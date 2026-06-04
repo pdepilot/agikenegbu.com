@@ -642,10 +642,11 @@
 
     function initSiteChrome() {
         var fixedTop = document.querySelector(".fixed-top");
+        var topbar = document.querySelector(".topbar");
         if (!fixedTop) return;
         fixedTop.classList.add("bg-white", "shadow");
-        if (window.innerWidth >= 992) {
-            fixedTop.style.top = "-45px";
+        if (topbar && topbar.offsetHeight) {
+            fixedTop.style.top = "-" + topbar.offsetHeight + "px";
         }
     }
 

@@ -130,6 +130,58 @@ body {
     transform: scale(1.08);
 }
 
+/* Topbar — visible & readable on mobile */
+.topbar .topbar-inner {
+    padding: 0.5rem 0.75rem;
+}
+
+@media (max-width: 991.98px) {
+    .topbar .topbar-inner {
+        padding: 0.45rem 0.65rem;
+        font-size: 0.8rem;
+    }
+
+    .topbar .row {
+        --bs-gutter-x: 0;
+    }
+
+    .topbar .row > [class*="col-"] {
+        width: 100%;
+        max-width: 100%;
+        text-align: center !important;
+    }
+
+    .topbar .h-100.d-inline-flex {
+        display: inline-flex !important;
+        height: auto !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0.15rem 0.35rem;
+    }
+
+    .topbar .text-body {
+        display: inline;
+        margin-right: 0.35rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .topbar a span {
+        font-size: 0.75rem;
+    }
+
+    .topbar .px-2 {
+        padding-left: 0.35rem !important;
+        padding-right: 0.35rem !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-header {
+        padding-top: calc(12rem + 3.5rem);
+    }
+}
+
 .fixed-top:not(.bg-white) .navbar {
     background: transparent !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.45);

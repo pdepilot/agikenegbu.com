@@ -19,20 +19,18 @@
     new WOW().init();
 
 
-    // Fixed Navbar
+    // Fixed Navbar — hide topbar on scroll (desktop & mobile)
+    function topbarOffset() {
+        var $tb = $('.topbar:visible');
+        return $tb.length ? $tb.outerHeight() : 0;
+    }
+
     $(window).scroll(function () {
-        if ($(window).width() < 992) {
-            if ($(this).scrollTop() > 45) {
-                $('.fixed-top').addClass('bg-white shadow');
-            } else {
-                $('.fixed-top').removeClass('bg-white shadow');
-            }
+        var offset = topbarOffset();
+        if ($(this).scrollTop() > 45) {
+            $('.fixed-top').addClass('bg-white shadow').css('top', offset ? -offset : 0);
         } else {
-            if ($(this).scrollTop() > 45) {
-                $('.fixed-top').addClass('bg-white shadow').css('top', -45);
-            } else {
-                $('.fixed-top').removeClass('bg-white shadow').css('top', 0);
-            }
+            $('.fixed-top').removeClass('bg-white shadow').css('top', 0);
         }
     });
     
