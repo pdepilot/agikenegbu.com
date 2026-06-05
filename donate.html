@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Give &amp; Donate | AG Ikenebgu Assemblies of God</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partner with AG Ikenebgu through offerings, tithes, charity, and building fund gifts. Secure, transparent giving for Nigeria and international donors.">
+    <meta name="keywords" content="church giving, tithes, offering, charity, AG Ikenebgu, donate">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/brand.css" rel="stylesheet">
+    <link href="css/donate.css" rel="stylesheet">
+    <link rel="icon" href="images/ag-logo.jpeg" type="image/jpeg">
+</head>
+
+<body class="donate-page">
+
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    <!-- Topbar + Navbar -->
+    <div class="container-fluid fixed-top">
+        <div class="container topbar">
+            <div class="topbar-inner">
+                <div class="row gx-0">
+                    <div class="col-lg-7 text-start">
+                        <div class="h-100 d-inline-flex align-items-center me-4">
+                            <span class="fa fa-phone-alt me-2"></span>
+                            <a href="tel:+2348034567890"><span>+234 803 456 7890</span></a>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center">
+                            <span class="far fa-envelope me-2"></span>
+                            <a href="mailto:info@agikenebgu.org"><span>info@agikenebgu.org</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-end">
+                        <div class="h-100 d-inline-flex align-items-center">
+                            <span class="text-body">Follow Us:</span>
+                            <a class="px-2" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="px-2" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a class="px-2" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="px-2" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg py-3" aria-label="Main navigation">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="images/ag-logo.jpeg" alt="AG Ikenebgu Assemblies of God" class="me-2" style="max-height: 52px;">
+                    <span class="mb-0 lh-sm"><strong class="text-dark">AG</strong><span class="text-primary"> Ikenebgu</span></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                    <div class="navbar-nav ms-lg-auto mx-xl-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About Us</a>
+                        <a href="activity.html" class="nav-item nav-link">Ministries</a>
+                        <a href="event.html" class="nav-item nav-link">Events</a>
+                        <a href="sermon-library/index.html" class="nav-item nav-link">Sermons</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0 rounded-0">
+                                <a href="blog.html" class="dropdown-item">Bible Study</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                                <a href="contact.html" class="dropdown-item">Prayer Requests</a>
+                                <a href="donate.html" class="dropdown-item">Give</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="donate.html" class="nav-item nav-link d-xl-none active">Give</a>
+                    </div>
+                    <a href="donate.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block is-give-active" aria-current="page">Give</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="donate-hero" aria-labelledby="donateHeroTitle">
+            <div class="donate-hero__bg" aria-hidden="true"></div>
+            <div class="donate-hero__overlay" aria-hidden="true"></div>
+            <div class="donate-hero__content donate-reveal is-visible">
+                <span class="donate-hero__badge">Generosity · Faith · Impact</span>
+                <h1 id="donateHeroTitle" class="donate-hero__title">Give Cheerfully.<br>Transform Lives Eternally.</h1>
+                <p class="donate-hero__scripture">"Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver."</p>
+                <p class="donate-hero__ref">— 2 Corinthians 9:7 (KJV)</p>
+                <a href="#give-categories" class="donate-hero__cta">
+                    <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                    Give Now
+                </a>
+            </div>
+            <a href="#give-categories" class="donate-hero__scroll" aria-label="Scroll to giving options"><i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <!-- Categories + Accounts -->
+        <section class="donate-section" id="give-categories" aria-labelledby="categoriesTitle">
+            <div class="container">
+                <header class="donate-section__header donate-reveal">
+                    <span class="donate-section__eyebrow">Choose Your Gift</span>
+                    <h2 id="categoriesTitle" class="donate-section__title">Where Would You Like to Give?</h2>
+                    <p class="donate-section__lead">Select a category below to view Nigerian and international account details. Your seed sows into souls, structures, and service.</p>
+                </header>
+
+                <div class="donate-categories donate-reveal" role="group" aria-label="Donation categories">
+                    <button type="button" class="donate-category-card" data-category="offering" aria-pressed="false">
+                        <div class="donate-category-card__icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3 class="donate-category-card__title">Offering</h3>
+                        <p class="donate-category-card__text">Worship God with a freewill gift of gratitude and faith.</p>
+                    </button>
+                    <button type="button" class="donate-category-card" data-category="tithes" aria-pressed="false">
+                        <div class="donate-category-card__icon"><i class="fas fa-percent"></i></div>
+                        <h3 class="donate-category-card__title">Tithes</h3>
+                        <p class="donate-category-card__text">Honor the Lord with the firstfruits of your increase.</p>
+                    </button>
+                    <button type="button" class="donate-category-card" data-category="charity" aria-pressed="false">
+                        <div class="donate-category-card__icon"><i class="fas fa-heart"></i></div>
+                        <h3 class="donate-category-card__title">Charity</h3>
+                        <p class="donate-category-card__text">Feed the hungry, clothe the needy, and bless the poor.</p>
+                    </button>
+                    <button type="button" class="donate-category-card" data-category="building" aria-pressed="false">
+                        <div class="donate-category-card__icon"><i class="fas fa-church"></i></div>
+                        <h3 class="donate-category-card__title">Building / Project Fund</h3>
+                        <p class="donate-category-card__text">Build the house of God and expand His kingdom reach.</p>
+                    </button>
+                </div>
+
+                <div id="donateAccountPanel" class="donate-account-panel" aria-hidden="true" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <!-- Trust -->
+        <section class="donate-section donate-section--alt" aria-labelledby="trustTitle">
+            <div class="container">
+                <header class="donate-section__header donate-reveal">
+                    <span class="donate-section__eyebrow">Your Trust Matters</span>
+                    <h2 id="trustTitle" class="donate-section__title">Give With Confidence</h2>
+                </header>
+                <div class="donate-trust donate-reveal">
+                    <div class="donate-trust-item">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <div>
+                            <h4>Secure Giving</h4>
+                            <p>Official church accounts only. Always verify details on this page before transfer.</p>
+                        </div>
+                    </div>
+                    <div class="donate-trust-item">
+                        <i class="fas fa-balance-scale" aria-hidden="true"></i>
+                        <div>
+                            <h4>Transparent Accounting</h4>
+                            <p>Every gift is recorded, stewarded, and reported with integrity before God and our members.</p>
+                        </div>
+                    </div>
+                    <div class="donate-trust-item">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <div>
+                            <h4>Trusted by Members</h4>
+                            <p>Thousands of faithful partners support our worship, outreach, and missions each year.</p>
+                        </div>
+                    </div>
+                    <div class="donate-trust-item">
+                        <i class="fas fa-globe-africa" aria-hidden="true"></i>
+                        <div>
+                            <h4>International Donations Accepted</h4>
+                            <p>Partners worldwide can give via SWIFT transfer to our designated accounts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact stats -->
+        <section class="donate-section" aria-labelledby="impactTitle">
+            <div class="container">
+                <header class="donate-section__header donate-reveal">
+                    <span class="donate-section__eyebrow">Your Impact</span>
+                    <h2 id="impactTitle" class="donate-section__title">How Your Giving Makes a Difference</h2>
+                    <p class="donate-section__lead">Every naira and every dollar fuels Gospel work — from the pew to the nations.</p>
+                </header>
+                <div class="donate-stats donate-reveal">
+                    <div class="donate-stat">
+                        <div class="donate-stat__icon"><i class="fas fa-hands-helping"></i></div>
+                        <span class="donate-stat__num" data-count="1200" data-suffix="+">0</span>
+                        <span class="donate-stat__label">Community Outreach</span>
+                    </div>
+                    <div class="donate-stat">
+                        <div class="donate-stat__icon"><i class="fas fa-gift"></i></div>
+                        <span class="donate-stat__num" data-count="850" data-suffix="+">0</span>
+                        <span class="donate-stat__label">Charity Programs</span>
+                    </div>
+                    <div class="donate-stat">
+                        <div class="donate-stat__icon"><i class="fas fa-hard-hat"></i></div>
+                        <span class="donate-stat__num" data-count="15" data-suffix="+">0</span>
+                        <span class="donate-stat__label">Church Projects</span>
+                    </div>
+                    <div class="donate-stat">
+                        <div class="donate-stat__icon"><i class="fas fa-child"></i></div>
+                        <span class="donate-stat__num" data-count="600" data-suffix="+">0</span>
+                        <span class="donate-stat__label">Youth Development</span>
+                    </div>
+                    <div class="donate-stat">
+                        <div class="donate-stat__icon"><i class="fas fa-cross"></i></div>
+                        <span class="donate-stat__num" data-count="40" data-suffix="+">0</span>
+                        <span class="donate-stat__label">Missions &amp; Evangelism</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent donors -->
+        <section class="donate-section donate-section--alt" aria-labelledby="donorsTitle">
+            <div class="container">
+                <header class="donate-section__header donate-reveal">
+                    <span class="donate-section__eyebrow">Faithful Partners</span>
+                    <h2 id="donorsTitle" class="donate-section__title">Recent Donors</h2>
+                    <p class="donate-section__lead">Celebrating those who sow into God's work. Phone numbers are partially hidden for privacy.</p>
+                </header>
+                <div class="donate-donors-wrap donate-reveal">
+                    <table class="donate-donors-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Donor Name</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="donorTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donor testimonies -->
+        <section class="donate-section" aria-labelledby="donorTestimoniesTitle">
+            <div class="container">
+                <header class="donate-section__header donate-reveal donate-giver-stories__header">
+                    <span class="donate-section__eyebrow">Why We Give</span>
+                    <h2 id="donorTestimoniesTitle" class="donate-section__title">Stories From Our Givers</h2>
+                    <p class="donate-section__lead mx-auto">Real hearts. Real faith. Real impact — told in the words of those who sow.</p>
+                    <button type="button" class="donate-giver-story-btn" data-bs-toggle="modal" data-bs-target="#agGivingStoryModal">
+                        <span class="donate-giver-story-btn__icon" aria-hidden="true"><i class="fas fa-feather-alt"></i></span>
+                        <span class="donate-giver-story-btn__text">
+                            <strong>Share Why You Gave</strong>
+                            <small>Your story may inspire another cheerful giver</small>
+                        </span>
+                        <span class="donate-giver-story-btn__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                    </button>
+                </header>
+                <div class="donate-testimonies donate-reveal" id="donateGiverStories">
+                    <blockquote class="donate-testimony-card">
+                        <p>Giving here taught me that generosity is worship. When I support outreach, I see hungry families fed and souls saved — and my faith grows stronger.</p>
+                        <cite>Adaeze Okafor<span>Monthly Tithe Partner</span></cite>
+                    </blockquote>
+                    <blockquote class="donate-testimony-card">
+                        <p>From abroad I still give to the building fund. This church raised me in the Word, and I want the next generation to worship in a place worthy of God's glory.</p>
+                        <cite>James Eze<span>International Partner · USA</span></cite>
+                    </blockquote>
+                    <blockquote class="donate-testimony-card">
+                        <p>Our charity gifts go directly to people in need. The transparency and love behind every program convinced us that AG Ikenebgu stewards every kobo faithfully.</p>
+                        <cite>Grace &amp; David Adeyemi<span>Charity Supporters</span></cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="donate-final-cta donate-reveal" aria-labelledby="finalCtaTitle">
+            <div class="donate-final-cta__inner">
+                <h2 id="finalCtaTitle">Your Gift Today Becomes Someone's Tomorrow</h2>
+                <p>Join a community of cheerful givers advancing the Gospel in Owerri and beyond. Select a category above and transfer securely today.</p>
+                <a href="#give-categories" class="donate-hero__cta">
+                    <i class="fas fa-seedling" aria-hidden="true"></i>
+                    Give Your Best Seed
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container-fluid ag-footer pt-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="footer-blessing">
+            <div class="footer-glow footer-glow-1"></div>
+            <div class="footer-glow footer-glow-2"></div>
+            <div class="container position-relative">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 col-xl-8 text-center">
+                        <a href="index.html" class="footer-logo-link d-inline-block mb-4">
+                            <img src="images/ag-logo.jpeg" alt="AG Ikenebgu Assemblies of God" class="footer-logo img-fluid">
+                        </a>
+                        <p class="footer-verse mb-3">"The Lord bless thee, and keep thee: the Lord make his face shine upon thee, and be gracious unto thee: the Lord lift up his countenance upon thee, and give thee peace."</p>
+                        <p class="footer-verse-ref mb-4">— Numbers 6:24–26 (KJV)</p>
+                        <h2 class="footer-blessing-title display-6 text-light mb-3">May Heaven Pour Down Blessings Upon You</h2>
+                        <p class="footer-blessing-sub mb-0">From our church family to yours — grace, peace, and favor in Christ Jesus.</p>
+                    </div>
+                </div>
+            </div>
+            <svg class="footer-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+                <path fill="currentColor" d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"></path>
+            </svg>
+        </div>
+        <div class="footer-body">
+            <div class="container py-5">
+                <div class="row g-5 align-items-start">
+                    <div class="col-lg-4">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-4">AG <span class="text-primary">Ikenebgu</span></h4>
+                            <p class="footer-text mb-4">A spirit-filled Assemblies of God church proclaiming the full Gospel — where worship, fellowship, and compassion meet every heart.</p>
+                            <div class="footer-social d-flex gap-2">
+                                <a class="footer-social-btn" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="footer-social-btn" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a class="footer-social-btn" href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a class="footer-social-btn" href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-4">Worship With Us</h4>
+                            <ul class="footer-list list-unstyled mb-0">
+                                <li><i class="fa fa-church text-primary me-2"></i>Sunday — 8:00 AM &amp; 10:30 AM</li>
+                                <li><i class="fa fa-bible text-primary me-2"></i>Wednesday Bible Study — 6:00 PM</li>
+                                <li><i class="fa fa-praying-hands text-primary me-2"></i>Friday Prayer — 6:00 PM</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary mt-4 py-2 px-4">Plan Your Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-4">Reach Us</h4>
+                            <div class="footer-contact">
+                                <p class="mb-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>11 Archdeacon Dennis Street, Ikenegbu, Owerri, Imo State</p>
+                                <p class="mb-3"><i class="fa fa-phone-alt text-primary me-2"></i><a href="tel:+2348034567890">+234 803 456 7890</a></p>
+                                <p class="mb-0"><i class="far fa-envelope text-primary me-2"></i><a href="mailto:info@agikenebgu.org">info@agikenebgu.org</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 pt-4 border-top border-secondary border-opacity-25">
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                        <h5 class="text-light mb-2">Stay Blessed &amp; Connected</h5>
+                        <p class="footer-text small mb-3">Receive encouragement, sermon highlights, and church news.</p>
+                        <div class="footer-newsletter position-relative">
+                            <input class="form-control border-0 py-3 ps-4 pe-5" type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <h5 class="text-light mb-3">Quick Links</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <a class="footer-link" href="index.html">Home</a>
+                                <a class="footer-link" href="about.html">About Us</a>
+                                <a class="footer-link" href="activity.html">Ministries</a>
+                                <a class="footer-link" href="sermon-library/index.html">Sermons</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="footer-link" href="event.html">Events</a>
+                                <a class="footer-link" href="blog.html">Bible Study</a>
+                                <a class="footer-link" href="contact.html">Prayer Requests</a>
+                                <a class="footer-link" href="donate.html">Give</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container py-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <p class="mb-0 small">&copy; <a href="index.html">AG Ikenebgu Assemblies of God</a>. All Rights Reserved. <span class="footer-pray">🕊</span> Blessed to be a blessing.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0 small">Crafted with love by <a href="https://htmlcodex.com">ERIBS Tech</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="btn btn-primary border-3 border-light back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/giving-story-form.js"></script>
+    <script src="js/donate.js"></script>
+</body>
+
+</html>
