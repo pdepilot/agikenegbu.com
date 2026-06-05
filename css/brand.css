@@ -93,6 +93,11 @@ body {
     background: linear-gradient(105deg, var(--ag-navy) 0%, var(--ag-navy-light) 50%, #243a6e 100%) !important;
     border-bottom: 2px solid rgba(212, 168, 44, 0.4);
     transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+    height: auto !important;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
 }
 
 .fixed-top.bg-white .topbar .topbar-inner {
@@ -130,49 +135,134 @@ body {
     transform: scale(1.08);
 }
 
-/* Topbar — visible & readable on mobile */
-.topbar .topbar-inner {
-    padding: 0.5rem 0.75rem;
+/* Topbar — grid layout */
+.topbar-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.75rem 1.5rem;
 }
 
+.topbar-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 1.25rem;
+    min-width: 0;
+}
+
+.topbar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    min-width: 0;
+}
+
+.topbar-link span {
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+.topbar-social {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+}
+
+.topbar-social-label {
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.topbar-social-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.topbar-social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 50%;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.topbar-social-icons a:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Topbar — tablet & mobile */
 @media (max-width: 991.98px) {
     .topbar .topbar-inner {
-        padding: 0.45rem 0.65rem;
+        padding: 0.55rem 0.65rem !important;
+    }
+
+    .topbar .container.topbar {
+        padding-left: 0.65rem;
+        padding-right: 0.65rem;
+        max-width: 100%;
+    }
+
+    .topbar-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.45rem;
+    }
+
+    .topbar-contact {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .topbar-social {
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .topbar-link span {
         font-size: 0.8rem;
     }
 
-    .topbar .row {
-        --bs-gutter-x: 0;
-    }
-
-    .topbar .row > [class*="col-"] {
-        width: 100%;
-        max-width: 100%;
-        text-align: center !important;
-    }
-
-    .topbar .h-100.d-inline-flex {
-        display: inline-flex !important;
-        height: auto !important;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0.15rem 0.35rem;
-    }
-
-    .topbar .text-body {
-        display: inline;
-        margin-right: 0.35rem;
+    .topbar-social-label {
+        font-size: 0.78rem;
     }
 }
 
 @media (max-width: 575.98px) {
-    .topbar a span {
-        font-size: 0.75rem;
+    .topbar .topbar-inner {
+        padding: 0.5rem 0.5rem !important;
     }
 
-    .topbar .px-2 {
-        padding-left: 0.35rem !important;
-        padding-right: 0.35rem !important;
+    .topbar-contact {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .topbar-link span {
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 399.98px) {
+    .topbar-link span {
+        font-size: 0.72rem;
+    }
+
+    .topbar-social-label {
+        font-size: 0.72rem;
+    }
+
+    .topbar-social-icons a {
+        width: 1.65rem;
+        height: 1.65rem;
     }
 }
 

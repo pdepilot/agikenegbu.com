@@ -114,6 +114,13 @@ h4, h5, h6, .h4, .h5, .h6 {
     background: rgba(255, 255, 255, .5);
 }
 
+@media (max-width: 991.98px) {
+    .topbar .topbar-inner {
+        height: auto !important;
+        min-height: 45px;
+    }
+}
+
 .topbar a,
 .topbar a i {
     transition: 0.5s;
