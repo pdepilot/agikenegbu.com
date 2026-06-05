@@ -19,6 +19,26 @@
     new WOW().init();
 
 
+    // Sync hero / page offset with actual fixed header height (topbar + navbar)
+    function updateSiteHeaderHeight() {
+        var fixedTop = document.querySelector(".fixed-top");
+        if (!fixedTop) {
+            return;
+        }
+        document.documentElement.style.setProperty(
+            "--site-header-height",
+            fixedTop.offsetHeight + "px"
+        );
+    }
+
+    updateSiteHeaderHeight();
+    window.agUpdateSiteHeaderHeight = updateSiteHeaderHeight;
+    $(window).on("resize orientationchange", updateSiteHeaderHeight);
+    $(window).on("load", updateSiteHeaderHeight);
+    setTimeout(updateSiteHeaderHeight, 150);
+    setTimeout(updateSiteHeaderHeight, 600);
+
+
     // Fixed Navbar — hide topbar on scroll (desktop & mobile)
     function topbarOffset() {
         var $tb = $('.topbar:visible');
@@ -32,6 +52,7 @@
         } else {
             $('.fixed-top').removeClass('bg-white shadow').css('top', 0);
         }
+        updateSiteHeaderHeight();
     });
     
     

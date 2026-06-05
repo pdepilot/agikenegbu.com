@@ -35,6 +35,9 @@
         setTimeout(function () {
             preloader.remove();
             document.body.classList.remove("preloader-active");
+            if (typeof window.agUpdateSiteHeaderHeight === "function") {
+                window.agUpdateSiteHeaderHeight();
+            }
         }, 900);
     }
 
