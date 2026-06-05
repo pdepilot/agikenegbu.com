@@ -1,5 +1,5 @@
 /**
- * AG Ikenebgu — spiritual homepage preloader (logo + dove)
+ * AG Ikenebgu — video homepage preloader
  */
 body.preloader-active {
     overflow: hidden;
@@ -12,12 +12,12 @@ body.preloader-active {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(ellipse at 50% 35%, #2a4078 0%, #1a2b5c 42%, #0f1a38 100%);
+    background: #0f1a38;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 0.9s,
-        transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.85s,
+        transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ag-preloader:not(.show) {
@@ -29,300 +29,67 @@ body.preloader-active {
 .ag-preloader.is-done {
     opacity: 0;
     visibility: hidden;
-    transform: scale(1.04);
+    transform: scale(1.02);
     pointer-events: none;
 }
 
-.ag-preloader__sky {
+.ag-preloader__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #000;
+}
+
+.ag-preloader__overlay {
     position: absolute;
     inset: 0;
-    overflow: hidden;
     pointer-events: none;
-}
-
-.ag-preloader__rays {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 140vmax;
-    height: 140vmax;
-    margin: -70vmax 0 0 -70vmax;
-    background: conic-gradient(
-        from 0deg,
-        transparent 0deg,
-        rgba(212, 168, 44, 0.07) 12deg,
-        transparent 24deg,
-        rgba(255, 255, 255, 0.04) 36deg,
-        transparent 48deg,
-        rgba(212, 168, 44, 0.09) 60deg,
-        transparent 72deg
+    background: linear-gradient(
+        to bottom,
+        rgba(15, 26, 56, 0.15) 0%,
+        transparent 35%,
+        transparent 65%,
+        rgba(15, 26, 56, 0.35) 100%
     );
-    opacity: 0;
-    animation: agPreloaderRaysSpin 32s linear infinite, agPreloaderFadeIn 1.2s ease forwards;
 }
 
-@keyframes agPreloaderRaysSpin {
-    to { transform: rotate(360deg); }
-}
-
-@keyframes agPreloaderFadeIn {
-    to { opacity: 1; }
-}
-
-.ag-preloader__glow {
+.ag-preloader__skip {
     position: absolute;
-    top: 28%;
-    left: 50%;
-    width: 420px;
-    height: 420px;
-    margin-left: -210px;
-    background: radial-gradient(circle, rgba(212, 168, 44, 0.35) 0%, transparent 68%);
-    animation: agPreloaderGlowPulse 3s ease-in-out infinite;
-}
-
-@keyframes agPreloaderGlowPulse {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 0.85; transform: scale(1.08); }
-}
-
-.ag-preloader__particle {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.55);
-    box-shadow: 0 0 12px rgba(212, 168, 44, 0.8);
-    animation: agPreloaderParticle 4s ease-in-out infinite;
-}
-
-.ag-preloader__particle:nth-child(1) { top: 18%; left: 22%; animation-delay: 0s; }
-.ag-preloader__particle:nth-child(2) { top: 72%; left: 18%; animation-delay: 0.6s; width: 4px; height: 4px; }
-.ag-preloader__particle:nth-child(3) { top: 25%; right: 20%; animation-delay: 1.1s; }
-.ag-preloader__particle:nth-child(4) { top: 65%; right: 28%; animation-delay: 1.8s; width: 5px; height: 5px; }
-.ag-preloader__particle:nth-child(5) { top: 42%; left: 12%; animation-delay: 2.2s; opacity: 0.7; }
-.ag-preloader__particle:nth-child(6) { top: 48%; right: 14%; animation-delay: 2.9s; }
-
-@keyframes agPreloaderParticle {
-    0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
-    50% { transform: translateY(-18px) scale(1.2); opacity: 1; }
-}
-
-.ag-preloader__stage {
-    position: relative;
+    bottom: 1.75rem;
+    right: 1.75rem;
     z-index: 2;
-    text-align: center;
-    padding: 2rem;
-    width: min(100%, 420px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(26, 43, 92, 0.55);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.55rem 1.15rem;
+    border-radius: 999px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
-.ag-preloader__scene {
-    position: relative;
-    width: 220px;
-    height: 200px;
-    margin: 0 auto 1.75rem;
+.ag-preloader__skip:hover {
+    background: rgba(212, 168, 44, 0.9);
+    border-color: rgba(212, 168, 44, 0.9);
+    color: #1a2b5c;
 }
 
-.ag-preloader__halo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    margin: -100px 0 0 -100px;
-    border: 2px solid rgba(212, 168, 44, 0.35);
-    border-radius: 50%;
-    box-shadow: 0 0 40px rgba(212, 168, 44, 0.25), inset 0 0 30px rgba(255, 255, 255, 0.06);
-    opacity: 0;
-    animation: agPreloaderLogoHaloIn 1s ease 0.3s forwards, agPreloaderHalo 2.8s ease-in-out 1s infinite;
-}
-
-@keyframes agPreloaderLogoHaloIn {
-    from { opacity: 0; transform: scale(0.7); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes agPreloaderHalo {
-    0%, 100% { transform: scale(1); opacity: 0.85; }
-    50% { transform: scale(1.06); opacity: 1; }
-}
-
-.ag-preloader__logo-wrap {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    animation: agPreloaderLogoReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
-    opacity: 0;
-}
-
-@keyframes agPreloaderLogoReveal {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) scale(0.82);
+@media (max-width: 575.98px) {
+    .ag-preloader__skip {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
     }
-    to {
-        opacity: 1;
-        transform: translateX(-50%) scale(1);
-    }
-}
-
-.ag-preloader__logo {
-    display: block;
-    width: 150px;
-    height: auto;
-    filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.45));
-    border-radius: 4px;
-}
-
-.ag-preloader__perch-mark {
-    position: absolute;
-    top: 28%;
-    left: 50%;
-    width: 44px;
-    height: 4px;
-    margin-left: -22px;
-    background: linear-gradient(90deg, transparent, rgba(212, 168, 44, 0.5), transparent);
-    border-radius: 2px;
-    opacity: 0;
-    animation: agPreloaderPerchMark 0.6s ease 3s forwards;
-}
-
-@keyframes agPreloaderPerchMark {
-    to { opacity: 1; }
-}
-
-.ag-preloader__dove {
-    position: absolute;
-    z-index: 4;
-    width: 110px;
-    height: 70px;
-    left: -20%;
-    top: 5%;
-    opacity: 0;
-    background: url("../img/dove-flying.svg") center / contain no-repeat;
-    filter: brightness(0) invert(1) drop-shadow(0 6px 16px rgba(255, 255, 255, 0.35));
-    animation: agPreloaderDoveFly 2.6s cubic-bezier(0.33, 1, 0.68, 1) 0.75s forwards,
-        agPreloaderDovePerch 2.2s ease-in-out 3.35s infinite;
-    transform-origin: center center;
-}
-
-@keyframes agPreloaderDoveFly {
-    0% {
-        left: -22%;
-        top: 6%;
-        opacity: 0;
-        transform: rotate(-28deg) scale(0.45);
-    }
-    12% {
-        opacity: 1;
-    }
-    45% {
-        left: 38%;
-        top: 2%;
-        transform: rotate(8deg) scale(0.7);
-    }
-    78% {
-        left: 48%;
-        top: 14%;
-        transform: rotate(-2deg) scale(0.42);
-    }
-    100% {
-        left: 50%;
-        top: 16%;
-        opacity: 1;
-        transform: translateX(-50%) rotate(0deg) scale(0.32);
-    }
-}
-
-@keyframes agPreloaderDovePerch {
-    0%, 100% {
-        transform: translateX(-50%) translateY(0) rotate(-4deg) scale(0.32);
-    }
-    50% {
-        transform: translateX(-50%) translateY(-4px) rotate(4deg) scale(0.33);
-    }
-}
-
-.ag-preloader__verse {
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.95rem;
-    font-style: italic;
-    line-height: 1.65;
-    color: rgba(255, 255, 255, 0.88);
-    margin: 0 0 0.5rem;
-    opacity: 0;
-    transform: translateY(12px);
-    animation: agPreloaderTextIn 1s ease 3.4s forwards;
-}
-
-.ag-preloader__name {
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--bs-primary, #d4a82c);
-    margin: 0 0 1.25rem;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: agPreloaderTextIn 1s ease 3.65s forwards;
-}
-
-@keyframes agPreloaderTextIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.ag-preloader__progress {
-    width: 120px;
-    height: 3px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 3px;
-    overflow: hidden;
-    opacity: 0;
-    animation: agPreloaderTextIn 0.6s ease 3.8s forwards;
-}
-
-.ag-preloader__progress-bar {
-    display: block;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, var(--bs-primary, #d4a82c), #fff8e0);
-    border-radius: 3px;
-    animation: agPreloaderProgress 4.2s ease-in-out 0.4s forwards;
-}
-
-@keyframes agPreloaderProgress {
-    0% { width: 0; }
-    70% { width: 88%; }
-    100% { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .ag-preloader__dove {
-        animation: none;
-        left: 50%;
-        top: 16%;
-        opacity: 1;
-        transform: translateX(-50%) scale(0.32);
-    }
-
-    .ag-preloader__rays,
-    .ag-preloader__halo,
-    .ag-preloader__particle,
-    .ag-preloader__glow {
-        animation: none;
-    }
-
-    .ag-preloader__logo-wrap,
-    .ag-preloader__verse,
-    .ag-preloader__name,
-    .ag-preloader__progress {
-        opacity: 1;
-        transform: none;
-        animation: none;
+    .ag-preloader {
+        transition-duration: 0.2s;
     }
 }

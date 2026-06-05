@@ -34,35 +34,22 @@
 
     <body>
 
-        <!-- Spiritual Preloader Start -->
+        <!-- Video Preloader Start -->
         <div id="agPreloader" class="ag-preloader show" role="status" aria-live="polite" aria-label="Loading AG Ikenebgu">
-            <div class="ag-preloader__sky" aria-hidden="true">
-                <div class="ag-preloader__rays"></div>
-                <div class="ag-preloader__glow"></div>
-                <span class="ag-preloader__particle"></span>
-                <span class="ag-preloader__particle"></span>
-                <span class="ag-preloader__particle"></span>
-                <span class="ag-preloader__particle"></span>
-                <span class="ag-preloader__particle"></span>
-                <span class="ag-preloader__particle"></span>
-            </div>
-            <div class="ag-preloader__stage">
-                <div class="ag-preloader__scene">
-                    <div class="ag-preloader__halo" aria-hidden="true"></div>
-                    <div class="ag-preloader__perch-mark" aria-hidden="true"></div>
-                    <div class="ag-preloader__dove" aria-hidden="true"></div>
-                    <div class="ag-preloader__logo-wrap">
-                        <img src="images/ag-logo.jpeg" alt="AG Ikenebgu Assemblies of God" class="ag-preloader__logo" width="150" height="150">
-                    </div>
-                </div>
-                <p class="ag-preloader__verse">"The Lord lift up his countenance upon thee, and give thee peace."</p>
-                <p class="ag-preloader__name">AG Ikenebgu</p>
-                <div class="ag-preloader__progress" aria-hidden="true">
-                    <span class="ag-preloader__progress-bar"></span>
-                </div>
-            </div>
+            <video
+                id="agPreloaderVideo"
+                class="ag-preloader__video"
+                src="videos/Create_a_cinematic_D_animatio.mp4"
+                playsinline
+                webkit-playsinline
+                autoplay
+                preload="auto"
+                aria-label="AG Ikenebgu welcome video">
+            </video>
+            <div class="ag-preloader__overlay" aria-hidden="true"></div>
+            <button type="button" class="ag-preloader__skip" id="agPreloaderSkip">Skip intro</button>
         </div>
-        <!-- Spiritual Preloader End -->
+        <!-- Video Preloader End -->
 
 
         <!-- Topbar start -->
@@ -644,7 +631,7 @@
                 <div class="row g-5">
                     <div class="col-lg-4 col-xl-5">
                         <div class="team-img wow zoomIn" data-wow-delay="0.1s">
-                            <img src="img/team-1.jpg" class="img-fluid" alt="">
+                            <img src="images/rev2.jpg" class="img-fluid" alt="">
                         </div>
                     </div>
                     <div class="col-lg-8 col-xl-7">
