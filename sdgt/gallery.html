@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Send Down Thy Glory International Music Crusade</title>
+    <meta name="description" content="Explore the SDTG digital archive — worship encounters, miracles, testimonies, and unforgettable moments from Send Down Thy Glory crusades across the years.">
+    <meta name="keywords" content="SDTG gallery, Send Down Thy Glory photos, worship crusade videos, gospel event archive, Nigeria revival">
+    <meta property="og:title" content="SDTG Gallery — A Digital Museum of Glory">
+    <meta property="og:description" content="Relive moments of worship, miracles, and transformation from previous editions of Send Down Thy Glory.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/lifted_hands.jpeg">
+    <meta name="theme-color" content="#1a0a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="icon" href="img/sdtg-logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navbar -->
+    <header class="navbar scrolled" id="navbar" role="banner">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand" aria-label="Send Down Thy Glory Home">
+                <div class="logo-video logo-video--sm" aria-hidden="true">
+                    <video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video>
+                </div>
+                <span class="navbar__logo-text">
+                    <strong>SDTG</strong>
+                    <small>Send Down Thy Glory</small>
+                </span>
+            </a>
+
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="navbar__backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+            <nav class="navbar__menu" id="navMenu" role="navigation" aria-label="Main navigation">
+                <div class="navbar__menu-header">
+                    <span class="navbar__menu-eyebrow">Navigation</span>
+                    <span class="navbar__menu-title">Send Down Thy Glory</span>
+                </div>
+                <ul class="navbar__links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="index.html#speakers" class="nav-link">Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a></li>
+                    <li><a href="index.html#livestream" class="nav-link">Livestream</a></li>
+                    <li><a href="index.html#registration" class="nav-link">Registration</a></li>
+                    <li><a href="index.html#donate" class="nav-link">Donate</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="navbar__actions">
+                    <a href="index.html#registration" class="btn btn--outline btn--sm">Register Now</a>
+                    <a href="index.html#livestream" class="btn btn--primary btn--sm"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="gallery-hero" aria-label="Gallery hero">
+            <div class="gallery-hero__media">
+                <video src="videos/worship-crowd.mp4" autoplay muted loop playsinline poster="img/lifted_hands.jpeg" aria-hidden="true"></video>
+            </div>
+            <div class="gallery-hero__overlay" aria-hidden="true"></div>
+            <div class="gallery-hero__rays" aria-hidden="true"></div>
+            <canvas id="galleryParticles" class="gallery-hero__particles" aria-hidden="true"></canvas>
+
+            <div class="gallery-hero__content">
+                <p class="gallery-hero__eyebrow reveal">
+                    <i class="fas fa-camera-retro" aria-hidden="true"></i>
+                    Digital Museum of Glory
+                </p>
+                <h1 class="gallery-hero__title reveal" data-delay="100">
+                    SDTG <span>Gallery</span>
+                </h1>
+                <p class="gallery-hero__sub reveal" data-delay="200">
+                    Relive moments of worship, miracles, transformation, and unforgettable encounters from previous editions of Send Down Thy Glory.
+                </p>
+                <div class="gallery-hero__actions reveal" data-delay="300">
+                    <a href="#photos" class="btn btn--primary btn--lg">
+                        <i class="fas fa-images" aria-hidden="true"></i>
+                        Explore Photos
+                    </a>
+                    <a href="#videos" class="btn btn--glass btn--lg">
+                        <i class="fas fa-play-circle" aria-hidden="true"></i>
+                        Watch Videos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="gallery-stats" aria-label="Gallery statistics">
+            <div class="container">
+                <div class="gallery-stats__grid">
+                    <div class="gallery-stat reveal">
+                        <div class="gallery-stat__icon"><i class="fas fa-image" aria-hidden="true"></i></div>
+                        <div class="gallery-stat__num" data-count="2840" data-suffix="+">0</div>
+                        <div class="gallery-stat__label">Total Photos</div>
+                    </div>
+                    <div class="gallery-stat reveal" data-delay="100">
+                        <div class="gallery-stat__icon"><i class="fas fa-video" aria-hidden="true"></i></div>
+                        <div class="gallery-stat__num" data-count="186" data-suffix="+">0</div>
+                        <div class="gallery-stat__label">Total Videos</div>
+                    </div>
+                    <div class="gallery-stat reveal" data-delay="200">
+                        <div class="gallery-stat__icon"><i class="fas fa-calendar-alt" aria-hidden="true"></i></div>
+                        <div class="gallery-stat__num" data-count="12">0</div>
+                        <div class="gallery-stat__label">Years Archived</div>
+                    </div>
+                    <div class="gallery-stat reveal" data-delay="300">
+                        <div class="gallery-stat__icon"><i class="fas fa-church" aria-hidden="true"></i></div>
+                        <div class="gallery-stat__num" data-count="48" data-suffix="+">0</div>
+                        <div class="gallery-stat__label">Events Covered</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filterable Masonry Gallery -->
+        <section class="gallery-filter-section" id="photos" aria-labelledby="photos-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Photo Archive</span>
+                    <h2 id="photos-heading" class="section-title">Captured In His Presence</h2>
+                    <p class="section-desc">Browse by category — every frame tells a story of worship, revival, and divine encounter.</p>
+                </div>
+
+                <div class="gallery-filters reveal" role="group" aria-label="Filter gallery">
+                    <button type="button" class="gallery-filters__btn is-active" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="gallery-filters__btn" data-filter="worship" aria-pressed="false">Worship</button>
+                    <button type="button" class="gallery-filters__btn" data-filter="ministers" aria-pressed="false">Ministers</button>
+                    <button type="button" class="gallery-filters__btn" data-filter="choir" aria-pressed="false">Choir</button>
+                    <button type="button" class="gallery-filters__btn" data-filter="congregation" aria-pressed="false">Congregation</button>
+                    <button type="button" class="gallery-filters__btn" data-filter="prayer" aria-pressed="false">Prayer Sessions</button>
+                    <button type="button" class="gallery-filters__btn" data-filter="healing" aria-pressed="false">Healing &amp; Testimonies</button>
+                    <button type="button" class="gallery-filters__btn" data-filter="highlights" aria-pressed="false">Crusade Highlights</button>
+                    <button type="button" class="gallery-filters__btn" data-filter="behind" aria-pressed="false">Behind The Scenes</button>
+                    <button type="button" class="gallery-filters__btn" data-filter="videos" aria-pressed="false">Videos</button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="gallery-masonry" id="galleryMasonry">
+
+                    <article class="gallery-masonry__item gallery-masonry__item--lg reveal" data-category="worship highlights" data-src="img/lifted_hands.jpeg" data-title="Hands Raised In Glory" data-year="SDTG 2025" data-caption="Thousands united in one voice as heaven touched earth on the final night of Glory Without Limits.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="img/lifted_hands.jpeg" alt="Worshippers with hands raised at SDTG 2025" loading="lazy" width="600" height="800">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2025</span>
+                            <span class="gallery-masonry__caption">Hands Raised In Glory</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--md reveal" data-category="ministers highlights" data-src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80" data-title="Stage Illuminated" data-year="SDTG 2024" data-caption="Guest ministers ministering under the weight of God's glory as stage lights pierced the atmosphere.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80" alt="Stage lighting at SDTG crusade" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2024</span>
+                            <span class="gallery-masonry__caption">Stage Illuminated</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--sm reveal" data-category="choir worship" data-src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80" data-title="Choir Ministration" data-year="SDTG 2023" data-caption="The SDTG mass choir leading the congregation into deep worship.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" alt="Choir leading worship at SDTG" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2023</span>
+                            <span class="gallery-masonry__caption">Choir Ministration</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--wide reveal" data-category="congregation highlights" data-src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&q=80" data-title="Sea of Worshippers" data-year="SDTG 2025" data-caption="Over 30,000 believers gathered as one family under the open sky.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=800&q=80" alt="Aerial view of crusade congregation" loading="lazy" width="800" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2025</span>
+                            <span class="gallery-masonry__caption">Sea of Worshippers</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--md reveal" data-category="prayer" data-src="img/main1.jpg" data-title="Midnight Prayer" data-year="SDTG 2022" data-caption="Intercessors crying out for nations during the all-night prayer vigil.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="img/main1.jpg" alt="Prayer session at SDTG" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2022</span>
+                            <span class="gallery-masonry__caption">Midnight Prayer</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--lg reveal" data-category="healing highlights" data-src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80" data-title="Miracle Service" data-year="SDTG 2024" data-caption="Documented healings and deliverances during Heaven's Sound crusade edition.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80" alt="Healing and testimony moment" loading="lazy" width="600" height="800">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2024</span>
+                            <span class="gallery-masonry__caption">Miracle Service</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--sm reveal" data-category="behind" data-src="img/hero-poster.jpg" data-title="Behind The Scenes" data-year="SDTG 2023" data-caption="Media team and volunteers preparing the atmosphere before doors open.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="img/hero-poster.jpg" alt="Behind the scenes at SDTG setup" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2023</span>
+                            <span class="gallery-masonry__caption">Behind The Scenes</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--md reveal" data-category="worship congregation" data-src="https://images.unsplash.com/photo-1507692049790-bcf87f88310a?w=800&q=80" data-title="Corporate Worship" data-year="SDTG 2021" data-caption="A unified cry for revival as worship filled the entire arena.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1507692049790-bcf87f88310a?w=600&q=80" alt="Corporate worship moment" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2021</span>
+                            <span class="gallery-masonry__caption">Corporate Worship</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--md reveal" data-category="ministers" data-src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80" data-title="Guest Minister" data-year="SDTG 2019" data-caption="International guest minister releasing a prophetic word over the nations.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80" alt="Guest minister preaching" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2019</span>
+                            <span class="gallery-masonry__caption">Guest Minister</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--lg reveal is-video" data-category="videos worship highlights" data-video-type="local" data-video-src="videos/worship-hero.mp4" data-video-title="SDTG 2025 Worship Highlight Reel">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="img/lifted_hands.jpeg" alt="Video thumbnail — worship highlight" loading="lazy" width="600" height="800">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2025</span>
+                            <span class="gallery-masonry__caption">Worship Highlight Reel</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--sm reveal" data-category="choir" data-src="https://images.unsplash.com/photo-1516280440614-379d11e789fa?w=800&q=80" data-title="Voices Of Heaven" data-year="SDTG 2020" data-caption="SDTG choir academy graduates leading their first mass ministration.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1516280440614-379d11e789fa?w=600&q=80" alt="Choir performance" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2020</span>
+                            <span class="gallery-masonry__caption">Voices Of Heaven</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--md reveal" data-category="healing" data-src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" data-title="Testimony Night" data-year="SDTG 2023" data-caption="Believers sharing powerful testimonies of healing and restoration.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Testimony sharing moment" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2023</span>
+                            <span class="gallery-masonry__caption">Testimony Night</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--md reveal" data-category="behind highlights" data-src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80" data-title="Volunteer Army" data-year="SDTG 2025" data-caption="The dedicated team that makes every SDTG edition possible.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80" alt="SDTG volunteer team" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2025</span>
+                            <span class="gallery-masonry__caption">Volunteer Army</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--sm reveal" data-category="prayer worship" data-src="https://images.unsplash.com/photo-1438232992991-995b7058bbb0?w=800&q=80" data-title="Altar Call" data-year="SDTG 2025" data-caption="Over 5,000 souls responding to the altar call on the final night.">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb0?w=600&q=80" alt="Altar call moment" loading="lazy" width="600" height="400">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2025</span>
+                            <span class="gallery-masonry__caption">Altar Call</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-masonry__item gallery-masonry__item--lg reveal is-video" data-category="videos highlights" data-video-type="local" data-video-src="videos/worship-crowd.mp4" data-video-title="SDTG Crusade Crowd Atmosphere">
+                        <div class="gallery-masonry__img-wrap">
+                            <img src="img/hero-poster.jpg" alt="Video thumbnail — crusade crowd" loading="lazy" width="600" height="800">
+                            <span class="gallery-masonry__shine" aria-hidden="true"></span>
+                            <span class="gallery-masonry__view" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </div>
+                        <div class="gallery-masonry__overlay">
+                            <span class="gallery-masonry__year">2024</span>
+                            <span class="gallery-masonry__caption">Crusade Atmosphere</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Gallery -->
+        <section class="video-gallery" id="videos" aria-labelledby="videos-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Video Archive</span>
+                    <h2 id="videos-heading" class="section-title">Watch &amp; Relive</h2>
+                    <p class="section-desc">Full sessions, messages, choir ministrations, testimonies, and crusade highlights.</p>
+                </div>
+
+                <div class="video-gallery__grid">
+                    <article class="video-card reveal" tabindex="0" data-video-type="local" data-video-src="videos/worship-hero.mp4" data-video-title="Night One Worship Session — SDTG 2025">
+                        <div class="video-card__thumb">
+                            <img src="img/lifted_hands.jpeg" alt="" loading="lazy" width="640" height="400">
+                            <span class="video-card__duration">12:48</span>
+                            <div class="video-card__play"><span class="video-card__play-btn"><i class="fas fa-play" aria-hidden="true"></i></span></div>
+                        </div>
+                        <div class="video-card__body">
+                            <p class="video-card__tag">Worship Sessions</p>
+                            <h3 class="video-card__title">Night One Worship Session — SDTG 2025</h3>
+                        </div>
+                    </article>
+
+                    <article class="video-card reveal" data-delay="100" tabindex="0" data-video-type="local" data-video-src="videos/worship-crowd.mp4" data-video-title="Guest Minister Message — Rev. Dr. Adeyemi">
+                        <div class="video-card__thumb">
+                            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=640&q=80" alt="" loading="lazy" width="640" height="400">
+                            <span class="video-card__duration">28:15</span>
+                            <div class="video-card__play"><span class="video-card__play-btn"><i class="fas fa-play" aria-hidden="true"></i></span></div>
+                        </div>
+                        <div class="video-card__body">
+                            <p class="video-card__tag">Guest Minister Messages</p>
+                            <h3 class="video-card__title">Guest Minister Message — Rev. Dr. Adeyemi</h3>
+                        </div>
+                    </article>
+
+                    <article class="video-card reveal" data-delay="200" tabindex="0" data-video-type="local" data-video-src="videos/worship-crowd.mp4" data-video-title="SDTG Mass Choir — Voices Of Revival">
+                        <div class="video-card__thumb">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=640&q=80" alt="" loading="lazy" width="640" height="400">
+                            <span class="video-card__duration">18:32</span>
+                            <div class="video-card__play"><span class="video-card__play-btn"><i class="fas fa-play" aria-hidden="true"></i></span></div>
+                        </div>
+                        <div class="video-card__body">
+                            <p class="video-card__tag">Choir Ministrations</p>
+                            <h3 class="video-card__title">SDTG Mass Choir — Voices Of Revival</h3>
+                        </div>
+                    </article>
+
+                    <article class="video-card reveal" data-delay="300" tabindex="0" data-video-type="local" data-video-src="videos/worship-hero.mp4" data-video-title="Healing Testimony — Restored After 12 Years">
+                        <div class="video-card__thumb">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=640&q=80" alt="" loading="lazy" width="640" height="400">
+                            <span class="video-card__duration">6:44</span>
+                            <div class="video-card__play"><span class="video-card__play-btn"><i class="fas fa-play" aria-hidden="true"></i></span></div>
+                        </div>
+                        <div class="video-card__body">
+                            <p class="video-card__tag">Testimonies</p>
+                            <h3 class="video-card__title">Healing Testimony — Restored After 12 Years</h3>
+                        </div>
+                    </article>
+
+                    <article class="video-card reveal" data-delay="400" tabindex="0" data-video-type="local" data-video-src="videos/worship-hero.mp4" data-video-title="SDTG 2024 — Heaven's Sound Highlights">
+                        <div class="video-card__thumb">
+                            <img src="img/main1.jpg" alt="" loading="lazy" width="640" height="400">
+                            <span class="video-card__duration">15:20</span>
+                            <div class="video-card__play"><span class="video-card__play-btn"><i class="fas fa-play" aria-hidden="true"></i></span></div>
+                        </div>
+                        <div class="video-card__body">
+                            <p class="video-card__tag">Crusade Highlights</p>
+                            <h3 class="video-card__title">SDTG 2024 — Heaven's Sound Highlights</h3>
+                        </div>
+                    </article>
+
+                    <article class="video-card reveal" data-delay="500" tabindex="0" data-video-type="youtube" data-video-src="LXb3EKWsInQ" data-video-title="Behind The Scenes — SDTG 2025 Setup">
+                        <div class="video-card__thumb">
+                            <img src="img/hero-poster.jpg" alt="" loading="lazy" width="640" height="400">
+                            <span class="video-card__duration">9:08</span>
+                            <div class="video-card__play"><span class="video-card__play-btn"><i class="fas fa-play" aria-hidden="true"></i></span></div>
+                        </div>
+                        <div class="video-card__body">
+                            <p class="video-card__tag">Behind The Scenes</p>
+                            <h3 class="video-card__title">Behind The Scenes — SDTG 2025 Setup</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SDTG Through The Years -->
+        <section class="years-timeline" id="years" aria-labelledby="years-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Our Legacy</span>
+                    <h2 id="years-heading" class="section-title">SDTG Through The Years</h2>
+                    <p class="section-desc">Six editions. Six themes. One unchanging mission — to send down His glory.</p>
+                </div>
+            </div>
+
+            <div class="years-timeline__track" role="list" aria-label="SDTG yearly archive">
+                <article class="year-card reveal" role="listitem">
+                    <div class="year-card__img">
+                        <img src="https://images.unsplash.com/photo-1507692049790-bcf87f88310a?w=600&q=80" alt="SDTG 2020 worship atmosphere" loading="lazy" width="340" height="212">
+                    </div>
+                    <div class="year-card__body">
+                        <p class="year-card__year">SDTG 2020</p>
+                        <h3 class="year-card__theme">Faith In The Fire</h3>
+                        <p class="year-card__highlights">Virtual and in-person hybrid edition reaching 80K viewers. First global prayer chain with 120 nations participating.</p>
+                    </div>
+                </article>
+
+                <article class="year-card reveal" data-delay="100" role="listitem">
+                    <div class="year-card__img">
+                        <img src="https://images.unsplash.com/photo-1516280440614-379d11e789fa?w=600&q=80" alt="SDTG 2021 choir ministration" loading="lazy" width="340" height="212">
+                    </div>
+                    <div class="year-card__body">
+                        <p class="year-card__year">SDTG 2021</p>
+                        <h3 class="year-card__theme">Digital Reach</h3>
+                        <p class="year-card__highlights">Pandemic-era virtual crusade with 200K live viewers. Launch of SDTG global prayer network.</p>
+                    </div>
+                </article>
+
+                <article class="year-card reveal" data-delay="200" role="listitem">
+                    <div class="year-card__img">
+                        <img src="img/main1.jpg" alt="SDTG 2022 return of glory" loading="lazy" width="340" height="212">
+                    </div>
+                    <div class="year-card__body">
+                        <p class="year-card__year">SDTG 2022</p>
+                        <h3 class="year-card__theme">Return Of Glory</h3>
+                        <p class="year-card__highlights">Post-pandemic comeback with doubled attendance. SDTG Youth Movement and choir academy launched.</p>
+                    </div>
+                </article>
+
+                <article class="year-card reveal" data-delay="300" role="listitem">
+                    <div class="year-card__img">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" alt="SDTG 2023 revival fire" loading="lazy" width="340" height="212">
+                    </div>
+                    <div class="year-card__body">
+                        <p class="year-card__year">SDTG 2023</p>
+                        <h3 class="year-card__theme">Revival Fire</h3>
+                        <p class="year-card__highlights">First international livestream — 500K+ viewers. Delegates from 32 nations in attendance.</p>
+                    </div>
+                </article>
+
+                <article class="year-card reveal" data-delay="400" role="listitem">
+                    <div class="year-card__img">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80" alt="SDTG 2024 heaven's sound" loading="lazy" width="340" height="212">
+                    </div>
+                    <div class="year-card__body">
+                        <p class="year-card__year">SDTG 2024</p>
+                        <h3 class="year-card__theme">Heaven's Sound</h3>
+                        <p class="year-card__highlights">Three nights of uninterrupted worship. Documented wheelchair deliverances and notable healings.</p>
+                    </div>
+                </article>
+
+                <article class="year-card reveal" data-delay="500" role="listitem">
+                    <div class="year-card__img">
+                        <img src="img/lifted_hands.jpeg" alt="SDTG 2025 glory without limits" loading="lazy" width="340" height="212">
+                    </div>
+                    <div class="year-card__body">
+                        <p class="year-card__year">SDTG 2025</p>
+                        <h3 class="year-card__theme">Glory Without Limits</h3>
+                        <p class="year-card__highlights">30,000 attendees. 5,000+ souls saved. Featured on global Christian networks worldwide.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Moments -->
+        <section class="featured-moments" id="featured" aria-labelledby="featured-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Featured Moments</span>
+                    <h2 id="featured-heading" class="section-title">Moments That Changed Everything</h2>
+                </div>
+
+                <article class="featured-block reveal">
+                    <div class="featured-block__visual">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=900&q=80" alt="Mass worship at SDTG crusade" loading="lazy" width="900" height="675">
+                        <span class="featured-block__glow" aria-hidden="true"></span>
+                    </div>
+                    <div class="featured-block__text">
+                        <p class="featured-block__eyebrow">Mass Worship</p>
+                        <h3 class="featured-block__title">When Thousands Became One Voice</h3>
+                        <p class="featured-block__desc">The moment when 30,000 voices lifted in unison — heaven seemed to pause and listen. Worship leaders describe it as the closest they've ever felt to the throne room.</p>
+                        <span class="featured-block__year">SDTG 2025</span>
+                    </div>
+                </article>
+
+                <article class="featured-block featured-block--reverse reveal">
+                    <div class="featured-block__visual">
+                        <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb0?w=900&q=80" alt="Powerful altar call at SDTG" loading="lazy" width="900" height="675">
+                        <span class="featured-block__glow" aria-hidden="true"></span>
+                    </div>
+                    <div class="featured-block__text">
+                        <p class="featured-block__eyebrow">Altar Call</p>
+                        <h3 class="featured-block__title">5,000 Souls, One Night</h3>
+                        <p class="featured-block__desc">The final altar call of Glory Without Limits saw over 5,000 people respond — the largest single-night salvation count in SDTG history.</p>
+                        <span class="featured-block__year">SDTG 2025</span>
+                    </div>
+                </article>
+
+                <article class="featured-block reveal">
+                    <div class="featured-block__visual">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=900&q=80" alt="Guest minister session" loading="lazy" width="900" height="675">
+                        <span class="featured-block__glow" aria-hidden="true"></span>
+                    </div>
+                    <div class="featured-block__text">
+                        <p class="featured-block__eyebrow">Guest Ministers</p>
+                        <h3 class="featured-block__title">Voices From Across The Nations</h3>
+                        <p class="featured-block__desc">International ministers from Ghana, Kenya, the UK, and the USA have graced the SDTG stage — each bringing a unique dimension of God's glory.</p>
+                        <span class="featured-block__year">SDTG 2019 — 2025</span>
+                    </div>
+                </article>
+
+                <article class="featured-block featured-block--reverse reveal">
+                    <div class="featured-block__visual">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=900&q=80" alt="Choir ministration at SDTG" loading="lazy" width="900" height="675">
+                        <span class="featured-block__glow" aria-hidden="true"></span>
+                    </div>
+                    <div class="featured-block__text">
+                        <p class="featured-block__eyebrow">Choir Ministrations</p>
+                        <h3 class="featured-block__title">Heaven's Sound Through Human Voices</h3>
+                        <p class="featured-block__desc">The SDTG mass choir — 300 voices trained in the choir academy — has become one of the most anticipated moments of every crusade edition.</p>
+                        <span class="featured-block__year">SDTG 2024</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Testimonial Snapshots -->
+        <section class="testimonial-snapshots" id="snapshots" aria-labelledby="snapshots-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Changed Lives</span>
+                    <h2 id="snapshots-heading" class="section-title">Testimony Snapshots</h2>
+                    <p class="section-desc">Real faces. Real stories. Real transformation.</p>
+                </div>
+
+                <div class="snapshot-grid">
+                    <article class="snapshot-card reveal">
+                        <div class="snapshot-card__photo">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80" alt="Adaeze Okafor at SDTG" loading="lazy" width="600" height="412">
+                        </div>
+                        <div class="snapshot-card__body">
+                            <p class="snapshot-card__quote">I came broken and left with a fresh anointing. The worship alone shifted something deep in my spirit. I received healing from a condition I'd carried for 12 years.</p>
+                            <div class="snapshot-card__author">
+                                <cite>Adaeze Okafor</cite>
+                                <span>Lagos, Nigeria</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="snapshot-card reveal" data-delay="150">
+                        <div class="snapshot-card__photo">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="James Okorie at SDTG" loading="lazy" width="600" height="412">
+                        </div>
+                        <div class="snapshot-card__body">
+                            <p class="snapshot-card__quote">I flew in from London just for SDTG. The atmosphere of faith and the unity of worshippers from every tribe and nation — this is what the church should look like.</p>
+                            <div class="snapshot-card__author">
+                                <cite>James Okorie</cite>
+                                <span>London, UK</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="snapshot-card reveal" data-delay="300">
+                        <div class="snapshot-card__photo">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80" alt="Grace Mwangi at SDTG" loading="lazy" width="600" height="412">
+                        </div>
+                        <div class="snapshot-card__body">
+                            <p class="snapshot-card__quote">My wheelchair-bound son walked for the first time in 8 years during the miracle service. SDTG didn't just change our lives — it rewrote our family's story.</p>
+                            <div class="snapshot-card__author">
+                                <cite>Grace Mwangi</cite>
+                                <span>Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Wall -->
+        <section class="social-wall" id="social" aria-labelledby="social-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Stay Connected</span>
+                    <h2 id="social-heading" class="section-title">SDTG Social Wall</h2>
+                    <p class="section-desc">Follow the movement across platforms and relive moments shared by our global family.</p>
+                </div>
+
+                <div class="social-grid">
+                    <article class="social-card social-card--fb reveal">
+                        <div class="social-card__icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></div>
+                        <p class="social-card__platform">Facebook</p>
+                        <p class="social-card__stat">48.2K</p>
+                        <p class="social-card__label">Followers</p>
+                        <div class="social-card__preview">
+                            <img src="img/lifted_hands.jpeg" alt="" loading="lazy" width="80" height="80">
+                            <img src="img/main1.jpg" alt="" loading="lazy" width="80" height="80">
+                            <img src="img/hero-poster.jpg" alt="" loading="lazy" width="80" height="80">
+                        </div>
+                    </article>
+
+                    <article class="social-card social-card--ig reveal" data-delay="100">
+                        <div class="social-card__icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                        <p class="social-card__platform">Instagram</p>
+                        <p class="social-card__stat">62.7K</p>
+                        <p class="social-card__label">Followers</p>
+                        <div class="social-card__preview">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=160&q=80" alt="" loading="lazy" width="80" height="80">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=160&q=80" alt="" loading="lazy" width="80" height="80">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=160&q=80" alt="" loading="lazy" width="80" height="80">
+                        </div>
+                    </article>
+
+                    <article class="social-card social-card--yt reveal" data-delay="200">
+                        <div class="social-card__icon"><i class="fab fa-youtube" aria-hidden="true"></i></div>
+                        <p class="social-card__platform">YouTube</p>
+                        <p class="social-card__stat">124K</p>
+                        <p class="social-card__label">Subscribers</p>
+                        <div class="social-card__preview">
+                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=160&q=80" alt="" loading="lazy" width="80" height="80">
+                            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=160&q=80" alt="" loading="lazy" width="80" height="80">
+                            <img src="https://images.unsplash.com/photo-1507692049790-bcf87f88310a?w=160&q=80" alt="" loading="lazy" width="80" height="80">
+                        </div>
+                    </article>
+
+                    <article class="social-card social-card--tt reveal" data-delay="300">
+                        <div class="social-card__icon"><i class="fab fa-tiktok" aria-hidden="true"></i></div>
+                        <p class="social-card__platform">TikTok</p>
+                        <p class="social-card__stat">89.4K</p>
+                        <p class="social-card__label">Followers</p>
+                        <div class="social-card__preview">
+                            <img src="https://images.unsplash.com/photo-1516280440614-379d11e789fa?w=160&q=80" alt="" loading="lazy" width="80" height="80">
+                            <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb0?w=160&q=80" alt="" loading="lazy" width="80" height="80">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=160&q=80" alt="" loading="lazy" width="80" height="80">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Memories -->
+        <section class="share-memories" id="share" aria-labelledby="share-heading">
+            <div class="container">
+                <div class="share-memories__grid">
+                    <div class="share-memories__intro reveal">
+                        <span class="section-eyebrow">Your Story Matters</span>
+                        <h2 id="share-heading">Share Your SDTG Memories</h2>
+                        <p>Were you at a Send Down Thy Glory crusade? Your photos, videos, and testimonies help preserve the legacy of what God has done. Submit your memories and become part of the archive.</p>
+                        <div class="share-memories__features">
+                            <div class="share-memories__feature"><i class="fas fa-camera" aria-hidden="true"></i> Upload crusade photos</div>
+                            <div class="share-memories__feature"><i class="fas fa-video" aria-hidden="true"></i> Share video clips</div>
+                            <div class="share-memories__feature"><i class="fas fa-heart" aria-hidden="true"></i> Submit your testimony</div>
+                        </div>
+                    </div>
+
+                    <div class="share-form reveal" data-delay="150">
+                        <form id="shareForm" novalidate>
+                            <div class="share-form__row">
+                                <div class="share-form__group">
+                                    <label for="shareName">Full Name</label>
+                                    <input type="text" id="shareName" name="name" required placeholder="Your name" autocomplete="name">
+                                </div>
+                                <div class="share-form__group">
+                                    <label for="shareEmail">Email Address</label>
+                                    <input type="email" id="shareEmail" name="email" required placeholder="you@email.com" autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="share-form__group">
+                                <label for="shareEdition">SDTG Edition</label>
+                                <select id="shareEdition" name="edition">
+                                    <option value="">Select edition attended</option>
+                                    <option value="2025">SDTG 2025 — Glory Without Limits</option>
+                                    <option value="2024">SDTG 2024 — Heaven's Sound</option>
+                                    <option value="2023">SDTG 2023 — Revival Fire</option>
+                                    <option value="2022">SDTG 2022 — Return Of Glory</option>
+                                    <option value="other">Other / Multiple Editions</option>
+                                </select>
+                            </div>
+                            <div class="share-form__group">
+                                <label for="shareTestimony">Your Testimony</label>
+                                <textarea id="shareTestimony" name="testimony" placeholder="Share what God did in your life at SDTG..."></textarea>
+                            </div>
+                            <div class="share-form__row">
+                                <div class="share-form__group">
+                                    <label>Upload Photos</label>
+                                    <div class="share-form__file">
+                                        <input type="file" id="sharePhotos" name="photos" accept="image/*" multiple aria-label="Upload photos">
+                                        <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+                                        <p>Drag &amp; drop or click to upload</p>
+                                    </div>
+                                </div>
+                                <div class="share-form__group">
+                                    <label>Upload Videos</label>
+                                    <div class="share-form__file">
+                                        <input type="file" id="shareVideos" name="videos" accept="video/*" multiple aria-label="Upload videos">
+                                        <i class="fas fa-film" aria-hidden="true"></i>
+                                        <p>MP4, MOV up to 100MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--lg" style="width:100%;">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                Submit My Memories
+                            </button>
+                        </form>
+                        <div class="share-form__success" id="shareSuccess">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            <h3>Thank You!</h3>
+                            <p>Your memories have been received. Our team will review and may feature them in the gallery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="gallery-cta" aria-labelledby="gallery-cta-heading">
+            <div class="gallery-cta__bg">
+                <img src="img/lifted_hands.jpeg" alt="" aria-hidden="true" loading="lazy">
+            </div>
+            <div class="gallery-cta__overlay" aria-hidden="true"></div>
+            <canvas id="ctaParticles" class="gallery-cta__particles" aria-hidden="true"></canvas>
+            <div class="container">
+                <div class="gallery-cta__content reveal">
+                    <h2 id="gallery-cta-heading" class="gallery-cta__title">Be Part of the Next Encounter</h2>
+                    <p class="gallery-cta__sub">Experience worship, revival, and transformation at the next Send Down Thy Glory Crusade.</p>
+                    <div class="gallery-cta__actions">
+                        <a href="index.html#registration" class="btn btn--primary btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Now</a>
+                        <a href="index.html#livestream" class="btn btn--glass btn--lg"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                        <a href="index.html#donate" class="btn btn--outline btn--lg"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Donate</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact" role="contentinfo">
+        <div class="footer__cta">
+            <div class="footer__cta-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__cta-inner">
+                    <div class="footer__cta-text">
+                        <span class="footer__eyebrow">Join The Movement</span>
+                        <h2 class="footer__cta-title">Experience The Glory</h2>
+                        <p>Thousands gather. Lives transform. Heaven invades earth. Your seat awaits at SDTG 2026.</p>
+                    </div>
+                    <div class="footer__cta-actions">
+                        <a href="index.html#registration" class="btn btn--primary btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Free</a>
+                        <a href="index.html#livestream" class="btn btn--glass btn--lg"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__main">
+            <div class="footer__glow footer__glow--left" aria-hidden="true"></div>
+            <div class="footer__glow footer__glow--right" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__intro">
+                    <a href="index.html" class="footer__logo">
+                        <div class="logo-video logo-video--lg" aria-hidden="true">
+                            <video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video>
+                        </div>
+                        <span class="footer__logo-text">
+                            <strong>Send Down Thy Glory</strong>
+                            <small>International Music Crusade</small>
+                        </span>
+                    </a>
+                    <p class="footer__tagline">Igniting revival across nations through worship, prayer, and the manifest glory of God.</p>
+                    <div class="footer__stats">
+                        <div class="footer__stat"><span>12+</span><small>Years</small></div>
+                        <div class="footer__stat"><span>250K+</span><small>Attendees</small></div>
+                        <div class="footer__stat"><span>45+</span><small>Nations</small></div>
+                    </div>
+                </div>
+
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Explore</h3>
+                        <ul class="footer__links">
+                            <li><a href="about.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> About SDTG</a></li>
+                            <li><a href="index.html#speakers"><i class="fas fa-chevron-right" aria-hidden="true"></i> Speakers</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Gallery</a></li>
+                            <li><a href="index.html#timeline"><i class="fas fa-chevron-right" aria-hidden="true"></i> Our Legacy</a></li>
+                            <li><a href="index.html#news"><i class="fas fa-chevron-right" aria-hidden="true"></i> News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Get Involved</h3>
+                        <ul class="footer__links">
+                            <li><a href="index.html#registration"><i class="fas fa-chevron-right" aria-hidden="true"></i> Registration</a></li>
+                            <li><a href="index.html#livestream"><i class="fas fa-chevron-right" aria-hidden="true"></i> Livestream</a></li>
+                            <li><a href="index.html#donate"><i class="fas fa-chevron-right" aria-hidden="true"></i> Give &amp; Support</a></li>
+                            <li><a href="index.html#prayer"><i class="fas fa-chevron-right" aria-hidden="true"></i> Prayer Request</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Contact</h3>
+                        <ul class="footer__contact">
+                            <li>
+                                <span class="footer__contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                                <span>Owerri, Imo State, Nigeria</span>
+                            </li>
+                            <li>
+                                <span class="footer__contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                                <a href="tel:+2348034567890">+234 803 456 7890</a>
+                            </li>
+                            <li>
+                                <span class="footer__contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                                <a href="mailto:info@sdtg.org">info@sdtg.org</a>
+                            </li>
+                            <li>
+                                <span class="footer__contact-icon"><i class="far fa-clock" aria-hidden="true"></i></span>
+                                <span>Mon – Sat, 9AM – 6PM WAT</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__col--newsletter">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Stay Connected</h3>
+                        <p>Crusade updates, speaker announcements, and worship resources — straight to your inbox.</p>
+                        <form class="footer__newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+                            <button type="submit" class="btn btn--primary">Subscribe</button>
+                        </form>
+                        <div class="footer__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">&copy; 2026 Send Down Thy Glory International Music Crusade. All rights reserved.</p>
+                    <div class="footer__bottom-links">
+                        <a href="about.html">About</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="#contact">Contact</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="index.html#donate">Give</a>
+                    </div>
+                    <p class="footer__parent">A ministry of <a href="../index.html">AG Ikenebgu Assemblies of God</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+        <div class="lightbox__inner">
+            <span class="lightbox__counter" id="lightboxCounter">1 / 1</span>
+            <button type="button" class="lightbox__close" aria-label="Close lightbox"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <button type="button" class="lightbox__btn lightbox__btn--prev" aria-label="Previous image"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+            <div class="lightbox__img-wrap">
+                <img id="lightboxImg" src="" alt="">
+            </div>
+            <button type="button" class="lightbox__btn lightbox__btn--next" aria-label="Next image"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+            <div class="lightbox__meta">
+                <p class="lightbox__year" id="lightboxYear"></p>
+                <h3 class="lightbox__title" id="lightboxTitle"></h3>
+                <p class="lightbox__caption" id="lightboxCaption"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video player" aria-hidden="true">
+        <div class="video-modal__inner">
+            <button type="button" class="video-modal__close" aria-label="Close video"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <div class="video-modal__frame" id="videoModalFrame"></div>
+            <p class="video-modal__title" id="videoModalTitle"></p>
+        </div>
+    </div>
+
+    <button type="button" id="scrollTop" class="scroll-top" aria-label="Scroll to top" title="Back to top">
+        <span class="scroll-top__ring" aria-hidden="true"></span>
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="js/gallery.js" defer></script>
+</body>
+</html>

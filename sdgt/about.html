@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Send Down Thy Glory International Music Crusade</title>
+    <meta name="description" content="The story, mission, vision, and people behind Send Down Thy Glory — Africa's most anticipated international gospel crusade.">
+    <meta name="theme-color" content="#1a0a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/sdtg-logo.svg" type="image/svg+xml">
+
+    <style>
+        /* About page — section-specific styles (shared navbar/footer in main.css) */
+        .about-hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            min-height: clamp(340px, 62vh, 50px);
+            padding: calc(var(--navbar-height) + 40px) 0 48px;
+        }
+
+        .about-hero__media {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .about-hero__media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+        }
+
+        .about-hero__overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(
+                135deg,
+                rgba(10, 6, 18, 0.88) 0%,
+                rgba(26, 10, 46, 0.75) 45%,
+                rgba(10, 6, 18, 0.85) 100%
+            );
+        }
+
+        .about-hero__overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 70% 80% at 50% 100%, rgba(212, 175, 55, 0.12) 0%, transparent 60%);
+        }
+
+        .about-hero__bg,
+        .about-hero__grid,
+        .about-hero__orb,
+        .about-hero__beam,
+        .about-hero__scroll {
+            display: none;
+        }
+
+        .about-hero__content {
+            position: relative;
+            z-index: 5;
+            text-align: center;
+            max-width: 760px;
+            padding: 0 24px;
+        }
+
+        .about-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(212,175,55,0.1);
+            border: 1px solid rgba(212,175,55,0.25);
+            border-radius: 50px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--sdtg-gold);
+            margin-bottom: 16px;
+            animation: fade-in-down 0.8s ease forwards;
+        }
+
+        .about-hero__badge i { font-size: 0.7rem; }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .about-hero__title {
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(1.75rem, 5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: 0.05em;
+            color: var(--sdtg-white);
+            margin-bottom: 14px;
+            animation: fade-in-up 0.9s ease 0.2s both;
+        }
+
+        .about-hero__title span {
+            background: linear-gradient(135deg, var(--sdtg-gold-light), var(--sdtg-gold), var(--sdtg-gold-deep));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-hero__sub {
+            font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+            color: var(--sdtg-text);
+            max-width: 560px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.65;
+            animation: fade-in-up 0.9s ease 0.4s both;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .about-hero__stats {
+            display: none;
+        }
+
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade-in-down {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* ============================================================
+           STORY SECTION — Immersive full-bleed text
+        ============================================================ */
+        .story {
+            padding: 140px 0;
+            background: var(--sdtg-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story::before {
+            content: '"';
+            position: absolute;
+            top: -40px;
+            left: -20px;
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(200px, 30vw, 360px);
+            color: rgba(212,175,55,0.03);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .story__grid {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .story__label {
+            position: sticky;
+            top: 140px;
+        }
+
+        .story__label-line {
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sdtg-gold), transparent);
+            margin-bottom: 20px;
+        }
+
+        .story__label h2 {
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--sdtg-white);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .story__label h2 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--sdtg-gold-light), var(--sdtg-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .story__label p {
+            color: var(--sdtg-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .story__year-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+            border: 1px solid var(--sdtg-glass-border);
+            border-radius: var(--sdtg-radius);
+            padding: 12px 20px;
+        }
+
+        .story__year-badge strong {
+            font-family: var(--sdtg-font-display);
+            font-size: 1.5rem;
+            color: var(--sdtg-gold);
+        }
+
+        .story__year-badge span {
+            font-size: 0.75rem;
+            color: var(--sdtg-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            line-height: 1.3;
+        }
+
+        .story__body {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .story__para {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .story__para.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .story__para:nth-child(2) { transition-delay: 0.1s; }
+        .story__para:nth-child(3) { transition-delay: 0.2s; }
+        .story__para:nth-child(4) { transition-delay: 0.3s; }
+
+        .story__para p {
+            font-size: 1.1rem;
+            color: var(--sdtg-text);
+            line-height: 1.9;
+        }
+
+        .story__para--lead p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--sdtg-white);
+            line-height: 1.8;
+        }
+
+        .story__pull-quote {
+            padding: 32px 36px;
+            border-left: 3px solid var(--sdtg-gold);
+            background: rgba(212,175,55,0.04);
+            border-radius: 0 var(--sdtg-radius) var(--sdtg-radius) 0;
+        }
+
+        .story__pull-quote blockquote {
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--sdtg-gold-light);
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* ============================================================
+           PILLARS — Mission / Vision / Values
+        ============================================================ */
+        .pillars {
+            padding: 120px 0;
+            background: linear-gradient(180deg, var(--sdtg-dark) 0%, var(--sdtg-purple) 60%, var(--sdtg-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillars__bg-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(80px, 18vw, 200px);
+            color: rgba(212,175,55,0.025);
+            white-space: nowrap;
+            pointer-events: none;
+            user-select: none;
+            letter-spacing: 0.1em;
+        }
+
+        .pillars__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: var(--sdtg-glass-border);
+            border-radius: var(--sdtg-radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--sdtg-glass-border);
+            position: relative;
+        }
+
+        .pillar-card {
+            background: rgba(10, 6, 18, 0.85);
+            padding: 56px 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all var(--sdtg-transition);
+            cursor: default;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(212,175,55,0.06), transparent);
+            opacity: 0;
+            transition: opacity var(--sdtg-transition);
+        }
+
+        .pillar-card:hover::before { opacity: 1; }
+
+        .pillar-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sdtg-gold), var(--sdtg-purple-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pillar-card:hover::after { transform: scaleX(1); }
+
+        .pillar-card__number {
+            position: absolute;
+            top: 24px;
+            right: 28px;
+            font-family: var(--sdtg-font-display);
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(212,175,55,0.06);
+            line-height: 1;
+            transition: color var(--sdtg-transition);
+        }
+
+        .pillar-card:hover .pillar-card__number { color: rgba(212,175,55,0.12); }
+
+        .pillar-card__icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: rgba(212,175,55,0.08);
+            border: 1px solid rgba(212,175,55,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--sdtg-gold);
+            margin-bottom: 28px;
+            transition: all var(--sdtg-transition);
+        }
+
+        .pillar-card:hover .pillar-card__icon {
+            background: var(--sdtg-gold);
+            color: var(--sdtg-dark);
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 24px var(--sdtg-glow);
+        }
+
+        .pillar-card h3 {
+            font-family: var(--sdtg-font-display);
+            font-size: 1.3rem;
+            color: var(--sdtg-white);
+            margin-bottom: 16px;
+            letter-spacing: 0.04em;
+        }
+
+        .pillar-card p {
+            font-size: 0.95rem;
+            color: var(--sdtg-text-muted);
+            line-height: 1.8;
+        }
+
+        /* ============================================================
+           FOUNDING STORY — Full bleed visual moment
+        ============================================================ */
+        .founding {
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: var(--sdtg-dark);
+        }
+
+        .founding__visual {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .founding__img {
+            position: absolute;
+            inset: 0;
+            background:
+                url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1600&q=80')
+                center / cover no-repeat;
+            filter: brightness(0.3) saturate(0.6);
+            transition: transform 8s ease;
+        }
+
+        .founding:hover .founding__img {
+            transform: scale(1.04);
+        }
+
+        .founding__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(26, 10, 46, 0.85) 0%,
+                rgba(10, 6, 18, 0.6) 50%,
+                rgba(26, 10, 46, 0.85) 100%
+            );
+        }
+
+        .founding__content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: 48px 24px;
+        }
+
+        .founding__year {
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(5rem, 15vw, 10rem);
+            font-weight: 700;
+            line-height: 0.9;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(212,175,55,0.3);
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .founding__tagline {
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--sdtg-white);
+            margin-bottom: 20px;
+        }
+
+        .founding__tagline em {
+            font-style: normal;
+            color: var(--sdtg-gold);
+        }
+
+        .founding__text {
+            font-size: 1.05rem;
+            color: var(--sdtg-text-muted);
+            line-height: 1.8;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ============================================================
+           LEADERSHIP SECTION
+        ============================================================ */
+        .leadership {
+            padding: 140px 0;
+            background: var(--sdtg-dark-soft);
+            position: relative;
+        }
+
+        .leadership__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .leadership__grid--reverse { direction: rtl; }
+        .leadership__grid--reverse > * { direction: ltr; }
+
+        .leadership__image {
+            position: relative;
+        }
+
+        .leadership__image-wrap {
+            position: relative;
+            border-radius: var(--sdtg-radius-lg);
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            border: 1px solid var(--sdtg-glass-border);
+        }
+
+        .leadership__image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .leadership__image:hover .leadership__image-wrap img { transform: scale(1.05); }
+
+        .leadership__image-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,6,18,0.6) 0%, transparent 50%);
+        }
+
+        .leadership__accent {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212,175,55,0.2), transparent 70%);
+            filter: blur(20px);
+            pointer-events: none;
+        }
+
+        .leadership__accent--tl { top: -30px; left: -30px; }
+        .leadership__accent--br { bottom: -30px; right: -30px; background: radial-gradient(circle, rgba(74,45,122,0.4), transparent 70%); }
+
+        .leadership__name-badge {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            padding: 20px 24px;
+            background: linear-gradient(to top, rgba(10,6,18,0.95), transparent);
+        }
+
+        .leadership__name-badge h3 {
+            font-family: var(--sdtg-font-display);
+            font-size: 1.3rem;
+            color: var(--sdtg-white);
+            margin-bottom: 4px;
+        }
+
+        .leadership__name-badge span {
+            font-size: 0.8rem;
+            color: var(--sdtg-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .leadership__content { }
+
+        .leadership__content h2 {
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            color: var(--sdtg-white);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .leadership__content p {
+            color: var(--sdtg-text-muted);
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+
+        .leadership__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .leadership__tag {
+            padding: 6px 16px;
+            background: rgba(212,175,55,0.08);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--sdtg-gold);
+            font-weight: 500;
+        }
+
+        /* Team cards */
+        .team-section {
+            margin-top: 80px;
+        }
+
+        .team-section__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .team-card {
+            text-align: center;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--sdtg-glass-border);
+            border-radius: var(--sdtg-radius-lg);
+            padding: 32px 20px;
+            transition: all var(--sdtg-transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--sdtg-gold), transparent);
+            transform: scaleX(0);
+            transition: transform var(--sdtg-transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212,175,55,0.3);
+            box-shadow: 0 20px 48px rgba(0,0,0,0.3);
+        }
+
+        .team-card:hover::before { transform: scaleX(1); }
+
+        .team-card__avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            overflow: hidden;
+            border: 2px solid var(--sdtg-glass-border);
+            transition: border-color var(--sdtg-transition);
+        }
+
+        .team-card:hover .team-card__avatar { border-color: var(--sdtg-gold); }
+
+        .team-card__avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-card h4 {
+            font-family: var(--sdtg-font-display);
+            font-size: 1rem;
+            color: var(--sdtg-white);
+            margin-bottom: 6px;
+        }
+
+        .team-card__role {
+            font-size: 0.78rem;
+            color: var(--sdtg-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 12px;
+        }
+
+        .team-card p {
+            font-size: 0.85rem;
+            color: var(--sdtg-text-muted);
+            line-height: 1.6;
+        }
+
+        /* ============================================================
+           VALUES — Icon Grid
+        ============================================================ */
+        .values {
+            padding: 120px 0;
+            background: var(--sdtg-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .values::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--sdtg-gold), transparent);
+        }
+
+        .values__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .value-card {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            gap: 24px;
+            align-items: start;
+            padding: 32px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--sdtg-glass-border);
+            border-radius: var(--sdtg-radius-lg);
+            transition: all var(--sdtg-transition);
+        }
+
+        .value-card:hover {
+            background: rgba(212,175,55,0.04);
+            border-color: rgba(212,175,55,0.25);
+            transform: translateX(6px);
+        }
+
+        .value-card__icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+            border: 1px solid rgba(212,175,55,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--sdtg-gold);
+            flex-shrink: 0;
+            transition: all var(--sdtg-transition);
+        }
+
+        .value-card:hover .value-card__icon {
+            background: var(--sdtg-gold);
+            color: var(--sdtg-dark);
+            transform: scale(1.08);
+        }
+
+        .value-card__text h3 {
+            font-family: var(--sdtg-font-display);
+            font-size: 1.1rem;
+            color: var(--sdtg-white);
+            margin-bottom: 10px;
+        }
+
+        .value-card__text p {
+            font-size: 0.9rem;
+            color: var(--sdtg-text-muted);
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           IMPACT NUMBERS — Bold full-width strip
+        ============================================================ */
+        .impact-strip {
+            padding: 100px 0;
+            background: var(--sdtg-purple);
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid var(--sdtg-glass-border);
+            border-bottom: 1px solid var(--sdtg-glass-border);
+        }
+
+        .impact-strip__bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(212,175,55,0.08) 0%, transparent 70%);
+        }
+
+        .impact-strip__grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+        }
+
+        .impact-item {
+            text-align: center;
+            padding: 20px;
+            border-right: 1px solid var(--sdtg-glass-border);
+            transition: background var(--sdtg-transition);
+        }
+
+        .impact-item:last-child { border-right: none; }
+        .impact-item:hover { background: rgba(212,175,55,0.04); }
+
+        .impact-item__num {
+            display: block;
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--sdtg-gold);
+            line-height: 1;
+            text-shadow: 0 0 40px var(--sdtg-glow);
+            margin-bottom: 12px;
+        }
+
+        .impact-item__label {
+            font-size: 0.78rem;
+            color: var(--sdtg-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+
+        /* ============================================================
+           CTA BAND
+        ============================================================ */
+        .about-cta {
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .about-cta__bg {
+            position: absolute;
+            inset: 0;
+            background:
+                url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1920&q=80')
+                center/cover no-repeat;
+        }
+
+        .about-cta__bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26,10,46,0.94) 0%, rgba(10,6,18,0.9) 100%);
+        }
+
+        .about-cta__content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .about-cta h2 {
+            font-family: var(--sdtg-font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--sdtg-white);
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+
+        .about-cta h2 span {
+            background: linear-gradient(135deg, var(--sdtg-gold-light), var(--sdtg-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-cta p {
+            color: var(--sdtg-text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 48px;
+            line-height: 1.8;
+        }
+
+        .about-cta__buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================================
+           SCROLL REVEAL
+        ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-32px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(32px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-left.revealed, .reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ============================================================
+           RESPONSIVE — About sections only (navbar/footer in main.css)
+        ============================================================ */
+        @media (max-width: 1024px) {
+            .story__grid { grid-template-columns: 1fr; gap: 48px; }
+            .story__label { position: static; }
+            .pillars__grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .impact-strip__grid { grid-template-columns: repeat(3, 1fr); }
+            .impact-item:nth-child(4), .impact-item:nth-child(5) { border-top: 1px solid var(--sdtg-glass-border); }
+            .impact-item:nth-child(3) { border-right: none; }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                min-height: clamp(280px, 44vh, 380px);
+                padding: calc(var(--navbar-height) + 32px) 0 40px;
+            }
+
+            .about-hero__title { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+
+            .leadership__grid { grid-template-columns: 1fr; gap: 40px; }
+            .leadership__grid--reverse { direction: ltr; }
+            .values__grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .impact-strip__grid { grid-template-columns: repeat(2, 1fr); }
+            .impact-item:nth-child(3) { border-right: 1px solid var(--sdtg-glass-border); }
+            .impact-item:nth-child(odd):last-child { border-right: none; }
+
+            .founding__year { font-size: clamp(4rem, 20vw, 7rem); }
+            .pillar-card { padding: 40px 28px; }
+        }
+
+        @media (max-width: 480px) {
+            .team-grid { grid-template-columns: 1fr; }
+            .impact-strip__grid { grid-template-columns: 1fr; }
+            .impact-item { border-right: none; border-bottom: 1px solid var(--sdtg-glass-border); }
+            .impact-item:last-child { border-bottom: none; }
+            .about-cta__buttons { flex-direction: column; align-items: center; }
+            .about-cta__buttons .btn { width: 100%; max-width: 320px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal, .reveal-left, .reveal-right, .story__para { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar" role="banner">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand" aria-label="Send Down Thy Glory Home">
+                <div class="logo-video logo-video--sm" aria-hidden="true">
+                    <video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video>
+                </div>
+                <span class="navbar__logo-text">
+                    <strong>SDTG</strong>
+                    <small>Send Down Thy Glory</small>
+                </span>
+            </a>
+
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="navbar__backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+            <nav class="navbar__menu" id="navMenu" role="navigation" aria-label="Main navigation">
+                <div class="navbar__menu-header">
+                    <span class="navbar__menu-eyebrow">Navigation</span>
+                    <span class="navbar__menu-title">Send Down Thy Glory</span>
+                </div>
+                <ul class="navbar__links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="index.html#speakers" class="nav-link">Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="index.html#livestream" class="nav-link">Livestream</a></li>
+                    <li><a href="index.html#registration" class="nav-link">Registration</a></li>
+                    <li><a href="index.html#donate" class="nav-link">Donate</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="navbar__actions">
+                    <a href="index.html#registration" class="btn btn--outline btn--sm">Register Now</a>
+                    <a href="index.html#livestream" class="btn btn--primary btn--sm"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ===== HERO ===== -->
+        <section class="about-hero" aria-label="About SDTG Hero">
+            <div class="about-hero__media">
+                <img src="img/lifted_hands.jpeg" alt="Worshippers with hands raised at Send Down Thy Glory crusade" width="1920" height="1080" fetchpriority="high">
+            </div>
+            <div class="about-hero__overlay" aria-hidden="true"></div>
+
+            <div class="about-hero__content">
+                <div class="about-hero__badge">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    Our Story · Our Mission · Our People
+                </div>
+
+                <h1 class="about-hero__title">
+                    Born For <span>His Glory</span>
+                </h1>
+
+                <p class="about-hero__sub">
+                    For over a decade, Send Down Thy Glory has gathered the hungry and the hopeful — creating sacred moments where heaven invades earth and lives are forever changed.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== STORY ===== -->
+        <section class="story" id="story" aria-labelledby="story-heading">
+            <div class="container">
+                <div class="story__grid">
+                    <div class="story__label">
+                        <div class="story__label-line" aria-hidden="true"></div>
+                        <span class="section-eyebrow">Our Story</span>
+                        <h2 id="story-heading">
+                            Where It All<br><em>Began</em>
+                        </h2>
+                        <p>A small prayer meeting. A burning desire. A God who answers.</p>
+                        <div class="story__year-badge">
+                            <strong>2014</strong>
+                            <span>Owerri,<br>Nigeria</span>
+                        </div>
+                    </div>
+
+                    <div class="story__body">
+                        <div class="story__para story__para--lead">
+                            <p>In the heart of Owerri, a small gathering of 800 believers came together with a single prayer: "Lord, send down Your glory." What began as an intimate worship night would ignite a movement that would span continents and generations.</p>
+                        </div>
+
+                        <div class="story__para">
+                            <p>The founding vision was simple yet profound — to create a space where the presence of God was not just invited but expected; where every prayer ascended with the faith of thousands, and every worship song became a prophetic declaration over nations.</p>
+                        </div>
+
+                        <div class="story__pull-quote">
+                            <blockquote>"We did not build an event. We built an altar — and God has been faithful to meet us there every single year, with signs and wonders that no human hand could orchestrate."</blockquote>
+                        </div>
+
+                        <div class="story__para">
+                            <p>Year after year, the crusade grew — not through marketing budgets or celebrity endorsements, but through the undeniable testimony of changed lives. By 2019, delegates were flying in from 15 nations. By 2023, the livestream reached over half a million viewers worldwide. Today, SDTG stands as one of Africa's most celebrated international gospel crusades, carrying the fire of revival from Owerri to the ends of the earth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PILLARS ===== -->
+        <section class="pillars" id="pillars" aria-labelledby="pillars-heading">
+            <div class="pillars__bg-text" aria-hidden="true">GLORY</div>
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">What We Stand For</span>
+                    <h2 id="pillars-heading" class="section-title">Mission · Vision · Purpose</h2>
+                </div>
+
+                <div class="pillars__grid">
+                    <div class="pillar-card">
+                        <span class="pillar-card__number" aria-hidden="true">01</span>
+                        <div class="pillar-card__icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>To ignite sustained revival through worship and the proclaimed Word — creating an atmosphere where miracles, healing, and salvation are not exceptions but everyday experiences of God's manifest glory.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <span class="pillar-card__number" aria-hidden="true">02</span>
+                        <div class="pillar-card__icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
+                        <h3>Our Vision</h3>
+                        <p>A generation fully awakened to the glory of God — equipped, empowered, and commissioned to carry revival fire from Owerri to every tribe, tongue, and nation on the face of the earth.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <span class="pillar-card__number" aria-hidden="true">03</span>
+                        <div class="pillar-card__icon"><i class="fas fa-fire-alt" aria-hidden="true"></i></div>
+                        <h3>Our Purpose</h3>
+                        <p>We exist not merely to host events, but to build eternal altars — places of encounter where the lost are found, the broken are mended, and the church rises in her full authority and anointing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOUNDING MOMENT ===== -->
+        <section class="founding" aria-label="The founding moment of SDTG">
+            <div class="founding__visual">
+                <div class="founding__img" role="presentation"></div>
+                <div class="founding__overlay" aria-hidden="true"></div>
+                <div class="founding__content">
+                    <span class="founding__year" aria-label="Year 2014">2014</span>
+                    <h2 class="founding__tagline">800 Voices.<br><em>One Prayer.</em></h2>
+                    <p class="founding__text">The first crusade gathered in faith, not knowing that a decade later, that same prayer would echo across 45 nations and transform a quarter million lives.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== LEADERSHIP ===== -->
+        <section class="leadership" id="leadership" aria-labelledby="leadership-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">The People Behind The Glory</span>
+                    <h2 id="leadership-heading" class="section-title">Leadership</h2>
+                </div>
+
+                <!-- Founder -->
+                <div class="leadership__grid">
+                    <div class="leadership__image reveal-left">
+                        <div class="leadership__accent leadership__accent--tl" aria-hidden="true"></div>
+                        <div class="leadership__accent leadership__accent--br" aria-hidden="true"></div>
+                        <div class="leadership__image-wrap">
+                            <img src="img/main1.jpg"
+                                 alt="Founder and Senior Pastor of SDTG" loading="lazy">
+                            <div class="leadership__name-badge">
+                                <h3>Rev. Bethel Nwanebu</h3>
+                                <span>Founder &amp; Visionary</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="leadership__content reveal-right">
+                        <span class="section-eyebrow">The Founder</span>
+                        <h2>A Vision Born<br>In The Secret Place</h2>
+                        <p>Rev. Bethel Nwanebu received the mandate for Send Down Thy Glory during an extended season of prayer and fasting in 2013. What God showed him was not merely a crusade — it was a portal through which heaven would pour revival upon a generation.</p>
+                        <p>With a background spanning pastoral ministry, music, and intercessory prayer, he carries a rare combination of gifts that make SDTG uniquely positioned to touch every dimension of the human spirit — intellect, emotion, and the deepest longings of the soul.</p>
+                        <p>Under his leadership, the crusade has grown from a local gathering to an internationally recognized move of God, receiving features on global Christian networks and drawing delegates from six continents.</p>
+                        <div class="leadership__tags">
+                            <span class="leadership__tag">Apostolic Minister</span>
+                            <span class="leadership__tag">Worship Leader</span>
+                            <span class="leadership__tag">Revival Preacher</span>
+                            <span class="leadership__tag">Author</span>
+                            <span class="leadership__tag">Conference Speaker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Co-leader -->
+                <div class="leadership__grid leadership__grid--reverse">
+                    <div class="leadership__image reveal-right">
+                        <div class="leadership__accent leadership__accent--tl" aria-hidden="true"></div>
+                        <div class="leadership__accent leadership__accent--br" aria-hidden="true"></div>
+                        <div class="leadership__image-wrap">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+                                 alt="Worship Director of SDTG" loading="lazy">
+                            <div class="leadership__name-badge">
+                                <h3>Min. Adaeze Ikenebgu</h3>
+                                <span>Worship Director</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="leadership__content reveal-left">
+                        <span class="section-eyebrow">The Worship Director</span>
+                        <h2>Crafting Atmospheres<br>Of Encounter</h2>
+                        <p>Minister Adaeze Ikenebgu leads the worship dimension of SDTG with an anointing that consistently ushers thousands into profound encounters with God. Her prophetic sensitivity and musical excellence set the tone for every session of the crusade.</p>
+                        <p>A recording artist in her own right, her worship compositions have been featured on international gospel platforms, and her voice has ministered across West Africa, Europe, and the Americas. She believes that worship is not a warm-up to the Word — it is itself a vehicle of transformation.</p>
+                        <div class="leadership__tags">
+                            <span class="leadership__tag">Gospel Artist</span>
+                            <span class="leadership__tag">Worship Director</span>
+                            <span class="leadership__tag">Choir Trainer</span>
+                            <span class="leadership__tag">Psalmist</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team -->
+                <div class="team-section reveal">
+                    <div class="team-section__header">
+                        <span class="section-eyebrow">The Team</span>
+                        <h3 class="section-title" style="font-size: clamp(1.5rem, 3.5vw, 2rem);">Faithful Servants Behind The Scenes</h3>
+                    </div>
+
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="team-card__avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="Programme Director" loading="lazy">
+                            </div>
+                            <h4>Bro. Emeka Eze</h4>
+                            <p class="team-card__role">Programme Director</p>
+                            <p>Coordinates the crusade programme from planning to execution with meticulous precision.</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-card__avatar">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Media and Creative Director" loading="lazy">
+                            </div>
+                            <h4>Sis. Ngozi Obi</h4>
+                            <p class="team-card__role">Media &amp; Creative</p>
+                            <p>Leads the media team that broadcasts SDTG to millions across global streaming platforms.</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-card__avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" alt="Intercessory Prayer Coordinator" loading="lazy">
+                            </div>
+                            <h4>Sis. Blessing Nwosu</h4>
+                            <p class="team-card__role">Prayer Coordinator</p>
+                            <p>Leads our intercessory army, covering every aspect of the crusade in fervent prayer 24/7.</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-card__avatar">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Operations Manager" loading="lazy">
+                            </div>
+                            <h4>Bro. Kelechi Ogbu</h4>
+                            <p class="team-card__role">Operations Manager</p>
+                            <p>Manages logistics, venue setup, and the 200+ volunteer army that serves across three crusade nights.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VALUES ===== -->
+        <section class="values" id="values" aria-labelledby="values-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">What We Believe</span>
+                    <h2 id="values-heading" class="section-title">Our Core Values</h2>
+                </div>
+
+                <div class="values__grid">
+                    <div class="value-card reveal">
+                        <div class="value-card__icon"><i class="fas fa-dove" aria-hidden="true"></i></div>
+                        <div class="value-card__text">
+                            <h3>Spirit-Led Worship</h3>
+                            <p>We believe genuine worship cannot be manufactured or choreographed. Every service is yielded to the Holy Spirit's direction, creating spontaneous, authentic encounters with God's presence.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card reveal">
+                        <div class="value-card__icon"><i class="fas fa-bible" aria-hidden="true"></i></div>
+                        <div class="value-card__text">
+                            <h3>Word-Rooted Ministry</h3>
+                            <p>All we do is anchored in Scripture. Messages are prepared in prayer, delivered with clarity, and measured against the eternal truth of God's Word — never compromised for crowd approval.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card reveal">
+                        <div class="value-card__icon"><i class="fas fa-globe-africa" aria-hidden="true"></i></div>
+                        <div class="value-card__text">
+                            <h3>Kingdom Unity</h3>
+                            <p>SDTG is a gathering of the whole body of Christ — across denominations, tribes, and nations. We celebrate diversity as a reflection of the Kingdom's breadth and beauty.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card reveal">
+                        <div class="value-card__icon"><i class="fas fa-hands-praying" aria-hidden="true"></i></div>
+                        <div class="value-card__text">
+                            <h3>Expectant Faith</h3>
+                            <p>We come expecting God to show up with signs, wonders, and miracles. Our meetings are not religious formalities — they are divine appointments where the impossible becomes testimony.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card reveal">
+                        <div class="value-card__icon"><i class="fas fa-seedling" aria-hidden="true"></i></div>
+                        <div class="value-card__text">
+                            <h3>Generational Investment</h3>
+                            <p>We are deeply committed to raising the next generation of worshippers and ministers. The SDTG Youth Movement and Choir Academy exist to pass the revival torch forward.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card reveal">
+                        <div class="value-card__icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                        <div class="value-card__text">
+                            <h3>Compassionate Outreach</h3>
+                            <p>Glory is not confined to the crusade grounds. Our charity initiatives bring the tangible love of Christ to the marginalised, demonstrating that revival transforms whole communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== OUR LEGACY ===== -->
+        <section class="milestones" id="milestones" aria-labelledby="milestones-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Our Legacy</span>
+                    <h2 id="milestones-heading" class="section-title">SDTG Through The Years</h2>
+                </div>
+                <p class="legacy-hscroll__hint reveal">
+                    <i class="fas fa-arrows-alt-h" aria-hidden="true"></i>
+                    Scroll horizontally to explore our legacy
+                </p>
+            </div>
+
+            <div class="legacy-hscroll__wrap">
+                <div class="legacy-hscroll__track" id="legacyTrack" role="list" aria-label="SDTG legacy timeline">
+                    <div class="legacy-hscroll__spacer" aria-hidden="true"></div>
+
+                    <article class="legacy-card reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2014</span>
+                            <h3>The Beginning</h3>
+                            <p>800 believers, one prayer, and the birth of a movement in Owerri.</p>
+                        </div>
+                    </article>
+                    <article class="legacy-card reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2016</span>
+                            <h3>First Miracle Night</h3>
+                            <p>A dedicated healing service with notable testimonies of restored sight and mobility.</p>
+                        </div>
+                    </article>
+                    <article class="legacy-card reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2018</span>
+                            <h3>Breaking 5,000</h3>
+                            <p>Attendance crosses 5,000 for the first time. Overflow tents installed.</p>
+                        </div>
+                    </article>
+                    <article class="legacy-card reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2019</span>
+                            <h3>Nations Arise</h3>
+                            <p>First international ministers hosted. Delegates from 15 nations attend.</p>
+                        </div>
+                    </article>
+                    <article class="legacy-card reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2021</span>
+                            <h3>Digital Reach</h3>
+                            <p>Pandemic-era virtual crusade reaches 200K viewers across 28 countries.</p>
+                        </div>
+                    </article>
+                    <article class="legacy-card reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2022</span>
+                            <h3>Return of Glory</h3>
+                            <p>Post-pandemic comeback with doubled attendance and launch of SDTG Youth Movement.</p>
+                        </div>
+                    </article>
+                    <article class="legacy-card reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2023</span>
+                            <h3>Revival Fire</h3>
+                            <p>First live international livestream — 500K+ viewers. Delegates from 32 nations.</p>
+                        </div>
+                    </article>
+                    <article class="legacy-card reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2024</span>
+                            <h3>Heaven's Sound</h3>
+                            <p>Three nights of uninterrupted worship. Wheelchair deliverances documented on camera.</p>
+                        </div>
+                    </article>
+                    <article class="legacy-card reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2025</span>
+                            <h3>Glory Without Limits</h3>
+                            <p>30,000 attendees. 5,000+ souls saved. Featured on global Christian networks.</p>
+                        </div>
+                    </article>
+                    <article class="legacy-card legacy-card--featured reveal" role="listitem">
+                        <div class="legacy-card__marker" aria-hidden="true"></div>
+                        <div class="legacy-card__body">
+                            <span class="legacy-card__year">2026</span>
+                            <h3>Next Chapter</h3>
+                            <p>Aug 15–17. What God does next exceeds all we have seen. Join us.</p>
+                        </div>
+                    </article>
+
+                    <div class="legacy-hscroll__spacer" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== IMPACT STRIP ===== -->
+        <section class="impact-strip" aria-label="Impact Statistics">
+            <div class="impact-strip__bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="impact-strip__grid">
+                    <div class="impact-item">
+                        <span class="impact-item__num" data-target="12" data-suffix="+">12+</span>
+                        <span class="impact-item__label">Years of Ministry</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-item__num" data-target="250000" data-suffix="+">250K+</span>
+                        <span class="impact-item__label">Total Attendees</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-item__num" data-target="45" data-suffix="+">45+</span>
+                        <span class="impact-item__label">Nations Represented</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-item__num" data-target="180" data-suffix="+">180+</span>
+                        <span class="impact-item__label">Guest Ministers Hosted</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-item__num" data-target="50000" data-suffix="+">50K+</span>
+                        <span class="impact-item__label">Souls Impacted</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="about-cta" aria-label="Join SDTG 2026">
+            <div class="about-cta__bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="about-cta__content reveal">
+                    <span class="section-eyebrow">Your Seat Awaits</span>
+                    <h2>Be Part of the<br><span>2026 Chapter</span></h2>
+                    <p>The story of Send Down Thy Glory is still being written — and your presence, your prayer, your offering, and your worship are pages yet to be penned. Join thousands of believers August 15–17, 2026 in Owerri.</p>
+                    <div class="about-cta__buttons">
+                        <a href="index.html#registration" class="btn btn--primary btn--lg">
+                            <i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Free
+                        </a>
+                        <a href="index.html#livestream" class="btn btn--glass btn--lg">
+                            <i class="fas fa-play" aria-hidden="true"></i> Watch Live
+                        </a>
+                        <a href="index.html#donate" class="btn btn--glass btn--lg">
+                            <i class="fas fa-heart" aria-hidden="true"></i> Give &amp; Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact" role="contentinfo">
+        <!-- CTA Band -->
+        <div class="footer__cta">
+            <div class="footer__cta-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__cta-inner">
+                    <div class="footer__cta-text">
+                        <span class="footer__eyebrow">Join The Movement</span>
+                        <h2 class="footer__cta-title">Experience The Glory</h2>
+                        <p>Thousands gather. Lives transform. Heaven invades earth. Your seat awaits at SDTG 2026.</p>
+                    </div>
+                    <div class="footer__cta-actions">
+                        <a href="index.html#registration" class="btn btn--primary btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Free</a>
+                        <a href="index.html#livestream" class="btn btn--glass btn--lg"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="footer__main">
+            <div class="footer__glow footer__glow--left" aria-hidden="true"></div>
+            <div class="footer__glow footer__glow--right" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__intro">
+                    <a href="index.html" class="footer__logo">
+                        <div class="logo-video logo-video--lg" aria-hidden="true">
+                            <video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video>
+                        </div>
+                        <span class="footer__logo-text">
+                            <strong>Send Down Thy Glory</strong>
+                            <small>International Music Crusade</small>
+                        </span>
+                    </a>
+                    <p class="footer__tagline">Igniting revival across nations through worship, prayer, and the manifest glory of God.</p>
+                    <div class="footer__stats">
+                        <div class="footer__stat"><span>12+</span><small>Years</small></div>
+                        <div class="footer__stat"><span>250K+</span><small>Attendees</small></div>
+                        <div class="footer__stat"><span>45+</span><small>Nations</small></div>
+                    </div>
+                </div>
+
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Explore</h3>
+                        <ul class="footer__links">
+                            <li><a href="about.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> About SDTG</a></li>
+                            <li><a href="index.html#speakers"><i class="fas fa-chevron-right" aria-hidden="true"></i> Speakers</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Gallery</a></li>
+                            <li><a href="#milestones"><i class="fas fa-chevron-right" aria-hidden="true"></i> Our Legacy</a></li>
+                            <li><a href="index.html#news"><i class="fas fa-chevron-right" aria-hidden="true"></i> News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Get Involved</h3>
+                        <ul class="footer__links">
+                            <li><a href="index.html#registration"><i class="fas fa-chevron-right" aria-hidden="true"></i> Registration</a></li>
+                            <li><a href="index.html#livestream"><i class="fas fa-chevron-right" aria-hidden="true"></i> Livestream</a></li>
+                            <li><a href="index.html#donate"><i class="fas fa-chevron-right" aria-hidden="true"></i> Give &amp; Support</a></li>
+                            <li><a href="index.html#prayer"><i class="fas fa-chevron-right" aria-hidden="true"></i> Prayer Request</a></li>
+                            <li><a href="../donate.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Donate Portal</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Contact</h3>
+                        <ul class="footer__contact">
+                            <li>
+                                <span class="footer__contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                                <span>Owerri, Imo State, Nigeria</span>
+                            </li>
+                            <li>
+                                <span class="footer__contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                                <a href="tel:+2348034567890">+234 803 456 7890</a>
+                            </li>
+                            <li>
+                                <span class="footer__contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                                <a href="mailto:info@sdtg.org">info@sdtg.org</a>
+                            </li>
+                            <li>
+                                <span class="footer__contact-icon"><i class="far fa-clock" aria-hidden="true"></i></span>
+                                <span>Mon – Sat, 9AM – 6PM WAT</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__col--newsletter">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Stay Connected</h3>
+                        <p>Crusade updates, speaker announcements, and worship resources — straight to your inbox.</p>
+                        <form class="footer__newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+                            <button type="submit" class="btn btn--primary">Subscribe</button>
+                        </form>
+                        <div class="footer__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">&copy; 2026 Send Down Thy Glory International Music Crusade. All rights reserved.</p>
+                    <div class="footer__bottom-links">
+                        <a href="about.html">About</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="#contact">Contact</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="index.html#donate">Give</a>
+                    </div>
+                    <p class="footer__parent">A ministry of <a href="../index.html">AG Ikenebgu Assemblies of God</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button type="button" id="scrollTop" class="scroll-top" aria-label="Scroll to top" title="Back to top">
+        <span class="scroll-top__ring" aria-hidden="true"></span>
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <script>
+        (function () {
+            'use strict';
+
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            /* --- Video logos (navbar & footer) --- */
+            document.querySelectorAll('.logo-video__el').forEach(video => {
+                video.muted = true;
+                video.playsInline = true;
+                const play = () => video.play().catch(() => {});
+                if (video.readyState >= 2) play();
+                else video.addEventListener('loadeddata', play, { once: true });
+            });
+
+            /* --- Newsletter --- */
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', e => {
+                    e.preventDefault();
+                    const input = newsletterForm.querySelector('input');
+                    const btn = newsletterForm.querySelector('button');
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Subscribed!';
+                    input.value = '';
+                    setTimeout(() => { btn.textContent = originalText; }, 2000);
+                });
+            }
+
+            /* --- Navbar --- */
+            const navbar = document.getElementById('navbar');
+            const toggle = document.getElementById('navToggle');
+            const menu = document.getElementById('navMenu');
+            const backdrop = document.getElementById('navBackdrop');
+
+            const closeMenu = () => {
+                menu.classList.remove('open');
+                toggle.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('no-scroll');
+                if (backdrop) backdrop.classList.remove('active');
+            };
+
+            const openMenu = () => {
+                menu.classList.add('open');
+                toggle.classList.add('active');
+                toggle.setAttribute('aria-expanded', 'true');
+                document.body.classList.add('no-scroll');
+                if (backdrop) backdrop.classList.add('active');
+            };
+
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 60);
+            }, { passive: true });
+
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+
+            if (toggle) toggle.addEventListener('click', () => menu.classList.contains('open') ? closeMenu() : openMenu());
+            if (backdrop) backdrop.addEventListener('click', closeMenu);
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+            document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', closeMenu));
+
+            /* --- Scroll Reveal --- */
+            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .story__para');
+
+            if (prefersReducedMotion) {
+                revealEls.forEach(el => el.classList.add('revealed'));
+            } else {
+                const revealObs = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const delay = parseInt(entry.target.dataset.delay || 0, 10);
+                            setTimeout(() => entry.target.classList.add('revealed'), delay);
+                            revealObs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+                revealEls.forEach(el => revealObs.observe(el));
+            }
+
+            /* --- Scroll to Top --- */
+            const scrollBtn = document.getElementById('scrollTop');
+            if (scrollBtn) {
+                window.addEventListener('scroll', () => {
+                    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+                }, { passive: true });
+
+                scrollBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+                });
+            }
+
+            /* --- Legacy horizontal scroll (drag) --- */
+            document.querySelectorAll('.legacy-hscroll__track').forEach(track => {
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                track.addEventListener('mousedown', e => {
+                    isDown = true;
+                    track.classList.add('is-dragging');
+                    startX = e.pageX - track.offsetLeft;
+                    scrollLeft = track.scrollLeft;
+                });
+
+                track.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    track.classList.remove('is-dragging');
+                });
+
+                track.addEventListener('mouseup', () => {
+                    isDown = false;
+                    track.classList.remove('is-dragging');
+                });
+
+                track.addEventListener('mousemove', e => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - track.offsetLeft;
+                    track.scrollLeft = scrollLeft - (x - startX) * 1.5;
+                });
+            });
+
+            /* --- Smooth anchor --- */
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', e => {
+                    const target = document.querySelector(a.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+                    }
+                });
+            });
+
+        })();
+    </script>
+</body>
+</html>
