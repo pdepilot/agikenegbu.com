@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register — Send Down Thy Glory International Music Crusade</title>
+    <meta name="description" content="Register for Send Down Thy Glory 2026 — reserve your place for worship, prayer, miracles, and transformation. Free registration for physical and online attendance.">
+    <meta name="keywords" content="SDTG registration, Send Down Thy Glory register, gospel crusade Nigeria, worship event registration">
+    <meta property="og:title" content="Register for Send Down Thy Glory 2026">
+    <meta property="og:description" content="Reserve your place for a powerful encounter of worship, prayer, miracles, and transformation.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/lifted_hands.jpeg">
+    <meta name="theme-color" content="#1a0a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="icon" href="img/sdtg-logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navbar -->
+    <header class="navbar scrolled" id="navbar" role="banner">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand" aria-label="Send Down Thy Glory Home">
+                <div class="logo-video logo-video--sm" aria-hidden="true">
+                    <video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video>
+                </div>
+                <span class="navbar__logo-text">
+                    <strong>SDTG</strong>
+                    <small>Send Down Thy Glory</small>
+                </span>
+            </a>
+
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="navbar__backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+            <nav class="navbar__menu" id="navMenu" role="navigation" aria-label="Main navigation">
+                <div class="navbar__menu-header">
+                    <span class="navbar__menu-eyebrow">Navigation</span>
+                    <span class="navbar__menu-title">Send Down Thy Glory</span>
+                </div>
+                <ul class="navbar__links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="index.html#speakers" class="nav-link">Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="index.html#livestream" class="nav-link">Livestream</a></li>
+                    <li><a href="registration.html" class="nav-link active" aria-current="page">Registration</a></li>
+                    <li><a href="index.html#donate" class="nav-link">Donate</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="navbar__actions">
+                    <a href="index.html#livestream" class="btn btn--primary btn--sm"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                    <a href="index.html#donate" class="btn btn--outline btn--sm">Donate</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="reg-hero" aria-label="Registration hero">
+            <div class="reg-hero__media">
+                <img src="img/lifted_hands.jpeg" alt="" width="1920" height="1080" fetchpriority="high">
+            </div>
+            <div class="reg-hero__overlay" aria-hidden="true"></div>
+            <div class="reg-hero__rays" aria-hidden="true"></div>
+            <canvas id="regHeroParticles" class="reg-hero__particles" aria-hidden="true"></canvas>
+
+            <div class="reg-hero__content">
+                <p class="reg-hero__badge reveal">
+                    <i class="fas fa-ticket-alt" aria-hidden="true"></i>
+                    Your Seat Awaits · Free Registration
+                </p>
+                <h1 class="reg-hero__title reveal" data-delay="100">
+                    Register For <span>Send Down Thy Glory</span>
+                </h1>
+                <p class="reg-hero__sub reveal" data-delay="200">
+                    Reserve your place for a powerful encounter of worship, prayer, miracles, and transformation.
+                </p>
+                <div class="reg-hero__actions reveal" data-delay="300">
+                    <a href="#register" class="btn btn--primary btn--lg">
+                        <i class="fas fa-arrow-down" aria-hidden="true"></i>
+                        Register Now
+                    </a>
+                    <a href="#benefits" class="btn btn--glass btn--lg">
+                        <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Progress -->
+        <section class="reg-journey" aria-label="Registration journey">
+            <div class="container">
+                <div class="reg-journey__track" id="regJourney">
+                    <div class="reg-journey__step is-active" data-journey="1">
+                        <div class="reg-journey__icon"><i class="fas fa-pen-fancy" aria-hidden="true"></i></div>
+                        <p class="reg-journey__label">Register</p>
+                    </div>
+                    <div class="reg-journey__step" data-journey="2">
+                        <div class="reg-journey__icon"><i class="fas fa-check-circle" aria-hidden="true"></i></div>
+                        <p class="reg-journey__label">Confirmation</p>
+                    </div>
+                    <div class="reg-journey__step" data-journey="3">
+                        <div class="reg-journey__icon"><i class="fas fa-qrcode" aria-hidden="true"></i></div>
+                        <p class="reg-journey__label">Event Access</p>
+                    </div>
+                    <div class="reg-journey__step" data-journey="4">
+                        <div class="reg-journey__icon"><i class="fas fa-fire" aria-hidden="true"></i></div>
+                        <p class="reg-journey__label">Encounter</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown -->
+        <section class="countdown" id="countdown" aria-label="Event countdown">
+            <div class="countdown__glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="countdown__header reveal">
+                    <span class="section-eyebrow">Mark Your Calendar</span>
+                    <h2 class="countdown__title">Your Encounter Begins In</h2>
+                </div>
+                <div class="countdown__timer" id="regCountdownTimer" role="timer" aria-live="polite">
+                    <div class="countdown__unit">
+                        <span class="countdown__number" id="regCdDays">00</span>
+                        <span class="countdown__label">Days</span>
+                    </div>
+                    <span class="countdown__sep">:</span>
+                    <div class="countdown__unit">
+                        <span class="countdown__number" id="regCdHours">00</span>
+                        <span class="countdown__label">Hours</span>
+                    </div>
+                    <span class="countdown__sep">:</span>
+                    <div class="countdown__unit">
+                        <span class="countdown__number" id="regCdMinutes">00</span>
+                        <span class="countdown__label">Minutes</span>
+                    </div>
+                    <span class="countdown__sep">:</span>
+                    <div class="countdown__unit">
+                        <span class="countdown__number" id="regCdSeconds">00</span>
+                        <span class="countdown__label">Seconds</span>
+                    </div>
+                </div>
+                <p class="countdown__date reveal">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    August 15–17, 2026 · Owerri, Imo State, Nigeria
+                </p>
+            </div>
+        </section>
+
+        <!-- Event Card + Registration Form -->
+        <section class="reg-main" id="register" aria-labelledby="register-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Secure Your Spot</span>
+                    <h2 id="register-heading" class="section-title">Complete Your Registration</h2>
+                    <p class="section-desc">Join thousands of believers preparing for an unforgettable encounter with God's glory.</p>
+                </div>
+
+                <div class="reg-main__grid">
+                    <!-- Event Card -->
+                    <aside class="event-card reveal" aria-label="Event details">
+                        <div class="event-card__header">
+                            <div class="event-card__logo"><i class="fas fa-crown" aria-hidden="true"></i></div>
+                            <p class="event-card__name">Send Down Thy Glory 2026</p>
+                            <p class="event-card__theme">Theme: Glory Without Limits</p>
+                        </div>
+                        <ul class="event-card__list">
+                            <li class="event-card__item">
+                                <span class="event-card__item-icon"><i class="far fa-calendar-alt" aria-hidden="true"></i></span>
+                                <div class="event-card__item-text">
+                                    <strong>Date</strong>
+                                    <span>August 15–17, 2026</span>
+                                </div>
+                            </li>
+                            <li class="event-card__item">
+                                <span class="event-card__item-icon"><i class="far fa-clock" aria-hidden="true"></i></span>
+                                <div class="event-card__item-text">
+                                    <strong>Time</strong>
+                                    <span>5:00 PM Daily (WAT)</span>
+                                </div>
+                            </li>
+                            <li class="event-card__item">
+                                <span class="event-card__item-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                                <div class="event-card__item-text">
+                                    <strong>Venue</strong>
+                                    <span>SDTG Crusade Grounds, Owerri, Nigeria</span>
+                                </div>
+                            </li>
+                            <li class="event-card__item">
+                                <span class="event-card__item-icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+                                <div class="event-card__item-text">
+                                    <strong>Expected Attendance</strong>
+                                    <span>35,000+ Believers</span>
+                                </div>
+                            </li>
+                            <li class="event-card__item">
+                                <span class="event-card__item-icon"><i class="fas fa-broadcast-tower" aria-hidden="true"></i></span>
+                                <div class="event-card__item-text">
+                                    <strong>Livestream</strong>
+                                    <span>Available Worldwide — Free Access</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="event-card__badge">
+                            <i class="fas fa-gift" aria-hidden="true"></i>
+                            Registration is completely free
+                        </p>
+                    </aside>
+
+                    <!-- Multi-step Form -->
+                    <div class="reg-form-wrap reveal" data-delay="150">
+                        <form id="sdtgRegistrationForm" class="reg-form" action="#" method="POST" novalidate aria-label="SDTG registration form">
+                            <input type="hidden" name="event_id" value="sdtg-2026">
+                            <input type="hidden" name="form_version" value="1.0">
+
+                            <div class="reg-form__header">
+                                <div class="reg-form__progress" aria-hidden="true">
+                                    <div class="reg-form__progress-bar">
+                                        <div class="reg-form__progress-fill" id="regProgressFill"></div>
+                                    </div>
+                                    <div class="reg-form__progress-text">
+                                        <span id="regProgressStep">Step 1 of 5</span>
+                                        <strong id="regProgressPct">20%</strong>
+                                    </div>
+                                </div>
+                                <h3 class="reg-form__step-title" id="regStepTitle">Personal Information</h3>
+                                <p class="reg-form__step-desc" id="regStepDesc">All required fields must be completed to continue.</p>
+                            </div>
+
+                            <div class="reg-form__steps">
+
+                                <!-- Step 1: Personal -->
+                                <div class="reg-form__step is-active" data-step="1" role="group" aria-label="Step 1: Personal Information">
+                                    <div class="reg-form__grid">
+                                        <div class="float-field">
+                                            <input type="text" id="first_name" name="first_name" required placeholder=" " autocomplete="given-name">
+                                            <label for="first_name">First Name</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                        <div class="float-field">
+                                            <input type="text" id="last_name" name="last_name" required placeholder=" " autocomplete="family-name">
+                                            <label for="last_name">Last Name</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                        <div class="float-field">
+                                            <input type="email" id="email" name="email" required placeholder=" " autocomplete="email">
+                                            <label for="email">Email Address</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                        <div class="float-field">
+                                            <input type="tel" id="phone" name="phone" required placeholder=" " autocomplete="tel">
+                                            <label for="phone">Phone Number</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                        <div class="float-field">
+                                            <select id="gender" name="gender" required>
+                                                <option value="" disabled selected></option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Prefer not to say">Prefer not to say</option>
+                                            </select>
+                                            <label for="gender">Gender</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                        <div class="float-field">
+                                            <input type="date" id="date_of_birth" name="date_of_birth" required placeholder=" ">
+                                            <label for="date_of_birth">Date of Birth</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 2: Location -->
+                                <div class="reg-form__step" data-step="2" role="group" aria-label="Step 2: Location Information">
+                                    <div class="reg-form__grid">
+                                        <div class="float-field">
+                                            <input type="text" id="country" name="country" required placeholder=" " autocomplete="country-name">
+                                            <label for="country">Country</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                        <div class="float-field">
+                                            <input type="text" id="state" name="state" required placeholder=" " autocomplete="address-level1">
+                                            <label for="state">State / Province</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                        <div class="float-field">
+                                            <input type="text" id="city" name="city" required placeholder=" " autocomplete="address-level2">
+                                            <label for="city">City</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                        <div class="float-field">
+                                            <input type="text" id="church_name" name="church_name" placeholder=" " autocomplete="organization">
+                                            <label for="church_name">Church Name</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3: Participation -->
+                                <div class="reg-form__step" data-step="3" role="group" aria-label="Step 3: Participation Details">
+                                    <div class="reg-form__grid reg-form__grid--full">
+                                        <div data-group="first_time">
+                                            <span class="reg-field-label">First Time Attending SDTG?</span>
+                                            <div class="reg-options">
+                                                <div class="reg-option">
+                                                    <input type="radio" id="first_time_yes" name="first_time" value="Yes" required>
+                                                    <label for="first_time_yes">Yes</label>
+                                                </div>
+                                                <div class="reg-option">
+                                                    <input type="radio" id="first_time_no" name="first_time" value="No">
+                                                    <label for="first_time_no">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-group="attendance_mode">
+                                            <span class="reg-field-label">Attending Physically or Online?</span>
+                                            <div class="reg-options">
+                                                <div class="reg-option">
+                                                    <input type="radio" id="mode_physical" name="attendance_mode" value="Physical" required>
+                                                    <label for="mode_physical"><i class="fas fa-church" aria-hidden="true"></i> Physical</label>
+                                                </div>
+                                                <div class="reg-option">
+                                                    <input type="radio" id="mode_online" name="attendance_mode" value="Online">
+                                                    <label for="mode_online"><i class="fas fa-laptop" aria-hidden="true"></i> Online</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="reg-field-label">Volunteer Interest</span>
+                                            <div class="reg-options">
+                                                <div class="reg-option">
+                                                    <input type="radio" id="volunteer_yes" name="volunteer_interest" value="yes">
+                                                    <label for="volunteer_yes">Yes, I'd love to serve</label>
+                                                </div>
+                                                <div class="reg-option">
+                                                    <input type="radio" id="volunteer_no" name="volunteer_interest" value="no" checked>
+                                                    <label for="volunteer_no">Not at this time</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="reg-field-label">Choir Participation</span>
+                                            <div class="reg-options">
+                                                <div class="reg-option">
+                                                    <input type="radio" id="choir_yes" name="choir_participation" value="yes">
+                                                    <label for="choir_yes">Yes, I'm interested</label>
+                                                </div>
+                                                <div class="reg-option">
+                                                    <input type="radio" id="choir_no" name="choir_participation" value="no" checked>
+                                                    <label for="choir_no">No, thank you</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="reg-field-label">Accommodation Request</span>
+                                            <div class="reg-options">
+                                                <div class="reg-option">
+                                                    <input type="radio" id="accom_yes" name="accommodation_request" value="yes">
+                                                    <label for="accom_yes">Yes, I need accommodation</label>
+                                                </div>
+                                                <div class="reg-option">
+                                                    <input type="radio" id="accom_no" name="accommodation_request" value="no" checked>
+                                                    <label for="accom_no">No, I have arrangements</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 4: Additional -->
+                                <div class="reg-form__step" data-step="4" role="group" aria-label="Step 4: Additional Information">
+                                    <div class="reg-form__grid reg-form__grid--full">
+                                        <div class="float-field">
+                                            <textarea id="prayer_request" name="prayer_request" placeholder=" " rows="4"></textarea>
+                                            <label for="prayer_request">Prayer Request (Optional)</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                        <div class="float-field">
+                                            <textarea id="expectations" name="expectations" placeholder=" " rows="4"></textarea>
+                                            <label for="expectations">Expectations From The Crusade</label>
+                                            <span class="float-field__error" role="alert"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 5: Review -->
+                                <div class="reg-form__step" data-step="5" role="group" aria-label="Step 5: Review and Confirm">
+                                    <div class="reg-review">
+                                        <div class="reg-review__group">
+                                            <h4>Personal Information</h4>
+                                            <div id="review-personal"></div>
+                                        </div>
+                                        <div class="reg-review__group">
+                                            <h4>Location</h4>
+                                            <div id="review-location"></div>
+                                        </div>
+                                        <div class="reg-review__group">
+                                            <h4>Participation</h4>
+                                            <div id="review-participation"></div>
+                                        </div>
+                                        <div class="reg-review__group">
+                                            <h4>Additional</h4>
+                                            <div id="review-additional"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="reg-form__nav">
+                                <button type="button" class="btn btn--outline" id="regBtnPrev" disabled>
+                                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Previous
+                                </button>
+                                <button type="button" class="btn btn--primary" id="regBtnNext">
+                                    Next <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                                <button type="submit" class="btn btn--primary hidden" id="regBtnSubmit">
+                                    <i class="fas fa-check" aria-hidden="true"></i> Submit Registration
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Stats -->
+        <section class="reg-live-stats" aria-label="Live registration statistics">
+            <div class="container">
+                <div class="reg-live-stats__grid">
+                    <div class="live-stat reveal">
+                        <p class="live-stat__num" data-count="18420" data-suffix="+">0</p>
+                        <p class="live-stat__label">Registered Attendees</p>
+                    </div>
+                    <div class="live-stat reveal" data-delay="100">
+                        <p class="live-stat__num" data-count="38" data-suffix="+">0</p>
+                        <p class="live-stat__label">Countries Represented</p>
+                    </div>
+                    <div class="live-stat reveal" data-delay="200">
+                        <p class="live-stat__num" data-count="420" data-suffix="+">0</p>
+                        <p class="live-stat__label">Churches Participating</p>
+                    </div>
+                    <div class="live-stat reveal" data-delay="300">
+                        <p class="live-stat__num" data-count="890" data-suffix="+">0</p>
+                        <p class="live-stat__label">Volunteers Registered</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="reg-benefits" id="benefits" aria-labelledby="benefits-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Why Register</span>
+                    <h2 id="benefits-heading" class="section-title">What Awaits You</h2>
+                    <p class="section-desc">More than an event — a divine appointment with destiny.</p>
+                </div>
+                <div class="benefits-grid">
+                    <article class="benefit-card reveal">
+                        <div class="benefit-card__icon"><i class="fas fa-music" aria-hidden="true"></i></div>
+                        <h3>Powerful Worship Sessions</h3>
+                        <p>Experience heaven-touching worship led by anointed ministers and the SDTG mass choir.</p>
+                    </article>
+                    <article class="benefit-card reveal" data-delay="80">
+                        <div class="benefit-card__icon"><i class="fas fa-bible" aria-hidden="true"></i></div>
+                        <h3>Life-Changing Messages</h3>
+                        <p>Receive prophetic words and transformative teachings from guest ministers across the globe.</p>
+                    </article>
+                    <article class="benefit-card reveal" data-delay="160">
+                        <div class="benefit-card__icon"><i class="fas fa-praying-hands" aria-hidden="true"></i></div>
+                        <h3>Prayer Encounters</h3>
+                        <p>Join all-night prayer vigils and intercessory sessions that shift atmospheres.</p>
+                    </article>
+                    <article class="benefit-card reveal" data-delay="240">
+                        <div class="benefit-card__icon"><i class="fas fa-handshake" aria-hidden="true"></i></div>
+                        <h3>Networking Opportunities</h3>
+                        <p>Connect with believers, pastors, and ministry leaders from 45+ nations.</p>
+                    </article>
+                    <article class="benefit-card reveal" data-delay="320">
+                        <div class="benefit-card__icon"><i class="fas fa-seedling" aria-hidden="true"></i></div>
+                        <h3>Spiritual Growth</h3>
+                        <p>Leave refreshed, renewed, and equipped to carry the fire of revival into your community.</p>
+                    </article>
+                    <article class="benefit-card reveal" data-delay="400">
+                        <div class="benefit-card__icon"><i class="fas fa-star" aria-hidden="true"></i></div>
+                        <h3>Divine Encounters</h3>
+                        <p>Witness miracles, healings, and testimonies that confirm God's presence among His people.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- International Attendees -->
+        <section class="reg-international" id="international" aria-labelledby="intl-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Traveling From Abroad?</span>
+                    <h2 id="intl-heading" class="section-title">International Attendees</h2>
+                    <p class="section-desc">We've prepared resources to make your journey to Owerri seamless and blessed.</p>
+                </div>
+                <div class="intl-grid">
+                    <article class="intl-card reveal">
+                        <div class="intl-card__icon"><i class="fas fa-bed" aria-hidden="true"></i></div>
+                        <h3>Accommodation</h3>
+                        <p>Partner hotels offering discounted rates for SDTG attendees. Indicate your accommodation need during registration and our hospitality team will contact you with options.</p>
+                    </article>
+                    <article class="intl-card reveal" data-delay="100">
+                        <div class="intl-card__icon"><i class="fas fa-bus" aria-hidden="true"></i></div>
+                        <h3>Transportation</h3>
+                        <p>Free shuttle services from Sam Mbakwe International Airport (Owerri) and designated pickup points in Port Harcourt and Enugu on crusade days.</p>
+                    </article>
+                    <article class="intl-card reveal" data-delay="200">
+                        <div class="intl-card__icon"><i class="fas fa-plane" aria-hidden="true"></i></div>
+                        <h3>Travel Recommendations</h3>
+                        <p>Fly into Owerri (QOW) or Port Harcourt (PHC). Arrive at least one day early. Bring valid ID and check visa requirements for Nigeria.</p>
+                    </article>
+                    <article class="intl-card reveal" data-delay="300">
+                        <div class="intl-card__icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
+                        <h3>International Desk</h3>
+                        <p>Contact our international team at <a href="mailto:intl@sdtg.org">intl@sdtg.org</a> or WhatsApp +234 803 456 7890 for personalized travel assistance.</p>
+                    </article>
+                    <div class="intl-card__map reveal" data-delay="400" role="img" aria-label="Venue map placeholder">
+                        <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                        <p>SDTG Crusade Grounds · Owerri, Imo State, Nigeria</p>
+                        <small>Interactive map integration coming soon</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="reg-testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Changed Lives</span>
+                    <h2 id="testimonials-heading" class="section-title">Why They Keep Coming Back</h2>
+                </div>
+                <div class="reg-slider" id="regTestimonialSlider">
+                    <div class="reg-slider__track" id="regTestimonialTrack">
+                        <blockquote class="reg-slide is-active">
+                            <div class="reg-slide__content">
+                                <div class="reg-slide__stars" aria-label="5 out of 5 stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="reg-slide__quote">"Registration was seamless and the experience exceeded every expectation. SDTG is not just a crusade — it's a divine appointment."</p>
+                                <footer class="reg-slide__author">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="" loading="lazy" width="56" height="56">
+                                    <div>
+                                        <cite>Adaeze Okafor</cite>
+                                        <span>Lagos, Nigeria</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </blockquote>
+                        <blockquote class="reg-slide">
+                            <div class="reg-slide__content">
+                                <div class="reg-slide__stars" aria-label="5 out of 5 stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="reg-slide__quote">"I registered online from London and watched the livestream. This year I'm flying in physically — SDTG changed my life and I can't stay away."</p>
+                                <footer class="reg-slide__author">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="" loading="lazy" width="56" height="56">
+                                    <div>
+                                        <cite>James Okorie</cite>
+                                        <span>London, UK</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </blockquote>
+                        <blockquote class="reg-slide">
+                            <div class="reg-slide__content">
+                                <div class="reg-slide__stars" aria-label="5 out of 5 stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="reg-slide__quote">"Volunteering at SDTG was the best decision I made. Register early, come with expectation, and prepare for God to move powerfully."</p>
+                                <footer class="reg-slide__author">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="" loading="lazy" width="56" height="56">
+                                    <div>
+                                        <cite>Grace Mwangi</cite>
+                                        <span>Nairobi, Kenya</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <div class="reg-slider__controls">
+                        <button type="button" class="reg-slider__btn" id="regSliderPrev" aria-label="Previous testimonial"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                        <div class="reg-slider__dots" id="regSliderDots"></div>
+                        <button type="button" class="reg-slider__btn" id="regSliderNext" aria-label="Next testimonial"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="reg-faq" id="faq" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Questions</span>
+                    <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item reveal">
+                        <button type="button" class="faq-item__question" aria-expanded="false">
+                            Is registration free?
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Yes! Registration for Send Down Thy Glory is completely free for both physical and online attendance. We believe everyone should have access to encounter God's glory.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" data-delay="80">
+                        <button type="button" class="faq-item__question" aria-expanded="false">
+                            Can I attend online?
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Absolutely. Select "Online" during registration and you'll receive livestream access links via email before the event. Our global livestream reaches believers in every time zone.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" data-delay="160">
+                        <button type="button" class="faq-item__question" aria-expanded="false">
+                            Is accommodation available?
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Yes. We partner with hotels near the venue offering special SDTG rates. Indicate your accommodation need during registration and our team will assist you with booking options.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" data-delay="240">
+                        <button type="button" class="faq-item__question" aria-expanded="false">
+                            How do I volunteer?
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Select "Yes" for volunteer interest during registration. Our volunteer coordinator will reach out with available roles including ushering, media, protocol, hospitality, and intercession teams.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" data-delay="320">
+                        <button type="button" class="faq-item__question" aria-expanded="false">
+                            Will sessions be recorded?
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Yes. All main sessions will be recorded and made available on our YouTube channel after the crusade. Registered attendees receive early access to select recordings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Sharing -->
+        <section class="reg-share" aria-labelledby="share-heading">
+            <div class="container reveal">
+                <h2 id="share-heading" class="reg-share__title">Invite a Friend to Experience God's Glory</h2>
+                <div class="reg-share__buttons">
+                    <a href="https://wa.me/?text=Register%20for%20Send%20Down%20Thy%20Glory%202026%20%E2%80%94%20a%20life-changing%20worship%20encounter!" class="reg-share__btn reg-share__btn--wa" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" class="reg-share__btn reg-share__btn--fb" target="_blank" rel="noopener noreferrer" id="shareFacebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i> Facebook
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=Register%20for%20Send%20Down%20Thy%20Glory%202026!" class="reg-share__btn reg-share__btn--x" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i> X
+                    </a>
+                    <a href="#" class="reg-share__btn reg-share__btn--ig" aria-label="Share on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing CTA -->
+        <section class="reg-cta" aria-labelledby="reg-cta-heading">
+            <div class="reg-cta__bg">
+                <img src="img/main1.jpg" alt="" loading="lazy" aria-hidden="true">
+            </div>
+            <div class="reg-cta__overlay" aria-hidden="true"></div>
+            <canvas id="regCtaParticles" class="reg-cta__particles" aria-hidden="true"></canvas>
+            <div class="container">
+                <div class="reg-cta__content reveal">
+                    <h2 id="reg-cta-heading" class="reg-cta__title">Your Encounter Awaits</h2>
+                    <p class="reg-cta__sub">Join thousands of believers for a life-changing experience.</p>
+                    <div class="reg-cta__actions">
+                        <a href="#register" class="btn btn--primary btn--lg">
+                            <i class="fas fa-ticket-alt" aria-hidden="true"></i>
+                            Complete Registration
+                        </a>
+                        <a href="gallery.html" class="btn btn--glass btn--lg">
+                            <i class="fas fa-play-circle" aria-hidden="true"></i>
+                            Watch Previous Crusades
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact" role="contentinfo">
+        <div class="footer__cta">
+            <div class="footer__cta-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__cta-inner">
+                    <div class="footer__cta-text">
+                        <span class="footer__eyebrow">Join The Movement</span>
+                        <h2 class="footer__cta-title">Experience The Glory</h2>
+                        <p>Thousands gather. Lives transform. Heaven invades earth. Your seat awaits at SDTG 2026.</p>
+                    </div>
+                    <div class="footer__cta-actions">
+                        <a href="registration.html" class="btn btn--primary btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Free</a>
+                        <a href="index.html#livestream" class="btn btn--glass btn--lg"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__main">
+            <div class="footer__glow footer__glow--left" aria-hidden="true"></div>
+            <div class="footer__glow footer__glow--right" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__intro">
+                    <a href="index.html" class="footer__logo">
+                        <div class="logo-video logo-video--lg" aria-hidden="true">
+                            <video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video>
+                        </div>
+                        <span class="footer__logo-text">
+                            <strong>Send Down Thy Glory</strong>
+                            <small>International Music Crusade</small>
+                        </span>
+                    </a>
+                    <p class="footer__tagline">Igniting revival across nations through worship, prayer, and the manifest glory of God.</p>
+                    <div class="footer__stats">
+                        <div class="footer__stat"><span>12+</span><small>Years</small></div>
+                        <div class="footer__stat"><span>250K+</span><small>Attendees</small></div>
+                        <div class="footer__stat"><span>45+</span><small>Nations</small></div>
+                    </div>
+                </div>
+
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Explore</h3>
+                        <ul class="footer__links">
+                            <li><a href="about.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> About SDTG</a></li>
+                            <li><a href="index.html#speakers"><i class="fas fa-chevron-right" aria-hidden="true"></i> Speakers</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Gallery</a></li>
+                            <li><a href="registration.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Registration</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Get Involved</h3>
+                        <ul class="footer__links">
+                            <li><a href="registration.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Register Now</a></li>
+                            <li><a href="index.html#livestream"><i class="fas fa-chevron-right" aria-hidden="true"></i> Livestream</a></li>
+                            <li><a href="index.html#donate"><i class="fas fa-chevron-right" aria-hidden="true"></i> Give &amp; Support</a></li>
+                            <li><a href="index.html#prayer"><i class="fas fa-chevron-right" aria-hidden="true"></i> Prayer Request</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Contact</h3>
+                        <ul class="footer__contact">
+                            <li>
+                                <span class="footer__contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                                <span>Owerri, Imo State, Nigeria</span>
+                            </li>
+                            <li>
+                                <span class="footer__contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                                <a href="tel:+2348034567890">+234 803 456 7890</a>
+                            </li>
+                            <li>
+                                <span class="footer__contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                                <a href="mailto:info@sdtg.org">info@sdtg.org</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__col--newsletter">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Stay Connected</h3>
+                        <p>Crusade updates, speaker announcements, and worship resources — straight to your inbox.</p>
+                        <form class="footer__newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+                            <button type="submit" class="btn btn--primary">Subscribe</button>
+                        </form>
+                        <div class="footer__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">&copy; 2026 Send Down Thy Glory International Music Crusade. All rights reserved.</p>
+                    <div class="footer__bottom-links">
+                        <a href="about.html">About</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="#contact">Contact</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="index.html#donate">Give</a>
+                    </div>
+                    <p class="footer__parent">A ministry of <a href="../index.html">AG Ikenebgu Assemblies of God</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle" aria-hidden="true">
+        <div class="success-modal__inner">
+            <div class="success-modal__icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+            <h2 class="success-modal__title" id="successTitle">Registration Successful!</h2>
+            <p class="success-modal__msg">Thank you for registering for Send Down Thy Glory. We look forward to worshiping with you.</p>
+            <p class="success-modal__ref" id="successRef">SDTG-REF</p>
+            <div class="success-modal__actions">
+                <button type="button" class="btn btn--primary" id="successDownload">
+                    <i class="fas fa-download" aria-hidden="true"></i> Download Confirmation
+                </button>
+                <button type="button" class="btn btn--outline" id="successShare">
+                    <i class="fas fa-share-alt" aria-hidden="true"></i> Share Registration
+                </button>
+                <button type="button" class="btn btn--glass" id="successHome">
+                    <i class="fas fa-home" aria-hidden="true"></i> Return Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="scrollTop" class="scroll-top" aria-label="Scroll to top" title="Back to top">
+        <span class="scroll-top__ring" aria-hidden="true"></span>
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="js/registration.js" defer></script>
+    <script>
+        /* Dynamic share URL for Facebook */
+        document.getElementById('shareFacebook')?.setAttribute('href',
+            'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
+    </script>
+</body>
+</html>
