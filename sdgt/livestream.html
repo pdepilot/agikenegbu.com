@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livestream — Send Down Thy Glory International Music Crusade</title>
+    <meta name="description" content="Watch Send Down Thy Glory live — join thousands of worshippers worldwide for worship, prayer, miracles, and transformation.">
+    <meta property="og:title" content="Watch SDTG Live — Global Worship Broadcast">
+    <meta property="og:description" content="Experience the glory of God from anywhere in the world.">
+    <meta property="og:image" content="img/lifted_hands.jpeg">
+    <meta name="theme-color" content="#1a0a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/livestream.css">
+    <link rel="icon" href="img/sdtg-logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="navbar scrolled" id="navbar" role="banner">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand" aria-label="Send Down Thy Glory Home">
+                <div class="logo-video logo-video--sm" aria-hidden="true">
+                    <video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video>
+                </div>
+                <span class="navbar__logo-text"><strong>SDTG</strong><small>Send Down Thy Glory</small></span>
+            </a>
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+            <div class="navbar__backdrop" id="navBackdrop" aria-hidden="true"></div>
+            <nav class="navbar__menu" id="navMenu" role="navigation" aria-label="Main navigation">
+                <div class="navbar__menu-header">
+                    <span class="navbar__menu-eyebrow">Navigation</span>
+                    <span class="navbar__menu-title">Send Down Thy Glory</span>
+                </div>
+                <ul class="navbar__links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="speakers.html" class="nav-link">Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="livestream.html" class="nav-link active" aria-current="page">Livestream</a></li>
+                    <li><a href="registration.html" class="nav-link">Registration</a></li>
+                    <li><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="navbar__actions">
+                    <a href="../index.html" class="btn btn--site-switch btn--sm" aria-label="Visit AG Ikenebgu Church website"><i class="fas fa-church" aria-hidden="true"></i> AG Ikenebgu</a>
+                    <a href="registration.html" class="btn btn--outline btn--sm">Register Now</a>
+                    <a href="#player" class="btn btn--primary btn--sm"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="ls-hero" aria-label="Livestream hero">
+            <div class="ls-hero__media">
+                <video src="videos/worship-hero.mp4" autoplay muted loop playsinline poster="img/lifted_hands.jpeg" aria-hidden="true"></video>
+            </div>
+            <div class="ls-hero__overlay" aria-hidden="true"></div>
+            <div class="ls-hero__scanlines" aria-hidden="true"></div>
+            <div class="ls-hero__rays" aria-hidden="true"></div>
+            <canvas id="lsHeroParticles" class="ls-hero__particles" aria-hidden="true"></canvas>
+            <div class="ls-hero__content">
+                <p class="ls-hero__badge reveal"><i class="fas fa-satellite-dish" aria-hidden="true"></i> Global Broadcast · Live From Owerri</p>
+                <h1 class="ls-hero__title reveal" data-delay="100">Watch Send Down Thy Glory <span>Live</span></h1>
+                <p class="ls-hero__sub reveal" data-delay="200">Join thousands of worshippers around the world for a powerful encounter of worship, prayer, miracles, and transformation.</p>
+                <div class="ls-hero__actions reveal" data-delay="300">
+                    <a href="#player" id="lsWatchNowBtn" class="btn btn--primary btn--lg"><i class="fas fa-play" aria-hidden="true"></i> Watch Live Now</a>
+                    <a href="registration.html" class="btn btn--glass btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register For Crusade</a>
+                    <a href="#prayer" class="btn btn--outline btn--lg"><i class="fas fa-praying-hands" aria-hidden="true"></i> Submit Prayer Request</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Status -->
+        <section class="ls-status" aria-label="Live broadcast status">
+            <div class="container">
+                <div id="lsStatusOffline" class="ls-status__panel reveal">
+                    <p class="ls-status__label">Event Starts In</p>
+                    <div class="ls-countdown" id="lsCountdown" role="timer" aria-live="polite">
+                        <div class="ls-countdown__unit"><span class="ls-countdown__num" id="lsCdDays">00</span><span class="ls-countdown__text">Days</span></div>
+                        <div class="ls-countdown__unit"><span class="ls-countdown__num" id="lsCdHours">00</span><span class="ls-countdown__text">Hours</span></div>
+                        <div class="ls-countdown__unit"><span class="ls-countdown__num" id="lsCdMinutes">00</span><span class="ls-countdown__text">Minutes</span></div>
+                        <div class="ls-countdown__unit"><span class="ls-countdown__num" id="lsCdSeconds">00</span><span class="ls-countdown__text">Seconds</span></div>
+                    </div>
+                </div>
+                <div id="lsStatusLive" class="ls-status__panel hidden reveal">
+                    <div class="ls-live-badge"><span class="ls-live-dot" aria-hidden="true"></span> Live Now</div>
+                    <div class="ls-live-stats">
+                        <div class="ls-live-stat"><span class="ls-live-stat__num" id="lsViewerCount">0</span><span class="ls-live-stat__label">Watching Now</span></div>
+                        <div class="ls-live-stat"><span class="ls-live-stat__num" id="lsSessionDuration">00:00:00</span><span class="ls-live-stat__label">Session Duration</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Player -->
+        <section class="ls-player-section" id="player" aria-labelledby="player-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Broadcast Center</span>
+                    <h2 id="player-heading" class="section-title">Live Stream</h2>
+                </div>
+                <div class="ls-player__header reveal">
+                    <span class="ls-player__live-tag"><span class="ls-live-dot"></span> SDTG Broadcast</span>
+                    <div class="ls-player__controls-top">
+                        <button type="button" class="ls-player__ctrl" id="lsTheatreBtn" aria-pressed="false"><i class="fas fa-expand-alt" aria-hidden="true"></i> Theatre Mode</button>
+                        <button type="button" class="ls-player__ctrl" id="lsFullscreenBtn"><i class="fas fa-expand" aria-hidden="true"></i> Fullscreen</button>
+                    </div>
+                </div>
+                <div class="ls-platform-tabs reveal" role="tablist" aria-label="Stream platform">
+                    <button type="button" class="ls-platform-tab is-active" data-platform="youtube" role="tab">YouTube</button>
+                    <button type="button" class="ls-platform-tab" data-platform="facebook" role="tab">Facebook</button>
+                    <button type="button" class="ls-platform-tab" data-platform="vimeo" role="tab">Vimeo</button>
+                    <button type="button" class="ls-platform-tab" data-platform="custom" role="tab">SDTG Direct</button>
+                </div>
+                <div class="ls-player__wrap reveal" id="lsPlayerWrap">
+                    <div class="ls-player__frame" id="lsPlayerFrame"></div>
+                    <div class="ls-player__bar">
+                        <span class="ls-player__quality">Quality: <strong>Auto · HD</strong></span>
+                        <span class="ls-player__quality"><i class="fas fa-signal" aria-hidden="true"></i> Stream Ready</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Panel -->
+        <section class="ls-experience" aria-labelledby="experience-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Now Playing</span>
+                    <h2 id="experience-heading" class="section-title">Live Worship Experience</h2>
+                </div>
+                <div class="ls-experience__grid" id="lsExperiencePanel"></div>
+            </div>
+        </section>
+
+        <!-- Prayer & Testimony -->
+        <section class="ls-interaction" id="prayer" aria-labelledby="interaction-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Engage With Us</span>
+                    <h2 id="interaction-heading" class="section-title">Join The Encounter</h2>
+                </div>
+                <div class="ls-interaction__grid">
+                    <div class="ls-form-panel reveal">
+                        <h3><i class="fas fa-praying-hands" aria-hidden="true"></i> Live Prayer Request</h3>
+                        <p>Submit Your Prayer Request During The Broadcast</p>
+                        <form id="lsPrayerForm">
+                            <div class="ls-form-group">
+                                <label for="lsPrayerName">Name</label>
+                                <input type="text" id="lsPrayerName" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="ls-form-group">
+                                <label for="lsPrayerCountry">Country</label>
+                                <input type="text" id="lsPrayerCountry" name="country" placeholder="Your country" required>
+                            </div>
+                            <div class="ls-form-group">
+                                <label for="lsPrayerMsg">Prayer Request</label>
+                                <textarea id="lsPrayerMsg" name="prayer" placeholder="Share your prayer need..." required></textarea>
+                            </div>
+                            <label class="ls-form-check">
+                                <input type="checkbox" name="anonymous" id="lsPrayerAnon"> Submit anonymously
+                            </label>
+                            <button type="submit" class="btn btn--primary btn--lg"><i class="fas fa-paper-plane" aria-hidden="true"></i> Submit Prayer</button>
+                        </form>
+                        <div id="lsPrayerSuccess" class="ls-form-success hidden" aria-live="polite">
+                            <div class="ls-form-success__icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+                            <h4>Prayer Received</h4>
+                            <p>Our intercessors are standing in agreement with you. God hears your cry.</p>
+                        </div>
+                    </div>
+                    <div class="ls-form-panel reveal" data-delay="100" id="lsTestimonySection">
+                        <h3><i class="fas fa-heart" aria-hidden="true"></i> Share Your Testimony</h3>
+                        <p>Tell us how God is moving in your life during this broadcast.</p>
+                        <form id="lsTestimonyForm">
+                            <div class="ls-form-group">
+                                <label for="lsTestName">Name</label>
+                                <input type="text" id="lsTestName" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="ls-form-group">
+                                <label for="lsTestCountry">Country</label>
+                                <input type="text" id="lsTestCountry" name="country" placeholder="Your country" required>
+                            </div>
+                            <div class="ls-form-group">
+                                <label for="lsTestMsg">Testimony</label>
+                                <textarea id="lsTestMsg" name="testimony" placeholder="Share what God is doing..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--lg"><i class="fas fa-star" aria-hidden="true"></i> Submit Testimony</button>
+                        </form>
+                        <div id="lsTestimonySuccess" class="ls-form-success hidden" aria-live="polite">
+                            <div class="ls-form-success__icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                            <h4>Testimony Shared!</h4>
+                            <p>Thank you for glorifying God. Your story will inspire nations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Viewers Map -->
+        <section class="ls-map-section" aria-labelledby="map-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Global Reach</span>
+                    <h2 id="map-heading" class="section-title">Watching Around The World</h2>
+                </div>
+                <div class="ls-map-layout">
+                    <div class="ls-map-wrap reveal">
+                        <svg viewBox="0 0 100 50" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="50" cy="25" rx="48" ry="22" fill="currentColor"/>
+                        </svg>
+                        <div id="lsViewerMap"></div>
+                    </div>
+                    <div class="ls-map-stats reveal" data-delay="100">
+                        <h3>Live Global Audience</h3>
+                        <div class="ls-map-stats__nums">
+                            <div><span id="lsMapTotal">0</span><small>Total Viewers</small></div>
+                            <div><span id="lsMapCountries">0</span><small>Countries</small></div>
+                        </div>
+                        <ul class="ls-country-list" id="lsCountryList"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Chat -->
+        <section class="ls-chat-section" aria-labelledby="chat-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Community</span>
+                    <h2 id="chat-heading" class="section-title">Live Interaction</h2>
+                    <p class="section-desc">Worship reactions, prayers, and encouragement from believers worldwide</p>
+                </div>
+                <div class="ls-chat-wrap reveal">
+                    <div class="ls-chat-header">
+                        <h3><i class="fas fa-comments" aria-hidden="true"></i> SDTG Live Chat</h3>
+                        <span>Preview Mode</span>
+                    </div>
+                    <div class="ls-chat-feed" id="lsChatFeed" role="log" aria-live="polite" aria-label="Live chat messages"></div>
+                    <div class="ls-chat-footer">Real-time chat integration coming soon · Powered by SDTG Broadcast</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ministering Now -->
+        <section class="ls-minister-section" aria-labelledby="minister-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">On Stage</span>
+                    <h2 id="minister-heading" class="section-title">Ministering Now</h2>
+                </div>
+                <div id="lsMinisterNow"></div>
+            </div>
+        </section>
+
+        <!-- Schedule -->
+        <section class="ls-schedule-section" aria-labelledby="schedule-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Program Guide</span>
+                    <h2 id="schedule-heading" class="section-title">Upcoming Program Schedule</h2>
+                </div>
+                <div class="ls-schedule" id="lsSchedule"></div>
+            </div>
+        </section>
+
+        <!-- Past Broadcasts -->
+        <section class="ls-broadcasts" aria-labelledby="broadcasts-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Archive</span>
+                    <h2 id="broadcasts-heading" class="section-title">Past Broadcasts</h2>
+                </div>
+                <div class="ls-broadcasts__grid" id="lsPastBroadcasts"></div>
+            </div>
+        </section>
+
+        <!-- Social Live -->
+        <section class="ls-social" aria-labelledby="social-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Stay Connected</span>
+                    <h2 id="social-heading" class="section-title">Social Media Live Feed</h2>
+                </div>
+                <div class="ls-social__grid">
+                    <a href="#" class="ls-social-card ls-social-card--fb reveal"><div class="ls-social-card__icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></div><span>Facebook</span><small>Live Reactions</small></a>
+                    <a href="#" class="ls-social-card ls-social-card--ig reveal" data-delay="60"><div class="ls-social-card__icon"><i class="fab fa-instagram" aria-hidden="true"></i></div><span>Instagram</span><small>Stories &amp; Clips</small></a>
+                    <a href="#" class="ls-social-card ls-social-card--yt reveal" data-delay="120"><div class="ls-social-card__icon"><i class="fab fa-youtube" aria-hidden="true"></i></div><span>YouTube</span><small>Live Stream</small></a>
+                    <a href="#" class="ls-social-card ls-social-card--tt reveal" data-delay="180"><div class="ls-social-card__icon"><i class="fab fa-tiktok" aria-hidden="true"></i></div><span>TikTok</span><small>Highlights</small></a>
+                    <a href="#" class="ls-social-card ls-social-card--x reveal" data-delay="240"><div class="ls-social-card__icon"><i class="fab fa-x-twitter" aria-hidden="true"></i></div><span>X</span><small>Live Updates</small></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="ls-cta" aria-labelledby="ls-cta-heading">
+            <div class="ls-cta__bg"><img src="img/main1.jpg" alt="" loading="lazy" aria-hidden="true"></div>
+            <div class="ls-cta__overlay" aria-hidden="true"></div>
+            <canvas id="lsCtaParticles" class="ls-cta__particles" aria-hidden="true"></canvas>
+            <div class="container">
+                <div class="ls-cta__content reveal">
+                    <h2 id="ls-cta-heading" class="ls-cta__title">Share The Experience</h2>
+                    <p class="ls-cta__sub">Invite friends and family to encounter the glory of God with you.</p>
+                    <div class="ls-cta__actions">
+                        <button type="button" id="lsInviteBtn" class="btn btn--primary btn--lg"><i class="fas fa-user-plus" aria-hidden="true"></i> Invite Friends</button>
+                        <a href="registration.html" class="btn btn--glass btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Now</a>
+                        <a href="donate.html" class="btn btn--outline btn--lg"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Support The Vision</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Video Modal -->
+    <div class="ls-video-modal" id="lsVideoModal" role="dialog" aria-modal="true" aria-label="Video player" aria-hidden="true">
+        <div class="ls-video-modal__inner">
+            <button type="button" class="ls-video-modal__close" aria-label="Close video"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <div class="ls-video-modal__frame" id="lsVideoFrame"></div>
+            <p id="lsVideoTitle" class="section-desc" style="text-align:center;margin-top:16px;"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__cta">
+            <div class="footer__cta-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__cta-inner">
+                    <div class="footer__cta-text">
+                        <span class="footer__eyebrow">Join The Movement</span>
+                        <h2 class="footer__cta-title">Experience The Glory</h2>
+                        <p>Watch live or register to attend SDTG 2026 in person.</p>
+                    </div>
+                    <div class="footer__cta-actions">
+                        <a href="registration.html" class="btn btn--primary btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Free</a>
+                        <a href="#player" class="btn btn--glass btn--lg"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__main">
+            <div class="footer__glow footer__glow--left" aria-hidden="true"></div>
+            <div class="footer__glow footer__glow--right" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__intro">
+                    <a href="index.html" class="footer__logo">
+                        <div class="logo-video logo-video--lg" aria-hidden="true"><video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video></div>
+                        <span class="footer__logo-text"><strong>Send Down Thy Glory</strong><small>International Music Crusade</small></span>
+                    </a>
+                    <p class="footer__tagline">Igniting revival across nations through worship, prayer, and the manifest glory of God.</p>
+                </div>
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Explore</h3>
+                        <ul class="footer__links">
+                            <li><a href="about.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> About</a></li>
+                            <li><a href="speakers.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Speakers</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Gallery</a></li>
+                            <li><a href="livestream.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Livestream</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Get Involved</h3>
+                        <ul class="footer__links">
+                            <li><a href="registration.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Register</a></li>
+                            <li><a href="donate.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Give</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Contact</h3>
+                        <ul class="footer__contact">
+                            <li><span class="footer__contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span><a href="mailto:info@sdtg.org">info@sdtg.org</a></li>
+                            <li><span class="footer__contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+2348034567890">+234 803 456 7890</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__col--newsletter">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Stay Connected</h3>
+                        <form class="footer__newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Enter your email" required aria-label="Email">
+                            <button type="submit" class="btn btn--primary">Subscribe</button>
+                        </form>
+                        <div class="footer__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">&copy; 2026 Send Down Thy Glory. All rights reserved.</p>
+                    <p class="footer__parent">A ministry of <a href="../index.html">AG Ikenebgu Assemblies of God</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button type="button" id="scrollTop" class="scroll-top" aria-label="Scroll to top"><span class="scroll-top__ring" aria-hidden="true"></span><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+    <script src="js/livestream.js" defer></script>
+</body>
+</html>

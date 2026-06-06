@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speakers — Send Down Thy Glory International Music Crusade</title>
+    <meta name="description" content="Meet the ministers, worship leaders, and speakers God has used through Send Down Thy Glory — voices of revival from Nigeria and around the world.">
+    <meta property="og:title" content="Voices Of Revival — SDTG Speakers">
+    <meta property="og:description" content="Guest ministers and worship leaders who have graced the SDTG stage across the years.">
+    <meta property="og:image" content="img/lifted_hands.jpeg">
+    <meta name="theme-color" content="#1a0a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/speakers.css">
+    <link rel="icon" href="img/sdtg-logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="navbar scrolled" id="navbar" role="banner">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand" aria-label="Send Down Thy Glory Home">
+                <div class="logo-video logo-video--sm" aria-hidden="true">
+                    <video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video>
+                </div>
+                <span class="navbar__logo-text"><strong>SDTG</strong><small>Send Down Thy Glory</small></span>
+            </a>
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+            <div class="navbar__backdrop" id="navBackdrop" aria-hidden="true"></div>
+            <nav class="navbar__menu" id="navMenu" role="navigation" aria-label="Main navigation">
+                <div class="navbar__menu-header">
+                    <span class="navbar__menu-eyebrow">Navigation</span>
+                    <span class="navbar__menu-title">Send Down Thy Glory</span>
+                </div>
+                <ul class="navbar__links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="speakers.html" class="nav-link active" aria-current="page">Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="livestream.html" class="nav-link">Livestream</a></li>
+                    <li><a href="registration.html" class="nav-link">Registration</a></li>
+                    <li><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="navbar__actions">
+                    <a href="../index.html" class="btn btn--site-switch btn--sm" aria-label="Visit AG Ikenebgu Church website"><i class="fas fa-church" aria-hidden="true"></i> AG Ikenebgu</a>
+                    <a href="registration.html" class="btn btn--outline btn--sm">Register Now</a>
+                    <a href="livestream.html" class="btn btn--primary btn--sm"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="spk-hero" aria-label="Speakers hero">
+            <div class="spk-hero__media">
+                <video src="videos/worship-crowd.mp4" autoplay muted loop playsinline poster="img/lifted_hands.jpeg" aria-hidden="true"></video>
+            </div>
+            <div class="spk-hero__overlay" aria-hidden="true"></div>
+            <div class="spk-hero__rays" aria-hidden="true"></div>
+            <canvas id="spkHeroParticles" class="spk-hero__particles" aria-hidden="true"></canvas>
+            <div class="spk-hero__content">
+                <p class="spk-hero__badge reveal"><i class="fas fa-microphone-alt" aria-hidden="true"></i> Anointed Voices · Global Impact</p>
+                <h1 class="spk-hero__title reveal" data-delay="100">Voices Of <span>Revival</span></h1>
+                <p class="spk-hero__sub reveal" data-delay="200">Meet the ministers, worship leaders, and speakers God has used through Send Down Thy Glory to impact lives around the world.</p>
+                <div class="spk-hero__actions reveal" data-delay="300">
+                    <a href="#upcoming" class="btn btn--primary btn--lg"><i class="fas fa-star" aria-hidden="true"></i> Upcoming Speakers</a>
+                    <a href="#marquee" class="btn btn--glass btn--lg"><i class="fas fa-history" aria-hidden="true"></i> Previous Speakers</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stats -->
+        <section class="spk-stats" aria-label="Speaker impact statistics">
+            <div class="container">
+                <div class="spk-stats__grid">
+                    <div class="spk-stat reveal">
+                        <div class="spk-stat__icon"><i class="fas fa-microphone" aria-hidden="true"></i></div>
+                        <p class="spk-stat__num" data-count="180" data-suffix="+">0</p>
+                        <p class="spk-stat__label">Guest Speakers</p>
+                    </div>
+                    <div class="spk-stat reveal" data-delay="80">
+                        <div class="spk-stat__icon"><i class="fas fa-globe-africa" aria-hidden="true"></i></div>
+                        <p class="spk-stat__num" data-count="45" data-suffix="+">0</p>
+                        <p class="spk-stat__label">Nations Represented</p>
+                    </div>
+                    <div class="spk-stat reveal" data-delay="160">
+                        <div class="spk-stat__icon"><i class="fas fa-calendar-alt" aria-hidden="true"></i></div>
+                        <p class="spk-stat__num" data-count="12">0</p>
+                        <p class="spk-stat__label">Years Of Crusades</p>
+                    </div>
+                    <div class="spk-stat reveal" data-delay="240">
+                        <div class="spk-stat__icon"><i class="fas fa-music" aria-hidden="true"></i></div>
+                        <p class="spk-stat__num" data-count="95" data-suffix="+">0</p>
+                        <p class="spk-stat__label">Worship Leaders</p>
+                    </div>
+                    <div class="spk-stat reveal" data-delay="320">
+                        <div class="spk-stat__icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                        <p class="spk-stat__num" data-count="250" data-suffix="K+">0</p>
+                        <p class="spk-stat__label">Lives Impacted</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Previous Speakers Marquee -->
+        <section class="spk-marquee" id="marquee" aria-labelledby="marquee-heading">
+            <div class="spk-marquee__header reveal">
+                <span class="section-eyebrow">Hall Of Revival</span>
+                <h2 id="marquee-heading" class="section-title">Previous Guest Ministers</h2>
+                <p class="section-desc">Click any minister to explore their biography, SDTG appearances, and more.</p>
+            </div>
+            <div class="spk-marquee__wrap">
+                <div class="spk-marquee__track" id="speakerMarquee" role="list" aria-label="Previous SDTG speakers"></div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="spk-timeline" id="timeline" aria-labelledby="timeline-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Through The Years</span>
+                    <h2 id="timeline-heading" class="section-title">Speakers By Edition</h2>
+                </div>
+            </div>
+            <div class="spk-timeline__track" id="speakerTimeline" role="list" aria-label="SDTG speakers timeline"></div>
+        </section>
+
+        <!-- Upcoming Speakers -->
+        <section class="spk-upcoming" id="upcoming" aria-labelledby="upcoming-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">SDTG 2026</span>
+                    <h2 id="upcoming-heading" class="section-title">Ministers For The Upcoming Crusade</h2>
+                    <p class="section-desc">August 15–17, 2026 · Owerri, Nigeria · Glory Without Limits</p>
+                </div>
+                <div class="spk-upcoming__wrap">
+                    <div class="spk-upcoming__track" id="upcomingSpeakers" role="list" aria-label="Upcoming crusade ministers"></div>
+                </div>
+                <p class="spk-upcoming__hint reveal" aria-hidden="true"><i class="fas fa-arrows-alt-h"></i> Drag or swipe to see more ministers</p>
+            </div>
+        </section>
+
+        <!-- Keynote Speaker -->
+        <section class="spk-keynote" aria-labelledby="keynote-heading">
+            <div class="spk-keynote__glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Main Guest</span>
+                    <h2 id="keynote-heading" class="section-title">Keynote Speaker</h2>
+                </div>
+                <div class="spk-keynote__grid" id="keynoteContent"></div>
+            </div>
+        </section>
+
+        <!-- Worship Ministers -->
+        <section class="spk-worship" aria-labelledby="worship-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Heaven's Sound</span>
+                    <h2 id="worship-heading" class="section-title">Worship Ministers</h2>
+                    <p class="section-desc">Anointed voices leading the congregation into the presence of God.</p>
+                </div>
+                <div class="spk-worship__grid" id="worshipMinisters"></div>
+            </div>
+        </section>
+
+        <!-- Meet The Hosts -->
+        <section class="spk-hosts" aria-labelledby="hosts-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Leadership</span>
+                    <h2 id="hosts-heading" class="section-title">Meet The Hosts</h2>
+                </div>
+                <div class="spk-hosts__grid" id="spkHosts"></div>
+            </div>
+        </section>
+
+        <!-- Ministry Highlights -->
+        <section class="spk-highlights" aria-labelledby="highlights-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Captured Glory</span>
+                    <h2 id="highlights-heading" class="section-title">Ministry Highlights</h2>
+                </div>
+                <div class="spk-highlights__grid">
+                    <a href="gallery.html" class="spk-highlight-card reveal">
+                        <img src="img/lifted_hands.jpeg" alt="Mass worship moment" loading="lazy" width="400" height="533">
+                        <div class="spk-highlight-card__overlay">
+                            <span class="spk-highlight-card__tag">Worship</span>
+                            <span class="spk-highlight-card__title">Mass Worship Encounter</span>
+                        </div>
+                    </a>
+                    <a href="gallery.html" class="spk-highlight-card reveal" data-delay="80">
+                        <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb0?w=400&q=80" alt="Altar call" loading="lazy" width="400" height="533">
+                        <div class="spk-highlight-card__overlay">
+                            <span class="spk-highlight-card__tag">Altar Call</span>
+                            <span class="spk-highlight-card__title">5,000 Souls One Night</span>
+                        </div>
+                    </a>
+                    <a href="gallery.html" class="spk-highlight-card reveal" data-delay="160">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80" alt="Testimony" loading="lazy" width="400" height="533">
+                        <div class="spk-highlight-card__overlay">
+                            <span class="spk-highlight-card__tag">Testimony</span>
+                            <span class="spk-highlight-card__title">Miracles Documented</span>
+                        </div>
+                    </a>
+                    <a href="gallery.html" class="spk-highlight-card reveal" data-delay="240">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&q=80" alt="Guest minister" loading="lazy" width="400" height="533">
+                        <div class="spk-highlight-card__overlay">
+                            <span class="spk-highlight-card__tag">Ministry</span>
+                            <span class="spk-highlight-card__title">Guest Minister Sessions</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Messages -->
+        <section class="spk-videos" aria-labelledby="videos-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Personal Invitations</span>
+                    <h2 id="videos-heading" class="section-title">Video Messages From Speakers</h2>
+                </div>
+                <div class="spk-videos__grid" id="speakerVideos"></div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="spk-testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Changed Lives</span>
+                    <h2 id="testimonials-heading" class="section-title">Impact Stories</h2>
+                </div>
+                <div class="spk-slider">
+                    <div class="spk-slider__track" id="spkSliderTrack">
+                        <blockquote class="spk-slide is-active">
+                            <div class="spk-slide__content">
+                                <p class="spk-slide__quote">"When Don Moen ministered at SDTG 2023, something shifted in my spirit. I received healing from a condition I'd carried for years. That night changed my life forever."</p>
+                                <footer class="spk-slide__author">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="" loading="lazy" width="52" height="52">
+                                    <div><cite>Adaeze Okafor</cite><span>Lagos, Nigeria</span></div>
+                                </footer>
+                            </div>
+                        </blockquote>
+                        <blockquote class="spk-slide">
+                            <div class="spk-slide__content">
+                                <p class="spk-slide__quote">"Frank Edwards' worship set at SDTG 2024 was unlike anything I've experienced. The atmosphere was so thick you could feel God's presence physically."</p>
+                                <footer class="spk-slide__author">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="" loading="lazy" width="52" height="52">
+                                    <div><cite>James Okorie</cite><span>London, UK</span></div>
+                                </footer>
+                            </div>
+                        </blockquote>
+                        <blockquote class="spk-slide">
+                            <div class="spk-slide__content">
+                                <p class="spk-slide__quote">"Rev. Dr. Okafor's message on glory at SDTG opened my understanding of what God wants to do in this generation. I left that crusade a different person."</p>
+                                <footer class="spk-slide__author">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="" loading="lazy" width="52" height="52">
+                                    <div><cite>Grace Mwangi</cite><span>Nairobi, Kenya</span></div>
+                                </footer>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <div class="spk-slider__controls">
+                        <button type="button" class="spk-slider__btn" id="spkSliderPrev" aria-label="Previous"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                        <div class="spk-slider__dots" id="spkSliderDots"></div>
+                        <button type="button" class="spk-slider__btn" id="spkSliderNext" aria-label="Next"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social -->
+        <section class="spk-social" aria-labelledby="social-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Follow The Movement</span>
+                    <h2 id="social-heading" class="section-title">Connect With SDTG Speakers</h2>
+                </div>
+                <div class="spk-social__grid">
+                    <a href="#" class="spk-social__card spk-social__card--fb reveal"><div class="spk-social__icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></div><span class="spk-social__label">Facebook</span></a>
+                    <a href="#" class="spk-social__card spk-social__card--ig reveal" data-delay="60"><div class="spk-social__icon"><i class="fab fa-instagram" aria-hidden="true"></i></div><span class="spk-social__label">Instagram</span></a>
+                    <a href="#" class="spk-social__card spk-social__card--yt reveal" data-delay="120"><div class="spk-social__icon"><i class="fab fa-youtube" aria-hidden="true"></i></div><span class="spk-social__label">YouTube</span></a>
+                    <a href="#" class="spk-social__card spk-social__card--tt reveal" data-delay="180"><div class="spk-social__icon"><i class="fab fa-tiktok" aria-hidden="true"></i></div><span class="spk-social__label">TikTok</span></a>
+                    <a href="#" class="spk-social__card spk-social__card--x reveal" data-delay="240"><div class="spk-social__icon"><i class="fab fa-x-twitter" aria-hidden="true"></i></div><span class="spk-social__label">X</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="spk-cta" aria-labelledby="spk-cta-heading">
+            <div class="spk-cta__bg"><img src="img/main1.jpg" alt="" loading="lazy" aria-hidden="true"></div>
+            <div class="spk-cta__overlay" aria-hidden="true"></div>
+            <canvas id="spkCtaParticles" class="spk-cta__particles" aria-hidden="true"></canvas>
+            <div class="container">
+                <div class="spk-cta__content reveal">
+                    <h2 id="spk-cta-heading" class="spk-cta__title">Prepare For An Unforgettable Encounter</h2>
+                    <p class="spk-cta__sub">Join thousands of worshippers and experience powerful ministry from God's servants.</p>
+                    <div class="spk-cta__actions">
+                        <a href="registration.html" class="btn btn--primary btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Now</a>
+                        <a href="gallery.html" class="btn btn--glass btn--lg"><i class="fas fa-play-circle" aria-hidden="true"></i> Watch Previous Crusades</a>
+                        <a href="donate.html" class="btn btn--outline btn--lg"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Donate</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Speaker Modal -->
+    <div class="spk-modal" id="speakerModal" role="dialog" aria-modal="true" aria-label="Speaker profile" aria-hidden="true">
+        <div class="spk-modal__inner">
+            <button type="button" class="spk-modal__close" aria-label="Close"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <div id="speakerModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="spk-video-modal" id="speakerVideoModal" role="dialog" aria-modal="true" aria-label="Video player" aria-hidden="true">
+        <div class="spk-video-modal__inner">
+            <button type="button" class="spk-video-modal__close" aria-label="Close video"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <div class="spk-video-modal__frame" id="speakerVideoFrame"></div>
+            <p id="speakerVideoTitle" class="spk-video-card__label" style="text-align:center;margin-top:16px;"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__cta">
+            <div class="footer__cta-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__cta-inner">
+                    <div class="footer__cta-text">
+                        <span class="footer__eyebrow">Join The Movement</span>
+                        <h2 class="footer__cta-title">Experience The Glory</h2>
+                        <p>Meet the voices of revival at SDTG 2026.</p>
+                    </div>
+                    <div class="footer__cta-actions">
+                        <a href="registration.html" class="btn btn--primary btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Free</a>
+                        <a href="livestream.html" class="btn btn--glass btn--lg"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__main">
+            <div class="footer__glow footer__glow--left" aria-hidden="true"></div>
+            <div class="footer__glow footer__glow--right" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__intro">
+                    <a href="index.html" class="footer__logo">
+                        <div class="logo-video logo-video--lg" aria-hidden="true"><video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video></div>
+                        <span class="footer__logo-text"><strong>Send Down Thy Glory</strong><small>International Music Crusade</small></span>
+                    </a>
+                    <p class="footer__tagline">Igniting revival across nations through worship, prayer, and the manifest glory of God.</p>
+                </div>
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Explore</h3>
+                        <ul class="footer__links">
+                            <li><a href="about.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> About</a></li>
+                            <li><a href="speakers.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Speakers</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Gallery</a></li>
+                            <li><a href="registration.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Registration</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Get Involved</h3>
+                        <ul class="footer__links">
+                            <li><a href="donate.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Give</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Contact</h3>
+                        <ul class="footer__contact">
+                            <li><span class="footer__contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span><a href="mailto:info@sdtg.org">info@sdtg.org</a></li>
+                            <li><span class="footer__contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+2348034567890">+234 803 456 7890</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__col--newsletter">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Stay Connected</h3>
+                        <form class="footer__newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Enter your email" required aria-label="Email">
+                            <button type="submit" class="btn btn--primary">Subscribe</button>
+                        </form>
+                        <div class="footer__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">&copy; 2026 Send Down Thy Glory. All rights reserved.</p>
+                    <p class="footer__parent">A ministry of <a href="../index.html">AG Ikenebgu Assemblies of God</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button type="button" id="scrollTop" class="scroll-top" aria-label="Scroll to top"><span class="scroll-top__ring" aria-hidden="true"></span><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+    <script src="js/speakers.js" defer></script>
+</body>
+</html>

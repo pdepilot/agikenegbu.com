@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate — Send Down Thy Glory International Music Crusade</title>
+    <meta name="description" content="Support the vision of Send Down Thy Glory — your giving fuels crusades, evangelism, charity, media ministry, and community outreach across nations.">
+    <meta property="og:title" content="Support The Vision — SDTG">
+    <meta property="og:description" content="Every gift helps spread hope, transform lives, and advance the work of God's Kingdom.">
+    <meta property="og:image" content="img/lifted_hands.jpeg">
+    <meta name="theme-color" content="#1a0a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/donate.css">
+    <link rel="icon" href="img/sdtg-logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="navbar scrolled" id="navbar" role="banner">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand" aria-label="Send Down Thy Glory Home">
+                <div class="logo-video logo-video--sm" aria-hidden="true">
+                    <video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video>
+                </div>
+                <span class="navbar__logo-text"><strong>SDTG</strong><small>Send Down Thy Glory</small></span>
+            </a>
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+            <div class="navbar__backdrop" id="navBackdrop" aria-hidden="true"></div>
+            <nav class="navbar__menu" id="navMenu" role="navigation" aria-label="Main navigation">
+                <div class="navbar__menu-header">
+                    <span class="navbar__menu-eyebrow">Navigation</span>
+                    <span class="navbar__menu-title">Send Down Thy Glory</span>
+                </div>
+                <ul class="navbar__links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="speakers.html" class="nav-link">Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="livestream.html" class="nav-link">Livestream</a></li>
+                    <li><a href="registration.html" class="nav-link">Registration</a></li>
+                    <li><a href="donate.html" class="nav-link active" aria-current="page">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="navbar__actions">
+                    <a href="../index.html" class="btn btn--site-switch btn--sm" aria-label="Visit AG Ikenebgu Church website"><i class="fas fa-church" aria-hidden="true"></i> AG Ikenebgu</a>
+                    <a href="livestream.html" class="btn btn--primary btn--sm"><i class="fas fa-play" aria-hidden="true"></i> Watch Live</a>
+                    <a href="donate.html#give" class="btn btn--outline btn--sm">Donate</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section class="donate-hero" aria-label="Donate hero">
+            <div class="donate-hero__media">
+                <img src="img/lifted_hands.jpeg" alt="" width="1920" height="1080" fetchpriority="high">
+            </div>
+            <div class="donate-hero__overlay" aria-hidden="true"></div>
+            <div class="donate-hero__rays" aria-hidden="true"></div>
+            <canvas id="donateHeroParticles" class="donate-hero__particles" aria-hidden="true"></canvas>
+            <div class="donate-hero__content">
+                <p class="donate-hero__badge reveal"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Sow Into Revival</p>
+                <h1 class="donate-hero__title reveal" data-delay="100">Support <span>The Vision</span></h1>
+                <p class="donate-hero__sub reveal" data-delay="200">Every gift helps spread hope, transform lives, and advance the work of God's Kingdom.</p>
+                <div class="donate-hero__actions reveal" data-delay="300">
+                    <a href="#give" class="btn btn--primary btn--lg"><i class="fas fa-gift" aria-hidden="true"></i> Give Now</a>
+                    <a href="#impact-stories" class="btn btn--glass btn--lg"><i class="fas fa-heart" aria-hidden="true"></i> See Impact Stories</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="donate-impact" aria-labelledby="impact-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Your Impact</span>
+                    <h2 id="impact-heading" class="section-title">What Your Giving Supports</h2>
+                </div>
+                <div class="impact-grid">
+                    <article class="impact-card reveal">
+                        <div class="impact-card__icon"><i class="fas fa-cross" aria-hidden="true"></i></div>
+                        <h3>Crusade Support</h3>
+                        <p>Stage, sound, logistics, and infrastructure for world-class crusades.</p>
+                        <div class="impact-card__bar"><span data-pct="85" style="width:0"></span></div>
+                    </article>
+                    <article class="impact-card reveal" data-delay="80">
+                        <div class="impact-card__icon"><i class="fas fa-bullhorn" aria-hidden="true"></i></div>
+                        <h3>Evangelism</h3>
+                        <p>Outreach teams, tracts, and soul-winning initiatives across communities.</p>
+                        <div class="impact-card__bar"><span data-pct="72" style="width:0"></span></div>
+                    </article>
+                    <article class="impact-card reveal" data-delay="160">
+                        <div class="impact-card__icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></div>
+                        <h3>Charity Projects</h3>
+                        <p>Food drives, medical outreach, and support for the less privileged.</p>
+                        <div class="impact-card__bar"><span data-pct="68" style="width:0"></span></div>
+                    </article>
+                    <article class="impact-card reveal" data-delay="240">
+                        <div class="impact-card__icon"><i class="fas fa-video" aria-hidden="true"></i></div>
+                        <h3>Media Ministry</h3>
+                        <p>Broadcasting, livestreams, and global digital gospel reach.</p>
+                        <div class="impact-card__bar"><span data-pct="90" style="width:0"></span></div>
+                    </article>
+                    <article class="impact-card reveal" data-delay="320">
+                        <div class="impact-card__icon"><i class="fas fa-child" aria-hidden="true"></i></div>
+                        <h3>Youth Development</h3>
+                        <p>SDTG Youth Movement, mentorship, and leadership training.</p>
+                        <div class="impact-card__bar"><span data-pct="55" style="width:0"></span></div>
+                    </article>
+                    <article class="impact-card reveal" data-delay="400">
+                        <div class="impact-card__icon"><i class="fas fa-music" aria-hidden="true"></i></div>
+                        <h3>Worship Ministry</h3>
+                        <p>Choir academy, musicians, and worship resource development.</p>
+                        <div class="impact-card__bar"><span data-pct="78" style="width:0"></span></div>
+                    </article>
+                    <article class="impact-card reveal" data-delay="480">
+                        <div class="impact-card__icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                        <h3>Community Outreach</h3>
+                        <p>Local missions, prison ministry, and community transformation programs.</p>
+                        <div class="impact-card__bar"><span data-pct="62" style="width:0"></span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="donate-methods" id="give" aria-labelledby="give-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Give Securely</span>
+                    <h2 id="give-heading" class="section-title">Choose Your Giving Category</h2>
+                    <p class="section-desc">Select a category to view Nigerian and international bank details.</p>
+                </div>
+                <div class="give-categories">
+                    <div class="give-cat reveal" data-category="tithes" tabindex="0" role="button"><div class="give-cat__icon"><i class="fas fa-church" aria-hidden="true"></i></div><h3>Tithes</h3></div>
+                    <div class="give-cat reveal" data-delay="60" data-category="offering" tabindex="0" role="button"><div class="give-cat__icon"><i class="fas fa-gift" aria-hidden="true"></i></div><h3>Offering</h3></div>
+                    <div class="give-cat reveal" data-delay="120" data-category="charity" tabindex="0" role="button"><div class="give-cat__icon"><i class="fas fa-heart" aria-hidden="true"></i></div><h3>Charity</h3></div>
+                    <div class="give-cat reveal" data-delay="180" data-category="missions" tabindex="0" role="button"><div class="give-cat__icon"><i class="fas fa-globe-africa" aria-hidden="true"></i></div><h3>Missions</h3></div>
+                    <div class="give-cat reveal" data-delay="240" data-category="project" tabindex="0" role="button"><div class="give-cat__icon"><i class="fas fa-hammer" aria-hidden="true"></i></div><h3>Project Support</h3></div>
+                    <div class="give-cat reveal" data-delay="300" data-category="partnership" tabindex="0" role="button"><div class="give-cat__icon"><i class="fas fa-handshake" aria-hidden="true"></i></div><h3>Partnership Giving</h3></div>
+                </div>
+                <div class="give-details" id="giveDetails">
+                    <div class="give-bank reveal">
+                        <div class="give-bank__header"><i class="fas fa-university" aria-hidden="true"></i><h3>Nigerian Donations</h3></div>
+                        <div id="giveNigeria"></div>
+                    </div>
+                    <div class="give-bank reveal" data-delay="100">
+                        <div class="give-bank__header"><i class="fas fa-globe" aria-hidden="true"></i><h3>International Donations</h3></div>
+                        <div id="giveInternational"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donor-wall" aria-labelledby="donor-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Transparency</span>
+                    <h2 id="donor-heading" class="section-title">Wall Of Impact</h2>
+                    <p class="section-desc">Recent partners who are advancing the gospel through generous giving.</p>
+                </div>
+            </div>
+            <div class="donor-track" id="donorTrack" aria-label="Recent donors">
+                <article class="donor-card">
+                    <p class="donor-card__name">Emmanuel Adebayo</p>
+                    <p class="donor-card__meta">Lagos, Nigeria · Aug 2025</p>
+                    <p class="donor-card__amount">₦500,000</p>
+                    <span class="donor-card__purpose">Crusade Support</span>
+                    <p class="donor-card__phone">0803****456</p>
+                </article>
+                <article class="donor-card">
+                    <p class="donor-card__name">Sarah Mitchell</p>
+                    <p class="donor-card__meta">London, UK · Jul 2025</p>
+                    <p class="donor-card__amount">£2,500</p>
+                    <span class="donor-card__purpose">Media Equipment</span>
+                    <p class="donor-card__phone">+447****892</p>
+                </article>
+                <article class="donor-card">
+                    <p class="donor-card__name">Anonymous Partner</p>
+                    <p class="donor-card__meta">Canada · Jul 2025</p>
+                    <p class="donor-card__amount">$5,000</p>
+                    <span class="donor-card__purpose">Media Ministry</span>
+                </article>
+                <article class="donor-card">
+                    <p class="donor-card__name">Pastor Daniel Okwu</p>
+                    <p class="donor-card__meta">Enugu, Nigeria · Jun 2025</p>
+                    <p class="donor-card__amount">₦250,000</p>
+                    <span class="donor-card__purpose">Charity Outreach</span>
+                    <p class="donor-card__phone">0813****901</p>
+                </article>
+                <article class="donor-card">
+                    <p class="donor-card__name">Grace Fellowship Church</p>
+                    <p class="donor-card__meta">Accra, Ghana · Jun 2025</p>
+                    <p class="donor-card__amount">₵15,000</p>
+                    <span class="donor-card__purpose">Worship Ministry</span>
+                </article>
+                <article class="donor-card">
+                    <p class="donor-card__name">Chioma Nwankwo</p>
+                    <p class="donor-card__meta">Abuja, Nigeria · May 2025</p>
+                    <p class="donor-card__amount">₦100,000</p>
+                    <span class="donor-card__purpose">Youth Programs</span>
+                    <p class="donor-card__phone">0705****234</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="donate-map" aria-labelledby="map-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Global Family</span>
+                    <h2 id="map-heading" class="section-title">Supporters Around The World</h2>
+                </div>
+                <div class="map-visual reveal">
+                    <svg class="map-visual__svg" viewBox="0 0 800 400" aria-hidden="true"><rect fill="rgba(255,255,255,0.03)" width="800" height="400" rx="12"/><text x="400" y="200" text-anchor="middle" fill="rgba(255,255,255,0.15)" font-size="14">World Map</text></svg>
+                    <span class="map-dot" style="left:48%;top:42%" title="Nigeria"></span>
+                    <span class="map-dot" style="left:46%;top:35%" title="UK"></span>
+                    <span class="map-dot" style="left:22%;top:38%" title="USA"></span>
+                    <span class="map-dot" style="left:52%;top:55%" title="Ghana"></span>
+                    <span class="map-dot" style="left:55%;top:48%" title="Kenya"></span>
+                    <span class="map-dot" style="left:75%;top:65%" title="Australia"></span>
+                </div>
+                <div class="map-stats reveal" data-delay="150">
+                    <div class="map-stat"><p class="map-stat__num" data-count="45" data-suffix="+">0</p><p class="map-stat__label">Countries</p></div>
+                    <div class="map-stat"><p class="map-stat__num" data-count="3200" data-suffix="+">0</p><p class="map-stat__label">Supporters</p></div>
+                    <div class="map-stat"><p class="map-stat__num" data-count="180" data-suffix="+">0</p><p class="map-stat__label">Partner Churches</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donate-feed" aria-label="Live donation feed">
+            <div class="container">
+                <div class="feed-ticker">
+                    <div class="feed-ticker__track">
+                        <div class="feed-ticker__item"><i class="fas fa-heart" aria-hidden="true"></i> Anonymous donor from Canada supported Media Ministry.</div>
+                        <div class="feed-ticker__item"><i class="fas fa-heart" aria-hidden="true"></i> Partner from Nigeria donated to Crusade Support.</div>
+                        <div class="feed-ticker__item"><i class="fas fa-heart" aria-hidden="true"></i> Supporter from the United Kingdom donated to Charity Outreach.</div>
+                        <div class="feed-ticker__item"><i class="fas fa-heart" aria-hidden="true"></i> Grace Fellowship Church (Ghana) gave to Worship Ministry.</div>
+                        <div class="feed-ticker__item"><i class="fas fa-heart" aria-hidden="true"></i> Anonymous donor from Canada supported Media Ministry.</div>
+                        <div class="feed-ticker__item"><i class="fas fa-heart" aria-hidden="true"></i> Partner from Nigeria donated to Crusade Support.</div>
+                        <div class="feed-ticker__item"><i class="fas fa-heart" aria-hidden="true"></i> Supporter from the United Kingdom donated to Charity Outreach.</div>
+                        <div class="feed-ticker__item"><i class="fas fa-heart" aria-hidden="true"></i> Grace Fellowship Church (Ghana) gave to Worship Ministry.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donate-testimonials" id="impact-stories" aria-labelledby="stories-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Lives Changed</span>
+                    <h2 id="stories-heading" class="section-title">Testimonies Of Impact</h2>
+                </div>
+                <div class="dn-test-grid">
+                    <article class="dn-test-card reveal">
+                        <div class="dn-test-card__img"><img src="img/main1.jpg" alt="Community outreach" loading="lazy" width="400" height="250"></div>
+                        <div class="dn-test-card__body">
+                            <p class="dn-test-card__quote">"Your charity giving fed 500 families in rural Imo State. Children who hadn't eaten in days received hope and the gospel."</p>
+                            <div class="dn-test-card__author"><cite>Outreach Team Lead</cite><span>Owerri, Nigeria</span></div>
+                        </div>
+                    </article>
+                    <article class="dn-test-card reveal" data-delay="100">
+                        <div class="dn-test-card__img"><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&q=80" alt="Worship ministry" loading="lazy" width="400" height="250"></div>
+                        <div class="dn-test-card__body">
+                            <p class="dn-test-card__quote">"Partnership giving equipped our choir academy. 120 youth now lead worship in their communities across 8 states."</p>
+                            <div class="dn-test-card__author"><cite>SDTG Choir Director</cite><span>Nigeria</span></div>
+                        </div>
+                    </article>
+                    <article class="dn-test-card reveal" data-delay="200">
+                        <div class="dn-test-card__img"><img src="https://images.unsplash.com/photo-1507692049790-bcf87f88310a?w=400&q=80" alt="Crusade impact" loading="lazy" width="400" height="250"></div>
+                        <div class="dn-test-card__body">
+                            <p class="dn-test-card__quote">"Crusade support made it possible to reach 30,000 souls. Over 5,000 gave their lives to Christ in a single night."</p>
+                            <div class="dn-test-card__author"><cite>Rev. Ministry Lead</cite><span>SDTG 2025</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="donate-transparency" aria-labelledby="transparency-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Accountability</span>
+                    <h2 id="transparency-heading" class="section-title">Transparency At A Glance</h2>
+                </div>
+                <div class="transparency-grid">
+                    <div class="trans-stat reveal"><p class="trans-stat__num" data-count="850" data-suffix="M+">0</p><p class="trans-stat__label">Funds Raised (₦)</p></div>
+                    <div class="trans-stat reveal" data-delay="80"><p class="trans-stat__num" data-count="48" data-suffix="+">0</p><p class="trans-stat__label">Projects Completed</p></div>
+                    <div class="trans-stat reveal" data-delay="160"><p class="trans-stat__num" data-count="120" data-suffix="+">0</p><p class="trans-stat__label">Communities Reached</p></div>
+                    <div class="trans-stat reveal" data-delay="240"><p class="trans-stat__num" data-count="35" data-suffix="+">0</p><p class="trans-stat__label">Outreach Programs</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donate-trust" aria-label="Trust and security">
+            <div class="container">
+                <div class="trust-grid">
+                    <article class="trust-item reveal">
+                        <div class="trust-item__icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+                        <h3>Secure Giving</h3>
+                        <p>Bank-grade security for all transactions</p>
+                    </article>
+                    <article class="trust-item reveal" data-delay="80">
+                        <div class="trust-item__icon"><i class="fas fa-file-invoice-dollar" aria-hidden="true"></i></div>
+                        <h3>Transparent Accounting</h3>
+                        <p>Annual reports published for partners</p>
+                    </article>
+                    <article class="trust-item reveal" data-delay="160">
+                        <div class="trust-item__icon"><i class="fas fa-globe-americas" aria-hidden="true"></i></div>
+                        <h3>International Donations</h3>
+                        <p>SWIFT &amp; IBAN transfers accepted worldwide</p>
+                    </article>
+                    <article class="trust-item reveal" data-delay="240">
+                        <div class="trust-item__icon"><i class="fas fa-award" aria-hidden="true"></i></div>
+                        <h3>Trusted Ministry</h3>
+                        <p>12+ years of faithful stewardship</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="donate-cta" aria-labelledby="donate-cta-heading">
+            <div class="donate-cta__bg"><img src="img/lifted_hands.jpeg" alt="" loading="lazy" aria-hidden="true"></div>
+            <div class="donate-cta__overlay" aria-hidden="true"></div>
+            <canvas id="donateCtaParticles" class="donate-cta__particles" aria-hidden="true"></canvas>
+            <div class="container">
+                <div class="donate-cta__content reveal">
+                    <h2 id="donate-cta-heading" class="donate-cta__title">Become Part Of The Story</h2>
+                    <p class="donate-cta__sub">Your generosity helps create moments of worship, transformation, outreach, and hope for generations to come.</p>
+                    <div class="donate-cta__actions">
+                        <a href="#give" class="btn btn--primary btn--lg"><i class="fas fa-gift" aria-hidden="true"></i> Donate Now</a>
+                        <a href="contact.html" class="btn btn--glass btn--lg"><i class="fas fa-handshake" aria-hidden="true"></i> Become A Partner</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__cta">
+            <div class="footer__cta-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__cta-inner">
+                    <div class="footer__cta-text">
+                        <span class="footer__eyebrow">Join The Movement</span>
+                        <h2 class="footer__cta-title">Experience The Glory</h2>
+                        <p>Your giving fuels revival across nations.</p>
+                    </div>
+                    <div class="footer__cta-actions">
+                        <a href="registration.html" class="btn btn--primary btn--lg"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Register Free</a>
+                        <a href="donate.html#give" class="btn btn--glass btn--lg"><i class="fas fa-gift" aria-hidden="true"></i> Give Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__main">
+            <div class="footer__glow footer__glow--left" aria-hidden="true"></div>
+            <div class="footer__glow footer__glow--right" aria-hidden="true"></div>
+            <div class="container">
+                <div class="footer__intro">
+                    <a href="index.html" class="footer__logo">
+                        <div class="logo-video logo-video--lg" aria-hidden="true"><video class="logo-video__el" src="videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto"></video></div>
+                        <span class="footer__logo-text"><strong>Send Down Thy Glory</strong><small>International Music Crusade</small></span>
+                    </a>
+                    <p class="footer__tagline">Igniting revival across nations through worship, prayer, and the manifest glory of God.</p>
+                </div>
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Explore</h3>
+                        <ul class="footer__links">
+                            <li><a href="about.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> About</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Gallery</a></li>
+                            <li><a href="donate.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Give</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Get Involved</h3>
+                        <ul class="footer__links">
+                            <li><a href="registration.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Register</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contact</a></li>
+                            <li><a href="contact.html#prayer"><i class="fas fa-chevron-right" aria-hidden="true"></i> Prayer</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Contact</h3>
+                        <ul class="footer__contact">
+                            <li><span class="footer__contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span><a href="mailto:giving@sdtg.org">giving@sdtg.org</a></li>
+                            <li><span class="footer__contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+2348034567890">+234 803 456 7890</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__col--newsletter">
+                        <h3 class="footer__heading"><span class="footer__heading-line" aria-hidden="true"></span>Stay Connected</h3>
+                        <form class="footer__newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Enter your email" required aria-label="Email">
+                            <button type="submit" class="btn btn--primary">Subscribe</button>
+                        </form>
+                        <div class="footer__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">&copy; 2026 Send Down Thy Glory. All rights reserved.</p>
+                    <p class="footer__parent">A ministry of <a href="../index.html">AG Ikenebgu Assemblies of God</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button type="button" id="scrollTop" class="scroll-top" aria-label="Scroll to top"><span class="scroll-top__ring" aria-hidden="true"></span><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+    <script src="js/donate.js" defer></script>
+</body>
+</html>

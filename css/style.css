@@ -206,7 +206,7 @@ h4, h5, h6, .h4, .h5, .h6 {
     margin-bottom: 6rem;
     padding-top: 15rem;
     padding-bottom: 6rem;
-    background: linear-gradient(rgba(26, 43, 92, 0.55), rgba(26, 43, 92, 0.45)), url("../img/hero-2.jpg") center center no-repeat;
+    background: linear-gradient(rgba(26, 43, 92, 0.55), rgba(26, 43, 92, 0.45)), url("../images/main1.jpg") center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }

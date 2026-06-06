@@ -1113,6 +1113,7 @@
     }
 }
 
+.donate-page .navbar-cta-group > a.btn.btn-primary.is-give-active,
 .donate-page .navbar-collapse > a.btn.btn-primary.is-give-active {
     background: var(--donate-navy);
     border-color: var(--donate-navy);

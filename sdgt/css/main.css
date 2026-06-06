@@ -159,6 +159,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .btn--lg { padding: 16px 36px; font-size: 1rem; }
+
+.btn--site-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--sdtg-text);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+}
+
+.btn--site-switch i {
+    color: var(--sdtg-gold);
+    font-size: 0.85rem;
+}
+
+.btn--site-switch:hover {
+    color: var(--sdtg-white);
+    border-color: rgba(212, 175, 55, 0.45);
+    background: rgba(26, 43, 92, 0.35);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
 .btn--sm { padding: 10px 20px; font-size: 0.85rem; }
 .btn--full { width: 100%; }
 
@@ -379,6 +402,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     align-items: center;
     gap: 10px;
     margin-left: 16px;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+}
+
+.navbar__actions .btn--site-switch {
+    padding: 8px 14px;
+    font-size: 0.8rem;
 }
 
 /* Mobile menu backdrop */
@@ -916,7 +946,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .minister-card__image {
     position: relative;
-    aspect-ratio: 1;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
 }
 
@@ -935,29 +965,33 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     background: linear-gradient(to top, rgba(10, 6, 18, 0.8) 0%, transparent 50%);
 }
 
-.minister-card__body { padding: 24px; }
+.minister-card__body { padding: 18px 16px; }
 
 .minister-card__body h3 {
     font-family: var(--sdtg-font-display);
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: var(--sdtg-white);
     margin-bottom: 4px;
 }
 
 .minister-card__ministry {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--sdtg-gold);
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .minister-card__body p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--sdtg-text-muted);
-    line-height: 1.6;
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .carousel-btn {
