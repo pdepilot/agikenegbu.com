@@ -434,6 +434,19 @@
     }
 }
 
+@media (max-width: 480px) {
+    .cookie-consent__actions,
+    .cookie-modal__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cookie-modal__actions .btn {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .cookie-consent__rays { animation: none; }
     .cookie-consent,

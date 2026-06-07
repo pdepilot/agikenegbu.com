@@ -1,0 +1,25 @@
+{
+  "agIkenebgu": {
+    "basePath": "/blog",
+    "rssPath": "/blog/feed.xml",
+    "categories": [
+      { "slug": "sermons", "title": "Sermons", "description": "Sunday messages and Bible teaching from AG Ikenebgu." },
+      { "slug": "devotionals", "title": "Devotionals", "description": "Daily faith encouragement and Scripture reflections." },
+      { "slug": "church-news", "title": "Church News", "description": "Announcements, events, and updates from AG Ikenebgu." },
+      { "slug": "testimonies", "title": "Testimonies", "description": "Stories of faith, healing, and transformation." }
+    ],
+    "templateFields": ["title", "slug", "excerpt", "author", "publishedDate", "category", "featuredImage", "metaDescription", "schemaArticle"]
+  },
+  "sdtg": {
+    "basePath": "/sdgt/blog",
+    "rssPath": "/sdgt/blog/feed.xml",
+    "categories": [
+      { "slug": "event-updates", "title": "Event Updates", "description": "SDTG 2026 announcements and logistics." },
+      { "slug": "speaker-announcements", "title": "Speaker Announcements", "description": "Featured ministers and worship leaders." },
+      { "slug": "worship-articles", "title": "Worship Articles", "description": "Teaching on worship, prayer, and revival." },
+      { "slug": "testimonies", "title": "Testimonies", "description": "Lives changed at Send Down Thy Glory." },
+      { "slug": "revival-stories", "title": "Revival Stories", "description": "Historic moments from the SDTG movement." }
+    ],
+    "templateFields": ["title", "slug", "excerpt", "author", "publishedDate", "category", "featuredImage", "metaDescription", "schemaArticle", "eventTag"]
+  }
+}

@@ -1,0 +1,23 @@
+# Netlify clean URL redirects
+/about          /about.html          200
+/ministries     /activity.html       200
+/events         /event.html          200
+/contact        /contact.html        200
+/donate         /donate.html         200
+/give           /donate.html         301
+/sermons        /sermon-library/index.html 200
+/send-down-thy-glory  /sdgt/index.html 301
+/sermon.html    /sermons             301
+/activity.html  /ministries          301
+/event.html     /events              301
+/send_down_thy_glory.html /sdgt/      301
+
+/sdgt           /sdgt/index.html     200
+/sdgt/about     /sdgt/about.html     200
+/sdgt/gallery   /sdgt/gallery.html   200
+/sdgt/speakers  /sdgt/speakers.html  200
+/sdgt/registration /sdgt/registration.html 200
+/sdgt/register  /sdgt/registration.html 301
+/sdgt/livestream /sdgt/livestream.html 200
+/sdgt/donate    /sdgt/donate.html    200
+/sdgt/contact   /sdgt/contact.html   200

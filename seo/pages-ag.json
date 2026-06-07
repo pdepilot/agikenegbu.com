@@ -1,0 +1,102 @@
+{
+  "index.html": {
+    "title": "AG Ikenebgu | Assemblies of God Church Port Harcourt — Worship & Community",
+    "description": "AG Ikenebgu Assemblies of God in Port Harcourt, Nigeria — spirit-filled worship, Bible teaching, family ministries, and community outreach. Join us Sundays 8:00 AM & 10:30 AM.",
+    "keywords": "Assemblies of God Port Harcourt, AG Ikenebgu, AG Ikenegbu, Pentecostal church Nigeria, churches in Port Harcourt, worship center Rivers State, Christian church Ikenebgu",
+    "path": "/",
+    "ogType": "website",
+    "image": "/images/main1.jpg",
+    "imageAlt": "Congregation worshiping at AG Ikenebgu Assemblies of God church",
+    "breadcrumb": [{ "name": "Home", "path": "/" }],
+    "schemas": ["organization", "church", "localBusiness", "website", "breadcrumb"]
+  },
+  "about.html": {
+    "title": "About AG Ikenebgu | Vision, Mission & Our Story",
+    "description": "Discover AG Ikenebgu Assemblies of God — our vision, mission, leadership, and heart for Gospel-centered family ministry in Port Harcourt, Rivers State, Nigeria.",
+    "keywords": "about AG Ikenebgu, Assemblies of God church history, church vision mission Nigeria, Pentecostal church Port Harcourt, AG Ikenegbu church",
+    "path": "/about",
+    "ogType": "website",
+    "image": "/images/main1.jpg",
+    "imageAlt": "AG Ikenebgu church community gathering",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "About Us", "path": "/about" }],
+    "schemas": ["organization", "church", "breadcrumb"]
+  },
+  "activity.html": {
+    "title": "Ministries | AG Ikenebgu — Youth, Family & Outreach Programs",
+    "description": "Explore AG Ikenebgu ministries — children's church, youth, women's fellowship, men's ministry, Bible study, prayer, and community outreach in Port Harcourt.",
+    "keywords": "church ministries Port Harcourt, youth ministry Nigeria, family ministry church, Bible study groups, community outreach AG Ikenebgu",
+    "path": "/ministries",
+    "ogType": "website",
+    "image": "/images/rev1.jpg",
+    "imageAlt": "Ministry activities at AG Ikenebgu church",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Ministries", "path": "/ministries" }],
+    "schemas": ["organization", "breadcrumb"]
+  },
+  "event.html": {
+    "title": "Church Events | AG Ikenebgu — Services, Programs & Gatherings",
+    "description": "Stay updated on AG Ikenebgu church events — worship services, conferences, outreaches, and special programs for families and the Port Harcourt community.",
+    "keywords": "church events Port Harcourt, worship services Nigeria, Christian events Rivers State, AG Ikenebgu programs, church calendar",
+    "path": "/events",
+    "ogType": "website",
+    "image": "/images/rev2.jpg",
+    "imageAlt": "Church event at AG Ikenebgu",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Events", "path": "/events" }],
+    "schemas": ["organization", "breadcrumb"]
+  },
+  "contact.html": {
+    "title": "Contact AG Ikenebgu | Visit, Call & Prayer Requests",
+    "description": "Contact AG Ikenebgu Assemblies of God in Port Harcourt. Find our address, phone, email, service times, and submit prayer requests. We welcome your visit.",
+    "keywords": "contact AG Ikenebgu, church address Port Harcourt, prayer request church, visit Assemblies of God Nigeria, AG Ikenegbu location",
+    "path": "/contact",
+    "ogType": "website",
+    "image": "/images/ag-logo.jpeg",
+    "imageAlt": "AG Ikenebgu Assemblies of God logo",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Contact", "path": "/contact" }],
+    "schemas": ["organization", "church", "localBusiness", "breadcrumb"]
+  },
+  "donate.html": {
+    "title": "Give & Donate | Partner with AG Ikenebgu Ministries",
+    "description": "Give to AG Ikenebgu through tithes, offerings, charity, and building fund gifts. Secure, transparent church giving for Nigeria and international partners.",
+    "keywords": "donate church Nigeria, tithe offering online, church giving Port Harcourt, partner with ministry, AG Ikenebgu donate",
+    "path": "/donate",
+    "ogType": "website",
+    "image": "/images/ag-logo.jpeg",
+    "imageAlt": "Support AG Ikenebgu church ministries",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Give", "path": "/donate" }],
+    "schemas": ["organization", "breadcrumb", "faqDonate"]
+  },
+  "sermon-library/index.html": {
+    "title": "Sermon Library | AG Ikenebgu — Messages & Bible Teachings",
+    "description": "Watch and listen to AG Ikenebgu sermons — Gospel messages, Bible teachings, and sermon series to strengthen your faith in Christ.",
+    "keywords": "AG Ikenebgu sermons, church sermon library Nigeria, Bible teachings online, Christian messages Port Harcourt, worship messages",
+    "path": "/sermons",
+    "ogType": "website",
+    "image": "/images/rev1.jpg",
+    "imageAlt": "Sermon teaching at AG Ikenebgu",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Sermons", "path": "/sermons" }],
+    "schemas": ["organization", "breadcrumb", "videoCollection"],
+    "basePathPrefix": "../"
+  },
+  "sermon.html": {
+    "title": "Sermon Library | AG Ikenebgu — Messages & Bible Teachings",
+    "description": "Watch and listen to AG Ikenebgu sermons — Gospel messages, Bible teachings, and sermon series to strengthen your faith in Christ.",
+    "keywords": "AG Ikenebgu sermons, church sermon library Nigeria, Bible teachings online",
+    "path": "/sermons",
+    "ogType": "website",
+    "image": "/images/rev1.jpg",
+    "imageAlt": "Sermon teaching at AG Ikenebgu",
+    "robots": "noindex, follow",
+    "canonical": "/sermons",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Sermons", "path": "/sermons" }],
+    "schemas": ["organization", "breadcrumb"]
+  },
+  "send_down_thy_glory.html": {
+    "title": "Send Down Thy Glory | International Music Crusade",
+    "description": "Redirecting to Send Down Thy Glory International Music Crusade — worship, revival, and transformation in Owerri, Nigeria.",
+    "keywords": "Send Down Thy Glory, SDTG, gospel crusade Nigeria",
+    "path": "/send-down-thy-glory",
+    "robots": "noindex, follow",
+    "canonical": "/sdgt/",
+    "schemas": []
+  }
+}

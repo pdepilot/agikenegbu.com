@@ -1278,6 +1278,14 @@ body.reg-page.is-loaded {
 }
 
 @media (max-width: 480px) {
+    .reg-hero {
+        min-height: clamp(360px, 65vh, 520px);
+    }
+
+    .reg-form-wrap {
+        padding: 24px 16px;
+    }
+
     .reg-live-stats__grid {
         grid-template-columns: 1fr;
     }

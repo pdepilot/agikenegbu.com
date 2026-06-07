@@ -1334,9 +1334,23 @@
         grid-template-columns: 1fr;
     }
 
+    .gallery-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+    }
+
+    .gallery-filters::-webkit-scrollbar {
+        display: none;
+    }
+
     .gallery-filters__btn {
         font-size: 0.75rem;
         padding: 8px 14px;
+        flex-shrink: 0;
     }
 }
 

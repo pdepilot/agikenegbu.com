@@ -799,8 +799,10 @@ body.speakers-page.is-loaded { opacity: 1; }
 
 @media (max-width: 480px) {
     .spk-stats__grid { grid-template-columns: 1fr; }
-    .spk-worship__grid { grid-template-columns: 1fr 1fr; }
+    .spk-worship__grid { grid-template-columns: 1fr; }
+    .spk-highlights__grid { grid-template-columns: 1fr; }
     .spk-social__grid { grid-template-columns: 1fr; }
+    .spk-modal__inner { margin: 16px; max-height: calc(100vh - 32px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

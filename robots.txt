@@ -1,0 +1,15 @@
+# AG Ikenebgu & SDTG — robots.txt
+# https://www.agikenebgu.org
+
+User-agent: *
+Allow: /
+
+# Block non-content utility paths
+Disallow: /lib/
+Disallow: /includes/
+
+# Redirect stubs — canonical versions indexed separately
+Disallow: /send_down_thy_glory.html
+Disallow: /sermon.html
+
+Sitemap: https://www.agikenebgu.org/sitemap.xml

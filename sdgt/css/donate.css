@@ -417,7 +417,7 @@ body.donate-page.is-loaded { opacity: 1; }
 }
 
 @media (max-width: 768px) {
-    .donate-hero { min-height: 85vh; }
+    .donate-hero { min-height: clamp(380px, 70vh, 560px); padding-bottom: 60px; }
     .give-categories { grid-template-columns: 1fr 1fr; }
     .map-stats { grid-template-columns: 1fr; }
     .dn-test-grid { grid-template-columns: 1fr; }

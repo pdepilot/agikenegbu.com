@@ -1,0 +1,44 @@
+{
+  "ag": {
+    "siteName": "AG Ikenebgu Assemblies of God",
+    "baseUrl": "https://www.agikenebgu.org",
+    "defaultImage": "/images/main1.jpg",
+    "logo": "/images/ag-logo.jpeg",
+    "locale": "en_NG",
+    "phone": "+2348034567890",
+    "email": "info@agikenebgu.org",
+    "address": {
+      "street": "AG Ikenegbu, Ikenebgu Layout",
+      "city": "Port Harcourt",
+      "region": "Rivers State",
+      "country": "Nigeria",
+      "postalCode": "500001"
+    },
+    "geo": {
+      "latitude": 4.8156,
+      "longitude": 7.0498
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    }
+  },
+  "sdtg": {
+    "siteName": "Send Down Thy Glory International Music Crusade",
+    "baseUrl": "https://www.agikenebgu.org/sdgt",
+    "defaultImage": "/img/lifted_hands.jpeg",
+    "logo": "/img/sdtg-logo.svg",
+    "locale": "en_NG",
+    "phone": "+2348034567890",
+    "email": "info@senddownthyglory.org",
+    "event": {
+      "name": "Send Down Thy Glory 2026",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-17",
+      "location": "SDTG Crusade Grounds, Owerri, Imo State, Nigeria",
+      "latitude": 5.4839,
+      "longitude": 7.0332
+    }
+  }
+}

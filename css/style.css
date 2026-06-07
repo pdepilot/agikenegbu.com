@@ -147,14 +147,6 @@ h4, h5, h6, .h4, .h5, .h6 {
     color: var(--bs-dark);
     font-size: 17px;
     font-weight: 600;
-    transition: .5s;
-}
-
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active,
-.fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
-.fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
-    color: var(--bs-primary);
 }
 
 .navbar .dropdown-toggle::after {
@@ -355,6 +347,24 @@ h4, h5, h6, .h4, .h5, .h6 {
     background: var(--bs-dark) !important;
     color: var(--bs-primary) !important;
     border: 0;
+}
+
+.about-gallery {
+    align-items: stretch;
+}
+
+.about-gallery > .col-6:first-child {
+    display: flex;
+}
+
+.about-gallery img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-gallery > .col-6:first-child img {
+    flex: 1;
+    min-height: 0;
 }
 /*** About End ***/
 

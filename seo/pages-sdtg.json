@@ -1,0 +1,90 @@
+{
+  "index.html": {
+    "title": "Send Down Thy Glory 2026 | International Music Crusade Owerri Nigeria",
+    "description": "Send Down Thy Glory (SDTG) — Africa's international gospel music crusade in Owerri, Nigeria. Worship, prayer, miracles & revival. August 15–17, 2026. Register free.",
+    "keywords": "Send Down Thy Glory, SDTG Owerri, Christian crusades Nigeria, gospel events Nigeria, worship conferences Africa, international music crusade Owerri, revival Nigeria 2026",
+    "path": "/",
+    "ogType": "website",
+    "image": "/img/lifted_hands.jpeg",
+    "imageAlt": "Worshippers with hands raised at Send Down Thy Glory crusade",
+    "breadcrumb": [{ "name": "Home", "path": "/" }],
+    "schemas": ["organization", "website", "event", "breadcrumb"]
+  },
+  "about.html": {
+    "title": "About SDTG | Story, Mission & Vision of Send Down Thy Glory",
+    "description": "The story behind Send Down Thy Glory — Africa's most anticipated international gospel crusade. Mission, vision, leadership, and legacy of revival from Owerri, Nigeria.",
+    "keywords": "about Send Down Thy Glory, SDTG history, gospel crusade mission, Rev Bethel Nwanebu, revival movement Nigeria",
+    "path": "/about",
+    "ogType": "website",
+    "image": "/img/lifted_hands.jpeg",
+    "imageAlt": "Send Down Thy Glory crusade worship gathering",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "About", "path": "/about" }],
+    "schemas": ["organization", "person", "breadcrumb"]
+  },
+  "gallery.html": {
+    "title": "SDTG Gallery | Photos & Videos from Send Down Thy Glory Crusades",
+    "description": "Explore the Send Down Thy Glory digital archive — worship moments, miracles, testimonies, and highlights from crusades across Nigeria and the world.",
+    "keywords": "SDTG gallery, Send Down Thy Glory photos, gospel crusade videos, worship event archive Nigeria, revival highlights",
+    "path": "/gallery",
+    "ogType": "website",
+    "image": "/img/lifted_hands.jpeg",
+    "imageAlt": "Send Down Thy Glory gallery worship moment",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Gallery", "path": "/gallery" }],
+    "schemas": ["organization", "imageGallery", "videoCollection", "breadcrumb"]
+  },
+  "speakers.html": {
+    "title": "SDTG Speakers | Ministers & Worship Leaders",
+    "description": "Meet ministers, worship leaders, and speakers who have graced the Send Down Thy Glory stage — voices of revival from Nigeria and around the world.",
+    "keywords": "SDTG speakers, gospel ministers Nigeria, worship leaders Africa, crusade speakers Send Down Thy Glory",
+    "path": "/speakers",
+    "ogType": "website",
+    "image": "/img/lifted_hands.jpeg",
+    "imageAlt": "Send Down Thy Glory speakers and ministers",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Speakers", "path": "/speakers" }],
+    "schemas": ["organization", "person", "breadcrumb"]
+  },
+  "registration.html": {
+    "title": "Register for SDTG 2026 | Free Registration — Owerri Nigeria",
+    "description": "Register free for Send Down Thy Glory 2026, August 15–17 in Owerri, Nigeria. Reserve your seat for worship, prayer, miracles — attend in person or online.",
+    "keywords": "SDTG registration, register Send Down Thy Glory 2026, free gospel event registration Nigeria, worship crusade Owerri tickets",
+    "path": "/registration",
+    "ogType": "website",
+    "image": "/img/lifted_hands.jpeg",
+    "imageAlt": "Register for Send Down Thy Glory 2026",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Registration", "path": "/registration" }],
+    "schemas": ["organization", "event", "breadcrumb", "faqRegistration"]
+  },
+  "livestream.html": {
+    "title": "Watch SDTG Live | Global Worship Livestream Broadcast",
+    "description": "Watch Send Down Thy Glory live from anywhere in the world. Join thousands for worship, prayer, miracles, and transformation via global livestream.",
+    "keywords": "SDTG livestream, watch Send Down Thy Glory live, gospel live broadcast Nigeria, online worship crusade, Christian livestream Africa",
+    "path": "/livestream",
+    "ogType": "website",
+    "image": "/img/lifted_hands.jpeg",
+    "imageAlt": "Send Down Thy Glory live worship broadcast",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Livestream", "path": "/livestream" }],
+    "schemas": ["organization", "event", "videoBroadcast", "breadcrumb", "faqLivestream"]
+  },
+  "donate.html": {
+    "title": "Donate to SDTG | Support the Vision & Global Outreach",
+    "description": "Support Send Down Thy Glory — your giving fuels crusades, evangelism, charity, media ministry, and community outreach across nations. Give securely today.",
+    "keywords": "donate Send Down Thy Glory, support gospel crusade, Christian giving Nigeria, SDTG partnership, international donations church",
+    "path": "/donate",
+    "ogType": "website",
+    "image": "/img/lifted_hands.jpeg",
+    "imageAlt": "Support Send Down Thy Glory ministry",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Donate", "path": "/donate" }],
+    "schemas": ["organization", "breadcrumb", "faqDonate"]
+  },
+  "contact.html": {
+    "title": "Contact SDTG | Phone, Email, WhatsApp & Partnerships",
+    "description": "Contact Send Down Thy Glory for registration help, prayer requests, media enquiries, partnerships, and general support. We're here to connect with you.",
+    "keywords": "contact Send Down Thy Glory, SDTG phone email, gospel event contact Nigeria, crusade partnerships Owerri",
+    "path": "/contact",
+    "ogType": "website",
+    "image": "/img/lifted_hands.jpeg",
+    "imageAlt": "Contact Send Down Thy Glory team",
+    "breadcrumb": [{ "name": "Home", "path": "/" }, { "name": "Contact", "path": "/contact" }],
+    "schemas": ["organization", "breadcrumb"]
+  }
+}
