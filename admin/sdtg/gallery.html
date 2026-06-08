@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Gallery Manager | SDTG International Music Crusade — AG Ikenebgu CMS</title>
+    <meta name="description" content="Manage SDTG crusade photo galleries, albums, and media uploads.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="gallery" data-depth="1">
+
+<div id="cmsLoader" class="cms-loader" aria-live="polite">
+    <div class="cms-loader__ring" aria-hidden="true"></div>
+    <span class="cms-loader__text">Loading CMS</span>
+</div>
+
+<div id="cmsPageContent" style="display:none">
+
+    <header class="cms-page__header">
+        <div>
+            <h1 class="cms-page__title">Gallery Manager</h1>
+            <p class="cms-page__subtitle">Organize crusade photos and albums for the SDTG public gallery — worship moments, crowd scenes, and ministry highlights.</p>
+        </div>
+        <div class="cms-page__actions">
+            <button type="button" class="cms-btn cms-btn--ghost"><i class="fas fa-folder-plus" aria-hidden="true"></i> New Album</button>
+            <button type="button" class="cms-btn cms-btn--primary"><i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> Upload Images</button>
+        </div>
+    </header>
+
+    <div class="cms-stats">
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-images" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="1247">0</div>
+            <div class="cms-stat__label">Total Images</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-folder" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="18">0</div>
+            <div class="cms-stat__label">Albums</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-globe" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="892">0</div>
+            <div class="cms-stat__label">Published</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-eye-slash" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="355">0</div>
+            <div class="cms-stat__label">Draft / Unpublished</div>
+        </div>
+    </div>
+
+    <div class="cms-grid cms-grid--dashboard">
+        <div>
+            <div class="cms-tabs" data-tabs role="tablist" aria-label="Gallery albums">
+                <button type="button" class="cms-tab is-active" data-tab="all" role="tab">All Albums</button>
+                <button type="button" class="cms-tab" data-tab="2026" role="tab">SDTG 2026</button>
+                <button type="button" class="cms-tab" data-tab="2025" role="tab">SDTG 2025</button>
+                <button type="button" class="cms-tab" data-tab="archive" role="tab">Archive</button>
+            </div>
+
+            <div class="cms-tab-panel is-active" data-panel="all">
+                <div class="cms-section-label cms-section-label--sdtg"><span>Albums</span></div>
+                <div class="cms-grid cms-grid--3" style="margin-bottom:28px">
+                    <article class="cms-card" style="cursor:pointer">
+                        <div class="cms-speaker-card__img" style="height:140px;background:linear-gradient(135deg,#1a2744,#0d1428)">
+                            <i class="fas fa-church" aria-hidden="true"></i>
+                            <span class="cms-badge cms-badge--gold cms-speaker-card__year">2026</span>
+                        </div>
+                        <div class="cms-card__body" style="padding:14px 16px">
+                            <h3 class="cms-card__title">Opening Night Worship</h3>
+                            <p style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:4px">142 photos · Published</p>
+                        </div>
+                    </article>
+                    <article class="cms-card" style="cursor:pointer">
+                        <div class="cms-speaker-card__img" style="height:140px;background:linear-gradient(135deg,#151f3d,#1a2744)">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                            <span class="cms-badge cms-badge--gold cms-speaker-card__year">2026</span>
+                        </div>
+                        <div class="cms-card__body" style="padding:14px 16px">
+                            <h3 class="cms-card__title">Crowd &amp; Atmosphere</h3>
+                            <p style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:4px">89 photos · Published</p>
+                        </div>
+                    </article>
+                    <article class="cms-card" style="cursor:pointer">
+                        <div class="cms-speaker-card__img" style="height:140px">
+                            <i class="fas fa-microphone" aria-hidden="true"></i>
+                            <span class="cms-badge cms-badge--muted cms-speaker-card__year">2025</span>
+                        </div>
+                        <div class="cms-card__body" style="padding:14px 16px">
+                            <h3 class="cms-card__title">Guest Ministers 2025</h3>
+                            <p style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:4px">64 photos · Archive</p>
+                        </div>
+                    </article>
+                    <article class="cms-card" style="cursor:pointer">
+                        <div class="cms-speaker-card__img" style="height:140px;background:linear-gradient(135deg,#0d1428,#151f3d)">
+                            <i class="fas fa-music" aria-hidden="true"></i>
+                            <span class="cms-badge cms-badge--gold cms-speaker-card__year">2026</span>
+                        </div>
+                        <div class="cms-card__body" style="padding:14px 16px">
+                            <h3 class="cms-card__title">SDTG Mass Choir</h3>
+                            <p style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:4px">56 photos · Draft</p>
+                        </div>
+                    </article>
+                    <article class="cms-card" style="cursor:pointer">
+                        <div class="cms-speaker-card__img" style="height:140px;background:linear-gradient(135deg,#151f3d,#0d1428)">
+                            <i class="fas fa-praying-hands" aria-hidden="true"></i>
+                            <span class="cms-badge cms-badge--gold cms-speaker-card__year">2026</span>
+                        </div>
+                        <div class="cms-card__body" style="padding:14px 16px">
+                            <h3 class="cms-card__title">Altar Call Moments</h3>
+                            <p style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:4px">78 photos · Published</p>
+                        </div>
+                    </article>
+                    <article class="cms-card" style="cursor:pointer">
+                        <div class="cms-speaker-card__img" style="height:140px">
+                            <i class="fas fa-child" aria-hidden="true"></i>
+                            <span class="cms-badge cms-badge--muted cms-speaker-card__year">2025</span>
+                        </div>
+                        <div class="cms-card__body" style="padding:14px 16px">
+                            <h3 class="cms-card__title">Youth &amp; Children</h3>
+                            <p style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:4px">41 photos · Archive</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="cms-section-label cms-section-label--sdtg"><span>Recent Images — Opening Night Worship</span></div>
+                <div class="cms-speaker-grid">
+                    <div class="cms-card cms-speaker-card">
+                        <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(160deg,#1a2744 30%,#d4af37 100%)"><i class="fas fa-image" aria-hidden="true"></i></div>
+                        <div class="cms-speaker-card__body" style="padding:12px">
+                            <p style="font-size:0.78rem;font-weight:600">IMG_2847.jpg</p>
+                            <p style="font-size:0.72rem;color:var(--cms-text-muted)">2.4 MB · Aug 14, 2026</p>
+                        </div>
+                    </div>
+                    <div class="cms-card cms-speaker-card">
+                        <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(160deg,#151f3d 30%,#3b82f6 100%)"><i class="fas fa-image" aria-hidden="true"></i></div>
+                        <div class="cms-speaker-card__body" style="padding:12px">
+                            <p style="font-size:0.78rem;font-weight:600">IMG_2848.jpg</p>
+                            <p style="font-size:0.72rem;color:var(--cms-text-muted)">1.8 MB · Aug 14, 2026</p>
+                        </div>
+                    </div>
+                    <div class="cms-card cms-speaker-card">
+                        <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(160deg,#0d1428 30%,#22c55e 100%)"><i class="fas fa-image" aria-hidden="true"></i></div>
+                        <div class="cms-speaker-card__body" style="padding:12px">
+                            <p style="font-size:0.78rem;font-weight:600">IMG_2849.jpg</p>
+                            <p style="font-size:0.72rem;color:var(--cms-text-muted)">3.1 MB · Aug 14, 2026</p>
+                        </div>
+                    </div>
+                    <div class="cms-card cms-speaker-card">
+                        <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(160deg,#1a2744 30%,#ef4444 100%)"><i class="fas fa-image" aria-hidden="true"></i></div>
+                        <div class="cms-speaker-card__body" style="padding:12px">
+                            <p style="font-size:0.78rem;font-weight:600">IMG_2850.jpg</p>
+                            <p style="font-size:0.72rem;color:var(--cms-text-muted)">2.0 MB · Aug 14, 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cms-tab-panel" data-panel="2026"><p style="color:var(--cms-text-muted);padding:20px 0">SDTG 2026 albums — 6 albums, 487 images.</p></div>
+            <div class="cms-tab-panel" data-panel="2025"><p style="color:var(--cms-text-muted);padding:20px 0">SDTG 2025 archive — 8 albums, 760 images.</p></div>
+            <div class="cms-tab-panel" data-panel="archive"><p style="color:var(--cms-text-muted);padding:20px 0">Historical albums from 2019–2024.</p></div>
+        </div>
+
+        <aside>
+            <div class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Upload Zone</h2>
+                </div>
+                <div class="cms-card__body">
+                    <div style="border:2px dashed var(--cms-glass-border);border-radius:var(--cms-radius-lg);padding:40px 24px;text-align:center;background:rgba(0,0,0,0.15);transition:border-color var(--cms-transition)" id="uploadZone">
+                        <i class="fas fa-cloud-upload-alt" style="font-size:2.5rem;color:var(--cms-sdtg-gold);margin-bottom:16px" aria-hidden="true"></i>
+                        <p style="font-weight:600;margin-bottom:8px">Drag &amp; drop images here</p>
+                        <p style="font-size:0.8rem;color:var(--cms-text-muted);margin-bottom:16px">JPG, PNG, WebP — max 10 MB each</p>
+                        <button type="button" class="cms-btn cms-btn--primary cms-btn--sm"><i class="fas fa-folder-open" aria-hidden="true"></i> Browse Files</button>
+                    </div>
+                    <form data-cms-form style="margin-top:20px" aria-label="Upload settings">
+                        <div class="cms-field">
+                            <label for="uploadAlbum">Target Album</label>
+                            <select id="uploadAlbum">
+                                <option>Opening Night Worship</option>
+                                <option>Crowd &amp; Atmosphere</option>
+                                <option>SDTG Mass Choir</option>
+                                <option>Altar Call Moments</option>
+                                <option>+ Create New Album</option>
+                            </select>
+                        </div>
+                        <div class="cms-field">
+                            <label for="uploadTags">Tags</label>
+                            <input type="text" id="uploadTags" placeholder="worship, choir, 2026…">
+                        </div>
+                        <button type="submit" class="cms-btn cms-btn--ghost" style="width:100%"><i class="fas fa-upload" aria-hidden="true"></i> Start Upload</button>
+                    </form>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/shell.js"></script>
+<script src="../js/core.js"></script>
+</body>
+</html>

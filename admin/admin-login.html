@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0f1f">
+    <title>Admin Login | AG Ikenebgu & SDTG Management Platform</title>
+    <meta name="description" content="Secure enterprise login for AG Ikenebgu Church Management System and Send Down Thy Glory Administration Platform.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="auth-page">
+
+    <a href="#authForm" class="auth-skip">Skip to login form</a>
+
+    <!-- Animated background -->
+    <div class="auth-bg" aria-hidden="true">
+        <div class="auth-bg__grid"></div>
+        <div class="auth-bg__orb auth-bg__orb--1"></div>
+        <div class="auth-bg__orb auth-bg__orb--2"></div>
+        <div class="auth-bg__orb auth-bg__orb--3"></div>
+        <span class="auth-bg__trail auth-bg__trail--1"></span>
+        <span class="auth-bg__trail auth-bg__trail--2"></span>
+        <span class="auth-bg__trail auth-bg__trail--3"></span>
+        <canvas id="authParticles" aria-hidden="true"></canvas>
+    </div>
+
+    <!-- Floating notifications -->
+    <div id="authToasts" class="auth-toasts" aria-live="polite" aria-label="Platform activity notifications"></div>
+
+    <!-- Authentication overlay -->
+    <div id="authOverlay" class="auth-overlay" role="alertdialog" aria-labelledby="authOverlayTitle" aria-describedby="authOverlayStatus" aria-hidden="true">
+        <div class="auth-overlay__shield" aria-hidden="true">
+            <i class="fas fa-shield-halved"></i>
+        </div>
+        <p id="authOverlayTitle" class="auth-overlay__title">Secure Authentication</p>
+        <div class="auth-overlay__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="authProgressBar" class="auth-overlay__progress-bar"></div>
+        </div>
+        <p id="authOverlayStatus" class="auth-overlay__status">Verifying credentials…</p>
+    </div>
+
+    <main class="auth-shell">
+
+        <!-- Left: Visual experience -->
+        <section class="auth-panel auth-panel--visual" aria-label="Platform overview">
+
+            <header class="auth-brand auth-glass" style="padding: 24px;">
+                <div class="auth-brand__logos">
+                    <div class="auth-logo-video auth-logo-video--ag" aria-label="AG Ikenebgu 3D logo">
+                        <video class="auth-logo-video__el" src="../videos/Create_a_cinematic_D_animatio.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+                    </div>
+                    <div class="auth-logo-video auth-logo-video--sdtg" aria-label="Send Down Thy Glory 3D logo">
+                        <video class="auth-logo-video__el" src="../sdgt/videos/3d-logo.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+                    </div>
+                </div>
+                <div class="auth-brand__titles">
+                    <h1>AG IKENEGBU</h1>
+                    <p>Church Management Platform</p>
+                </div>
+                <div class="auth-brand__divider" aria-hidden="true"></div>
+                <p class="auth-brand__sdtg">Send Down Thy Glory</p>
+                <p style="font-size: 0.82rem; color: var(--auth-text-muted); margin-top: 4px;">Event Management Platform</p>
+                <div class="auth-highlight" style="margin-top: 16px;" aria-live="polite"></div>
+            </header>
+
+            <div class="auth-security" role="list" aria-label="Security features">
+                <article class="auth-security__card auth-glass" role="listitem">
+                    <span class="auth-security__icon auth-security__icon--gold" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
+                    <div class="auth-security__text">
+                        <strong>Enterprise Security</strong>
+                        <span>256-bit encrypted sessions</span>
+                    </div>
+                </article>
+                <article class="auth-security__card auth-glass" role="listitem">
+                    <span class="auth-security__icon" aria-hidden="true"><i class="fas fa-user-lock"></i></span>
+                    <div class="auth-security__text">
+                        <strong>Role-Based Access</strong>
+                        <span>Granular permission control</span>
+                    </div>
+                </article>
+                <article class="auth-security__card auth-glass" role="listitem">
+                    <span class="auth-security__icon auth-security__icon--gold" aria-hidden="true"><i class="fas fa-lock"></i></span>
+                    <div class="auth-security__text">
+                        <strong>Encrypted Access</strong>
+                        <span>End-to-end protection</span>
+                    </div>
+                </article>
+                <article class="auth-security__card auth-glass" role="listitem">
+                    <span class="auth-security__icon" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                    <div class="auth-security__text">
+                        <strong>Activity Monitoring</strong>
+                        <span>Real-time audit trails</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="auth-dashboard auth-glass" aria-label="Live dashboard preview">
+                <div class="auth-dashboard__header">
+                    <h3>Platform Snapshot</h3>
+                    <span class="auth-dashboard__live">Live</span>
+                </div>
+                <div class="auth-metrics">
+                    <div class="auth-metric">
+                        <span class="auth-metric__value" id="metricMembers">0</span>
+                        <span class="auth-metric__label">Members</span>
+                    </div>
+                    <div class="auth-metric">
+                        <span class="auth-metric__value" id="metricAttendance">0</span>
+                        <span class="auth-metric__label">Attendance</span>
+                    </div>
+                    <div class="auth-metric">
+                        <span class="auth-metric__value" id="metricRegistrations">0</span>
+                        <span class="auth-metric__label">Registrations</span>
+                    </div>
+                    <div class="auth-metric">
+                        <span class="auth-metric__value" id="metricDonations">0</span>
+                        <span class="auth-metric__label">Donations</span>
+                    </div>
+                    <div class="auth-metric">
+                        <span class="auth-metric__value" id="metricEvents">0</span>
+                        <span class="auth-metric__label">Events</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-features">
+                <h3 class="auth-section-title">Platform Capabilities</h3>
+                <div class="auth-chip-grid" role="list">
+                    <span class="auth-chip" role="listitem">Member Management</span>
+                    <span class="auth-chip" role="listitem">Attendance Tracking</span>
+                    <span class="auth-chip" role="listitem">SDTG Registration</span>
+                    <span class="auth-chip" role="listitem">Speaker Management</span>
+                    <span class="auth-chip" role="listitem">Livestream Control</span>
+                    <span class="auth-chip" role="listitem">Donation Tracking</span>
+                    <span class="auth-chip" role="listitem">Website CMS</span>
+                    <span class="auth-chip" role="listitem">Event Scheduling</span>
+                </div>
+            </div>
+
+            <div class="auth-seo">
+                <h3 class="auth-section-title">SEO Management Suite</h3>
+                <div class="auth-chip-grid" role="list">
+                    <span class="auth-chip" role="listitem">Dynamic Meta Titles</span>
+                    <span class="auth-chip" role="listitem">Meta Descriptions</span>
+                    <span class="auth-chip" role="listitem">Open Graph</span>
+                    <span class="auth-chip" role="listitem">Schema Management</span>
+                    <span class="auth-chip" role="listitem">Sitemap Generation</span>
+                    <span class="auth-chip" role="listitem">SEO Auditing</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Right: Login -->
+        <section class="auth-panel auth-panel--login" aria-label="Secure login">
+
+            <div class="auth-login-card auth-glass">
+
+                <div class="auth-welcome">
+                    <p class="auth-welcome__label">Administrator Portal</p>
+                    <h2 class="auth-welcome__title">Welcome Back</h2>
+                    <div class="auth-welcome__rotate" aria-live="polite" aria-atomic="true"></div>
+                </div>
+
+                <form id="authForm" class="auth-form" novalidate>
+
+                    <div class="auth-field">
+                        <input
+                            type="email"
+                            id="authEmail"
+                            name="email"
+                            class="auth-field__input"
+                            placeholder=" "
+                            autocomplete="email"
+                            required
+                            aria-required="true"
+                            aria-describedby="authEmailError"
+                        >
+                        <label class="auth-field__label" for="authEmail">Email Address</label>
+                        <p id="authEmailError" class="auth-field__error" role="alert">Please enter a valid email address.</p>
+                    </div>
+
+                    <div class="auth-field">
+                        <input
+                            type="password"
+                            id="authPassword"
+                            name="password"
+                            class="auth-field__input"
+                            placeholder=" "
+                            autocomplete="current-password"
+                            required
+                            aria-required="true"
+                            aria-describedby="authPasswordError"
+                            minlength="6"
+                        >
+                        <label class="auth-field__label" for="authPassword">Password</label>
+                        <button type="button" id="authPasswordToggle" class="auth-field__toggle" aria-label="Show password">
+                            <i class="fas fa-eye" aria-hidden="true"></i>
+                        </button>
+                        <p id="authPasswordError" class="auth-field__error" role="alert">Password must be at least 6 characters.</p>
+                    </div>
+
+                    <div class="auth-form__row">
+                        <label class="auth-check">
+                            <input type="checkbox" name="remember" id="authRemember">
+                            Remember Me
+                        </label>
+                        <a href="forgot-password.html" class="auth-link">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" id="authSubmit" class="auth-submit">
+                        <span class="auth-submit__content">
+                            <span class="auth-submit__loader" aria-hidden="true"></span>
+                            <i class="fas fa-lock auth-submit__text" aria-hidden="true"></i>
+                            <span class="auth-submit__text">Secure Login</span>
+                        </span>
+                    </button>
+
+                    <p class="auth-form__footer">
+                        Protected by enterprise encryption · <a href="../index.html">Return to Website</a>
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/auth.js" defer></script>
+</body>
+</html>

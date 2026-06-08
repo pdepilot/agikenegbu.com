@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>SEO Manager | AG Ikenebgu CMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="seo" data-depth="1">
+
+    <div class="cms-loader" id="cmsLoader"><div class="cms-loader__ring"></div><p class="cms-loader__text">Loading Platform</p></div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">SEO Manager</h1>
+                <p class="cms-page__subtitle">Dynamic SEO management for AG Ikenebgu and SDTG websites — meta tags, Open Graph, schema markup, sitemaps, and AI search optimization.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost" id="runSeoAudit"><i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i> Run Audit</button>
+                <button type="button" class="cms-btn cms-btn--primary" data-cms-form><i class="fas fa-save" aria-hidden="true"></i> Save All Changes</button>
+            </div>
+        </header>
+
+        <div class="cms-grid cms-grid--3" style="margin-bottom:24px">
+            <article class="cms-card cms-seo-score">
+                <div class="cms-seo-score__ring">
+                    <svg width="100" height="100" viewBox="0 0 100 100" aria-hidden="true">
+                        <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8"/>
+                        <circle cx="50" cy="50" r="42" fill="none" stroke="var(--cms-gold)" stroke-width="8" stroke-dasharray="264" stroke-dashoffset="34" stroke-linecap="round"/>
+                    </svg>
+                    <span class="cms-seo-score__value">87</span>
+                </div>
+                <div class="cms-seo-score__label">
+                    <strong>Overall SEO Score</strong>
+                    <span>AG Ikenebgu + SDTG combined audit</span>
+                </div>
+            </article>
+            <article class="cms-stat cms-card"><div class="cms-stat__value" data-count="22">0</div><div class="cms-stat__label">Pages Indexed</div></article>
+            <article class="cms-stat cms-card"><div class="cms-stat__value" data-count="3">0</div><div class="cms-stat__label">Issues to Fix</div></article>
+        </div>
+
+        <div class="cms-tabs" data-tabs role="tablist">
+            <button type="button" class="cms-tab is-active" data-tab="page-seo" role="tab">Page SEO</button>
+            <button type="button" class="cms-tab" data-tab="open-graph" role="tab">Open Graph</button>
+            <button type="button" class="cms-tab" data-tab="twitter" role="tab">Twitter/X</button>
+            <button type="button" class="cms-tab" data-tab="schema" role="tab">Schema Markup</button>
+            <button type="button" class="cms-tab" data-tab="sitemap" role="tab">Sitemap</button>
+            <button type="button" class="cms-tab" data-tab="audit" role="tab">SEO Audit</button>
+            <button type="button" class="cms-tab" data-tab="ai-seo" role="tab">AI Search</button>
+        </div>
+
+        <!-- Page SEO -->
+        <div class="cms-tab-panel is-active" data-panel="page-seo">
+            <div class="cms-grid cms-grid--2">
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Page SEO Settings</h2></div>
+                    <div class="cms-card__body">
+                        <div class="cms-field">
+                            <label for="seoPageSelect">Select Page</label>
+                            <select id="seoPageSelect">
+                                <option value="index.html">AG — Home (index.html)</option>
+                                <option value="about.html">AG — About (about.html)</option>
+                                <option value="activity.html">AG — Ministries (activity.html)</option>
+                                <option value="event.html">AG — Events (event.html)</option>
+                                <option value="sdgt/index.html">SDTG — Home</option>
+                                <option value="sdgt/about.html">SDTG — About</option>
+                                <option value="sdgt/registration.html">SDTG — Registration</option>
+                            </select>
+                        </div>
+                        <div class="cms-field"><label for="seoTitle">SEO Title</label><input type="text" id="seoTitle" value="AG Ikenebgu | Assemblies of God Church Port Harcourt — Worship & Community" maxlength="70"><small style="color:var(--cms-text-dim);font-size:0.72rem">Recommended: 50–60 characters</small></div>
+                        <div class="cms-field"><label for="seoDescription">Meta Description</label><textarea id="seoDescription" maxlength="160">AG Ikenebgu Assemblies of God in Port Harcourt, Nigeria — spirit-filled worship, Bible teaching, family ministries, and community outreach.</textarea></div>
+                        <div class="cms-field"><label for="seoKeywords">Meta Keywords</label><input type="text" id="seoKeywords" value="Assemblies of God Port Harcourt, AG Ikenebgu, Pentecostal church Nigeria"></div>
+                        <div class="cms-field"><label for="canonicalUrl">Canonical URL</label><input type="url" id="canonicalUrl" value="https://agikenebgu.org/"></div>
+                        <div class="cms-field"><label for="robotsDirective">Robots Directives</label><select id="robotsDirective"><option value="index,follow">index, follow</option><option value="noindex,follow">noindex, follow</option><option value="index,nofollow">index, nofollow</option><option value="noindex,nofollow">noindex, nofollow</option></select></div>
+                    </div>
+                </article>
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Search Preview</h2></div>
+                    <div class="cms-card__body">
+                        <div style="padding:16px;background:rgba(0,0,0,0.3);border-radius:var(--cms-radius)">
+                            <p style="color:#8ab4f8;font-size:1.1rem;margin-bottom:4px" id="serpTitle">AG Ikenebgu | Assemblies of God Church Port Harcourt</p>
+                            <p style="color:var(--cms-success);font-size:0.8rem;margin-bottom:6px">https://agikenebgu.org/</p>
+                            <p style="font-size:0.85rem;color:var(--cms-text-muted);line-height:1.5" id="serpDesc">AG Ikenebgu Assemblies of God in Port Harcourt, Nigeria — spirit-filled worship, Bible teaching, family ministries, and community outreach.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Open Graph -->
+        <div class="cms-tab-panel" data-panel="open-graph">
+            <div class="cms-grid cms-grid--2">
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Open Graph Settings</h2></div>
+                    <div class="cms-card__body">
+                        <div class="cms-field"><label for="ogTitle">OG Title</label><input type="text" id="ogTitle" value="AG Ikenebgu | Assemblies of God Church Port Harcourt"></div>
+                        <div class="cms-field"><label for="ogDescription">OG Description</label><textarea id="ogDescription">Spirit-filled worship and community at AG Ikenebgu, Port Harcourt.</textarea></div>
+                        <div class="cms-field"><label for="ogUrl">OG URL</label><input type="url" id="ogUrl" value="https://agikenebgu.org/"></div>
+                        <div class="cms-field"><label for="ogImage">OG Image URL</label><input type="url" id="ogImage" value="https://agikenebgu.org/images/main1.jpg"><button type="button" class="cms-btn cms-btn--ghost cms-btn--sm" style="margin-top:8px"><i class="fas fa-image"></i> Choose from Media Library</button></div>
+                    </div>
+                </article>
+                <div class="cms-grid" style="gap:16px">
+                    <article class="cms-card">
+                        <div class="cms-card__head"><h2 class="cms-card__title"><i class="fab fa-facebook" style="color:#1877f2"></i> Facebook Preview</h2></div>
+                        <div class="cms-card__body"><div class="cms-og-preview"><div class="cms-og-preview__img">OG Image Preview</div><div class="cms-og-preview__body"><p class="cms-og-preview__url">agikenebgu.org</p><p class="cms-og-preview__title">AG Ikenebgu | Assemblies of God Church Port Harcourt</p><p class="cms-og-preview__desc">Spirit-filled worship and community at AG Ikenebgu, Port Harcourt.</p></div></div></div>
+                    </article>
+                    <article class="cms-card">
+                        <div class="cms-card__head"><h2 class="cms-card__title"><i class="fab fa-whatsapp" style="color:#25d366"></i> WhatsApp Preview</h2></div>
+                        <div class="cms-card__body"><div class="cms-og-preview"><div class="cms-og-preview__img">OG Image Preview</div><div class="cms-og-preview__body"><p class="cms-og-preview__title">AG Ikenebgu | Assemblies of God Church Port Harcourt</p><p class="cms-og-preview__desc">Spirit-filled worship and community at AG Ikenebgu, Port Harcourt.</p><p class="cms-og-preview__url">agikenebgu.org</p></div></div></div>
+                    </article>
+                    <article class="cms-card">
+                        <div class="cms-card__head"><h2 class="cms-card__title"><i class="fab fa-linkedin" style="color:#0a66c2"></i> LinkedIn Preview</h2></div>
+                        <div class="cms-card__body"><div class="cms-og-preview"><div class="cms-og-preview__img">OG Image Preview</div><div class="cms-og-preview__body"><p class="cms-og-preview__title">AG Ikenebgu | Assemblies of God Church Port Harcourt</p><p class="cms-og-preview__url">agikenebgu.org</p></div></div></div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- Twitter -->
+        <div class="cms-tab-panel" data-panel="twitter">
+            <div class="cms-grid cms-grid--2">
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Twitter/X Card Settings</h2></div>
+                    <div class="cms-card__body">
+                        <div class="cms-field"><label for="twitterCardType">Card Type</label><select id="twitterCardType"><option>summary_large_image</option><option>summary</option></select></div>
+                        <div class="cms-field"><label for="twitterTitle">Twitter Title</label><input type="text" id="twitterTitle" value="AG Ikenebgu — Worship & Community in Port Harcourt"></div>
+                        <div class="cms-field"><label for="twitterDescription">Twitter Description</label><textarea id="twitterDescription">Join us for spirit-filled worship every Sunday at AG Ikenebgu Assemblies of God.</textarea></div>
+                        <div class="cms-field"><label for="twitterImage">Twitter Image URL</label><input type="url" id="twitterImage" value="https://agikenebgu.org/images/main1.jpg"></div>
+                    </div>
+                </article>
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title"><i class="fab fa-x-twitter"></i> Live Preview</h2></div>
+                    <div class="cms-card__body">
+                        <div class="cms-og-preview" style="border-color:rgba(255,255,255,0.12)">
+                            <div class="cms-og-preview__img">Twitter Card Image</div>
+                            <div class="cms-og-preview__body">
+                                <p class="cms-og-preview__title" id="twitterPreviewTitle">AG Ikenebgu — Worship & Community in Port Harcourt</p>
+                                <p class="cms-og-preview__desc" id="twitterPreviewDesc">Join us for spirit-filled worship every Sunday at AG Ikenebgu Assemblies of God.</p>
+                                <p class="cms-og-preview__url">agikenebgu.org</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Schema -->
+        <div class="cms-tab-panel" data-panel="schema">
+            <p class="cms-section-label">AG IKENEGBU Schema</p>
+            <div class="cms-schema-block cms-card" style="padding:20px">
+                <div class="cms-schema-block__head"><span class="cms-schema-block__type"><i class="fas fa-church" style="color:var(--cms-gold)"></i> Church Schema</span><button class="cms-btn cms-btn--ghost cms-btn--sm">Edit</button></div>
+                <div class="cms-form-row">
+                    <div class="cms-field"><label>Church Name</label><input type="text" value="Assemblies of God Church, Ikenebgu"></div>
+                    <div class="cms-field"><label>Denomination</label><input type="text" value="Assemblies of God Nigeria"></div>
+                </div>
+                <div class="cms-field"><label>Address</label><input type="text" value="Ikenebgu, Port Harcourt, Rivers State, Nigeria"></div>
+            </div>
+            <div class="cms-schema-block cms-card" style="padding:20px">
+                <div class="cms-schema-block__head"><span class="cms-schema-block__type"><i class="fas fa-building" style="color:var(--cms-blue)"></i> Organization Schema</span><button class="cms-btn cms-btn--ghost cms-btn--sm">Edit</button></div>
+                <div class="cms-form-row">
+                    <div class="cms-field"><label>Organization Name</label><input type="text" value="AG Ikenebgu"></div>
+                    <div class="cms-field"><label>Website URL</label><input type="url" value="https://agikenebgu.org"></div>
+                </div>
+            </div>
+            <div class="cms-schema-block cms-card" style="padding:20px">
+                <div class="cms-schema-block__head"><span class="cms-schema-block__type"><i class="fas fa-map-marker-alt" style="color:var(--cms-success)"></i> Local Business Schema</span><button class="cms-btn cms-btn--ghost cms-btn--sm">Edit</button></div>
+                <div class="cms-form-row">
+                    <div class="cms-field"><label>Service Hours</label><input type="text" value="Sunday 8:00 AM & 10:30 AM"></div>
+                    <div class="cms-field"><label>Phone</label><input type="tel" value="+234 XXX XXX XXXX"></div>
+                </div>
+            </div>
+
+            <p class="cms-section-label cms-section-label--sdtg">SDTG Schema</p>
+            <div class="cms-schema-block cms-card" style="padding:20px">
+                <div class="cms-schema-block__head"><span class="cms-schema-block__type"><i class="fas fa-calendar-star" style="color:var(--cms-sdtg-gold)"></i> Event Schema</span><button class="cms-btn cms-btn--ghost cms-btn--sm">Edit</button></div>
+                <div class="cms-form-row">
+                    <div class="cms-field"><label>Event Name</label><input type="text" value="Send Down Thy Glory International Music Crusade 2025"></div>
+                    <div class="cms-field"><label>Start Date</label><input type="date" value="2025-08-14"></div>
+                </div>
+                <div class="cms-field"><label>Location</label><input type="text" value="Port Harcourt, Rivers State, Nigeria"></div>
+            </div>
+            <div class="cms-schema-block cms-card" style="padding:20px">
+                <div class="cms-schema-block__head"><span class="cms-schema-block__type"><i class="fas fa-microphone" style="color:var(--cms-sdtg-gold)"></i> Speaker Schema</span><button class="cms-btn cms-btn--ghost cms-btn--sm">Edit</button></div>
+                <div class="cms-field"><label>Featured Speakers (JSON-LD array)</label><textarea rows="3">Dr. Paul Enenche, Bishop David Oyedepo, Rev. Dr. Cindy Trimm</textarea></div>
+            </div>
+            <div class="cms-schema-block cms-card" style="padding:20px">
+                <div class="cms-schema-block__head"><span class="cms-schema-block__type"><i class="fas fa-circle-question" style="color:var(--cms-info)"></i> FAQ Schema</span><button class="cms-btn cms-btn--ghost cms-btn--sm">Edit</button></div>
+                <div class="cms-field"><label>FAQ Pairs</label><textarea rows="4">Q: When is SDTG 2025? A: August 14–17, 2025. Q: How do I register? A: Visit the registration page.</textarea></div>
+            </div>
+            <div class="cms-schema-block cms-card" style="padding:20px">
+                <div class="cms-schema-block__head"><span class="cms-schema-block__type"><i class="fas fa-video" style="color:var(--cms-danger)"></i> Video Schema</span><button class="cms-btn cms-btn--ghost cms-btn--sm">Edit</button></div>
+                <div class="cms-field"><label>Livestream URL</label><input type="url" value="https://agikenebgu.org/sdgt/livestream"></div>
+            </div>
+            <article class="cms-card" style="margin-top:16px">
+                <div class="cms-card__head"><h2 class="cms-card__title">Generated JSON-LD Preview</h2></div>
+                <div class="cms-card__body"><pre class="cms-code">{
+  "@context": "https://schema.org",
+  "@type": "Church",
+  "name": "Assemblies of God Church, Ikenebgu",
+  "address": { "@type": "PostalAddress", "addressLocality": "Port Harcourt", "addressCountry": "NG" }
+}</pre></div>
+            </article>
+        </div>
+
+        <!-- Sitemap -->
+        <div class="cms-tab-panel" data-panel="sitemap">
+            <div class="cms-stats" style="margin-bottom:24px">
+                <article class="cms-stat cms-card"><div class="cms-stat__value">Jun 6</div><div class="cms-stat__label">Last Generated</div></article>
+                <article class="cms-stat cms-card"><div class="cms-stat__value" data-count="22">0</div><div class="cms-stat__label">Total URLs</div></article>
+                <article class="cms-stat cms-card"><div class="cms-stat__value" data-count="48">0</div><div class="cms-stat__label">Total Images</div></article>
+                <article class="cms-stat cms-card"><div class="cms-stat__value" data-count="6">0</div><div class="cms-stat__label">Total Videos</div></article>
+            </div>
+            <div class="cms-grid cms-grid--2">
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Sitemap Actions</h2></div>
+                    <div class="cms-card__body" style="display:grid;gap:12px">
+                        <button type="button" class="cms-btn cms-btn--primary"><i class="fas fa-sitemap"></i> Generate Sitemap</button>
+                        <button type="button" class="cms-btn cms-btn--ghost" id="regenerateSitemap"><i class="fas fa-rotate"></i> Regenerate Sitemap</button>
+                        <a href="../../sitemap.xml" target="_blank" class="cms-btn cms-btn--ghost"><i class="fas fa-external-link-alt"></i> View sitemap.xml</a>
+                        <a href="../../sitemap-sdtg.xml" target="_blank" class="cms-btn cms-btn--ghost"><i class="fas fa-external-link-alt"></i> View sitemap-sdtg.xml</a>
+                    </div>
+                </article>
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Sitemap Pages</h2></div>
+                    <div class="cms-table-wrap">
+                        <table class="cms-table">
+                            <thead><tr><th>URL</th><th>Priority</th><th>Change Freq</th></tr></thead>
+                            <tbody>
+                                <tr><td>/</td><td>1.0</td><td>weekly</td></tr>
+                                <tr><td>/about</td><td>0.8</td><td>monthly</td></tr>
+                                <tr><td>/sdgt/</td><td>0.9</td><td>weekly</td></tr>
+                                <tr><td>/sdgt/registration</td><td>0.9</td><td>daily</td></tr>
+                                <tr><td>/sdgt/livestream</td><td>0.8</td><td>daily</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Audit -->
+        <div class="cms-tab-panel" data-panel="audit">
+            <div class="cms-grid cms-grid--2">
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">SEO Audit Center</h2></div>
+                    <div class="cms-card__body cms-seo-audit">
+                        <div class="cms-seo-audit__item cms-seo-audit__item--error"><div><strong>Missing Meta Descriptions</strong><p style="font-size:0.8rem;color:var(--cms-text-muted)">1 page affected</p></div><span class="cms-badge cms-badge--danger">Critical</span></div>
+                        <div class="cms-seo-audit__item cms-seo-audit__item--warn"><div><strong>Missing Alt Text</strong><p style="font-size:0.8rem;color:var(--cms-text-muted)">4 images on gallery.html</p></div><span class="cms-badge cms-badge--warning">Warning</span></div>
+                        <div class="cms-seo-audit__item cms-seo-audit__item--warn"><div><strong>Duplicate Metadata</strong><p style="font-size:0.8rem;color:var(--cms-text-muted)">2 pages share identical titles</p></div><span class="cms-badge cms-badge--warning">Warning</span></div>
+                        <div class="cms-seo-audit__item cms-seo-audit__item--ok"><div><strong>Canonical URLs</strong><p style="font-size:0.8rem;color:var(--cms-text-muted)">All pages configured</p></div><span class="cms-badge cms-badge--success">Pass</span></div>
+                        <div class="cms-seo-audit__item cms-seo-audit__item--ok"><div><strong>Internal Links</strong><p style="font-size:0.8rem;color:var(--cms-text-muted)">No broken links detected</p></div><span class="cms-badge cms-badge--success">Pass</span></div>
+                        <div class="cms-seo-audit__item cms-seo-audit__item--ok"><div><strong>Schema Markup</strong><p style="font-size:0.8rem;color:var(--cms-text-muted)">8 schema types active</p></div><span class="cms-badge cms-badge--success">Pass</span></div>
+                    </div>
+                </article>
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Score Breakdown</h2></div>
+                    <div class="cms-card__body">
+                        <div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span>Title Tags</span><strong style="color:var(--cms-success)">95%</strong></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:3px"><div style="width:95%;height:100%;background:var(--cms-success);border-radius:3px"></div></div></div>
+                        <div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span>Meta Descriptions</span><strong style="color:var(--cms-warning)">82%</strong></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:3px"><div style="width:82%;height:100%;background:var(--cms-warning);border-radius:3px"></div></div></div>
+                        <div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span>Open Graph</span><strong style="color:var(--cms-success)">100%</strong></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:3px"><div style="width:100%;height:100%;background:var(--cms-success);border-radius:3px"></div></div></div>
+                        <div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span>Schema Markup</span><strong style="color:var(--cms-success)">90%</strong></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:3px"><div style="width:90%;height:100%;background:var(--cms-success);border-radius:3px"></div></div></div>
+                        <div><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span>Image Alt Text</span><strong style="color:var(--cms-warning)">78%</strong></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:3px"><div style="width:78%;height:100%;background:var(--cms-warning);border-radius:3px"></div></div></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- AI SEO -->
+        <div class="cms-tab-panel" data-panel="ai-seo">
+            <article class="cms-card" style="margin-bottom:24px">
+                <div class="cms-card__head"><h2 class="cms-card__title"><i class="fas fa-robot" style="color:var(--cms-blue);margin-right:8px"></i> AI Search Optimization</h2><span class="cms-badge cms-badge--info">Future-Ready</span></div>
+                <div class="cms-card__body">
+                    <p style="color:var(--cms-text-muted);margin-bottom:20px;font-size:0.9rem">Prepare content for Google AI Overviews, ChatGPT Discovery, Gemini, and Perplexity indexing.</p>
+                    <div class="cms-field"><label for="aiSummary">AI Search Summary</label><textarea id="aiSummary" rows="3">AG Ikenebgu is a vibrant Assemblies of God church in Port Harcourt, Nigeria, offering spirit-filled worship, family ministries, and community outreach. Send Down Thy Glory is its flagship international music crusade drawing worshippers globally.</textarea></div>
+                    <div class="cms-field"><label for="structuredBlocks">Structured Content Blocks</label><textarea id="structuredBlocks" rows="4">## Worship Services\n- Sunday 8:00 AM (First Service)\n- Sunday 10:30 AM (Second Service)\n\n## SDTG 2025\n- Dates: August 14–17, 2025\n- Location: Port Harcourt, Nigeria</textarea></div>
+                    <div class="cms-field"><label for="featuredSnippet">Featured Snippet Content</label><textarea id="featuredSnippet" rows="3">AG Ikenebgu Church is located in Ikenebgu, Port Harcourt, Rivers State, Nigeria. Sunday services are held at 8:00 AM and 10:30 AM. Send Down Thy Glory International Music Crusade is hosted annually by AG Ikenebgu.</textarea></div>
+                    <div class="cms-grid cms-grid--4" style="margin-top:16px">
+                        <div style="text-align:center;padding:16px;border:1px solid var(--cms-glass-border);border-radius:var(--cms-radius)"><i class="fab fa-google" style="font-size:1.5rem;color:var(--cms-gold)"></i><p style="font-size:0.75rem;margin-top:8px;color:var(--cms-text-muted)">Google AI Overviews</p><span class="cms-badge cms-badge--success" style="margin-top:6px">Optimized</span></div>
+                        <div style="text-align:center;padding:16px;border:1px solid var(--cms-glass-border);border-radius:var(--cms-radius)"><i class="fas fa-brain" style="font-size:1.5rem;color:var(--cms-blue)"></i><p style="font-size:0.75rem;margin-top:8px;color:var(--cms-text-muted)">ChatGPT Discovery</p><span class="cms-badge cms-badge--warning" style="margin-top:6px">Pending</span></div>
+                        <div style="text-align:center;padding:16px;border:1px solid var(--cms-glass-border);border-radius:var(--cms-radius)"><i class="fas fa-gem" style="font-size:1.5rem;color:var(--cms-info)"></i><p style="font-size:0.75rem;margin-top:8px;color:var(--cms-text-muted)">Gemini Discovery</p><span class="cms-badge cms-badge--warning" style="margin-top:6px">Pending</span></div>
+                        <div style="text-align:center;padding:16px;border:1px solid var(--cms-glass-border);border-radius:var(--cms-radius)"><i class="fas fa-search" style="font-size:1.5rem;color:var(--cms-sdtg-gold)"></i><p style="font-size:0.75rem;margin-top:8px;color:var(--cms-text-muted)">Perplexity</p><span class="cms-badge cms-badge--success" style="margin-top:6px">Optimized</span></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/core.js"></script>
+    <script src="../js/seo.js"></script>
+</body>
+</html>

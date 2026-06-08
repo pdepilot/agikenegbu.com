@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0f1f">
+    <title>Reports | AG IKENEGBU Church Management</title>
+    <meta name="description" content="Generate and download church management reports for AG Ikenebgu Assembly.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="reports" data-depth="0">
+
+    <div class="cms-loader" id="cmsLoader" aria-hidden="true">
+        <div class="cms-loader__ring"></div>
+        <p class="cms-loader__text">Loading Platform</p>
+    </div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Reports</h1>
+                <p class="cms-page__subtitle">Generate comprehensive reports for membership, attendance, finances, and departmental performance at AG Ikenebgu.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost" data-export="PDF"><i class="fas fa-clock-rotate-left" aria-hidden="true"></i> Report History</button>
+            </div>
+        </header>
+
+        <div class="cms-stats">
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-file-lines" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="24" data-suffix="">0</div>
+                <div class="cms-stat__label">Reports Generated (YTD)</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="6" data-suffix="">0</div>
+                <div class="cms-stat__label">This Month</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-download" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="18" data-suffix="">0</div>
+                <div class="cms-stat__label">Downloads</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-clock" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="2" data-suffix="">0</div>
+                <div class="cms-stat__label">Scheduled Reports</div>
+            </article>
+        </div>
+
+        <h2 class="cms-section-label">Report Types</h2>
+
+        <div class="cms-grid cms-grid--3">
+
+            <article class="cms-card">
+                <div class="cms-card__body">
+                    <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px">
+                        <span class="cms-stat__icon cms-stat__icon--gold" style="width:48px;height:48px;flex-shrink:0"><i class="fas fa-users" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 class="cms-card__title" style="margin-bottom:4px">Membership Report</h3>
+                            <p style="font-size:0.82rem;color:var(--cms-text-muted)">Full member roster with department assignments, status, and join dates.</p>
+                        </div>
+                    </div>
+                    <div class="cms-form-row" style="margin-bottom:12px">
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Period</label>
+                            <select aria-label="Membership report period">
+                                <option>Current Month</option>
+                                <option>Last Quarter</option>
+                                <option>Year to Date</option>
+                                <option>All Time</option>
+                            </select>
+                        </div>
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Format</label>
+                            <select aria-label="Membership report format">
+                                <option>PDF</option>
+                                <option>CSV</option>
+                                <option>Excel</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="cms-btn cms-btn--primary cms-btn--sm" data-report="membership"><i class="fas fa-file-export" aria-hidden="true"></i> Generate</button>
+                </div>
+            </article>
+
+            <article class="cms-card">
+                <div class="cms-card__body">
+                    <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px">
+                        <span class="cms-stat__icon cms-stat__icon--green" style="width:48px;height:48px;flex-shrink:0"><i class="fas fa-clipboard-check" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 class="cms-card__title" style="margin-bottom:4px">Attendance Report</h3>
+                            <p style="font-size:0.82rem;color:var(--cms-text-muted)">Service and departmental attendance trends with weekly breakdowns.</p>
+                        </div>
+                    </div>
+                    <div class="cms-form-row" style="margin-bottom:12px">
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Period</label>
+                            <select aria-label="Attendance report period">
+                                <option>Last 4 Weeks</option>
+                                <option>Last Quarter</option>
+                                <option>Year to Date</option>
+                            </select>
+                        </div>
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Format</label>
+                            <select aria-label="Attendance report format">
+                                <option>PDF</option>
+                                <option>CSV</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="cms-btn cms-btn--primary cms-btn--sm" data-report="attendance"><i class="fas fa-file-export" aria-hidden="true"></i> Generate</button>
+                </div>
+            </article>
+
+            <article class="cms-card">
+                <div class="cms-card__body">
+                    <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px">
+                        <span class="cms-stat__icon cms-stat__icon--blue" style="width:48px;height:48px;flex-shrink:0"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 class="cms-card__title" style="margin-bottom:4px">Financial Report</h3>
+                            <p style="font-size:0.82rem;color:var(--cms-text-muted)">Tithes, offerings, donations by category with transaction summaries.</p>
+                        </div>
+                    </div>
+                    <div class="cms-form-row" style="margin-bottom:12px">
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Period</label>
+                            <select aria-label="Financial report period">
+                                <option>June 2025</option>
+                                <option>Q2 2025</option>
+                                <option>Year to Date</option>
+                            </select>
+                        </div>
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Format</label>
+                            <select aria-label="Financial report format">
+                                <option>PDF</option>
+                                <option>Excel</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="cms-btn cms-btn--primary cms-btn--sm" data-report="financial"><i class="fas fa-file-export" aria-hidden="true"></i> Generate</button>
+                </div>
+            </article>
+
+            <article class="cms-card">
+                <div class="cms-card__body">
+                    <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px">
+                        <span class="cms-stat__icon cms-stat__icon--purple" style="width:48px;height:48px;flex-shrink:0"><i class="fas fa-sitemap" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 class="cms-card__title" style="margin-bottom:4px">Department Report</h3>
+                            <p style="font-size:0.82rem;color:var(--cms-text-muted)">Per-department rosters, attendance, and leadership assignments.</p>
+                        </div>
+                    </div>
+                    <div class="cms-form-row" style="margin-bottom:12px">
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Department</label>
+                            <select aria-label="Department report filter">
+                                <option>All Departments</option>
+                                <option>Youth</option>
+                                <option>Choir</option>
+                                <option>Children</option>
+                                <option>Ushering</option>
+                                <option>Media</option>
+                                <option>Prayer</option>
+                                <option>Welfare</option>
+                            </select>
+                        </div>
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Format</label>
+                            <select aria-label="Department report format">
+                                <option>PDF</option>
+                                <option>CSV</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="cms-btn cms-btn--primary cms-btn--sm" data-report="department"><i class="fas fa-file-export" aria-hidden="true"></i> Generate</button>
+                </div>
+            </article>
+
+            <article class="cms-card">
+                <div class="cms-card__body">
+                    <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px">
+                        <span class="cms-stat__icon cms-stat__icon--gold" style="width:48px;height:48px;flex-shrink:0"><i class="fas fa-calendar-days" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 class="cms-card__title" style="margin-bottom:4px">Events Report</h3>
+                            <p style="font-size:0.82rem;color:var(--cms-text-muted)">Upcoming and past events with attendance projections and budgets.</p>
+                        </div>
+                    </div>
+                    <div class="cms-form-row" style="margin-bottom:12px">
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Period</label>
+                            <select aria-label="Events report period">
+                                <option>Next 30 Days</option>
+                                <option>Last Quarter</option>
+                                <option>Year to Date</option>
+                            </select>
+                        </div>
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Format</label>
+                            <select aria-label="Events report format">
+                                <option>PDF</option>
+                                <option>CSV</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="cms-btn cms-btn--primary cms-btn--sm" data-report="events"><i class="fas fa-file-export" aria-hidden="true"></i> Generate</button>
+                </div>
+            </article>
+
+            <article class="cms-card cms-stat--sdtg">
+                <div class="cms-card__body">
+                    <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px">
+                        <span class="cms-stat__icon cms-stat__icon--gold" style="width:48px;height:48px;flex-shrink:0"><i class="fas fa-bolt" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 class="cms-card__title" style="margin-bottom:4px">SDTG Summary Report</h3>
+                            <p style="font-size:0.82rem;color:var(--cms-text-muted)">Registrations, volunteers, donations, and speaker lineup for crusade.</p>
+                        </div>
+                    </div>
+                    <div class="cms-form-row" style="margin-bottom:12px">
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Event</label>
+                            <select aria-label="SDTG report event">
+                                <option>SDTG 2025</option>
+                                <option>SDTG 2024</option>
+                            </select>
+                        </div>
+                        <div class="cms-field" style="margin-bottom:0">
+                            <label>Format</label>
+                            <select aria-label="SDTG report format">
+                                <option>PDF</option>
+                                <option>Excel</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="cms-btn cms-btn--primary cms-btn--sm" data-report="sdtg"><i class="fas fa-file-export" aria-hidden="true"></i> Generate</button>
+                </div>
+            </article>
+
+        </div>
+
+        <h2 class="cms-section-label">Recent Reports</h2>
+
+        <section class="cms-card">
+            <div class="cms-card__body" style="padding:0">
+                <div class="cms-table-wrap">
+                    <table class="cms-table">
+                        <thead>
+                            <tr>
+                                <th>Report</th>
+                                <th>Type</th>
+                                <th>Period</th>
+                                <th>Generated By</th>
+                                <th>Date</th>
+                                <th>Format</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>June Attendance Summary</strong></td>
+                                <td><span class="cms-badge cms-badge--success">Attendance</span></td>
+                                <td>1–7 Jun 2025</td>
+                                <td>Admin</td>
+                                <td>7 Jun 2025, 9:14 AM</td>
+                                <td>PDF</td>
+                                <td>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Download"><i class="fas fa-download"></i></button>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Share"><i class="fas fa-share"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Q2 Financial Statement</strong></td>
+                                <td><span class="cms-badge cms-badge--info">Financial</span></td>
+                                <td>Apr–Jun 2025</td>
+                                <td>Pastor Emmanuel Nwosu</td>
+                                <td>5 Jun 2025, 2:30 PM</td>
+                                <td>Excel</td>
+                                <td>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Download"><i class="fas fa-download"></i></button>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Share"><i class="fas fa-share"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Full Member Roster</strong></td>
+                                <td><span class="cms-badge cms-badge--gold">Membership</span></td>
+                                <td>All Time</td>
+                                <td>Admin</td>
+                                <td>3 Jun 2025, 11:00 AM</td>
+                                <td>CSV</td>
+                                <td>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Download"><i class="fas fa-download"></i></button>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Share"><i class="fas fa-share"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Youth Department Report</strong></td>
+                                <td><span class="cms-badge cms-badge--muted">Department</span></td>
+                                <td>May 2025</td>
+                                <td>David Eze</td>
+                                <td>1 Jun 2025, 4:45 PM</td>
+                                <td>PDF</td>
+                                <td>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Download"><i class="fas fa-download"></i></button>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Share"><i class="fas fa-share"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>SDTG 2025 Registration Summary</strong></td>
+                                <td><span class="cms-badge cms-badge--gold">SDTG</span></td>
+                                <td>Jan–May 2025</td>
+                                <td>Admin</td>
+                                <td>28 May 2025, 10:20 AM</td>
+                                <td>PDF</td>
+                                <td>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Download"><i class="fas fa-download"></i></button>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Share"><i class="fas fa-share"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>May Events Calendar</strong></td>
+                                <td><span class="cms-badge cms-badge--warning">Events</span></td>
+                                <td>May 2025</td>
+                                <td>Grace Okonkwo</td>
+                                <td>25 May 2025, 8:00 AM</td>
+                                <td>PDF</td>
+                                <td>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Download"><i class="fas fa-download"></i></button>
+                                    <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Share"><i class="fas fa-share"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/core.js"></script>
+    <script>
+    document.querySelectorAll('[data-report]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            CMS.showToast(btn.getAttribute('data-report') + ' report queued — awaiting backend integration', 'success');
+        });
+    });
+    </script>
+</body>
+</html>

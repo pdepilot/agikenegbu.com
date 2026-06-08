@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Speakers | SDTG International Music Crusade — AG Ikenebgu CMS</title>
+    <meta name="description" content="Manage SDTG International Music Crusade guest speakers, ministries, and session assignments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="speakers" data-depth="1">
+
+<div id="cmsLoader" class="cms-loader" aria-live="polite">
+    <div class="cms-loader__ring" aria-hidden="true"></div>
+    <span class="cms-loader__text">Loading CMS</span>
+</div>
+
+<div id="cmsPageContent" style="display:none">
+
+    <header class="cms-page__header">
+        <div>
+            <h1 class="cms-page__title">SDTG Speakers</h1>
+            <p class="cms-page__subtitle">Manage guest ministers, worship leaders, and keynote speakers for Send Down Thy Glory International Music Crusade 2026 — Owerri, Nigeria.</p>
+        </div>
+        <div class="cms-page__actions">
+            <button type="button" class="cms-btn cms-btn--ghost" data-export="CSV"><i class="fas fa-file-export" aria-hidden="true"></i> Export List</button>
+            <button type="button" class="cms-btn cms-btn--primary" id="addSpeakerBtn"><i class="fas fa-plus" aria-hidden="true"></i> Add Speaker</button>
+        </div>
+    </header>
+
+    <div class="cms-stats">
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-microphone" aria-hidden="true"></i></div>
+                <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 3 new</span>
+            </div>
+            <div class="cms-stat__value" data-count="18">0</div>
+            <div class="cms-stat__label">Total Speakers</div>
+            <span class="cms-stat__brand cms-stat__brand--sdtg">SDTG 2026</span>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-globe-africa" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="12">0</div>
+            <div class="cms-stat__label">Countries Represented</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-check-circle" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="14">0</div>
+            <div class="cms-stat__label">Confirmed</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-clock" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="4">0</div>
+            <div class="cms-stat__label">Pending Confirmation</div>
+        </div>
+    </div>
+
+    <div class="cms-filters">
+        <div class="cms-field">
+            <label for="speakerSearch">Search speakers</label>
+            <input type="search" id="speakerSearch" placeholder="Name, ministry, or country…" aria-label="Search speakers">
+        </div>
+        <div class="cms-field">
+            <label for="speakerYear">Crusade Year</label>
+            <select id="speakerYear" aria-label="Filter by year">
+                <option value="">All Years</option>
+                <option value="2026" selected>2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+            </select>
+        </div>
+        <div class="cms-field">
+            <label for="speakerCountry">Country</label>
+            <select id="speakerCountry" aria-label="Filter by country">
+                <option value="">All Countries</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Ghana">Ghana</option>
+                <option value="South Africa">South Africa</option>
+            </select>
+        </div>
+        <div class="cms-field">
+            <label for="speakerStatus">Status</label>
+            <select id="speakerStatus" aria-label="Filter by status">
+                <option value="">All Status</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="pending">Pending</option>
+                <option value="featured">Featured</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="cms-grid cms-grid--dashboard">
+        <div>
+            <div class="cms-section-label cms-section-label--sdtg"><span>Speaker Roster</span></div>
+            <div class="cms-speaker-grid" id="speakerGrid">
+
+                <article class="cms-card cms-speaker-card" data-name="Dr. Paul Enenche" data-country="Nigeria" data-year="2026" data-status="featured">
+                    <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,#151f3d,#0d1428)">
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        <span class="cms-badge cms-badge--gold cms-speaker-card__year">2026</span>
+                    </div>
+                    <div class="cms-speaker-card__body">
+                        <h3 class="cms-speaker-card__name">Dr. Paul Enenche</h3>
+                        <p class="cms-speaker-card__meta">Dunamis International Gospel Centre · Nigeria</p>
+                        <p style="font-size:0.8rem;color:var(--cms-text-muted);margin-bottom:12px">Founder &amp; Senior Pastor. Keynote — Day 1 Opening Session.</p>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap">
+                            <span class="cms-badge cms-badge--gold">Featured</span>
+                            <span class="cms-badge cms-badge--success">Confirmed</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cms-card cms-speaker-card" data-name="Bishop David Oyedepo" data-country="Nigeria" data-year="2026" data-status="confirmed">
+                    <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,#1a2744,#0d1428)">
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        <span class="cms-badge cms-badge--gold cms-speaker-card__year">2026</span>
+                    </div>
+                    <div class="cms-speaker-card__body">
+                        <h3 class="cms-speaker-card__name">Bishop David Oyedepo</h3>
+                        <p class="cms-speaker-card__meta">Living Faith Church Worldwide · Nigeria</p>
+                        <p style="font-size:0.8rem;color:var(--cms-text-muted);margin-bottom:12px">Chancellor, Covenant University. Special Anointing Service — Day 2.</p>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap">
+                            <span class="cms-badge cms-badge--success">Confirmed</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cms-card cms-speaker-card" data-name="Rev. Dr. Cindy Trimm" data-country="USA" data-year="2026" data-status="confirmed">
+                    <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,#151f3d,#1a2744)">
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        <span class="cms-badge cms-badge--gold cms-speaker-card__year">2026</span>
+                    </div>
+                    <div class="cms-speaker-card__body">
+                        <h3 class="cms-speaker-card__name">Rev. Dr. Cindy Trimm</h3>
+                        <p class="cms-speaker-card__meta">Trim Ministries International · USA</p>
+                        <p style="font-size:0.8rem;color:var(--cms-text-muted);margin-bottom:12px">International speaker &amp; bestselling author. Women's Session.</p>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap">
+                            <span class="cms-badge cms-badge--success">Confirmed</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cms-card cms-speaker-card" data-name="Pastor Matthew Ashimolowo" data-country="UK" data-year="2025" data-status="confirmed">
+                    <div class="cms-speaker-card__img">
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        <span class="cms-badge cms-badge--muted cms-speaker-card__year">2025</span>
+                    </div>
+                    <div class="cms-speaker-card__body">
+                        <h3 class="cms-speaker-card__name">Pastor Matthew Ashimolowo</h3>
+                        <p class="cms-speaker-card__meta">Kingsway International Christian Centre · UK</p>
+                        <p style="font-size:0.8rem;color:var(--cms-text-muted);margin-bottom:12px">Senior Pastor KICC London. Alumni speaker — SDTG 2025.</p>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap">
+                            <span class="cms-badge cms-badge--muted">Archive</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cms-card cms-speaker-card" data-name="Dr. Mensa Otabil" data-country="Ghana" data-year="2026" data-status="pending">
+                    <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,#151f3d,#0d1428)">
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        <span class="cms-badge cms-badge--gold cms-speaker-card__year">2026</span>
+                    </div>
+                    <div class="cms-speaker-card__body">
+                        <h3 class="cms-speaker-card__name">Dr. Mensa Otabil</h3>
+                        <p class="cms-speaker-card__meta">International Central Gospel Church · Ghana</p>
+                        <p style="font-size:0.8rem;color:var(--cms-text-muted);margin-bottom:12px">General Overseeing Pastor. Leadership &amp; Vision Session.</p>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap">
+                            <span class="cms-badge cms-badge--warning">Pending</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cms-card cms-speaker-card" data-name="Pastor E.A. Adeboye" data-country="Nigeria" data-year="2026" data-status="featured">
+                    <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,#1a2744,#151f3d)">
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        <span class="cms-badge cms-badge--gold cms-speaker-card__year">2026</span>
+                    </div>
+                    <div class="cms-speaker-card__body">
+                        <h3 class="cms-speaker-card__name">Pastor E.A. Adeboye</h3>
+                        <p class="cms-speaker-card__meta">The Redeemed Christian Church of God · Nigeria</p>
+                        <p style="font-size:0.8rem;color:var(--cms-text-muted);margin-bottom:12px">General Overseer RCCG. Grand Finale — Holy Ghost Night.</p>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap">
+                            <span class="cms-badge cms-badge--gold">Featured</span>
+                            <span class="cms-badge cms-badge--success">Confirmed</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="cms-pagination">
+                <span style="font-size:0.82rem;color:var(--cms-text-muted)">Showing 6 of 18 speakers</span>
+                <div class="cms-pagination__pages">
+                    <button type="button" class="cms-pagination__btn is-active" aria-current="page">1</button>
+                    <button type="button" class="cms-pagination__btn">2</button>
+                    <button type="button" class="cms-pagination__btn">3</button>
+                    <button type="button" class="cms-pagination__btn" aria-label="Next page"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <aside>
+            <div class="cms-section-label cms-section-label--sdtg"><span>Speaker Profile Preview</span></div>
+            <div class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Field Preview</h2>
+                    <span class="cms-badge cms-badge--info">CMS Schema</span>
+                </div>
+                <div class="cms-card__body">
+                    <form data-cms-form aria-label="Speaker profile fields">
+                        <div class="cms-field">
+                            <label for="spName">Full Name</label>
+                            <input type="text" id="spName" value="Dr. Paul Enenche" readonly>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="spMinistry">Ministry / Church</label>
+                                <input type="text" id="spMinistry" value="Dunamis International Gospel Centre" readonly>
+                            </div>
+                            <div class="cms-field">
+                                <label for="spCountry">Country</label>
+                                <input type="text" id="spCountry" value="Nigeria" readonly>
+                            </div>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="spYear">Crusade Year</label>
+                                <input type="text" id="spYear" value="2026" readonly>
+                            </div>
+                            <div class="cms-field">
+                                <label for="spSession">Session Assignment</label>
+                                <input type="text" id="spSession" value="Day 1 — Opening Keynote" readonly>
+                            </div>
+                        </div>
+                        <div class="cms-field">
+                            <label for="spBio">Biography</label>
+                            <textarea id="spBio" readonly>Founder of Dunamis International Gospel Centre, Abuja. Author of over 80 books. Host of Dunamis International Gospel Centre's Power Communion Service.</textarea>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="spPhoto">Photo URL</label>
+                                <input type="url" id="spPhoto" value="/sdgt/images/speakers/paul-enenche.jpg" readonly>
+                            </div>
+                            <div class="cms-field">
+                                <label for="spFeatured">Featured on Homepage</label>
+                                <select id="spFeatured" disabled>
+                                    <option selected>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="cms-btn cms-btn--primary" style="width:100%"><i class="fas fa-save" aria-hidden="true"></i> Save Speaker</button>
+                    </form>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/shell.js"></script>
+<script src="../js/core.js"></script>
+<script>
+(function () {
+    var search = document.getElementById('speakerSearch');
+    var year = document.getElementById('speakerYear');
+    var country = document.getElementById('speakerCountry');
+    var status = document.getElementById('speakerStatus');
+    var cards = document.querySelectorAll('.cms-speaker-card');
+
+    function filterSpeakers() {
+        var q = (search && search.value || '').toLowerCase();
+        var y = year && year.value;
+        var c = country && country.value;
+        var s = status && status.value;
+        cards.forEach(function (card) {
+            var match = true;
+            if (q && card.getAttribute('data-name').toLowerCase().indexOf(q) === -1) match = false;
+            if (y && card.getAttribute('data-year') !== y) match = false;
+            if (c && card.getAttribute('data-country') !== c) match = false;
+            if (s && card.getAttribute('data-status') !== s) match = false;
+            card.style.display = match ? '' : 'none';
+        });
+    }
+
+    [search, year, country, status].forEach(function (el) {
+        if (el) el.addEventListener('input', filterSpeakers);
+        if (el && el.tagName === 'SELECT') el.addEventListener('change', filterSpeakers);
+    });
+
+    var addBtn = document.getElementById('addSpeakerBtn');
+    if (addBtn) addBtn.addEventListener('click', function () {
+        if (window.CMS) CMS.showToast('Add Speaker form — backend integration pending', 'info');
+    });
+})();
+</script>
+</body>
+</html>

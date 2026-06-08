@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Page Management | AG Ikenebgu CMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="pages" data-depth="1">
+
+    <div class="cms-loader" id="cmsLoader"><div class="cms-loader__ring"></div><p class="cms-loader__text">Loading Platform</p></div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Page Management</h1>
+                <p class="cms-page__subtitle">Manage content for AG Ikenebgu Church website and Send Down Thy Glory crusade site — pages, hero sections, and event updates.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost"><i class="fas fa-eye" aria-hidden="true"></i> Preview Site</button>
+                <button type="button" class="cms-btn cms-btn--primary"><i class="fas fa-plus" aria-hidden="true"></i> New Page</button>
+            </div>
+        </header>
+
+        <div class="cms-tabs" data-tabs role="tablist">
+            <button type="button" class="cms-tab is-active" data-tab="ag" role="tab">AG Ikenebgu Website</button>
+            <button type="button" class="cms-tab" data-tab="sdtg" role="tab">SDTG Website</button>
+        </div>
+
+        <div class="cms-tab-panel is-active" data-panel="ag">
+            <div class="cms-grid cms-grid--2" style="margin-bottom:24px">
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Hero Section — Home</h2><span class="cms-badge cms-badge--success">Published</span></div>
+                    <div class="cms-card__body">
+                        <div class="cms-field"><label>Headline</label><input type="text" value="Welcome to AG Ikenebgu — A Place of Worship & Transformation"></div>
+                        <div class="cms-field"><label>Subheadline</label><textarea>Assemblies of God Church, Ikenebgu — Spirit-filled worship every Sunday.</textarea></div>
+                        <div class="cms-field"><label>CTA Button</label><input type="text" value="Plan Your Visit"></div>
+                        <button type="button" class="cms-btn cms-btn--primary cms-btn--sm" data-cms-form>Save Hero</button>
+                    </div>
+                </article>
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Featured Event Banner</h2><span class="cms-badge cms-badge--gold">Scheduled</span></div>
+                    <div class="cms-card__body">
+                        <div class="cms-field"><label>Event Title</label><input type="text" value="Annual Thanksgiving Service 2025"></div>
+                        <div class="cms-form-row">
+                            <div class="cms-field"><label>Date</label><input type="date" value="2025-11-23"></div>
+                            <div class="cms-field"><label>Status</label><select><option>Visible</option><option>Hidden</option></select></div>
+                        </div>
+                        <button type="button" class="cms-btn cms-btn--primary cms-btn--sm">Update Banner</button>
+                    </div>
+                </article>
+            </div>
+
+            <article class="cms-card">
+                <div class="cms-card__head"><h2 class="cms-card__title">AG Website Pages</h2></div>
+                <div class="cms-table-wrap">
+                    <table class="cms-table">
+                        <thead><tr><th>Page</th><th>URL</th><th>Last Updated</th><th>Status</th><th>Actions</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Home</strong></td><td>/index.html</td><td>Jun 5, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>About Us</strong></td><td>/about.html</td><td>May 28, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>Ministries</strong></td><td>/activity.html</td><td>May 20, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>Events</strong></td><td>/event.html</td><td>Jun 1, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>Contact</strong></td><td>/contact.html</td><td>May 15, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>Gallery</strong></td><td>/gallery.html</td><td>Apr 30, 2025</td><td><span class="cms-badge cms-badge--warning">Draft</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </div>
+
+        <div class="cms-tab-panel" data-panel="sdtg">
+            <article class="cms-card" style="margin-bottom:24px">
+                <div class="cms-card__head"><h2 class="cms-card__title">SDTG Hero Section</h2></div>
+                <div class="cms-card__body">
+                    <div class="cms-field"><label>Crusade Title</label><input type="text" value="Send Down Thy Glory — International Music Crusade 2025"></div>
+                    <div class="cms-field"><label>Tagline</label><textarea>Worship. Revival. Global Gathering. Port Harcourt, Nigeria.</textarea></div>
+                    <div class="cms-form-row">
+                        <div class="cms-field"><label>Registration CTA</label><input type="text" value="Register Now"></div>
+                        <div class="cms-field"><label>Livestream CTA</label><input type="text" value="Watch Live"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="cms-card">
+                <div class="cms-card__head"><h2 class="cms-card__title">SDTG Website Pages</h2></div>
+                <div class="cms-table-wrap">
+                    <table class="cms-table">
+                        <thead><tr><th>Page</th><th>URL</th><th>Last Updated</th><th>Status</th><th>Actions</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Home</strong></td><td>/sdgt/index.html</td><td>Jun 6, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>About SDTG</strong></td><td>/sdgt/about.html</td><td>Jun 4, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>Registration</strong></td><td>/sdgt/registration.html</td><td>Jun 6, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>Livestream</strong></td><td>/sdgt/livestream.html</td><td>Jun 6, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>Speakers</strong></td><td>/sdgt/about.html#speakers</td><td>May 25, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                            <tr><td><strong>Donate</strong></td><td>/sdgt/donate.html</td><td>Jun 2, 2025</td><td><span class="cms-badge cms-badge--success">Published</span></td><td><button class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-pen"></i> Edit</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </div>
+
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/core.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Activity Logs | AG Ikenebgu CMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="activity-logs" data-depth="1">
+
+    <div class="cms-loader" id="cmsLoader"><div class="cms-loader__ring"></div><p class="cms-loader__text">Loading Platform</p></div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Activity Logs</h1>
+                <p class="cms-page__subtitle">Complete audit trail of administrative actions across AG Ikenebgu Church and SDTG management modules.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost" data-export="CSV"><i class="fas fa-file-csv" aria-hidden="true"></i> Export Logs</button>
+            </div>
+        </header>
+
+        <div class="cms-filters">
+            <div class="cms-field"><label>Date Range</label><input type="date" value="2025-06-01"></div>
+            <div class="cms-field"><label>To</label><input type="date" value="2025-06-07"></div>
+            <div class="cms-field"><label>Module</label><select><option>All Modules</option><option>Members</option><option>SDTG</option><option>SEO</option><option>Donations</option><option>Settings</option></select></div>
+            <div class="cms-field"><label>User</label><select><option>All Users</option><option>Admin</option><option>Pastor Emmanuel</option><option>Media Team</option></select></div>
+            <button type="button" class="cms-btn cms-btn--ghost"><i class="fas fa-filter"></i> Filter</button>
+        </div>
+
+        <article class="cms-card">
+            <div class="cms-table-wrap">
+                <table class="cms-table">
+                    <thead>
+                        <tr><th>Timestamp</th><th>User</th><th>Module</th><th>Action</th><th>Details</th><th>IP</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Jun 7, 2025 09:42</td><td>Admin</td><td><span class="cms-badge cms-badge--gold">SDTG</span></td><td>Registration Approved</td><td>Approved R-1042 — John Mensah (Ghana)</td><td>192.168.*.*</td></tr>
+                        <tr><td>Jun 7, 2025 09:18</td><td>Admin</td><td><span class="cms-badge cms-badge--info">SEO</span></td><td>Meta Updated</td><td>Updated title for index.html</td><td>192.168.*.*</td></tr>
+                        <tr><td>Jun 7, 2025 08:55</td><td>Pastor Emmanuel</td><td><span class="cms-badge cms-badge--success">Attendance</span></td><td>Record Submitted</td><td>Youth Dept — 142 present</td><td>10.0.*.*</td></tr>
+                        <tr><td>Jun 6, 2025 16:30</td><td>Media Team</td><td><span class="cms-badge cms-badge--gold">SDTG</span></td><td>Livestream Config</td><td>Updated RTMP stream key</td><td>172.16.*.*</td></tr>
+                        <tr><td>Jun 6, 2025 14:12</td><td>Admin</td><td><span class="cms-badge cms-badge--muted">Members</span></td><td>Member Added</td><td>Added Chioma Ibe — Children Dept</td><td>192.168.*.*</td></tr>
+                        <tr><td>Jun 6, 2025 11:45</td><td>Admin</td><td><span class="cms-badge cms-badge--warning">Donations</span></td><td>Donation Recorded</td><td>₦50,000 — Building Fund</td><td>192.168.*.*</td></tr>
+                        <tr><td>Jun 5, 2025 22:08</td><td>Admin</td><td><span class="cms-badge cms-badge--info">SEO</span></td><td>Sitemap Regenerated</td><td>22 URLs, 48 images indexed</td><td>192.168.*.*</td></tr>
+                        <tr><td>Jun 5, 2025 18:20</td><td>Admin</td><td><span class="cms-badge cms-badge--gold">SDTG</span></td><td>Speaker Updated</td><td>Dr. Paul Enenche profile edited</td><td>192.168.*.*</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cms-card__foot cms-pagination">
+                <span style="font-size:0.82rem;color:var(--cms-text-muted)">Showing 1–8 of 342 entries</span>
+                <div class="cms-pagination__pages">
+                    <button class="cms-pagination__btn is-active">1</button>
+                    <button class="cms-pagination__btn">2</button>
+                    <button class="cms-pagination__btn">3</button>
+                    <button class="cms-pagination__btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/core.js"></script>
+</body>
+</html>

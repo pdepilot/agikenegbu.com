@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Testimonies | SDTG International Music Crusade — AG Ikenebgu CMS</title>
+    <meta name="description" content="Moderate SDTG crusade testimonies — approve, reject, and manage the public testimony wall.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="testimonies" data-depth="1">
+
+<div id="cmsLoader" class="cms-loader" aria-live="polite">
+    <div class="cms-loader__ring" aria-hidden="true"></div>
+    <span class="cms-loader__text">Loading CMS</span>
+</div>
+
+<div id="cmsPageContent" style="display:none">
+
+    <header class="cms-page__header">
+        <div>
+            <h1 class="cms-page__title">Testimony Moderation</h1>
+            <p class="cms-page__subtitle">Review and approve testimonies submitted during and after Send Down Thy Glory International Music Crusade.</p>
+        </div>
+        <div class="cms-page__actions">
+            <button type="button" class="cms-btn cms-btn--ghost" data-export="CSV"><i class="fas fa-file-export" aria-hidden="true"></i> Export</button>
+            <button type="button" class="cms-btn cms-btn--primary"><i class="fas fa-check-double" aria-hidden="true"></i> Approve Selected</button>
+        </div>
+    </header>
+
+    <div class="cms-stats">
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="156">0</div>
+            <div class="cms-stat__label">Total Submissions</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-check" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="118">0</div>
+            <div class="cms-stat__label">Approved &amp; Live</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-hourglass-half" aria-hidden="true"></i></div>
+                <span class="cms-stat__trend cms-stat__trend--up">+8 today</span>
+            </div>
+            <div class="cms-stat__value" data-count="23">0</div>
+            <div class="cms-stat__label">Pending Review</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-ban" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="15">0</div>
+            <div class="cms-stat__label">Rejected</div>
+        </div>
+    </div>
+
+    <div class="cms-tabs" data-tabs role="tablist" aria-label="Testimony queues">
+        <button type="button" class="cms-tab is-active" data-tab="pending" role="tab">Moderation Queue <span class="cms-badge cms-badge--warning" style="margin-left:6px">23</span></button>
+        <button type="button" class="cms-tab" data-tab="approved" role="tab">Approved</button>
+        <button type="button" class="cms-tab" data-tab="rejected" role="tab">Rejected</button>
+        <button type="button" class="cms-tab" data-tab="featured" role="tab">Featured</button>
+    </div>
+
+    <div class="cms-tab-panel is-active" data-panel="pending">
+        <div class="cms-section-label cms-section-label--sdtg"><span>Pending Review</span></div>
+        <div class="cms-grid cms-grid--2">
+
+            <article class="cms-card">
+                <div class="cms-card__head">
+                    <div class="cms-table__user">
+                        <div class="cms-table__avatar">GO</div>
+                        <div><strong>Grace Okonkwo</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Owerri, Nigeria · Jun 7, 2026</span></div>
+                    </div>
+                    <span class="cms-badge cms-badge--warning">Pending</span>
+                </div>
+                <div class="cms-card__body">
+                    <blockquote style="font-size:0.9rem;font-style:italic;color:var(--cms-text-muted);border-left:3px solid var(--cms-sdtg-gold);padding-left:16px;margin-bottom:16px">"During the SDTG 2025 worship session, I received healing from a condition I had for 12 years. The doctors said nothing could be done, but God proved them wrong. Send Down Thy Glory changed my life forever."</blockquote>
+                    <div style="display:flex;gap:8px">
+                        <button type="button" class="cms-btn cms-btn--primary cms-btn--sm testimony-approve"><i class="fas fa-check" aria-hidden="true"></i> Approve</button>
+                        <button type="button" class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-star" aria-hidden="true"></i> Feature</button>
+                        <button type="button" class="cms-btn cms-btn--danger cms-btn--sm testimony-reject"><i class="fas fa-times" aria-hidden="true"></i> Reject</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card">
+                <div class="cms-card__head">
+                    <div class="cms-table__user">
+                        <div class="cms-table__avatar">KM</div>
+                        <div><strong>Kwame Mensah</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Accra, Ghana · Jun 6, 2026</span></div>
+                    </div>
+                    <span class="cms-badge cms-badge--warning">Pending</span>
+                </div>
+                <div class="cms-card__body">
+                    <blockquote style="font-size:0.9rem;font-style:italic;color:var(--cms-text-muted);border-left:3px solid var(--cms-sdtg-gold);padding-left:16px;margin-bottom:16px">"I flew from Ghana to Owerri for SDTG. On the second night, I felt a release in my spirit and received a breakthrough in my business. Within two weeks, three major contracts came through. To God be the glory!"</blockquote>
+                    <div style="display:flex;gap:8px">
+                        <button type="button" class="cms-btn cms-btn--primary cms-btn--sm testimony-approve"><i class="fas fa-check" aria-hidden="true"></i> Approve</button>
+                        <button type="button" class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-star" aria-hidden="true"></i> Feature</button>
+                        <button type="button" class="cms-btn cms-btn--danger cms-btn--sm testimony-reject"><i class="fas fa-times" aria-hidden="true"></i> Reject</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card">
+                <div class="cms-card__head">
+                    <div class="cms-table__user">
+                        <div class="cms-table__avatar">AN</div>
+                        <div><strong>Amaka Nwachukwu</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Port Harcourt, Nigeria · Jun 5, 2026</span></div>
+                    </div>
+                    <span class="cms-badge cms-badge--warning">Pending</span>
+                </div>
+                <div class="cms-card__body">
+                    <blockquote style="font-size:0.9rem;font-style:italic;color:var(--cms-text-muted);border-left:3px solid var(--cms-sdtg-gold);padding-left:16px;margin-bottom:16px">"My family was restored during the Holy Ghost Night. After years of estrangement, my brother called me the very next morning. SDTG is not just a crusade — it is a move of God."</blockquote>
+                    <div style="display:flex;gap:8px">
+                        <button type="button" class="cms-btn cms-btn--primary cms-btn--sm testimony-approve"><i class="fas fa-check" aria-hidden="true"></i> Approve</button>
+                        <button type="button" class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-star" aria-hidden="true"></i> Feature</button>
+                        <button type="button" class="cms-btn cms-btn--danger cms-btn--sm testimony-reject"><i class="fas fa-times" aria-hidden="true"></i> Reject</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card">
+                <div class="cms-card__head">
+                    <div class="cms-table__user">
+                        <div class="cms-table__avatar">RJ</div>
+                        <div><strong>Robert Johnson</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Houston, USA · Jun 4, 2026</span></div>
+                    </div>
+                    <span class="cms-badge cms-badge--warning">Pending</span>
+                </div>
+                <div class="cms-card__body">
+                    <blockquote style="font-size:0.9rem;font-style:italic;color:var(--cms-text-muted);border-left:3px solid var(--cms-sdtg-gold);padding-left:16px;margin-bottom:16px">"I watched SDTG online from Texas. During Pastor Enenche's message, I surrendered my life to Christ. My local church has now connected me with a discipleship group. Thank you AG Ikenebgu!"</blockquote>
+                    <div style="display:flex;gap:8px">
+                        <button type="button" class="cms-btn cms-btn--primary cms-btn--sm testimony-approve"><i class="fas fa-check" aria-hidden="true"></i> Approve</button>
+                        <button type="button" class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-star" aria-hidden="true"></i> Feature</button>
+                        <button type="button" class="cms-btn cms-btn--danger cms-btn--sm testimony-reject"><i class="fas fa-times" aria-hidden="true"></i> Reject</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="cms-tab-panel" data-panel="approved">
+        <div class="cms-section-label cms-section-label--sdtg"><span>Approved Testimonies</span></div>
+        <div class="cms-grid cms-grid--2">
+            <article class="cms-card">
+                <div class="cms-card__head">
+                    <div class="cms-table__user">
+                        <div class="cms-table__avatar">DE</div>
+                        <div><strong>David Eze</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Enugu, Nigeria</span></div>
+                    </div>
+                    <span class="cms-badge cms-badge--success">Approved</span>
+                </div>
+                <div class="cms-card__body">
+                    <blockquote style="font-size:0.9rem;font-style:italic;color:var(--cms-text-muted);border-left:3px solid var(--cms-success);padding-left:16px">"Deliverance came during the mass choir ministration. Chains were broken. I am free!"</blockquote>
+                </div>
+            </article>
+            <article class="cms-card">
+                <div class="cms-card__head">
+                    <div class="cms-table__user">
+                        <div class="cms-table__avatar">CI</div>
+                        <div><strong>Chioma Ibe</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Lagos, Nigeria</span></div>
+                    </div>
+                    <span class="cms-badge cms-badge--success">Approved</span>
+                </div>
+                <div class="cms-card__body">
+                    <blockquote style="font-size:0.9rem;font-style:italic;color:var(--cms-text-muted);border-left:3px solid var(--cms-success);padding-left:16px">"SDTG 2024 was my first crusade. I received the baptism of the Holy Spirit with evidence of speaking in tongues."</blockquote>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="cms-tab-panel" data-panel="rejected"><p style="color:var(--cms-text-muted);padding:20px 0">15 rejected submissions — spam, incomplete, or duplicate entries.</p></div>
+    <div class="cms-tab-panel" data-panel="featured"><p style="color:var(--cms-text-muted);padding:20px 0">12 featured testimonies displayed on the SDTG homepage carousel.</p></div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/shell.js"></script>
+<script src="../js/core.js"></script>
+<script>
+(function () {
+    document.querySelectorAll('.testimony-approve').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var card = btn.closest('.cms-card');
+            var badge = card.querySelector('.cms-badge');
+            if (badge) { badge.className = 'cms-badge cms-badge--success'; badge.textContent = 'Approved'; }
+            if (window.CMS) CMS.showToast('Testimony approved and published', 'success');
+        });
+    });
+    document.querySelectorAll('.testimony-reject').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var card = btn.closest('.cms-card');
+            var badge = card.querySelector('.cms-badge');
+            if (badge) { badge.className = 'cms-badge cms-badge--danger'; badge.textContent = 'Rejected'; }
+            if (window.CMS) CMS.showToast('Testimony rejected', 'info');
+        });
+    });
+})();
+</script>
+</body>
+</html>

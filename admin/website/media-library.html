@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Media Library | AG Ikenebgu CMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="media-library" data-depth="1">
+
+    <div class="cms-loader" id="cmsLoader"><div class="cms-loader__ring"></div><p class="cms-loader__text">Loading Platform</p></div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Media Library</h1>
+                <p class="cms-page__subtitle">Central asset hub for both AG Ikenebgu and SDTG websites — images, videos, documents, and 3D brand assets.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost" data-export="ZIP"><i class="fas fa-download" aria-hidden="true"></i> Bulk Download</button>
+                <button type="button" class="cms-btn cms-btn--primary"><i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> Upload Media</button>
+            </div>
+        </header>
+
+        <div class="cms-stats">
+            <article class="cms-stat cms-card"><div class="cms-stat__value" data-count="248">0</div><div class="cms-stat__label">Total Assets</div></article>
+            <article class="cms-stat cms-card"><div class="cms-stat__value" data-count="186">0</div><div class="cms-stat__label">Images</div></article>
+            <article class="cms-stat cms-card"><div class="cms-stat__value" data-count="42">0</div><div class="cms-stat__label">Videos</div></article>
+            <article class="cms-stat cms-card"><div class="cms-stat__value" data-count="2.4" data-suffix=" GB" data-decimals="1">0</div><div class="cms-stat__label">Storage Used</div></article>
+        </div>
+
+        <div class="cms-filters">
+            <div class="cms-field"><label>Search</label><input type="search" placeholder="Search by filename, alt text…"></div>
+            <div class="cms-field"><label>Site</label><select><option>All Sites</option><option>AG Ikenebgu</option><option>SDTG</option></select></div>
+            <div class="cms-field"><label>Type</label><select><option>All Types</option><option>Images</option><option>Videos</option><option>Documents</option><option>3D Assets</option></select></div>
+            <button type="button" class="cms-btn cms-btn--ghost"><i class="fas fa-filter" aria-hidden="true"></i> Apply</button>
+        </div>
+
+        <div class="cms-card" style="margin-bottom:24px;padding:40px;text-align:center;border-style:dashed">
+            <i class="fas fa-cloud-upload-alt" style="font-size:2.5rem;color:var(--cms-gold);margin-bottom:12px" aria-hidden="true"></i>
+            <p style="font-weight:600;margin-bottom:4px">Drag & drop files here</p>
+            <p style="font-size:0.85rem;color:var(--cms-text-muted)">Supports JPG, PNG, WebP, MP4, PDF — max 50MB per file</p>
+            <button type="button" class="cms-btn cms-btn--primary cms-btn--sm" style="margin-top:16px">Browse Files</button>
+        </div>
+
+        <div class="cms-grid cms-grid--4">
+            <article class="cms-card" style="overflow:hidden">
+                <div style="height:140px;background:var(--cms-navy-light);display:flex;align-items:center;justify-content:center"><i class="fas fa-image" style="font-size:2rem;color:var(--cms-text-dim)"></i></div>
+                <div class="cms-card__body" style="padding:12px">
+                    <p style="font-size:0.8rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">main1.jpg</p>
+                    <p style="font-size:0.72rem;color:var(--cms-text-muted)">AG · 1.2 MB</p>
+                    <span class="cms-badge cms-badge--muted" style="margin-top:8px">Hero</span>
+                </div>
+            </article>
+            <article class="cms-card" style="overflow:hidden">
+                <div style="height:140px;background:var(--cms-navy-light);display:flex;align-items:center;justify-content:center"><i class="fas fa-video" style="font-size:2rem;color:var(--cms-gold)"></i></div>
+                <div class="cms-card__body" style="padding:12px">
+                    <p style="font-size:0.8rem;font-weight:600">3D_video.mp4</p>
+                    <p style="font-size:0.72rem;color:var(--cms-text-muted)">AG · 8.4 MB</p>
+                    <span class="cms-badge cms-badge--gold" style="margin-top:8px">3D Logo</span>
+                </div>
+            </article>
+            <article class="cms-card" style="overflow:hidden">
+                <div style="height:140px;background:var(--cms-navy-light);display:flex;align-items:center;justify-content:center"><i class="fas fa-video" style="font-size:2rem;color:var(--cms-sdtg-gold)"></i></div>
+                <div class="cms-card__body" style="padding:12px">
+                    <p style="font-size:0.8rem;font-weight:600">3d-logo.mp4</p>
+                    <p style="font-size:0.72rem;color:var(--cms-text-muted)">SDTG · 6.1 MB</p>
+                    <span class="cms-badge cms-badge--gold" style="margin-top:8px">3D Logo</span>
+                </div>
+            </article>
+            <article class="cms-card" style="overflow:hidden">
+                <div style="height:140px;background:var(--cms-navy-light);display:flex;align-items:center;justify-content:center"><i class="fas fa-image" style="font-size:2rem;color:var(--cms-text-dim)"></i></div>
+                <div class="cms-card__body" style="padding:12px">
+                    <p style="font-size:0.8rem;font-weight:600">sdtg-hero.jpg</p>
+                    <p style="font-size:0.72rem;color:var(--cms-text-muted)">SDTG · 2.8 MB</p>
+                    <span class="cms-badge cms-badge--muted" style="margin-top:8px">Banner</span>
+                </div>
+            </article>
+        </div>
+
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/core.js"></script>
+</body>
+</html>

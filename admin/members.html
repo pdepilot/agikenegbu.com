@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0f1f">
+    <title>Members | AG IKENEGBU Church Management</title>
+    <meta name="description" content="Manage church members, departments, and membership status for AG Ikenebgu Assembly.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="members" data-depth="0">
+
+    <div class="cms-loader" id="cmsLoader" aria-hidden="true">
+        <div class="cms-loader__ring"></div>
+        <p class="cms-loader__text">Loading Platform</p>
+    </div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Members</h1>
+                <p class="cms-page__subtitle">Manage membership records for AG Ikenebgu Assembly — Ikenebgu, Imo State. Track departments, status, and contact details.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost" data-export="CSV"><i class="fas fa-file-csv" aria-hidden="true"></i> Export CSV</button>
+                <button type="button" class="cms-btn cms-btn--ghost" data-export="PDF"><i class="fas fa-file-pdf" aria-hidden="true"></i> Export PDF</button>
+                <button type="button" class="cms-btn cms-btn--primary" id="btnAddMember"><i class="fas fa-user-plus" aria-hidden="true"></i> Add Member</button>
+            </div>
+        </header>
+
+        <div class="cms-stats">
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-users" aria-hidden="true"></i></span>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 4.2%</span>
+                </div>
+                <div class="cms-stat__value" data-count="486" data-suffix="">0</div>
+                <div class="cms-stat__label">Total Members</div>
+                <span class="cms-stat__brand cms-stat__brand--ag">AG Ikenebgu</span>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-user-check" aria-hidden="true"></i></span>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 2.1%</span>
+                </div>
+                <div class="cms-stat__value" data-count="452" data-suffix="">0</div>
+                <div class="cms-stat__label">Active Members</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-user-plus" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="18" data-suffix="">0</div>
+                <div class="cms-stat__label">New This Month</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-sitemap" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="7" data-suffix="">0</div>
+                <div class="cms-stat__label">Departments</div>
+            </article>
+        </div>
+
+        <section class="cms-card">
+            <div class="cms-card__head">
+                <h2 class="cms-card__title">Member Directory</h2>
+                <span class="cms-badge cms-badge--muted" id="memberCountBadge">6 members</span>
+            </div>
+            <div class="cms-card__body">
+                <div class="cms-filters">
+                    <div class="cms-field">
+                        <label for="memberSearch">Search</label>
+                        <input type="search" id="memberSearch" placeholder="Name, email, or ID…" aria-label="Search members">
+                    </div>
+                    <div class="cms-field">
+                        <label for="filterDept">Department</label>
+                        <select id="filterDept" aria-label="Filter by department">
+                            <option value="">All Departments</option>
+                            <option value="Leadership">Leadership</option>
+                            <option value="Choir">Choir</option>
+                            <option value="Youth">Youth</option>
+                            <option value="Ushering">Ushering</option>
+                            <option value="Children">Children</option>
+                            <option value="Media">Media</option>
+                            <option value="Prayer">Prayer</option>
+                            <option value="Welfare">Welfare</option>
+                        </select>
+                    </div>
+                    <div class="cms-field">
+                        <label for="filterStatus">Status</label>
+                        <select id="filterStatus" aria-label="Filter by status">
+                            <option value="">All Status</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    <button type="button" class="cms-btn cms-btn--ghost" id="btnClearFilters"><i class="fas fa-rotate-left" aria-hidden="true"></i> Reset</button>
+                </div>
+
+                <div class="cms-table-wrap">
+                    <table class="cms-table" id="membersTable">
+                        <thead>
+                            <tr>
+                                <th>Member</th>
+                                <th>ID</th>
+                                <th>Department</th>
+                                <th>Status</th>
+                                <th>Joined</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="membersTableBody">
+                            <!-- Populated from CMS_CONFIG.members -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cms-pagination" id="membersPagination">
+                    <span class="cms-pagination__info" id="paginationInfo">Showing 1–6 of 6 members</span>
+                    <div class="cms-pagination__pages" role="navigation" aria-label="Member list pagination">
+                        <button type="button" class="cms-pagination__btn" aria-label="Previous page" disabled><i class="fas fa-chevron-left"></i></button>
+                        <button type="button" class="cms-pagination__btn is-active" aria-current="page">1</button>
+                        <button type="button" class="cms-pagination__btn" aria-label="Next page" disabled><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/core.js"></script>
+    <script>
+    (function () {
+        'use strict';
+
+        var PAGE_SIZE = 10;
+        var currentPage = 1;
+        var filtered = [];
+
+        function initials(name) {
+            return name.split(' ').map(function (w) { return w[0]; }).slice(0, 2).join('').toUpperCase();
+        }
+
+        function statusBadge(status) {
+            if (status === 'active') return '<span class="cms-badge cms-badge--success"><i class="fas fa-circle" style="font-size:0.45rem"></i> Active</span>';
+            return '<span class="cms-badge cms-badge--muted"><i class="fas fa-circle" style="font-size:0.45rem"></i> Inactive</span>';
+        }
+
+        function renderTable() {
+            var tbody = document.getElementById('membersTableBody');
+            var start = (currentPage - 1) * PAGE_SIZE;
+            var page = filtered.slice(start, start + PAGE_SIZE);
+            if (!tbody) return;
+
+            if (!page.length) {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--cms-text-muted);padding:32px">No members match your filters.</td></tr>';
+            } else {
+                tbody.innerHTML = page.map(function (m) {
+                    return '<tr data-id="' + m.id + '">' +
+                        '<td><div class="cms-table__user">' +
+                            '<div class="cms-table__avatar" aria-hidden="true">' + initials(m.name) + '</div>' +
+                            '<div><strong>' + m.name + '</strong><br><span style="color:var(--cms-text-muted);font-size:0.78rem">' + m.email + '</span></div>' +
+                        '</div></td>' +
+                        '<td><span class="cms-badge cms-badge--gold">' + m.id + '</span></td>' +
+                        '<td>' + m.dept + '</td>' +
+                        '<td>' + statusBadge(m.status) + '</td>' +
+                        '<td>' + new Date(m.joined).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) + '</td>' +
+                        '<td>' +
+                            '<button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="View profile"><i class="fas fa-eye"></i></button> ' +
+                            '<button type="button" class="cms-btn cms-btn--sm cms-btn--ghost" title="Edit member"><i class="fas fa-pen"></i></button>' +
+                        '</td>' +
+                    '</tr>';
+                }).join('');
+            }
+
+            var total = filtered.length;
+            var from = total ? start + 1 : 0;
+            var to = Math.min(start + PAGE_SIZE, total);
+            var info = document.getElementById('paginationInfo');
+            var badge = document.getElementById('memberCountBadge');
+            if (info) info.textContent = 'Showing ' + from + '–' + to + ' of ' + total + ' members';
+            if (badge) badge.textContent = total + ' member' + (total !== 1 ? 's' : '');
+        }
+
+        function applyFilters() {
+            var q = (document.getElementById('memberSearch').value || '').toLowerCase().trim();
+            var dept = document.getElementById('filterDept').value;
+            var status = document.getElementById('filterStatus').value;
+            filtered = CMS_CONFIG.members.filter(function (m) {
+                var matchQ = !q || m.name.toLowerCase().indexOf(q) >= 0 || m.email.toLowerCase().indexOf(q) >= 0 || m.id.toLowerCase().indexOf(q) >= 0;
+                var matchDept = !dept || m.dept === dept;
+                var matchStatus = !status || m.status === status;
+                return matchQ && matchDept && matchStatus;
+            });
+            currentPage = 1;
+            renderTable();
+        }
+
+        document.getElementById('memberSearch').addEventListener('input', applyFilters);
+        document.getElementById('filterDept').addEventListener('change', applyFilters);
+        document.getElementById('filterStatus').addEventListener('change', applyFilters);
+        document.getElementById('btnClearFilters').addEventListener('click', function () {
+            document.getElementById('memberSearch').value = '';
+            document.getElementById('filterDept').value = '';
+            document.getElementById('filterStatus').value = '';
+            applyFilters();
+        });
+        document.getElementById('btnAddMember').addEventListener('click', function () {
+            CMS.showToast('Add Member form — awaiting backend integration', 'info');
+        });
+
+        filtered = CMS_CONFIG.members.slice();
+        renderTable();
+    })();
+    </script>
+</body>
+</html>

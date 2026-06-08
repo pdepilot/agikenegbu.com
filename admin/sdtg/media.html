@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Media Library | SDTG International Music Crusade — AG Ikenebgu CMS</title>
+    <meta name="description" content="SDTG media library — manage videos, images, audio, and promotional assets for the International Music Crusade.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="media" data-depth="1">
+
+<div id="cmsLoader" class="cms-loader" aria-live="polite">
+    <div class="cms-loader__ring" aria-hidden="true"></div>
+    <span class="cms-loader__text">Loading CMS</span>
+</div>
+
+<div id="cmsPageContent" style="display:none">
+
+    <header class="cms-page__header">
+        <div>
+            <h1 class="cms-page__title">SDTG Media Library</h1>
+            <p class="cms-page__subtitle">Central repository for crusade videos, promotional images, audio tracks, sermon recordings, and social media assets.</p>
+        </div>
+        <div class="cms-page__actions">
+            <button type="button" class="cms-btn cms-btn--ghost"><i class="fas fa-folder-plus" aria-hidden="true"></i> New Folder</button>
+            <button type="button" class="cms-btn cms-btn--primary"><i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> Upload Media</button>
+        </div>
+    </header>
+
+    <div class="cms-stats">
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-photo-film" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="384">0</div>
+            <div class="cms-stat__label">Total Assets</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-video" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="47">0</div>
+            <div class="cms-stat__label">Videos</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-image" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="298">0</div>
+            <div class="cms-stat__label">Images</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-music" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="39">0</div>
+            <div class="cms-stat__label">Audio Files</div>
+        </div>
+    </div>
+
+    <div class="cms-filters">
+        <div class="cms-field">
+            <label for="mediaSearch">Search media</label>
+            <input type="search" id="mediaSearch" placeholder="Filename, tag, or description…" aria-label="Search media">
+        </div>
+        <div class="cms-field">
+            <label for="mediaType">Type</label>
+            <select id="mediaType" aria-label="Filter by type">
+                <option value="">All Types</option>
+                <option value="video">Video</option>
+                <option value="image">Image</option>
+                <option value="audio">Audio</option>
+            </select>
+        </div>
+        <div class="cms-field">
+            <label for="mediaFolder">Folder</label>
+            <select id="mediaFolder" aria-label="Filter by folder">
+                <option value="">All Folders</option>
+                <option>Promotional</option>
+                <option>Sermon Recordings</option>
+                <option>Worship Sessions</option>
+                <option>Social Media</option>
+                <option>Livestream Archives</option>
+            </select>
+        </div>
+        <div class="cms-field">
+            <label for="mediaYear">Year</label>
+            <select id="mediaYear" aria-label="Filter by year">
+                <option value="">All Years</option>
+                <option selected>2026</option>
+                <option>2025</option>
+                <option>2024</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="cms-tabs" data-tabs role="tablist" aria-label="Media view">
+        <button type="button" class="cms-tab is-active" data-tab="grid" role="tab"><i class="fas fa-grip" aria-hidden="true"></i> Grid</button>
+        <button type="button" class="cms-tab" data-tab="list" role="tab"><i class="fas fa-list" aria-hidden="true"></i> List</button>
+    </div>
+
+    <div class="cms-tab-panel is-active" data-panel="grid">
+        <div class="cms-section-label cms-section-label--sdtg"><span>Media Assets</span></div>
+        <div class="cms-speaker-grid" id="mediaGrid">
+
+            <article class="cms-card cms-speaker-card" data-type="video">
+                <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(135deg,#1a2744,#0d1428);position:relative">
+                    <i class="fas fa-play-circle" style="font-size:2.5rem;color:var(--cms-sdtg-gold)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--info cms-speaker-card__year">12:48</span>
+                </div>
+                <div class="cms-speaker-card__body" style="padding:14px">
+                    <h3 class="cms-speaker-card__name" style="font-size:0.9rem">SDTG 2026 Official Trailer</h3>
+                    <p class="cms-speaker-card__meta">Video · 48.2 MB · Promotional</p>
+                    <div style="display:flex;gap:6px;margin-top:10px">
+                        <span class="cms-badge cms-badge--info">Video</span>
+                        <span class="cms-badge cms-badge--success">Published</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card" data-type="video">
+                <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(135deg,#151f3d,#1a2744);position:relative">
+                    <i class="fas fa-play-circle" style="font-size:2.5rem;color:var(--cms-sdtg-gold)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--info cms-speaker-card__year">1:24:18</span>
+                </div>
+                <div class="cms-speaker-card__body" style="padding:14px">
+                    <h3 class="cms-speaker-card__name" style="font-size:0.9rem">Day 1 — Dr. Paul Enenche Full Message</h3>
+                    <p class="cms-speaker-card__meta">Video · 1.2 GB · Sermon Recordings</p>
+                    <div style="display:flex;gap:6px;margin-top:10px">
+                        <span class="cms-badge cms-badge--info">Video</span>
+                        <span class="cms-badge cms-badge--gold">Featured</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card" data-type="image">
+                <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(160deg,#0d1428 30%,#d4af37 100%)">
+                    <i class="fas fa-image" aria-hidden="true"></i>
+                </div>
+                <div class="cms-speaker-card__body" style="padding:14px">
+                    <h3 class="cms-speaker-card__name" style="font-size:0.9rem">SDTG 2026 Flyer — Main</h3>
+                    <p class="cms-speaker-card__meta">Image · 2.1 MB · Promotional</p>
+                    <div style="display:flex;gap:6px;margin-top:10px">
+                        <span class="cms-badge cms-badge--success">Image</span>
+                        <span class="cms-badge cms-badge--success">Published</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card" data-type="image">
+                <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(160deg,#151f3d 30%,#3b82f6 100%)">
+                    <i class="fas fa-image" aria-hidden="true"></i>
+                </div>
+                <div class="cms-speaker-card__body" style="padding:14px">
+                    <h3 class="cms-speaker-card__name" style="font-size:0.9rem">Social — Instagram Story Template</h3>
+                    <p class="cms-speaker-card__meta">Image · 890 KB · Social Media</p>
+                    <div style="display:flex;gap:6px;margin-top:10px">
+                        <span class="cms-badge cms-badge--success">Image</span>
+                        <span class="cms-badge cms-badge--muted">Draft</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card" data-type="audio">
+                <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(135deg,#1a2744,#151f3d)">
+                    <i class="fas fa-music" style="font-size:2rem;color:var(--cms-sdtg-gold)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--muted cms-speaker-card__year">4:32</span>
+                </div>
+                <div class="cms-speaker-card__body" style="padding:14px">
+                    <h3 class="cms-speaker-card__name" style="font-size:0.9rem">Send Down Thy Glory — Theme Song</h3>
+                    <p class="cms-speaker-card__meta">Audio · 6.4 MB · Worship Sessions</p>
+                    <div style="display:flex;gap:6px;margin-top:10px">
+                        <span class="cms-badge cms-badge--gold">Audio</span>
+                        <span class="cms-badge cms-badge--success">Published</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card" data-type="video">
+                <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(135deg,#0d1428,#1a2744);position:relative">
+                    <i class="fas fa-play-circle" style="font-size:2.5rem;color:var(--cms-sdtg-gold)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--info cms-speaker-card__year">58:12</span>
+                </div>
+                <div class="cms-speaker-card__body" style="padding:14px">
+                    <h3 class="cms-speaker-card__name" style="font-size:0.9rem">SDTG Mass Choir — Worship Explosion</h3>
+                    <p class="cms-speaker-card__meta">Video · 620 MB · Worship Sessions</p>
+                    <div style="display:flex;gap:6px;margin-top:10px">
+                        <span class="cms-badge cms-badge--info">Video</span>
+                        <span class="cms-badge cms-badge--success">Published</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card" data-type="image">
+                <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(160deg,#1a2744 30%,#22c55e 100%)">
+                    <i class="fas fa-image" aria-hidden="true"></i>
+                </div>
+                <div class="cms-speaker-card__body" style="padding:14px">
+                    <h3 class="cms-speaker-card__name" style="font-size:0.9rem">Speaker Lineup Banner 2026</h3>
+                    <p class="cms-speaker-card__meta">Image · 3.4 MB · Promotional</p>
+                    <div style="display:flex;gap:6px;margin-top:10px">
+                        <span class="cms-badge cms-badge--success">Image</span>
+                        <span class="cms-badge cms-badge--success">Published</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card" data-type="video">
+                <div class="cms-speaker-card__img" style="height:160px;background:linear-gradient(135deg,#151f3d,#0d1428);position:relative">
+                    <i class="fas fa-play-circle" style="font-size:2.5rem;color:var(--cms-sdtg-gold)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--info cms-speaker-card__year">2:15:40</span>
+                </div>
+                <div class="cms-speaker-card__body" style="padding:14px">
+                    <h3 class="cms-speaker-card__name" style="font-size:0.9rem">Holy Ghost Night — Pastor E.A. Adeboye</h3>
+                    <p class="cms-speaker-card__meta">Video · 2.1 GB · Livestream Archives</p>
+                    <div style="display:flex;gap:6px;margin-top:10px">
+                        <span class="cms-badge cms-badge--info">Video</span>
+                        <span class="cms-badge cms-badge--gold">Featured</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="cms-pagination">
+            <span style="font-size:0.82rem;color:var(--cms-text-muted)">Showing 8 of 384 assets · 2.4 GB total</span>
+            <div class="cms-pagination__pages">
+                <button type="button" class="cms-pagination__btn is-active">1</button>
+                <button type="button" class="cms-pagination__btn">2</button>
+                <button type="button" class="cms-pagination__btn">3</button>
+                <button type="button" class="cms-pagination__btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cms-tab-panel" data-panel="list">
+        <div class="cms-card">
+            <div class="cms-table-wrap">
+                <table class="cms-table">
+                    <thead>
+                        <tr>
+                            <th>File</th>
+                            <th>Type</th>
+                            <th>Folder</th>
+                            <th>Size</th>
+                            <th>Uploaded</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>SDTG 2026 Official Trailer.mp4</strong></td>
+                            <td><span class="cms-badge cms-badge--info">Video</span></td>
+                            <td>Promotional</td>
+                            <td>48.2 MB</td>
+                            <td>May 15, 2026</td>
+                            <td><span class="cms-badge cms-badge--success">Published</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>SDTG 2026 Flyer — Main.jpg</strong></td>
+                            <td><span class="cms-badge cms-badge--success">Image</span></td>
+                            <td>Promotional</td>
+                            <td>2.1 MB</td>
+                            <td>May 10, 2026</td>
+                            <td><span class="cms-badge cms-badge--success">Published</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Send Down Thy Glory — Theme Song.mp3</strong></td>
+                            <td><span class="cms-badge cms-badge--gold">Audio</span></td>
+                            <td>Worship Sessions</td>
+                            <td>6.4 MB</td>
+                            <td>Apr 28, 2026</td>
+                            <td><span class="cms-badge cms-badge--success">Published</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/shell.js"></script>
+<script src="../js/core.js"></script>
+<script>
+(function () {
+    var typeFilter = document.getElementById('mediaType');
+    var cards = document.querySelectorAll('#mediaGrid .cms-speaker-card');
+
+    if (typeFilter) typeFilter.addEventListener('change', function () {
+        var val = typeFilter.value;
+        cards.forEach(function (card) {
+            if (!val || card.getAttribute('data-type') === val) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+})();
+</script>
+</body>
+</html>

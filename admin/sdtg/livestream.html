@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Livestream Control | SDTG International Music Crusade — AG Ikenebgu CMS</title>
+    <meta name="description" content="SDTG livestream control panel — stream status, RTMP settings, viewer analytics, and go-live controls.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="livestream" data-depth="1">
+
+<div id="cmsLoader" class="cms-loader" aria-live="polite">
+    <div class="cms-loader__ring" aria-hidden="true"></div>
+    <span class="cms-loader__text">Loading CMS</span>
+</div>
+
+<div id="cmsPageContent" style="display:none">
+
+    <header class="cms-page__header">
+        <div>
+            <h1 class="cms-page__title">Livestream Control Panel</h1>
+            <p class="cms-page__subtitle">Manage SDTG International Music Crusade broadcast — YouTube, Facebook Live, and embedded website player.</p>
+        </div>
+        <div class="cms-page__actions">
+            <span class="cms-badge cms-badge--muted" id="streamStatusBadge"><i class="fas fa-circle" style="font-size:0.5rem;margin-right:6px" aria-hidden="true"></i> Offline</span>
+            <button type="button" class="cms-btn cms-btn--ghost"><i class="fas fa-external-link" aria-hidden="true"></i> Preview Stream</button>
+            <button type="button" class="cms-btn cms-btn--primary" id="goLiveBtn"><i class="fas fa-tower-broadcast" aria-hidden="true"></i> Go Live</button>
+        </div>
+    </header>
+
+    <div class="cms-stats">
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-eye" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="0" id="viewerCount">0</div>
+            <div class="cms-stat__label">Current Viewers</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="12847">0</div>
+            <div class="cms-stat__label">Peak Viewers (2025)</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-signal" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value">1080p</div>
+            <div class="cms-stat__label">Stream Quality</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-clock" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" id="streamDuration">00:00:00</div>
+            <div class="cms-stat__label">Stream Duration</div>
+        </div>
+    </div>
+
+    <div class="cms-grid cms-grid--2">
+        <div class="cms-card">
+            <div class="cms-card__head">
+                <h2 class="cms-card__title">Stream Status</h2>
+                <span class="cms-badge cms-badge--danger" id="liveIndicator">Standby</span>
+            </div>
+            <div class="cms-card__body">
+                <div style="aspect-ratio:16/9;background:var(--cms-navy-light);border-radius:var(--cms-radius);display:flex;align-items:center;justify-content:center;margin-bottom:20px;border:1px solid var(--cms-glass-border)">
+                    <div style="text-align:center;color:var(--cms-text-dim)">
+                        <i class="fas fa-video-slash" style="font-size:2.5rem;margin-bottom:12px;display:block" aria-hidden="true"></i>
+                        <span style="font-size:0.85rem">No active broadcast</span>
+                        <p style="font-size:0.75rem;margin-top:8px;color:var(--cms-text-muted)">Next scheduled: Day 1 Opening — Aug 14, 2026 · 6:00 PM WAT</p>
+                    </div>
+                </div>
+                <div class="cms-feed">
+                    <div class="cms-feed__item">
+                        <span class="cms-feed__dot cms-feed__dot--gold" aria-hidden="true"></span>
+                        <div>
+                            <p class="cms-feed__text"><strong>Encoder connected</strong> — OBS Studio v30.1 on Media PC-01</p>
+                            <p class="cms-feed__time">Last heartbeat: 2 min ago</p>
+                        </div>
+                    </div>
+                    <div class="cms-feed__item">
+                        <span class="cms-feed__dot cms-feed__dot--green" aria-hidden="true"></span>
+                        <div>
+                            <p class="cms-feed__text"><strong>CDN nodes healthy</strong> — Lagos, London, Atlanta edge servers</p>
+                            <p class="cms-feed__time">Latency: 1.2s avg</p>
+                        </div>
+                    </div>
+                    <div class="cms-feed__item">
+                        <span class="cms-feed__dot cms-feed__dot--blue" aria-hidden="true"></span>
+                        <div>
+                            <p class="cms-feed__text"><strong>Chat moderation active</strong> — 3 moderators on duty</p>
+                            <p class="cms-feed__time">Auto-filter enabled</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="cms-card" style="margin-bottom:20px">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">RTMP Settings</h2>
+                    <span class="cms-badge cms-badge--muted"><i class="fas fa-lock" aria-hidden="true"></i> Read-only</span>
+                </div>
+                <div class="cms-card__body">
+                    <div class="cms-field">
+                        <label>Primary RTMP URL</label>
+                        <div class="cms-code">rtmp://live.sdtg.agikenebgu.org/app/sdtg2026-primary</div>
+                    </div>
+                    <div class="cms-field">
+                        <label>Stream Key</label>
+                        <div class="cms-code">sk_live_••••••••••••••••••••4f8a</div>
+                    </div>
+                    <div class="cms-form-row">
+                        <div class="cms-field">
+                            <label>Backup RTMP URL</label>
+                            <div class="cms-code" style="font-size:0.7rem">rtmp://backup.sdtg.agikenebgu.org/app/sdtg2026</div>
+                        </div>
+                        <div class="cms-field">
+                            <label>Bitrate</label>
+                            <div class="cms-code">4500 kbps</div>
+                        </div>
+                    </div>
+                    <p style="font-size:0.75rem;color:var(--cms-text-dim);margin-top:8px"><i class="fas fa-info-circle" aria-hidden="true"></i> Contact IT admin to rotate stream keys. Keys expire after each crusade.</p>
+                </div>
+            </div>
+
+            <div class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Broadcast Schedule</h2>
+                </div>
+                <div class="cms-card__body">
+                    <div class="cms-table-wrap">
+                        <table class="cms-table">
+                            <thead>
+                                <tr>
+                                    <th>Session</th>
+                                    <th>Date &amp; Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Day 1 — Opening Night</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Dr. Paul Enenche</span></td>
+                                    <td>Aug 14 · 6:00 PM WAT</td>
+                                    <td><span class="cms-badge cms-badge--info">Scheduled</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Day 2 — Anointing Service</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Bishop David Oyedepo</span></td>
+                                    <td>Aug 15 · 10:00 AM WAT</td>
+                                    <td><span class="cms-badge cms-badge--info">Scheduled</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Day 3 — Worship Explosion</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">SDTG Mass Choir</span></td>
+                                    <td>Aug 16 · 4:00 PM WAT</td>
+                                    <td><span class="cms-badge cms-badge--info">Scheduled</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Day 4 — Holy Ghost Night</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Pastor E.A. Adeboye</span></td>
+                                    <td>Aug 17 · 8:00 PM WAT</td>
+                                    <td><span class="cms-badge cms-badge--gold">Finale</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/shell.js"></script>
+<script src="../js/core.js"></script>
+<script>
+(function () {
+    var live = false;
+    var goLiveBtn = document.getElementById('goLiveBtn');
+    var badge = document.getElementById('streamStatusBadge');
+    var indicator = document.getElementById('liveIndicator');
+    var viewerEl = document.getElementById('viewerCount');
+    var durationEl = document.getElementById('streamDuration');
+    var timer = null;
+    var seconds = 0;
+
+    if (goLiveBtn) goLiveBtn.addEventListener('click', function () {
+        live = !live;
+        if (live) {
+            goLiveBtn.innerHTML = '<i class="fas fa-stop" aria-hidden="true"></i> End Stream';
+            goLiveBtn.classList.remove('cms-btn--primary');
+            goLiveBtn.classList.add('cms-btn--danger');
+            badge.className = 'cms-badge cms-badge--danger';
+            badge.innerHTML = '<i class="fas fa-circle" style="font-size:0.5rem;margin-right:6px;animation:cmsSpin 1s linear infinite" aria-hidden="true"></i> LIVE';
+            indicator.className = 'cms-badge cms-badge--danger';
+            indicator.textContent = 'Broadcasting';
+            if (viewerEl) viewerEl.setAttribute('data-count', '342');
+            if (window.CMS) { CMS.initCounters(); CMS.showToast('Stream is now LIVE on all platforms', 'success'); }
+            timer = setInterval(function () {
+                seconds++;
+                var h = String(Math.floor(seconds / 3600)).padStart(2, '0');
+                var m = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+                var s = String(seconds % 60).padStart(2, '0');
+                if (durationEl) durationEl.textContent = h + ':' + m + ':' + s;
+            }, 1000);
+        } else {
+            goLiveBtn.innerHTML = '<i class="fas fa-tower-broadcast" aria-hidden="true"></i> Go Live';
+            goLiveBtn.classList.add('cms-btn--primary');
+            goLiveBtn.classList.remove('cms-btn--danger');
+            badge.className = 'cms-badge cms-badge--muted';
+            badge.innerHTML = '<i class="fas fa-circle" style="font-size:0.5rem;margin-right:6px" aria-hidden="true"></i> Offline';
+            indicator.className = 'cms-badge cms-badge--danger';
+            indicator.textContent = 'Standby';
+            if (viewerEl) { viewerEl.setAttribute('data-count', '0'); viewerEl.textContent = '0'; }
+            clearInterval(timer);
+            seconds = 0;
+            if (durationEl) durationEl.textContent = '00:00:00';
+            if (window.CMS) CMS.showToast('Stream ended successfully', 'info');
+        }
+    });
+})();
+</script>
+</body>
+</html>

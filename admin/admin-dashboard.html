@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Dashboard | AG Ikenebgu & SDTG Management Platform</title>
+    <meta name="description" content="Unified administration dashboard for AG Ikenebgu Church and Send Down Thy Glory International Music Crusade.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+</head>
+<body class="cms-app" data-page="dashboard" data-depth="0">
+
+    <div class="cms-loader" id="cmsLoader" aria-hidden="true">
+        <div class="cms-loader__ring"></div>
+        <p class="cms-loader__text">Initializing Platform</p>
+    </div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Dashboard</h1>
+                <p class="cms-page__subtitle">Welcome back. Here's what's happening across AG Ikenebgu Church and Send Down Thy Glory International Music Crusade.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost"><i class="fas fa-download" aria-hidden="true"></i> Export Report</button>
+                <a href="events.html" class="cms-btn cms-btn--primary"><i class="fas fa-plus" aria-hidden="true"></i> New Event</a>
+            </div>
+        </header>
+
+        <p class="cms-section-label">AG IKENEGBU — Church Metrics</p>
+        <div class="cms-stats">
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <div class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-users" aria-hidden="true"></i></div>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 4.2%</span>
+                </div>
+                <div class="cms-stat__value" data-count="2847">0</div>
+                <div class="cms-stat__label">Total Members</div>
+                <span class="cms-stat__brand cms-stat__brand--ag">AG Ikenebgu</span>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <div class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-sitemap" aria-hidden="true"></i></div>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 2</span>
+                </div>
+                <div class="cms-stat__value" data-count="14">0</div>
+                <div class="cms-stat__label">Active Departments</div>
+                <span class="cms-stat__brand cms-stat__brand--ag">AG Ikenebgu</span>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <div class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-clipboard-check" aria-hidden="true"></i></div>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 6.1%</span>
+                </div>
+                <div class="cms-stat__value" data-count="478">0</div>
+                <div class="cms-stat__label">Weekly Attendance</div>
+                <span class="cms-stat__brand cms-stat__brand--ag">AG Ikenebgu</span>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <div class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-calendar-days" aria-hidden="true"></i></div>
+                    <span class="cms-badge cms-badge--gold">3 This Week</span>
+                </div>
+                <div class="cms-stat__value" data-count="12">0</div>
+                <div class="cms-stat__label">Upcoming Events</div>
+                <span class="cms-stat__brand cms-stat__brand--ag">AG Ikenebgu</span>
+            </article>
+        </div>
+
+        <p class="cms-section-label cms-section-label--sdtg">SEND DOWN THY GLORY — Crusade Metrics</p>
+        <div class="cms-stats">
+            <article class="cms-stat cms-card cms-stat--sdtg">
+                <div class="cms-stat__top">
+                    <div class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-ticket" aria-hidden="true"></i></div>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 18%</span>
+                </div>
+                <div class="cms-stat__value" data-count="248">0</div>
+                <div class="cms-stat__label">Total Registrations</div>
+                <span class="cms-stat__brand cms-stat__brand--sdtg">SDTG 2025</span>
+            </article>
+            <article class="cms-stat cms-card cms-stat--sdtg">
+                <div class="cms-stat__top">
+                    <div class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-microphone" aria-hidden="true"></i></div>
+                </div>
+                <div class="cms-stat__value" data-count="24">0</div>
+                <div class="cms-stat__label">Total Speakers</div>
+                <span class="cms-stat__brand cms-stat__brand--sdtg">SDTG 2025</span>
+            </article>
+            <article class="cms-stat cms-card cms-stat--sdtg">
+                <div class="cms-stat__top">
+                    <div class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-coins" aria-hidden="true"></i></div>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 12%</span>
+                </div>
+                <div class="cms-stat__value" data-count="48.7" data-prefix="₦" data-suffix="M" data-decimals="1">0</div>
+                <div class="cms-stat__label">Total Donations</div>
+                <span class="cms-stat__brand cms-stat__brand--sdtg">SDTG 2025</span>
+            </article>
+            <article class="cms-stat cms-card cms-stat--sdtg">
+                <div class="cms-stat__top">
+                    <div class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-tower-broadcast" aria-hidden="true"></i></div>
+                    <span class="cms-badge cms-badge--success">Live Ready</span>
+                </div>
+                <div class="cms-stat__value" data-count="1240">0</div>
+                <div class="cms-stat__label">Livestream Viewers (Peak)</div>
+                <span class="cms-stat__brand cms-stat__brand--sdtg">SDTG 2025</span>
+            </article>
+        </div>
+
+        <div class="cms-grid cms-grid--dashboard">
+            <div class="cms-grid" style="gap:20px">
+                <article class="cms-card">
+                    <div class="cms-card__head">
+                        <h2 class="cms-card__title"><i class="fas fa-chart-line" style="color:var(--cms-gold);margin-right:8px" aria-hidden="true"></i> Attendance Trends</h2>
+                        <select class="cms-btn cms-btn--ghost cms-btn--sm" aria-label="Attendance period">
+                            <option>Last 6 Weeks</option>
+                            <option>Last 3 Months</option>
+                        </select>
+                    </div>
+                    <div class="cms-card__body">
+                        <div class="cms-chart-wrap"><canvas id="chartAttendance" aria-label="Attendance chart"></canvas></div>
+                    </div>
+                </article>
+
+                <div class="cms-grid cms-grid--2">
+                    <article class="cms-card">
+                        <div class="cms-card__head"><h2 class="cms-card__title">SDTG Registrations</h2></div>
+                        <div class="cms-card__body">
+                            <div class="cms-chart-wrap cms-chart-wrap--sm"><canvas id="chartRegistrations" aria-label="Registrations chart"></canvas></div>
+                        </div>
+                    </article>
+                    <article class="cms-card">
+                        <div class="cms-card__head"><h2 class="cms-card__title">Donation Breakdown</h2></div>
+                        <div class="cms-card__body">
+                            <div class="cms-chart-wrap cms-chart-wrap--sm"><canvas id="chartDonations" aria-label="Donations chart"></canvas></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <aside class="cms-grid" style="gap:20px">
+                <article class="cms-card">
+                    <div class="cms-card__head">
+                        <h2 class="cms-card__title">Activity Feed</h2>
+                        <a href="system/activity-logs.html" class="cms-btn cms-btn--ghost cms-btn--sm">View All</a>
+                    </div>
+                    <div class="cms-card__body">
+                        <div class="cms-feed">
+                            <div class="cms-feed__item">
+                                <span class="cms-feed__dot cms-feed__dot--gold" aria-hidden="true"></span>
+                                <div>
+                                    <p class="cms-feed__text"><strong>Emmanuel O.</strong> registered for SDTG 2025 from Ghana</p>
+                                    <p class="cms-feed__time">2 minutes ago</p>
+                                </div>
+                            </div>
+                            <div class="cms-feed__item">
+                                <span class="cms-feed__dot cms-feed__dot--green" aria-hidden="true"></span>
+                                <div>
+                                    <p class="cms-feed__text"><strong>₦50,000</strong> donation received — Building Fund</p>
+                                    <p class="cms-feed__time">18 minutes ago</p>
+                                </div>
+                            </div>
+                            <div class="cms-feed__item">
+                                <span class="cms-feed__dot cms-feed__dot--blue" aria-hidden="true"></span>
+                                <div>
+                                    <p class="cms-feed__text"><strong>Youth Department</strong> attendance submitted — 142 present</p>
+                                    <p class="cms-feed__time">1 hour ago</p>
+                                </div>
+                            </div>
+                            <div class="cms-feed__item">
+                                <span class="cms-feed__dot cms-feed__dot--gold" aria-hidden="true"></span>
+                                <div>
+                                    <p class="cms-feed__text"><strong>SEO Audit</strong> completed — score improved to 87/100</p>
+                                    <p class="cms-feed__time">3 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="cms-feed__item">
+                                <span class="cms-feed__dot cms-feed__dot--blue" aria-hidden="true"></span>
+                                <div>
+                                    <p class="cms-feed__text"><strong>Dr. Paul Enenche</strong> speaker profile updated for SDTG</p>
+                                    <p class="cms-feed__time">5 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cms-card">
+                    <div class="cms-card__head"><h2 class="cms-card__title">Quick Actions</h2></div>
+                    <div class="cms-card__body" style="display:grid;gap:10px">
+                        <a href="members.html" class="cms-btn cms-btn--ghost" style="justify-content:flex-start"><i class="fas fa-user-plus" aria-hidden="true"></i> Add Member</a>
+                        <a href="attendance.html" class="cms-btn cms-btn--ghost" style="justify-content:flex-start"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Record Attendance</a>
+                        <a href="sdtg/registrations.html" class="cms-btn cms-btn--ghost" style="justify-content:flex-start"><i class="fas fa-ticket" aria-hidden="true"></i> View Registrations</a>
+                        <a href="website/seo.html" class="cms-btn cms-btn--ghost" style="justify-content:flex-start"><i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i> SEO Manager</a>
+                        <a href="sdtg/livestream.html" class="cms-btn cms-btn--ghost" style="justify-content:flex-start"><i class="fas fa-tower-broadcast" aria-hidden="true"></i> Livestream Control</a>
+                    </div>
+                </article>
+            </aside>
+        </div>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

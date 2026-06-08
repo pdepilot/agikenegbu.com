@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0f1f">
+    <title>Settings | AG IKENEGBU Church Management</title>
+    <meta name="description" content="Configure AG Ikenebgu Church Management System — general settings, church profile, SDTG, notifications, and security.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="settings" data-depth="0">
+
+    <div class="cms-loader" id="cmsLoader" aria-hidden="true">
+        <div class="cms-loader__ring"></div>
+        <p class="cms-loader__text">Loading Platform</p>
+    </div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Settings</h1>
+                <p class="cms-page__subtitle">Configure your AG Ikenebgu Church Management System — platform preferences, church profile, SDTG integration, and security.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="submit" form="settingsFormGeneral" class="cms-btn cms-btn--primary"><i class="fas fa-floppy-disk" aria-hidden="true"></i> Save Changes</button>
+            </div>
+        </header>
+
+        <nav class="cms-tabs" data-tabs role="tablist" aria-label="Settings sections">
+            <button type="button" class="cms-tab is-active" data-tab="general" role="tab" aria-selected="true">General</button>
+            <button type="button" class="cms-tab" data-tab="church" role="tab" aria-selected="false">Church Profile</button>
+            <button type="button" class="cms-tab" data-tab="sdtg" role="tab" aria-selected="false">SDTG</button>
+            <button type="button" class="cms-tab" data-tab="notifications" role="tab" aria-selected="false">Notifications</button>
+            <button type="button" class="cms-tab" data-tab="security" role="tab" aria-selected="false">Security</button>
+        </nav>
+
+        <!-- General -->
+        <div class="cms-tab-panel is-active" data-panel="general" role="tabpanel">
+            <section class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">General Settings</h2>
+                </div>
+                <div class="cms-card__body">
+                    <form id="settingsFormGeneral" data-cms-form novalidate>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="setTimezone">Timezone</label>
+                                <select id="setTimezone">
+                                    <option value="Africa/Lagos" selected>Africa/Lagos (WAT, UTC+1)</option>
+                                    <option value="Africa/Accra">Africa/Accra (GMT)</option>
+                                    <option value="Europe/London">Europe/London (GMT/BST)</option>
+                                    <option value="America/New_York">America/New_York (EST/EDT)</option>
+                                </select>
+                            </div>
+                            <div class="cms-field">
+                                <label for="setLanguage">Language</label>
+                                <select id="setLanguage">
+                                    <option value="en" selected>English</option>
+                                    <option value="ig">Igbo</option>
+                                    <option value="pcm">Nigerian Pidgin</option>
+                                </select>
+                            </div>
+                            <div class="cms-field">
+                                <label for="setCurrency">Currency</label>
+                                <select id="setCurrency">
+                                    <option value="NGN" selected>Nigerian Naira (₦)</option>
+                                    <option value="USD">US Dollar ($)</option>
+                                    <option value="GBP">British Pound (£)</option>
+                                    <option value="GHS">Ghanaian Cedi (₵)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="setDateFormat">Date Format</label>
+                                <select id="setDateFormat">
+                                    <option value="dmy" selected>DD/MM/YYYY</option>
+                                    <option value="mdy">MM/DD/YYYY</option>
+                                    <option value="ymd">YYYY-MM-DD</option>
+                                </select>
+                            </div>
+                            <div class="cms-field">
+                                <label for="setFiscalYear">Fiscal Year Start</label>
+                                <select id="setFiscalYear">
+                                    <option value="jan" selected>January</option>
+                                    <option value="apr">April</option>
+                                    <option value="jul">July</option>
+                                </select>
+                            </div>
+                            <div class="cms-field">
+                                <label for="setRecordsPerPage">Records Per Page</label>
+                                <select id="setRecordsPerPage">
+                                    <option value="10">10</option>
+                                    <option value="25" selected>25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cms-field">
+                            <label for="setDashboardWidgets">Default Dashboard Widgets</label>
+                            <select id="setDashboardWidgets" multiple style="min-height:100px">
+                                <option value="attendance" selected>Attendance Overview</option>
+                                <option value="members" selected>Member Stats</option>
+                                <option value="donations" selected>Donation Summary</option>
+                                <option value="events" selected>Upcoming Events</option>
+                                <option value="sdtg" selected>SDTG Registrations</option>
+                                <option value="activity">Activity Feed</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- Church Profile -->
+        <div class="cms-tab-panel" data-panel="church" role="tabpanel">
+            <section class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Church Profile</h2>
+                </div>
+                <div class="cms-card__body">
+                    <form id="settingsFormChurch" data-cms-form novalidate>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="churchName">Church Name</label>
+                                <input type="text" id="churchName" value="Assemblies of God — Ikenebgu District">
+                            </div>
+                            <div class="cms-field">
+                                <label for="churchShortName">Short Name</label>
+                                <input type="text" id="churchShortName" value="AG IKENEGBU">
+                            </div>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="churchPastor">Senior Pastor</label>
+                                <input type="text" id="churchPastor" value="Pastor Emmanuel Nwosu">
+                            </div>
+                            <div class="cms-field">
+                                <label for="churchFounded">Year Founded</label>
+                                <input type="number" id="churchFounded" value="1988" min="1900" max="2099">
+                            </div>
+                        </div>
+                        <div class="cms-field">
+                            <label for="churchAddress">Address</label>
+                            <input type="text" id="churchAddress" value="AG Ikenebgu Assembly, Ikenebgu, Owerri North LGA, Imo State, Nigeria">
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="churchPhone">Phone</label>
+                                <input type="tel" id="churchPhone" value="+234 803 456 7890">
+                            </div>
+                            <div class="cms-field">
+                                <label for="churchEmail">Email</label>
+                                <input type="email" id="churchEmail" value="info@agikenebgu.org">
+                            </div>
+                            <div class="cms-field">
+                                <label for="churchWebsite">Website</label>
+                                <input type="url" id="churchWebsite" value="https://agikenebgu.org">
+                            </div>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="serviceSunday">Sunday Service Time</label>
+                                <input type="text" id="serviceSunday" value="8:00 AM — Main Auditorium">
+                            </div>
+                            <div class="cms-field">
+                                <label for="serviceMidweek">Midweek Bible Study</label>
+                                <input type="text" id="serviceMidweek" value="Wednesday 5:30 PM — Fellowship Hall">
+                            </div>
+                        </div>
+                        <div class="cms-field">
+                            <label for="churchMission">Mission Statement</label>
+                            <textarea id="churchMission" rows="3">To raise a people of power, purpose, and praise — transforming Ikenebgu and the nations through the gospel of Jesus Christ.</textarea>
+                        </div>
+                        <div class="cms-field">
+                            <label for="churchVision">Vision</label>
+                            <textarea id="churchVision" rows="2">A thriving, Spirit-filled community where every member discovers their purpose and impacts their world for Christ.</textarea>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- SDTG -->
+        <div class="cms-tab-panel" data-panel="sdtg" role="tabpanel">
+            <section class="cms-card cms-stat--sdtg">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Send Down Thy Glory Settings</h2>
+                    <span class="cms-badge cms-badge--gold">SDTG 2025</span>
+                </div>
+                <div class="cms-card__body">
+                    <form id="settingsFormSdtg" data-cms-form novalidate>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="sdtgEventName">Event Name</label>
+                                <input type="text" id="sdtgEventName" value="Send Down Thy Glory Crusade 2025">
+                            </div>
+                            <div class="cms-field">
+                                <label for="sdtgTheme">Theme</label>
+                                <input type="text" id="sdtgTheme" value="Thy Glory Come Down">
+                            </div>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="sdtgStartDate">Start Date</label>
+                                <input type="date" id="sdtgStartDate" value="2025-07-15">
+                            </div>
+                            <div class="cms-field">
+                                <label for="sdtgEndDate">End Date</label>
+                                <input type="date" id="sdtgEndDate" value="2025-07-19">
+                            </div>
+                            <div class="cms-field">
+                                <label for="sdtgVenue">Venue</label>
+                                <input type="text" id="sdtgVenue" value="AG Ikenebgu Crusade Grounds">
+                            </div>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="sdtgSpeaker">Featured Speaker</label>
+                                <input type="text" id="sdtgSpeaker" value="Dr. Paul Enenche">
+                            </div>
+                            <div class="cms-field">
+                                <label for="sdtgCapacity">Expected Capacity</label>
+                                <input type="number" id="sdtgCapacity" value="5000" min="100">
+                            </div>
+                            <div class="cms-field">
+                                <label for="sdtgRegistrations">Registration Count</label>
+                                <input type="number" id="sdtgRegistrations" value="248" readonly style="opacity:0.7">
+                            </div>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="sdtgLivestream">Livestream URL</label>
+                                <input type="url" id="sdtgLivestream" value="https://agikenebgu.org/sdgt/livestream.html" placeholder="https://">
+                            </div>
+                            <div class="cms-field">
+                                <label for="sdtgDonationLink">Donation Link</label>
+                                <input type="url" id="sdtgDonationLink" value="https://agikenebgu.org/sdgt/donate.html">
+                            </div>
+                        </div>
+                        <div class="cms-field">
+                            <label for="sdtgDescription">Event Description</label>
+                            <textarea id="sdtgDescription" rows="4">Send Down Thy Glory is AG Ikenebgu's annual international crusade — five nights of worship, healing, and revival. SDTG 2025 features Dr. Paul Enenche of Dunamis International Gospel Centre, with livestream coverage, volunteer coordination, and international guest registrations.</textarea>
+                        </div>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label>
+                                    <input type="checkbox" checked> Enable online registration
+                                </label>
+                            </div>
+                            <div class="cms-field">
+                                <label>
+                                    <input type="checkbox" checked> Enable volunteer sign-up
+                                </label>
+                            </div>
+                            <div class="cms-field">
+                                <label>
+                                    <input type="checkbox" checked> Enable livestream integration
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- Notifications -->
+        <div class="cms-tab-panel" data-panel="notifications" role="tabpanel">
+            <section class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Notification Preferences</h2>
+                </div>
+                <div class="cms-card__body">
+                    <form id="settingsFormNotifications" data-cms-form novalidate>
+                        <h3 style="font-size:0.85rem;font-weight:600;margin-bottom:14px;color:var(--cms-text-muted)">Email Notifications</h3>
+                        <div class="cms-seo-audit" style="margin-bottom:24px">
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>New Member Registration</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">When a new member is added to the system</div></div>
+                                <input type="checkbox" checked>
+                            </label>
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>Attendance Submitted</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">When a department leader submits attendance</div></div>
+                                <input type="checkbox" checked>
+                            </label>
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>Donation Received</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">For donations above ₦10,000</div></div>
+                                <input type="checkbox" checked>
+                            </label>
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>SDTG Registration</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">New crusade registration from any country</div></div>
+                                <input type="checkbox" checked>
+                            </label>
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>Weekly Summary Report</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">Automated digest every Monday at 8 AM</div></div>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <h3 style="font-size:0.85rem;font-weight:600;margin-bottom:14px;color:var(--cms-text-muted)">SMS Alerts</h3>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="smsProvider">SMS Provider</label>
+                                <select id="smsProvider">
+                                    <option value="termii" selected>Termii</option>
+                                    <option value="twilio">Twilio</option>
+                                    <option value="africastalking">Africa's Talking</option>
+                                </select>
+                            </div>
+                            <div class="cms-field">
+                                <label for="smsSenderId">Sender ID</label>
+                                <input type="text" id="smsSenderId" value="AGIKENEGBU" maxlength="11">
+                            </div>
+                        </div>
+                        <div class="cms-seo-audit">
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>Service Reminders</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">Saturday evening reminder to all members</div></div>
+                                <input type="checkbox" checked>
+                            </label>
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>Emergency Broadcasts</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">Urgent church-wide announcements</div></div>
+                                <input type="checkbox" checked>
+                            </label>
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>Leader Alerts</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">Meeting reminders for department heads</div></div>
+                                <input type="checkbox" checked>
+                            </label>
+                        </div>
+
+                        <div class="cms-field" style="margin-top:20px">
+                            <label for="notifyEmail">Admin Notification Email</label>
+                            <input type="email" id="notifyEmail" value="admin@agikenebgu.org">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- Security -->
+        <div class="cms-tab-panel" data-panel="security" role="tabpanel">
+            <div class="cms-grid cms-grid--2">
+                <section class="cms-card">
+                    <div class="cms-card__head">
+                        <h2 class="cms-card__title">Account Security</h2>
+                    </div>
+                    <div class="cms-card__body">
+                        <form id="settingsFormSecurity" data-cms-form novalidate>
+                            <div class="cms-field">
+                                <label for="secCurrentPassword">Current Password</label>
+                                <input type="password" id="secCurrentPassword" autocomplete="current-password">
+                            </div>
+                            <div class="cms-form-row">
+                                <div class="cms-field">
+                                    <label for="secNewPassword">New Password</label>
+                                    <input type="password" id="secNewPassword" autocomplete="new-password" minlength="8">
+                                </div>
+                                <div class="cms-field">
+                                    <label for="secConfirmPassword">Confirm Password</label>
+                                    <input type="password" id="secConfirmPassword" autocomplete="new-password">
+                                </div>
+                            </div>
+                            <button type="submit" class="cms-btn cms-btn--primary cms-btn--sm"><i class="fas fa-lock" aria-hidden="true"></i> Update Password</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="cms-card">
+                    <div class="cms-card__head">
+                        <h2 class="cms-card__title">Two-Factor Authentication</h2>
+                        <span class="cms-badge cms-badge--warning">Not Enabled</span>
+                    </div>
+                    <div class="cms-card__body">
+                        <p style="font-size:0.85rem;color:var(--cms-text-muted);margin-bottom:16px">Add an extra layer of security to your administrator account. We recommend enabling 2FA for all super administrators.</p>
+                        <div class="cms-seo-audit" style="margin-bottom:16px">
+                            <div class="cms-seo-audit__item cms-seo-audit__item--ok">
+                                <div><strong>Authenticator App</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">Google Authenticator, Authy</div></div>
+                                <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost">Enable</button>
+                            </div>
+                            <div class="cms-seo-audit__item">
+                                <div><strong>SMS Verification</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">+234 803 *** 7890</div></div>
+                                <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost">Enable</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="cms-card" style="margin-top:20px">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Session &amp; Access Control</h2>
+                </div>
+                <div class="cms-card__body">
+                    <form data-cms-form novalidate>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="secSessionTimeout">Session Timeout</label>
+                                <select id="secSessionTimeout">
+                                    <option value="30">30 minutes</option>
+                                    <option value="60" selected>1 hour</option>
+                                    <option value="120">2 hours</option>
+                                    <option value="480">8 hours</option>
+                                </select>
+                            </div>
+                            <div class="cms-field">
+                                <label for="secMaxAttempts">Max Login Attempts</label>
+                                <select id="secMaxAttempts">
+                                    <option value="3">3 attempts</option>
+                                    <option value="5" selected>5 attempts</option>
+                                    <option value="10">10 attempts</option>
+                                </select>
+                            </div>
+                            <div class="cms-field">
+                                <label for="secLockoutDuration">Lockout Duration</label>
+                                <select id="secLockoutDuration">
+                                    <option value="15">15 minutes</option>
+                                    <option value="30" selected>30 minutes</option>
+                                    <option value="60">1 hour</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cms-seo-audit">
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>Require strong passwords</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">Minimum 8 characters with uppercase, number, and symbol</div></div>
+                                <input type="checkbox" checked>
+                            </label>
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>Log all admin activity</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">Audit trail for compliance and security review</div></div>
+                                <input type="checkbox" checked>
+                            </label>
+                            <label class="cms-seo-audit__item" style="cursor:pointer">
+                                <div><strong>IP restriction for admin login</strong><div style="font-size:0.78rem;color:var(--cms-text-muted)">Limit access to whitelisted IP addresses</div></div>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="cms-card" style="margin-top:20px">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Active Sessions</h2>
+                </div>
+                <div class="cms-card__body" style="padding:0">
+                    <div class="cms-table-wrap">
+                        <table class="cms-table">
+                            <thead>
+                                <tr>
+                                    <th>Device</th>
+                                    <th>Location</th>
+                                    <th>IP Address</th>
+                                    <th>Last Active</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fas fa-desktop" style="color:var(--cms-gold);margin-right:8px" aria-hidden="true"></i> Windows — Chrome <span class="cms-badge cms-badge--success" style="margin-left:6px">Current</span></td>
+                                    <td>Owerri, Nigeria</td>
+                                    <td>197.210.*.*</td>
+                                    <td>Just now</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-mobile-screen" style="color:var(--cms-blue);margin-right:8px" aria-hidden="true"></i> iPhone — Safari</td>
+                                    <td>Owerri, Nigeria</td>
+                                    <td>102.89.*.*</td>
+                                    <td>2 hours ago</td>
+                                    <td><button type="button" class="cms-btn cms-btn--sm cms-btn--danger">Revoke</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/core.js"></script>
+</body>
+</html>

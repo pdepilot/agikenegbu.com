@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0f1f">
+    <title>Events | AG IKENEGBU Church Management</title>
+    <meta name="description" content="Schedule and manage church events, programs, and special services at AG Ikenebgu Assembly.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="events" data-depth="0">
+
+    <div class="cms-loader" id="cmsLoader" aria-hidden="true">
+        <div class="cms-loader__ring"></div>
+        <p class="cms-loader__text">Loading Platform</p>
+    </div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Events</h1>
+                <p class="cms-page__subtitle">Plan and coordinate church programs — Sunday services, conferences, outreaches, and Send Down Thy Glory crusade activities.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost" data-export="ICS"><i class="fas fa-calendar-plus" aria-hidden="true"></i> Export Calendar</button>
+                <button type="button" class="cms-btn cms-btn--primary" id="btnCreateEvent"><i class="fas fa-plus" aria-hidden="true"></i> Create Event</button>
+            </div>
+        </header>
+
+        <div class="cms-stats">
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-calendar-days" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="12" data-suffix="">0</div>
+                <div class="cms-stat__label">Upcoming Events</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-calendar-week" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="4" data-suffix="">0</div>
+                <div class="cms-stat__label">This Month</div>
+            </article>
+            <article class="cms-stat cms-card cms-stat--sdtg">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-bolt" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="3" data-suffix="">0</div>
+                <div class="cms-stat__label">SDTG Programs</div>
+                <span class="cms-stat__brand cms-stat__brand--sdtg">Send Down Thy Glory</span>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-users" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="1840" data-suffix="">0</div>
+                <div class="cms-stat__label">Expected Attendees (Total)</div>
+            </article>
+        </div>
+
+        <h2 class="cms-section-label">Featured Events</h2>
+
+        <div class="cms-grid cms-grid--3">
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(212,175,55,0.25),rgba(212,168,44,0.1))">
+                    <i class="fas fa-bolt" style="font-size:2.5rem;color:var(--cms-sdtg-gold)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--gold cms-speaker-card__year">SDTG 2025</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Send Down Thy Glory Crusade</h3>
+                    <p class="cms-speaker-card__meta"><i class="fas fa-calendar" aria-hidden="true"></i> 15–19 Jul 2025 · AG Ikenebgu Grounds</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:12px">Annual international crusade featuring Dr. Paul Enenche. 5 nights of worship, healing, and revival.</p>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap">
+                        <span class="cms-badge cms-badge--success">Confirmed</span>
+                        <span class="cms-badge cms-badge--info">2,500+ expected</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(212,168,44,0.2),rgba(59,130,246,0.1))">
+                    <i class="fas fa-church" style="font-size:2.5rem;color:var(--cms-gold)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--info cms-speaker-card__year">Annual</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Church Anniversary &amp; Thanksgiving</h3>
+                    <p class="cms-speaker-card__meta"><i class="fas fa-calendar" aria-hidden="true"></i> 28 Jun 2025 · Main Auditorium</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:12px">Celebrating 37 years of God's faithfulness. Special guest ministers and community outreach.</p>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap">
+                        <span class="cms-badge cms-badge--success">Confirmed</span>
+                        <span class="cms-badge cms-badge--info">800+ expected</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(34,197,94,0.2),rgba(59,130,246,0.1))">
+                    <i class="fas fa-people-group" style="font-size:2.5rem;color:var(--cms-success)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--warning cms-speaker-card__year">Outreach</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Community Medical Outreach</h3>
+                    <p class="cms-speaker-card__meta"><i class="fas fa-calendar" aria-hidden="true"></i> 14 Jun 2025 · Ikenebgu Market Square</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:12px">Free health screening, prayer, and gospel distribution in partnership with Welfare Department.</p>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap">
+                        <span class="cms-badge cms-badge--warning">Planning</span>
+                        <span class="cms-badge cms-badge--info">300+ expected</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <h2 class="cms-section-label">Upcoming Events Schedule</h2>
+
+        <section class="cms-card">
+            <div class="cms-card__head">
+                <h2 class="cms-card__title">Event Calendar</h2>
+                <div class="cms-filters" style="margin-bottom:0">
+                    <div class="cms-field" style="min-width:140px">
+                        <select aria-label="Filter by category">
+                            <option value="">All Categories</option>
+                            <option>Sunday Service</option>
+                            <option>Conference</option>
+                            <option>Outreach</option>
+                            <option>SDTG</option>
+                            <option>Youth</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="cms-card__body" style="padding:0">
+                <div class="cms-table-wrap">
+                    <table class="cms-table">
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Location</th>
+                                <th>Category</th>
+                                <th>Expected</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sunday Morning Service</strong></td>
+                                <td>8 Jun 2025</td>
+                                <td>8:00 AM</td>
+                                <td>Main Auditorium</td>
+                                <td><span class="cms-badge cms-badge--muted">Sunday Service</span></td>
+                                <td>480</td>
+                                <td><span class="cms-badge cms-badge--success">Scheduled</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-pen"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Midweek Bible Study</strong></td>
+                                <td>11 Jun 2025</td>
+                                <td>5:30 PM</td>
+                                <td>Fellowship Hall</td>
+                                <td><span class="cms-badge cms-badge--muted">Bible Study</span></td>
+                                <td>220</td>
+                                <td><span class="cms-badge cms-badge--success">Scheduled</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-pen"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Youth Friday Fellowship</strong></td>
+                                <td>13 Jun 2025</td>
+                                <td>6:00 PM</td>
+                                <td>Youth Centre</td>
+                                <td><span class="cms-badge cms-badge--info">Youth</span></td>
+                                <td>150</td>
+                                <td><span class="cms-badge cms-badge--success">Scheduled</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-pen"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Community Medical Outreach</strong></td>
+                                <td>14 Jun 2025</td>
+                                <td>9:00 AM</td>
+                                <td>Ikenebgu Market Square</td>
+                                <td><span class="cms-badge cms-badge--warning">Outreach</span></td>
+                                <td>300</td>
+                                <td><span class="cms-badge cms-badge--warning">Planning</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-pen"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Choir Rehearsal — SDTG Prep</strong></td>
+                                <td>19 Jun 2025</td>
+                                <td>5:30 PM</td>
+                                <td>Choir Room</td>
+                                <td><span class="cms-badge cms-badge--gold">SDTG</span></td>
+                                <td>68</td>
+                                <td><span class="cms-badge cms-badge--success">Scheduled</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-pen"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Church Anniversary &amp; Thanksgiving</strong></td>
+                                <td>28 Jun 2025</td>
+                                <td>9:00 AM</td>
+                                <td>Main Auditorium</td>
+                                <td><span class="cms-badge cms-badge--gold">Conference</span></td>
+                                <td>800</td>
+                                <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-pen"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>SDTG Volunteer Briefing</strong></td>
+                                <td>5 Jul 2025</td>
+                                <td>4:00 PM</td>
+                                <td>Conference Room</td>
+                                <td><span class="cms-badge cms-badge--gold">SDTG</span></td>
+                                <td>120</td>
+                                <td><span class="cms-badge cms-badge--warning">Planning</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-pen"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Send Down Thy Glory Crusade</strong></td>
+                                <td>15 Jul 2025</td>
+                                <td>6:00 PM</td>
+                                <td>AG Ikenebgu Grounds</td>
+                                <td><span class="cms-badge cms-badge--gold">SDTG</span></td>
+                                <td>2,500</td>
+                                <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-pen"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/core.js"></script>
+    <script>
+    document.getElementById('btnCreateEvent').addEventListener('click', function () {
+        CMS.showToast('Create Event form — awaiting backend integration', 'info');
+    });
+    </script>
+</body>
+</html>

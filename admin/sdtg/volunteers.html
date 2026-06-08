@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Volunteers | SDTG International Music Crusade — AG Ikenebgu CMS</title>
+    <meta name="description" content="Manage SDTG volunteer roster, roles, shifts, and application queue.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="volunteers" data-depth="1">
+
+<div id="cmsLoader" class="cms-loader" aria-live="polite">
+    <div class="cms-loader__ring" aria-hidden="true"></div>
+    <span class="cms-loader__text">Loading CMS</span>
+</div>
+
+<div id="cmsPageContent" style="display:none">
+
+    <header class="cms-page__header">
+        <div>
+            <h1 class="cms-page__title">Volunteer Management</h1>
+            <p class="cms-page__subtitle">Coordinate SDTG 2026 volunteer teams — ushers, media, protocol, hospitality, security, and medical support across all four crusade days.</p>
+        </div>
+        <div class="cms-page__actions">
+            <button type="button" class="cms-btn cms-btn--ghost" data-export="CSV"><i class="fas fa-file-export" aria-hidden="true"></i> Export Roster</button>
+            <button type="button" class="cms-btn cms-btn--primary"><i class="fas fa-user-plus" aria-hidden="true"></i> Add Volunteer</button>
+        </div>
+    </header>
+
+    <div class="cms-stats">
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-hands-helping" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="67">0</div>
+            <div class="cms-stat__label">Active Volunteers</div>
+            <span class="cms-stat__brand cms-stat__brand--sdtg">SDTG 2026</span>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-sitemap" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="12">0</div>
+            <div class="cms-stat__label">Teams / Roles</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="268">0</div>
+            <div class="cms-stat__label">Shifts Scheduled</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-inbox" aria-hidden="true"></i></div>
+                <span class="cms-stat__trend cms-stat__trend--up">+5 new</span>
+            </div>
+            <div class="cms-stat__value" data-count="14">0</div>
+            <div class="cms-stat__label">Pending Applications</div>
+        </div>
+    </div>
+
+    <div class="cms-tabs" data-tabs role="tablist" aria-label="Volunteer sections">
+        <button type="button" class="cms-tab is-active" data-tab="roster" role="tab">Volunteer Roster</button>
+        <button type="button" class="cms-tab" data-tab="shifts" role="tab">Shift Schedule</button>
+        <button type="button" class="cms-tab" data-tab="applications" role="tab">Application Queue <span class="cms-badge cms-badge--warning" style="margin-left:6px">14</span></button>
+    </div>
+
+    <div class="cms-tab-panel is-active" data-panel="roster">
+        <div class="cms-filters">
+            <div class="cms-field">
+                <label for="volSearch">Search</label>
+                <input type="search" id="volSearch" placeholder="Name or team…" aria-label="Search volunteers">
+            </div>
+            <div class="cms-field">
+                <label for="volRole">Role / Team</label>
+                <select id="volRole" aria-label="Filter by role">
+                    <option value="">All Teams</option>
+                    <option>Ushering</option>
+                    <option>Media &amp; Broadcast</option>
+                    <option>Protocol</option>
+                    <option>Hospitality</option>
+                    <option>Security</option>
+                    <option>Medical</option>
+                    <option>Children &amp; Youth</option>
+                    <option>Parking &amp; Logistics</option>
+                </select>
+            </div>
+            <div class="cms-field">
+                <label for="volDay">Crusade Day</label>
+                <select id="volDay" aria-label="Filter by day">
+                    <option value="">All Days</option>
+                    <option>Day 1 — Aug 14</option>
+                    <option>Day 2 — Aug 15</option>
+                    <option>Day 3 — Aug 16</option>
+                    <option>Day 4 — Aug 17</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="cms-card">
+            <div class="cms-table-wrap">
+                <table class="cms-table">
+                    <thead>
+                        <tr>
+                            <th>Volunteer</th>
+                            <th>Role / Team</th>
+                            <th>Shift</th>
+                            <th>Days Assigned</th>
+                            <th>Contact</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">SU</div>
+                                    <div><strong>Samuel Uche</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Team Lead</span></div>
+                                </div>
+                            </td>
+                            <td><span class="cms-badge cms-badge--info">Media &amp; Broadcast</span></td>
+                            <td>Morning · 8:00 AM – 2:00 PM</td>
+                            <td>All 4 Days</td>
+                            <td style="font-size:0.78rem">samuel.u@email.com</td>
+                            <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">BA</div>
+                                    <div><strong>Blessing Adeyemi</strong></div>
+                                </div>
+                            </td>
+                            <td><span class="cms-badge cms-badge--gold">Ushering</span></td>
+                            <td>Evening · 4:00 PM – 10:00 PM</td>
+                            <td>Day 1, 2, 4</td>
+                            <td style="font-size:0.78rem">blessing.a@email.com</td>
+                            <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">CI</div>
+                                    <div><strong>Chioma Ibe</strong></div>
+                                </div>
+                            </td>
+                            <td><span class="cms-badge cms-badge--muted">Children &amp; Youth</span></td>
+                            <td>Full Day · 9:00 AM – 6:00 PM</td>
+                            <td>Day 2, 3</td>
+                            <td style="font-size:0.78rem">chioma.ibe@email.com</td>
+                            <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">DE</div>
+                                    <div><strong>David Eze</strong></div>
+                                </div>
+                            </td>
+                            <td><span class="cms-badge cms-badge--info">Protocol</span></td>
+                            <td>Morning · 7:00 AM – 1:00 PM</td>
+                            <td>All 4 Days</td>
+                            <td style="font-size:0.78rem">david.eze@email.com</td>
+                            <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">GO</div>
+                                    <div><strong>Grace Okonkwo</strong></div>
+                                </div>
+                            </td>
+                            <td><span class="cms-badge cms-badge--gold">Hospitality</span></td>
+                            <td>Afternoon · 12:00 PM – 6:00 PM</td>
+                            <td>Day 1, 3, 4</td>
+                            <td style="font-size:0.78rem">grace.o@email.com</td>
+                            <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">EN</div>
+                                    <div><strong>Emmanuel Nwosu</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">Coordinator</span></div>
+                                </div>
+                            </td>
+                            <td><span class="cms-badge cms-badge--danger">Security</span></td>
+                            <td>Full Day · 6:00 AM – 11:00 PM</td>
+                            <td>All 4 Days</td>
+                            <td style="font-size:0.78rem">emmanuel@agikenebgu.org</td>
+                            <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">PO</div>
+                                    <div><strong>Peter Okafor</strong></div>
+                                </div>
+                            </td>
+                            <td><span class="cms-badge cms-badge--muted">Parking &amp; Logistics</span></td>
+                            <td>Morning · 6:00 AM – 12:00 PM</td>
+                            <td>Day 1, 4</td>
+                            <td style="font-size:0.78rem">peter.o@email.com</td>
+                            <td><span class="cms-badge cms-badge--warning">Tentative</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cms-card__foot">
+                <div class="cms-pagination">
+                    <span style="font-size:0.82rem;color:var(--cms-text-muted)">Showing 7 of 67 volunteers</span>
+                    <div class="cms-pagination__pages">
+                        <button type="button" class="cms-pagination__btn is-active">1</button>
+                        <button type="button" class="cms-pagination__btn">2</button>
+                        <button type="button" class="cms-pagination__btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cms-tab-panel" data-panel="shifts">
+        <div class="cms-section-label cms-section-label--sdtg"><span>Shift Schedule — Day 1 (Aug 14)</span></div>
+        <div class="cms-grid cms-grid--3">
+            <div class="cms-card">
+                <div class="cms-card__head"><h3 class="cms-card__title">Ushering</h3><span class="cms-badge cms-badge--gold">18 assigned</span></div>
+                <div class="cms-card__body" style="font-size:0.85rem">
+                    <p style="margin-bottom:8px"><strong>Morning</strong> · 8:00 AM – 2:00 PM · 9 volunteers</p>
+                    <p><strong>Evening</strong> · 4:00 PM – 10:00 PM · 9 volunteers</p>
+                </div>
+            </div>
+            <div class="cms-card">
+                <div class="cms-card__head"><h3 class="cms-card__title">Media &amp; Broadcast</h3><span class="cms-badge cms-badge--info">12 assigned</span></div>
+                <div class="cms-card__body" style="font-size:0.85rem">
+                    <p style="margin-bottom:8px"><strong>Pre-show</strong> · 2:00 PM – 6:00 PM · 4 volunteers</p>
+                    <p><strong>Live</strong> · 6:00 PM – 11:00 PM · 8 volunteers</p>
+                </div>
+            </div>
+            <div class="cms-card">
+                <div class="cms-card__head"><h3 class="cms-card__title">Security</h3><span class="cms-badge cms-badge--danger">8 assigned</span></div>
+                <div class="cms-card__body" style="font-size:0.85rem">
+                    <p style="margin-bottom:8px"><strong>Perimeter</strong> · 6:00 AM – 12:00 PM · 4 volunteers</p>
+                    <p><strong>Gate &amp; Stage</strong> · 12:00 PM – 11:00 PM · 4 volunteers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cms-tab-panel" data-panel="applications">
+        <div class="cms-section-label cms-section-label--sdtg"><span>Application Queue</span></div>
+        <div class="cms-card">
+            <div class="cms-table-wrap">
+                <table class="cms-table">
+                    <thead>
+                        <tr>
+                            <th>Applicant</th>
+                            <th>Preferred Role</th>
+                            <th>Availability</th>
+                            <th>Applied</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">FO</div>
+                                    <div><strong>Faith Obi</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">faith.o@email.com</span></div>
+                                </div>
+                            </td>
+                            <td>Ushering</td>
+                            <td>Day 1, 2, 3</td>
+                            <td>Jun 7, 2026</td>
+                            <td>
+                                <button type="button" class="cms-btn cms-btn--primary cms-btn--sm vol-approve"><i class="fas fa-check" aria-hidden="true"></i> Accept</button>
+                                <button type="button" class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-times" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">MK</div>
+                                    <div><strong>Michael Kofi</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">m.kofi@email.com</span></div>
+                                </div>
+                            </td>
+                            <td>Media &amp; Broadcast</td>
+                            <td>All 4 Days</td>
+                            <td>Jun 6, 2026</td>
+                            <td>
+                                <button type="button" class="cms-btn cms-btn--primary cms-btn--sm vol-approve"><i class="fas fa-check" aria-hidden="true"></i> Accept</button>
+                                <button type="button" class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-times" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">RN</div>
+                                    <div><strong>Ruth Nnamdi</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">ruth.n@email.com</span></div>
+                                </div>
+                            </td>
+                            <td>Medical</td>
+                            <td>Day 2, 4</td>
+                            <td>Jun 5, 2026</td>
+                            <td>
+                                <button type="button" class="cms-btn cms-btn--primary cms-btn--sm vol-approve"><i class="fas fa-check" aria-hidden="true"></i> Accept</button>
+                                <button type="button" class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-times" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cms-table__user">
+                                    <div class="cms-table__avatar">TA</div>
+                                    <div><strong>Tunde Adebayo</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">tunde.a@email.com</span></div>
+                                </div>
+                            </td>
+                            <td>Hospitality</td>
+                            <td>Day 3, 4</td>
+                            <td>Jun 4, 2026</td>
+                            <td>
+                                <button type="button" class="cms-btn cms-btn--primary cms-btn--sm vol-approve"><i class="fas fa-check" aria-hidden="true"></i> Accept</button>
+                                <button type="button" class="cms-btn cms-btn--ghost cms-btn--sm"><i class="fas fa-times" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/shell.js"></script>
+<script src="../js/core.js"></script>
+<script>
+(function () {
+    document.querySelectorAll('.vol-approve').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            if (window.CMS) CMS.showToast('Volunteer application accepted — shift assignment pending', 'success');
+        });
+    });
+})();
+</script>
+</body>
+</html>

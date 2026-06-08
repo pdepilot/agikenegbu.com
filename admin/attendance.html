@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0f1f">
+    <title>Attendance | AG IKENEGBU Church Management</title>
+    <meta name="description" content="Track Sunday and midweek service attendance across AG Ikenebgu departments.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="attendance" data-depth="0">
+
+    <div class="cms-loader" id="cmsLoader" aria-hidden="true">
+        <div class="cms-loader__ring"></div>
+        <p class="cms-loader__text">Loading Platform</p>
+    </div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Attendance</h1>
+                <p class="cms-page__subtitle">Monitor service attendance across AG Ikenebgu — Sunday worship, midweek Bible study, and departmental meetings.</p>
+            </div>
+            <div class="cms-page__actions">
+                <div class="cms-field" style="margin-bottom:0">
+                    <label for="attendanceDate">Report Period</label>
+                    <input type="date" id="attendanceDate" value="2025-06-01" aria-label="Select date range start">
+                </div>
+                <button type="button" class="cms-btn cms-btn--ghost" data-export="PDF"><i class="fas fa-file-pdf" aria-hidden="true"></i> Export Report</button>
+                <button type="button" class="cms-btn cms-btn--primary" id="btnRecordAttendance"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Record Attendance</button>
+            </div>
+        </header>
+
+        <div class="cms-stats">
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-church" aria-hidden="true"></i></span>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 6.0%</span>
+                </div>
+                <div class="cms-stat__value" data-count="478" data-suffix="">0</div>
+                <div class="cms-stat__label">Last Sunday Service</div>
+                <span class="cms-stat__brand cms-stat__brand--ag">1 Jun 2025</span>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-book-bible" aria-hidden="true"></i></span>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 3.8%</span>
+                </div>
+                <div class="cms-stat__value" data-count="218" data-suffix="">0</div>
+                <div class="cms-stat__label">Midweek Bible Study</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="449" data-suffix="">0</div>
+                <div class="cms-stat__label">6-Week Average</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-percent" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="92.4" data-suffix="%" data-decimals="1">0</div>
+                <div class="cms-stat__label">Member Participation Rate</div>
+            </article>
+        </div>
+
+        <div class="cms-grid cms-grid--dashboard">
+            <section class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Department Attendance</h2>
+                    <span class="cms-badge cms-badge--info">June 2025</span>
+                </div>
+                <div class="cms-card__body">
+                    <div class="cms-chart-wrap">
+                        <canvas id="chartDeptAttendance" aria-label="Department attendance bar chart" role="img"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Quick Insights</h2>
+                </div>
+                <div class="cms-card__body">
+                    <div class="cms-feed">
+                        <div class="cms-feed__item">
+                            <span class="cms-feed__dot cms-feed__dot--green" aria-hidden="true"></span>
+                            <div class="cms-feed__text">
+                                <strong>Youth Department</strong> recorded highest attendance — 142 present at Friday fellowship.
+                                <div class="cms-feed__time">Submitted 18 min ago by David Eze</div>
+                            </div>
+                        </div>
+                        <div class="cms-feed__item">
+                            <span class="cms-feed__dot cms-feed__dot--gold" aria-hidden="true"></span>
+                            <div class="cms-feed__text">
+                                <strong>Sunday Service</strong> exceeded 6-week average by 29 attendees.
+                                <div class="cms-feed__time">1 Jun 2025 · Main Auditorium</div>
+                            </div>
+                        </div>
+                        <div class="cms-feed__item">
+                            <span class="cms-feed__dot cms-feed__dot--blue" aria-hidden="true"></span>
+                            <div class="cms-feed__text">
+                                <strong>Choir rehearsal</strong> — 68 of 72 registered members present (94%).
+                                <div class="cms-feed__time">29 May 2025</div>
+                            </div>
+                        </div>
+                        <div class="cms-feed__item">
+                            <span class="cms-feed__dot cms-feed__dot--green" aria-hidden="true"></span>
+                            <div class="cms-feed__text">
+                                <strong>Children's Church</strong> — 95 children, 12 teachers on duty.
+                                <div class="cms-feed__time">1 Jun 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <h2 class="cms-section-label">Weekly Attendance Log</h2>
+
+        <section class="cms-card">
+            <div class="cms-card__head">
+                <h2 class="cms-card__title">Service Breakdown</h2>
+                <div class="cms-filters" style="margin-bottom:0">
+                    <div class="cms-field" style="min-width:140px">
+                        <select id="filterService" aria-label="Filter by service type">
+                            <option value="">All Services</option>
+                            <option value="Sunday">Sunday Service</option>
+                            <option value="Midweek">Midweek Bible Study</option>
+                            <option value="Friday">Friday Fellowship</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="cms-card__body" style="padding:0">
+                <div class="cms-table-wrap">
+                    <table class="cms-table" id="weeklyAttendanceTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Service</th>
+                                <th>Adults</th>
+                                <th>Children</th>
+                                <th>Total</th>
+                                <th>Recorded By</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1 Jun 2025</td>
+                                <td>Sunday Morning Service</td>
+                                <td>412</td>
+                                <td>66</td>
+                                <td><strong>478</strong></td>
+                                <td>Pastor Emmanuel Nwosu</td>
+                                <td><span class="cms-badge cms-badge--success">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>28 May 2025</td>
+                                <td>Midweek Bible Study</td>
+                                <td>198</td>
+                                <td>20</td>
+                                <td><strong>218</strong></td>
+                                <td>Grace Okonkwo</td>
+                                <td><span class="cms-badge cms-badge--success">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>25 May 2025</td>
+                                <td>Sunday Morning Service</td>
+                                <td>398</td>
+                                <td>53</td>
+                                <td><strong>451</strong></td>
+                                <td>Samuel Uche</td>
+                                <td><span class="cms-badge cms-badge--success">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>23 May 2025</td>
+                                <td>Friday Youth Fellowship</td>
+                                <td>128</td>
+                                <td>14</td>
+                                <td><strong>142</strong></td>
+                                <td>David Eze</td>
+                                <td><span class="cms-badge cms-badge--success">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>21 May 2025</td>
+                                <td>Midweek Bible Study</td>
+                                <td>185</td>
+                                <td>17</td>
+                                <td><strong>202</strong></td>
+                                <td>Chioma Ibe</td>
+                                <td><span class="cms-badge cms-badge--success">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>18 May 2025</td>
+                                <td>Sunday Morning Service</td>
+                                <td>405</td>
+                                <td>57</td>
+                                <td><strong>462</strong></td>
+                                <td>Blessing Adeyemi</td>
+                                <td><span class="cms-badge cms-badge--warning">Pending Review</span></td>
+                            </tr>
+                            <tr>
+                                <td>14 May 2025</td>
+                                <td>Midweek Bible Study</td>
+                                <td>172</td>
+                                <td>16</td>
+                                <td><strong>188</strong></td>
+                                <td>Grace Okonkwo</td>
+                                <td><span class="cms-badge cms-badge--success">Verified</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="cms-card__foot">
+                <div class="cms-pagination">
+                    <span>Showing 7 of 42 weekly records</span>
+                    <div class="cms-pagination__pages">
+                        <button type="button" class="cms-pagination__btn" disabled><i class="fas fa-chevron-left"></i></button>
+                        <button type="button" class="cms-pagination__btn is-active">1</button>
+                        <button type="button" class="cms-pagination__btn">2</button>
+                        <button type="button" class="cms-pagination__btn">3</button>
+                        <button type="button" class="cms-pagination__btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/charts.js"></script>
+    <script>
+    document.getElementById('btnRecordAttendance').addEventListener('click', function () {
+        CMS.showToast('Attendance recording form — awaiting backend integration', 'info');
+    });
+    </script>
+</body>
+</html>

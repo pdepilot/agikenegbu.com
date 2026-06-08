@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0f1f">
+    <title>Departments | AG IKENEGBU Church Management</title>
+    <meta name="description" content="Manage AG Ikenebgu church departments — Youth, Choir, Children, Ushering, Media, Prayer, and Welfare.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="departments" data-depth="0">
+
+    <div class="cms-loader" id="cmsLoader" aria-hidden="true">
+        <div class="cms-loader__ring"></div>
+        <p class="cms-loader__text">Loading Platform</p>
+    </div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Departments</h1>
+                <p class="cms-page__subtitle">Organize ministry teams at AG Ikenebgu Assembly. Each department serves a vital role in worship, outreach, and community care.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost" data-export="CSV"><i class="fas fa-file-csv" aria-hidden="true"></i> Export Roster</button>
+                <button type="button" class="cms-btn cms-btn--primary" id="btnAddDept"><i class="fas fa-plus" aria-hidden="true"></i> Add Department</button>
+            </div>
+        </header>
+
+        <div class="cms-stats">
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-sitemap" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="7" data-suffix="">0</div>
+                <div class="cms-stat__label">Active Departments</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-users" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="412" data-suffix="">0</div>
+                <div class="cms-stat__label">Total Department Members</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-user-tie" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="14" data-suffix="">0</div>
+                <div class="cms-stat__label">Department Leaders</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-calendar-check" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="23" data-suffix="">0</div>
+                <div class="cms-stat__label">Meetings This Month</div>
+            </article>
+        </div>
+
+        <div class="cms-speaker-grid" id="deptGrid">
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(212,168,44,0.2),rgba(59,130,246,0.15))">
+                    <i class="fas fa-fire" style="color:var(--cms-gold)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--success cms-speaker-card__year">Active</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Youth</h3>
+                    <p class="cms-speaker-card__meta">Leader: David Eze · Friday 6:00 PM</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:14px">Empowering young believers through fellowship, discipleship, and outreach across Ikenebgu and Owerri.</p>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+                        <span class="cms-badge cms-badge--gold"><i class="fas fa-users" aria-hidden="true"></i> 142 Members</span>
+                        <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost">Manage</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(212,168,44,0.1))">
+                    <i class="fas fa-music" style="color:#a78bfa" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--success cms-speaker-card__year">Active</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Choir</h3>
+                    <p class="cms-speaker-card__meta">Leader: Grace Okonkwo · Thu 5:30 PM</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:14px">Ministering through worship and praise — Sunday service, special programs, and SDTG crusade nights.</p>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+                        <span class="cms-badge cms-badge--gold"><i class="fas fa-users" aria-hidden="true"></i> 68 Members</span>
+                        <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost">Manage</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(34,197,94,0.2),rgba(59,130,246,0.1))">
+                    <i class="fas fa-child" style="color:var(--cms-success)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--success cms-speaker-card__year">Active</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Children</h3>
+                    <p class="cms-speaker-card__meta">Leader: Chioma Ibe · Sunday 9:00 AM</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:14px">Nurturing the next generation with Bible stories, worship, and creative activities during main service.</p>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+                        <span class="cms-badge cms-badge--gold"><i class="fas fa-users" aria-hidden="true"></i> 95 Members</span>
+                        <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost">Manage</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(212,168,44,0.1))">
+                    <i class="fas fa-door-open" style="color:var(--cms-blue)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--success cms-speaker-card__year">Active</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Ushering</h3>
+                    <p class="cms-speaker-card__meta">Leader: Blessing Adeyemi · Sunday 7:30 AM</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:14px">Creating a welcoming atmosphere — seating, offering collection, and crowd management during services.</p>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+                        <span class="cms-badge cms-badge--gold"><i class="fas fa-users" aria-hidden="true"></i> 45 Members</span>
+                        <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost">Manage</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(139,92,246,0.1))">
+                    <i class="fas fa-video" style="color:var(--cms-info)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--success cms-speaker-card__year">Active</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Media</h3>
+                    <p class="cms-speaker-card__meta">Leader: Samuel Uche · On-call</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:14px">Audio, video, livestream, and social media coverage for church services and Send Down Thy Glory events.</p>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+                        <span class="cms-badge cms-badge--gold"><i class="fas fa-users" aria-hidden="true"></i> 22 Members</span>
+                        <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost">Manage</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(212,168,44,0.15),rgba(34,197,94,0.15))">
+                    <i class="fas fa-hands-praying" style="color:var(--cms-gold)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--success cms-speaker-card__year">Active</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Prayer</h3>
+                    <p class="cms-speaker-card__meta">Leader: Pastor Emmanuel Nwosu · Daily 5:00 AM</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:14px">Intercessory prayer chain, dawn broadcasts, and prayer coverage for church, community, and nation.</p>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+                        <span class="cms-badge cms-badge--gold"><i class="fas fa-users" aria-hidden="true"></i> 38 Members</span>
+                        <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost">Manage</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cms-card cms-speaker-card">
+                <div class="cms-speaker-card__img" style="background:linear-gradient(135deg,rgba(239,68,68,0.15),rgba(212,168,44,0.1))">
+                    <i class="fas fa-hand-holding-heart" style="color:var(--cms-danger)" aria-hidden="true"></i>
+                    <span class="cms-badge cms-badge--success cms-speaker-card__year">Active</span>
+                </div>
+                <div class="cms-speaker-card__body">
+                    <h3 class="cms-speaker-card__name">Welfare</h3>
+                    <p class="cms-speaker-card__meta">Leader: Grace Okonkwo · As needed</p>
+                    <p style="font-size:0.82rem;color:var(--cms-text-muted);margin-bottom:14px">Supporting members in need — hospital visits, bereavement care, food assistance, and community outreach.</p>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+                        <span class="cms-badge cms-badge--gold"><i class="fas fa-users" aria-hidden="true"></i> 32 Members</span>
+                        <button type="button" class="cms-btn cms-btn--sm cms-btn--ghost">Manage</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <h2 class="cms-section-label">Department Roster Summary</h2>
+
+        <section class="cms-card">
+            <div class="cms-card__body" style="padding:0">
+                <div class="cms-table-wrap">
+                    <table class="cms-table">
+                        <thead>
+                            <tr>
+                                <th>Department</th>
+                                <th>Leader</th>
+                                <th>Members</th>
+                                <th>Meeting Day</th>
+                                <th>Last Attendance</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Youth</td><td>David Eze</td><td>142</td><td>Friday</td><td>142 / 142</td><td><span class="cms-badge cms-badge--success">Active</span></td></tr>
+                            <tr><td>Choir</td><td>Grace Okonkwo</td><td>68</td><td>Thursday</td><td>68 / 72</td><td><span class="cms-badge cms-badge--success">Active</span></td></tr>
+                            <tr><td>Children</td><td>Chioma Ibe</td><td>95</td><td>Sunday</td><td>95 / 95</td><td><span class="cms-badge cms-badge--success">Active</span></td></tr>
+                            <tr><td>Ushering</td><td>Blessing Adeyemi</td><td>45</td><td>Sunday</td><td>42 / 45</td><td><span class="cms-badge cms-badge--success">Active</span></td></tr>
+                            <tr><td>Media</td><td>Samuel Uche</td><td>22</td><td>On-call</td><td>20 / 22</td><td><span class="cms-badge cms-badge--success">Active</span></td></tr>
+                            <tr><td>Prayer</td><td>Pastor Emmanuel Nwosu</td><td>38</td><td>Daily</td><td>35 / 38</td><td><span class="cms-badge cms-badge--success">Active</span></td></tr>
+                            <tr><td>Welfare</td><td>Grace Okonkwo</td><td>32</td><td>As needed</td><td>—</td><td><span class="cms-badge cms-badge--success">Active</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/core.js"></script>
+    <script>
+    document.getElementById('btnAddDept').addEventListener('click', function () {
+        CMS.showToast('Add Department form — awaiting backend integration', 'info');
+    });
+    </script>
+</body>
+</html>

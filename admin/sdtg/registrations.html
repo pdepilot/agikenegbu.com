@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#070b16">
+    <title>Registrations | SDTG International Music Crusade — AG Ikenebgu CMS</title>
+    <meta name="description" content="View and manage SDTG 2026 crusade registrations, ticket types, and volunteer sign-ups.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="registrations" data-depth="1">
+
+<div id="cmsLoader" class="cms-loader" aria-live="polite">
+    <div class="cms-loader__ring" aria-hidden="true"></div>
+    <span class="cms-loader__text">Loading CMS</span>
+</div>
+
+<div id="cmsPageContent" style="display:none">
+
+    <header class="cms-page__header">
+        <div>
+            <h1 class="cms-page__title">Crusade Registrations</h1>
+            <p class="cms-page__subtitle">Track attendee registrations for Send Down Thy Glory International Music Crusade 2026 — August 14–17, Douglas Road, Owerri.</p>
+        </div>
+        <div class="cms-page__actions">
+            <button type="button" class="cms-btn cms-btn--ghost" data-export="CSV"><i class="fas fa-file-csv" aria-hidden="true"></i> Export CSV</button>
+            <button type="button" class="cms-btn cms-btn--ghost" data-export="PDF"><i class="fas fa-file-pdf" aria-hidden="true"></i> Export PDF</button>
+            <button type="button" class="cms-btn cms-btn--primary"><i class="fas fa-user-plus" aria-hidden="true"></i> Manual Entry</button>
+        </div>
+    </header>
+
+    <div class="cms-stats">
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-ticket" aria-hidden="true"></i></div>
+                <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 12%</span>
+            </div>
+            <div class="cms-stat__value" data-count="248">0</div>
+            <div class="cms-stat__label">Total Registrations</div>
+            <span class="cms-stat__brand cms-stat__brand--sdtg">SDTG 2026</span>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-globe" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="34">0</div>
+            <div class="cms-stat__label">Countries</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-hands-helping" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="67">0</div>
+            <div class="cms-stat__label">Volunteers</div>
+        </div>
+        <div class="cms-card cms-stat cms-stat--sdtg">
+            <div class="cms-stat__top">
+                <div class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-crown" aria-hidden="true"></i></div>
+            </div>
+            <div class="cms-stat__value" data-count="42">0</div>
+            <div class="cms-stat__label">VIP / Group Passes</div>
+        </div>
+    </div>
+
+    <div class="cms-filters">
+        <div class="cms-field">
+            <label for="regSearch">Search</label>
+            <input type="search" id="regSearch" placeholder="Name, ID, or email…" aria-label="Search registrations">
+        </div>
+        <div class="cms-field">
+            <label for="regCountry">Country</label>
+            <select id="regCountry" aria-label="Filter by country">
+                <option value="">All Countries</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Ghana">Ghana</option>
+                <option value="USA">USA</option>
+                <option value="Kenya">Kenya</option>
+                <option value="UK">UK</option>
+                <option value="South Africa">South Africa</option>
+            </select>
+        </div>
+        <div class="cms-field">
+            <label for="regType">Ticket Type</label>
+            <select id="regType" aria-label="Filter by ticket type">
+                <option value="">All Types</option>
+                <option value="General">General Admission</option>
+                <option value="VIP">VIP</option>
+                <option value="Group">Group (10+)</option>
+                <option value="Online">Online Stream</option>
+            </select>
+        </div>
+        <div class="cms-field">
+            <label for="regVolunteer">Volunteer</label>
+            <select id="regVolunteer" aria-label="Filter by volunteer status">
+                <option value="">All</option>
+                <option value="Yes">Volunteer — Yes</option>
+                <option value="No">Volunteer — No</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="cms-card">
+        <div class="cms-card__head">
+            <h2 class="cms-card__title">Registration Records</h2>
+            <span class="cms-badge cms-badge--info">248 entries</span>
+        </div>
+        <div class="cms-table-wrap">
+            <table class="cms-table">
+                <thead>
+                    <tr>
+                        <th>Reg. ID</th>
+                        <th>Attendee</th>
+                        <th>Country</th>
+                        <th>Ticket Type</th>
+                        <th>Volunteer</th>
+                        <th>Registered</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code style="font-size:0.78rem;color:var(--cms-gold)">R-1048</code></td>
+                        <td>
+                            <div class="cms-table__user">
+                                <div class="cms-table__avatar">EM</div>
+                                <div><strong>Emmanuel Osei</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">emmanuel.o@email.com</span></div>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-flag" style="color:var(--cms-text-dim);margin-right:6px" aria-hidden="true"></i>Ghana</td>
+                        <td><span class="cms-badge cms-badge--muted">General</span></td>
+                        <td><span class="cms-badge cms-badge--success">Yes</span></td>
+                        <td>Jun 7, 2026</td>
+                        <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td><code style="font-size:0.78rem;color:var(--cms-gold)">R-1047</code></td>
+                        <td>
+                            <div class="cms-table__user">
+                                <div class="cms-table__avatar">SJ</div>
+                                <div><strong>Sarah Johnson</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">sarah.j@email.com</span></div>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-flag" style="color:var(--cms-text-dim);margin-right:6px" aria-hidden="true"></i>USA</td>
+                        <td><span class="cms-badge cms-badge--gold">VIP</span></td>
+                        <td><span class="cms-badge cms-badge--muted">No</span></td>
+                        <td>Jun 6, 2026</td>
+                        <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td><code style="font-size:0.78rem;color:var(--cms-gold)">R-1046</code></td>
+                        <td>
+                            <div class="cms-table__user">
+                                <div class="cms-table__avatar">PO</div>
+                                <div><strong>Peter Okafor</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">peter.o@email.com</span></div>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-flag" style="color:var(--cms-text-dim);margin-right:6px" aria-hidden="true"></i>Nigeria</td>
+                        <td><span class="cms-badge cms-badge--muted">General</span></td>
+                        <td><span class="cms-badge cms-badge--success">Yes</span></td>
+                        <td>Jun 6, 2026</td>
+                        <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td><code style="font-size:0.78rem;color:var(--cms-gold)">R-1045</code></td>
+                        <td>
+                            <div class="cms-table__user">
+                                <div class="cms-table__avatar">MW</div>
+                                <div><strong>Mary Wanjiku</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">mary.w@email.com</span></div>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-flag" style="color:var(--cms-text-dim);margin-right:6px" aria-hidden="true"></i>Kenya</td>
+                        <td><span class="cms-badge cms-badge--info">Group</span></td>
+                        <td><span class="cms-badge cms-badge--muted">No</span></td>
+                        <td>Jun 5, 2026</td>
+                        <td><span class="cms-badge cms-badge--warning">Pending Payment</span></td>
+                    </tr>
+                    <tr>
+                        <td><code style="font-size:0.78rem;color:var(--cms-gold)">R-1044</code></td>
+                        <td>
+                            <div class="cms-table__user">
+                                <div class="cms-table__avatar">DA</div>
+                                <div><strong>David Adeyemi</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">david.a@email.com</span></div>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-flag" style="color:var(--cms-text-dim);margin-right:6px" aria-hidden="true"></i>Nigeria</td>
+                        <td><span class="cms-badge cms-badge--info">Online Stream</span></td>
+                        <td><span class="cms-badge cms-badge--muted">No</span></td>
+                        <td>Jun 5, 2026</td>
+                        <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td><code style="font-size:0.78rem;color:var(--cms-gold)">R-1043</code></td>
+                        <td>
+                            <div class="cms-table__user">
+                                <div class="cms-table__avatar">CT</div>
+                                <div><strong>Chioma Thompson</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">chioma.t@email.com</span></div>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-flag" style="color:var(--cms-text-dim);margin-right:6px" aria-hidden="true"></i>UK</td>
+                        <td><span class="cms-badge cms-badge--gold">VIP</span></td>
+                        <td><span class="cms-badge cms-badge--success">Yes</span></td>
+                        <td>Jun 4, 2026</td>
+                        <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td><code style="font-size:0.78rem;color:var(--cms-gold)">R-1042</code></td>
+                        <td>
+                            <div class="cms-table__user">
+                                <div class="cms-table__avatar">JM</div>
+                                <div><strong>John Mensah</strong><br><span style="font-size:0.75rem;color:var(--cms-text-muted)">john.m@email.com</span></div>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-flag" style="color:var(--cms-text-dim);margin-right:6px" aria-hidden="true"></i>Ghana</td>
+                        <td><span class="cms-badge cms-badge--muted">General</span></td>
+                        <td><span class="cms-badge cms-badge--success">Yes</span></td>
+                        <td>May 28, 2026</td>
+                        <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cms-card__foot">
+            <div class="cms-pagination">
+                <span style="font-size:0.82rem;color:var(--cms-text-muted)">Showing 1–7 of 248 registrations</span>
+                <div class="cms-pagination__pages">
+                    <button type="button" class="cms-pagination__btn is-active" aria-current="page">1</button>
+                    <button type="button" class="cms-pagination__btn">2</button>
+                    <button type="button" class="cms-pagination__btn">3</button>
+                    <button type="button" class="cms-pagination__btn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/shell.js"></script>
+<script src="../js/core.js"></script>
+</body>
+</html>

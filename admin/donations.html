@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0f1f">
+    <title>Donations | AG IKENEGBU Church Management</title>
+    <meta name="description" content="Track tithes, offerings, and special donations for AG Ikenebgu Assembly.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="donations" data-depth="0">
+
+    <div class="cms-loader" id="cmsLoader" aria-hidden="true">
+        <div class="cms-loader__ring"></div>
+        <p class="cms-loader__text">Loading Platform</p>
+    </div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Donations</h1>
+                <p class="cms-page__subtitle">Monitor tithes, offerings, building fund contributions, and special gifts for AG Ikenebgu Assembly.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost" data-export="CSV"><i class="fas fa-file-csv" aria-hidden="true"></i> Export</button>
+                <button type="button" class="cms-btn cms-btn--primary" id="btnRecordDonation"><i class="fas fa-plus" aria-hidden="true"></i> Record Donation</button>
+            </div>
+        </header>
+
+        <div class="cms-stats">
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-naira-sign" aria-hidden="true"></i></span>
+                    <span class="cms-stat__trend cms-stat__trend--up"><i class="fas fa-arrow-up" aria-hidden="true"></i> 12.4%</span>
+                </div>
+                <div class="cms-stat__value" data-count="4850000" data-prefix="₦" data-suffix="">0</div>
+                <div class="cms-stat__label">Total This Month</div>
+                <span class="cms-stat__brand cms-stat__brand--ag">June 2025</span>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="2180000" data-prefix="₦" data-suffix="">0</div>
+                <div class="cms-stat__label">Tithes &amp; Offerings</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-building" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="1520000" data-prefix="₦" data-suffix="">0</div>
+                <div class="cms-stat__label">Building Fund</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-receipt" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="186" data-suffix="">0</div>
+                <div class="cms-stat__label">Transactions This Month</div>
+            </article>
+        </div>
+
+        <div class="cms-grid cms-grid--dashboard">
+            <section class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Donation Categories</h2>
+                </div>
+                <div class="cms-card__body">
+                    <div class="cms-seo-audit">
+                        <div class="cms-seo-audit__item cms-seo-audit__item--ok">
+                            <div>
+                                <strong>Tithes &amp; Offerings</strong>
+                                <div style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:2px">Sunday &amp; midweek collections</div>
+                            </div>
+                            <div style="text-align:right">
+                                <strong style="color:var(--cms-gold)">₦2,180,000</strong>
+                                <div style="font-size:0.72rem;color:var(--cms-text-dim)">44.9%</div>
+                            </div>
+                        </div>
+                        <div class="cms-seo-audit__item cms-seo-audit__item--ok">
+                            <div>
+                                <strong>Building Fund</strong>
+                                <div style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:2px">Auditorium expansion project</div>
+                            </div>
+                            <div style="text-align:right">
+                                <strong style="color:var(--cms-blue)">₦1,520,000</strong>
+                                <div style="font-size:0.72rem;color:var(--cms-text-dim)">31.3%</div>
+                            </div>
+                        </div>
+                        <div class="cms-seo-audit__item cms-seo-audit__item--ok">
+                            <div>
+                                <strong>Welfare &amp; Missions</strong>
+                                <div style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:2px">Community outreach &amp; missions</div>
+                            </div>
+                            <div style="text-align:right">
+                                <strong style="color:var(--cms-success)">₦680,000</strong>
+                                <div style="font-size:0.72rem;color:var(--cms-text-dim)">14.0%</div>
+                            </div>
+                        </div>
+                        <div class="cms-seo-audit__item cms-seo-audit__item--warn">
+                            <div>
+                                <strong>Special Seeds</strong>
+                                <div style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:2px">Prophetic offerings &amp; pledges</div>
+                            </div>
+                            <div style="text-align:right">
+                                <strong style="color:var(--cms-warning)">₦320,000</strong>
+                                <div style="font-size:0.72rem;color:var(--cms-text-dim)">6.6%</div>
+                            </div>
+                        </div>
+                        <div class="cms-seo-audit__item cms-seo-audit__item--ok">
+                            <div>
+                                <strong>Youth &amp; Children's Fund</strong>
+                                <div style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:2px">Programs and camp sponsorships</div>
+                            </div>
+                            <div style="text-align:right">
+                                <strong style="color:#a78bfa">₦150,000</strong>
+                                <div style="font-size:0.72rem;color:var(--cms-text-dim)">3.1%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Monthly Mini Stats</h2>
+                </div>
+                <div class="cms-card__body">
+                    <div class="cms-stats" style="grid-template-columns:1fr 1fr;margin-bottom:0">
+                        <div class="cms-stat" style="padding:14px;background:rgba(0,0,0,0.2);border-radius:var(--cms-radius)">
+                            <div class="cms-stat__value" style="font-size:1.4rem" data-count="478" data-suffix="">0</div>
+                            <div class="cms-stat__label">Avg. Sunday Offering</div>
+                        </div>
+                        <div class="cms-stat" style="padding:14px;background:rgba(0,0,0,0.2);border-radius:var(--cms-radius)">
+                            <div class="cms-stat__value" style="font-size:1.4rem" data-count="42" data-suffix="">0</div>
+                            <div class="cms-stat__label">Online Donations</div>
+                        </div>
+                        <div class="cms-stat" style="padding:14px;background:rgba(0,0,0,0.2);border-radius:var(--cms-radius)">
+                            <div class="cms-stat__value" style="font-size:1.4rem" data-prefix="₦" data-count="25000" data-suffix="">0</div>
+                            <div class="cms-stat__label">Highest Single Gift</div>
+                        </div>
+                        <div class="cms-stat" style="padding:14px;background:rgba(0,0,0,0.2);border-radius:var(--cms-radius)">
+                            <div class="cms-stat__value" style="font-size:1.4rem" data-count="8" data-suffix="">0</div>
+                            <div class="cms-stat__label">Active Pledges</div>
+                        </div>
+                    </div>
+                    <div class="cms-feed" style="margin-top:20px">
+                        <div class="cms-feed__item">
+                            <span class="cms-feed__dot cms-feed__dot--gold" aria-hidden="true"></span>
+                            <div class="cms-feed__text">
+                                <strong>Building Fund</strong> reached 68% of ₦25M target.
+                                <div class="cms-feed__time">Updated today</div>
+                            </div>
+                        </div>
+                        <div class="cms-feed__item">
+                            <span class="cms-feed__dot cms-feed__dot--green" aria-hidden="true"></span>
+                            <div class="cms-feed__text">
+                                <strong>12 new online donors</strong> via church website this week.
+                                <div class="cms-feed__time">3 days ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <h2 class="cms-section-label">Recent Donations</h2>
+
+        <section class="cms-card">
+            <div class="cms-card__head">
+                <h2 class="cms-card__title">Transaction Log</h2>
+                <div class="cms-filters" style="margin-bottom:0">
+                    <div class="cms-field" style="min-width:140px">
+                        <select aria-label="Filter by category">
+                            <option value="">All Categories</option>
+                            <option>Tithes &amp; Offerings</option>
+                            <option>Building Fund</option>
+                            <option>Welfare &amp; Missions</option>
+                            <option>Special Seeds</option>
+                        </select>
+                    </div>
+                    <div class="cms-field" style="min-width:140px">
+                        <select aria-label="Filter by method">
+                            <option value="">All Methods</option>
+                            <option>Cash</option>
+                            <option>Bank Transfer</option>
+                            <option>Online</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="cms-card__body" style="padding:0">
+                <div class="cms-table-wrap">
+                    <table class="cms-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Donor</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Method</th>
+                                <th>Reference</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>7 Jun 2025</td>
+                                <td><div class="cms-table__user"><div class="cms-table__avatar">EO</div><div><strong>Emmanuel Okafor</strong></div></div></td>
+                                <td><span class="cms-badge cms-badge--gold">Building Fund</span></td>
+                                <td><strong>₦50,000</strong></td>
+                                <td>Bank Transfer</td>
+                                <td>AG-BF-2025-0612</td>
+                                <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>7 Jun 2025</td>
+                                <td><div class="cms-table__user"><div class="cms-table__avatar">GO</div><div><strong>Grace Okonkwo</strong></div></div></td>
+                                <td><span class="cms-badge cms-badge--info">Tithes &amp; Offerings</span></td>
+                                <td><strong>₦25,000</strong></td>
+                                <td>Cash</td>
+                                <td>AG-TI-2025-0611</td>
+                                <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>6 Jun 2025</td>
+                                <td><div class="cms-table__user"><div class="cms-table__avatar">AN</div><div><strong>Anonymous</strong></div></div></td>
+                                <td><span class="cms-badge cms-badge--warning">Special Seeds</span></td>
+                                <td><strong>₦100,000</strong></td>
+                                <td>Online</td>
+                                <td>AG-SS-2025-0610</td>
+                                <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>5 Jun 2025</td>
+                                <td><div class="cms-table__user"><div class="cms-table__avatar">DE</div><div><strong>David Eze</strong></div></div></td>
+                                <td><span class="cms-badge cms-badge--success">Welfare &amp; Missions</span></td>
+                                <td><strong>₦15,000</strong></td>
+                                <td>Bank Transfer</td>
+                                <td>AG-WM-2025-0609</td>
+                                <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>4 Jun 2025</td>
+                                <td><div class="cms-table__user"><div class="cms-table__avatar">CI</div><div><strong>Chioma Ibe</strong></div></div></td>
+                                <td><span class="cms-badge cms-badge--muted">Youth Fund</span></td>
+                                <td><strong>₦10,000</strong></td>
+                                <td>Cash</td>
+                                <td>AG-YF-2025-0608</td>
+                                <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>3 Jun 2025</td>
+                                <td><div class="cms-table__user"><div class="cms-table__avatar">SU</div><div><strong>Samuel Uche</strong></div></div></td>
+                                <td><span class="cms-badge cms-badge--info">Tithes &amp; Offerings</span></td>
+                                <td><strong>₦18,500</strong></td>
+                                <td>Online</td>
+                                <td>AG-TI-2025-0607</td>
+                                <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>2 Jun 2025</td>
+                                <td><div class="cms-table__user"><div class="cms-table__avatar">BA</div><div><strong>Blessing Adeyemi</strong></div></div></td>
+                                <td><span class="cms-badge cms-badge--gold">Building Fund</span></td>
+                                <td><strong>₦35,000</strong></td>
+                                <td>Bank Transfer</td>
+                                <td>AG-BF-2025-0606</td>
+                                <td><span class="cms-badge cms-badge--warning">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>1 Jun 2025</td>
+                                <td><div class="cms-table__user"><div class="cms-table__avatar">PN</div><div><strong>Pastor Emmanuel Nwosu</strong></div></div></td>
+                                <td><span class="cms-badge cms-badge--info">Tithes &amp; Offerings</span></td>
+                                <td><strong>₦45,000</strong></td>
+                                <td>Cash</td>
+                                <td>AG-TI-2025-0605</td>
+                                <td><span class="cms-badge cms-badge--success">Confirmed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="cms-card__foot">
+                <div class="cms-pagination">
+                    <span>Showing 8 of 186 transactions</span>
+                    <div class="cms-pagination__pages">
+                        <button type="button" class="cms-pagination__btn" disabled><i class="fas fa-chevron-left"></i></button>
+                        <button type="button" class="cms-pagination__btn is-active">1</button>
+                        <button type="button" class="cms-pagination__btn">2</button>
+                        <button type="button" class="cms-pagination__btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/core.js"></script>
+    <script>
+    document.getElementById('btnRecordDonation').addEventListener('click', function () {
+        CMS.showToast('Record Donation form — awaiting backend integration', 'info');
+    });
+    </script>
+</body>
+</html>

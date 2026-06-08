@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0f1f">
+    <title>Messages | AG IKENEGBU Church Management</title>
+    <meta name="description" content="Send and manage church communications, announcements, and member messages for AG Ikenebgu Assembly.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="../images/ag-logo.jpeg" type="image/jpeg">
+</head>
+<body class="cms-app" data-page="messages" data-depth="0">
+
+    <div class="cms-loader" id="cmsLoader" aria-hidden="true">
+        <div class="cms-loader__ring"></div>
+        <p class="cms-loader__text">Loading Platform</p>
+    </div>
+
+    <div id="cmsPageContent" style="display:none">
+
+        <header class="cms-page__header">
+            <div>
+                <h1 class="cms-page__title">Messages</h1>
+                <p class="cms-page__subtitle">Communicate with members, department leaders, and the wider AG Ikenebgu community via email and SMS broadcasts.</p>
+            </div>
+            <div class="cms-page__actions">
+                <button type="button" class="cms-btn cms-btn--ghost" id="btnTemplates"><i class="fas fa-file-lines" aria-hidden="true"></i> Templates</button>
+                <button type="button" class="cms-btn cms-btn--primary" id="btnBroadcast"><i class="fas fa-bullhorn" aria-hidden="true"></i> Broadcast Message</button>
+            </div>
+        </header>
+
+        <div class="cms-stats">
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--gold"><i class="fas fa-inbox" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="24" data-suffix="">0</div>
+                <div class="cms-stat__label">Inbox Messages</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--blue"><i class="fas fa-paper-plane" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="156" data-suffix="">0</div>
+                <div class="cms-stat__label">Sent This Month</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--green"><i class="fas fa-envelope-open" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="94.2" data-suffix="%" data-decimals="1">0</div>
+                <div class="cms-stat__label">Delivery Rate</div>
+            </article>
+            <article class="cms-stat cms-card">
+                <div class="cms-stat__top">
+                    <span class="cms-stat__icon cms-stat__icon--purple"><i class="fas fa-bullhorn" aria-hidden="true"></i></span>
+                </div>
+                <div class="cms-stat__value" data-count="8" data-suffix="">0</div>
+                <div class="cms-stat__label">Broadcasts Sent</div>
+            </article>
+        </div>
+
+        <div class="cms-grid cms-grid--dashboard">
+
+            <section class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Compose Message</h2>
+                </div>
+                <div class="cms-card__body">
+                    <form id="composeForm" data-cms-form novalidate>
+                        <div class="cms-form-row">
+                            <div class="cms-field">
+                                <label for="msgRecipient">Recipient</label>
+                                <select id="msgRecipient" required aria-required="true">
+                                    <option value="">Select recipient…</option>
+                                    <option value="all">All Members (486)</option>
+                                    <option value="leaders">Department Leaders (14)</option>
+                                    <option value="youth">Youth Department (142)</option>
+                                    <option value="choir">Choir Department (68)</option>
+                                    <option value="children">Children's Church (95)</option>
+                                    <option value="ushering">Ushering (45)</option>
+                                    <option value="media">Media Team (22)</option>
+                                    <option value="prayer">Prayer Chain (38)</option>
+                                    <option value="welfare">Welfare (32)</option>
+                                    <option value="sdtg">SDTG Volunteers (86)</option>
+                                </select>
+                            </div>
+                            <div class="cms-field">
+                                <label for="msgChannel">Channel</label>
+                                <select id="msgChannel" required aria-required="true">
+                                    <option value="email">Email</option>
+                                    <option value="sms">SMS</option>
+                                    <option value="both">Email + SMS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cms-field">
+                            <label for="msgSubject">Subject</label>
+                            <input type="text" id="msgSubject" placeholder="e.g. Sunday Service Reminder — 8 June 2025" required aria-required="true">
+                        </div>
+                        <div class="cms-field">
+                            <label for="msgBody">Message</label>
+                            <textarea id="msgBody" rows="6" placeholder="Write your message here…" required aria-required="true">Dear AG Ikenebgu Family,
+
+We look forward to seeing you this Sunday at 8:00 AM for our worship service. Pastor Emmanuel will be ministering on "Walking in Divine Favour."
+
+Please remember to bring a friend and arrive early for ushering assistance.
+
+God bless you,
+AG Ikenebgu Communications Team</textarea>
+                        </div>
+                        <div style="display:flex;gap:10px;flex-wrap:wrap">
+                            <button type="submit" class="cms-btn cms-btn--primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message</button>
+                            <button type="button" class="cms-btn cms-btn--ghost" id="btnSaveDraft"><i class="fas fa-floppy-disk" aria-hidden="true"></i> Save Draft</button>
+                            <button type="button" class="cms-btn cms-btn--ghost" id="btnPreview"><i class="fas fa-eye" aria-hidden="true"></i> Preview</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="cms-card">
+                <div class="cms-card__head">
+                    <h2 class="cms-card__title">Quick Broadcasts</h2>
+                </div>
+                <div class="cms-card__body">
+                    <div class="cms-seo-audit">
+                        <button type="button" class="cms-seo-audit__item" style="width:100%;cursor:pointer;text-align:left" data-quick-broadcast="sunday">
+                            <div>
+                                <strong>Sunday Service Reminder</strong>
+                                <div style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:2px">Send to all members · Email + SMS</div>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color:var(--cms-text-dim)" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="cms-seo-audit__item" style="width:100%;cursor:pointer;text-align:left" data-quick-broadcast="sdtg">
+                            <div>
+                                <strong>SDTG Crusade Announcement</strong>
+                                <div style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:2px">Send to all + SDTG list · Email</div>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color:var(--cms-text-dim)" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="cms-seo-audit__item" style="width:100%;cursor:pointer;text-align:left" data-quick-broadcast="leaders">
+                            <div>
+                                <strong>Leaders Meeting Notice</strong>
+                                <div style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:2px">Department leaders only · SMS</div>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color:var(--cms-text-dim)" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="cms-seo-audit__item" style="width:100%;cursor:pointer;text-align:left" data-quick-broadcast="youth">
+                            <div>
+                                <strong>Youth Fellowship Invite</strong>
+                                <div style="font-size:0.78rem;color:var(--cms-text-muted);margin-top:2px">Youth department · Friday 6 PM</div>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color:var(--cms-text-dim)" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <h2 class="cms-section-label">Inbox</h2>
+
+        <section class="cms-card">
+            <div class="cms-card__head">
+                <h2 class="cms-card__title">Recent Messages</h2>
+                <div class="cms-filters" style="margin-bottom:0">
+                    <div class="cms-field" style="min-width:160px">
+                        <input type="search" placeholder="Search messages…" aria-label="Search messages">
+                    </div>
+                    <div class="cms-field" style="min-width:120px">
+                        <select aria-label="Filter by status">
+                            <option value="">All</option>
+                            <option>Unread</option>
+                            <option>Sent</option>
+                            <option>Draft</option>
+                            <option>Failed</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="cms-card__body" style="padding:0">
+                <div class="cms-table-wrap">
+                    <table class="cms-table">
+                        <thead>
+                            <tr>
+                                <th style="width:32px"><input type="checkbox" aria-label="Select all messages"></th>
+                                <th>From / To</th>
+                                <th>Subject</th>
+                                <th>Channel</th>
+                                <th>Recipients</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" aria-label="Select message"></td>
+                                <td>
+                                    <div class="cms-table__user">
+                                        <div class="cms-table__avatar" style="background:rgba(212,168,44,0.2);color:var(--cms-gold)">DE</div>
+                                        <div><strong>David Eze</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">Youth Leader</span></div>
+                                    </div>
+                                </td>
+                                <td><strong>Youth Fellowship — Attendance Report</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">142 members present at Friday fellowship…</span></td>
+                                <td><span class="cms-badge cms-badge--info">Email</span></td>
+                                <td>Admin</td>
+                                <td>7 Jun 2025, 8:42 AM</td>
+                                <td><span class="cms-badge cms-badge--warning">Unread</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-reply"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" aria-label="Select message"></td>
+                                <td>
+                                    <div class="cms-table__user">
+                                        <div class="cms-table__avatar">AG</div>
+                                        <div><strong>AG Ikenebgu</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">To: All Members</span></div>
+                                    </div>
+                                </td>
+                                <td><strong>Church Anniversary — 28 June 2025</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">Join us as we celebrate 37 years of God's faithfulness…</span></td>
+                                <td><span class="cms-badge cms-badge--gold">Email + SMS</span></td>
+                                <td>486</td>
+                                <td>5 Jun 2025, 10:00 AM</td>
+                                <td><span class="cms-badge cms-badge--success">Delivered</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-eye"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" aria-label="Select message"></td>
+                                <td>
+                                    <div class="cms-table__user">
+                                        <div class="cms-table__avatar">AG</div>
+                                        <div><strong>AG Ikenebgu</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">To: SDTG Volunteers</span></div>
+                                    </div>
+                                </td>
+                                <td><strong>SDTG 2025 — Volunteer Briefing Schedule</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">All volunteers are required to attend the briefing on 5 July…</span></td>
+                                <td><span class="cms-badge cms-badge--info">Email</span></td>
+                                <td>86</td>
+                                <td>3 Jun 2025, 3:15 PM</td>
+                                <td><span class="cms-badge cms-badge--success">Delivered</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-eye"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" aria-label="Select message"></td>
+                                <td>
+                                    <div class="cms-table__user">
+                                        <div class="cms-table__avatar">GO</div>
+                                        <div><strong>Grace Okonkwo</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">Choir Leader</span></div>
+                                    </div>
+                                </td>
+                                <td><strong>Choir Rehearsal — SDTG Preparation</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">Extra rehearsal scheduled for Thursday 5:30 PM…</span></td>
+                                <td><span class="cms-badge cms-badge--muted">SMS</span></td>
+                                <td>Choir (68)</td>
+                                <td>2 Jun 2025, 11:30 AM</td>
+                                <td><span class="cms-badge cms-badge--success">Delivered</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-eye"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" aria-label="Select message"></td>
+                                <td>
+                                    <div class="cms-table__user">
+                                        <div class="cms-table__avatar">AG</div>
+                                        <div><strong>AG Ikenebgu</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">To: Department Leaders</span></div>
+                                    </div>
+                                </td>
+                                <td><strong>Monthly Leaders Meeting — 12 June</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">All department heads please confirm attendance…</span></td>
+                                <td><span class="cms-badge cms-badge--gold">Email + SMS</span></td>
+                                <td>14</td>
+                                <td>1 Jun 2025, 9:00 AM</td>
+                                <td><span class="cms-badge cms-badge--success">Delivered</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-eye"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" aria-label="Select message"></td>
+                                <td>
+                                    <div class="cms-table__user">
+                                        <div class="cms-table__avatar">AG</div>
+                                        <div><strong>AG Ikenebgu</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">Draft</span></div>
+                                    </div>
+                                </td>
+                                <td><strong>Community Medical Outreach — Volunteer Call</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">We need 20 volunteers for the outreach on 14 June…</span></td>
+                                <td><span class="cms-badge cms-badge--info">Email</span></td>
+                                <td>Welfare (32)</td>
+                                <td>30 May 2025</td>
+                                <td><span class="cms-badge cms-badge--muted">Draft</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-pen"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" aria-label="Select message"></td>
+                                <td>
+                                    <div class="cms-table__user">
+                                        <div class="cms-table__avatar">SU</div>
+                                        <div><strong>Samuel Uche</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">Media Leader</span></div>
+                                    </div>
+                                </td>
+                                <td><strong>Livestream Equipment Request</strong><br><span style="font-size:0.78rem;color:var(--cms-text-muted)">Requesting approval for new encoder unit for SDTG…</span></td>
+                                <td><span class="cms-badge cms-badge--info">Email</span></td>
+                                <td>Admin</td>
+                                <td>28 May 2025, 2:10 PM</td>
+                                <td><span class="cms-badge cms-badge--success">Read</span></td>
+                                <td><button type="button" class="cms-btn cms-btn--sm cms-btn--ghost"><i class="fas fa-reply"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="cms-card__foot">
+                <div class="cms-pagination">
+                    <span>Showing 7 of 24 messages</span>
+                    <div class="cms-pagination__pages">
+                        <button type="button" class="cms-pagination__btn" disabled><i class="fas fa-chevron-left"></i></button>
+                        <button type="button" class="cms-pagination__btn is-active">1</button>
+                        <button type="button" class="cms-pagination__btn">2</button>
+                        <button type="button" class="cms-pagination__btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/core.js"></script>
+    <script>
+    document.getElementById('btnBroadcast').addEventListener('click', function () {
+        document.getElementById('msgRecipient').value = 'all';
+        document.getElementById('msgSubject').focus();
+        CMS.showToast('Broadcast mode — select recipients and compose your message', 'info');
+    });
+    document.getElementById('btnTemplates').addEventListener('click', function () {
+        CMS.showToast('Message templates — awaiting backend integration', 'info');
+    });
+    document.getElementById('btnSaveDraft').addEventListener('click', function () {
+        CMS.showToast('Draft saved locally', 'success');
+    });
+    document.getElementById('btnPreview').addEventListener('click', function () {
+        CMS.showToast('Message preview — awaiting backend integration', 'info');
+    });
+    document.querySelectorAll('[data-quick-broadcast]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            CMS.showToast('Quick broadcast "' + btn.getAttribute('data-quick-broadcast') + '" loaded into compose form', 'success');
+        });
+    });
+    </script>
+</body>
+</html>
