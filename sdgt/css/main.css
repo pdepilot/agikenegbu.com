@@ -31,6 +31,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--navbar-height);
+    overflow-x: clip;
+    max-width: 100%;
 }
 
 body {
@@ -38,7 +40,8 @@ body {
     background: var(--sdtg-dark);
     color: var(--sdtg-text);
     line-height: 1.7;
-    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100%;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -2382,6 +2385,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 @media (max-width: 768px) {
     :root { --navbar-height: 70px; }
+
+    .reveal-left:not(.revealed),
+    .reveal-right:not(.revealed) {
+        transform: translateY(32px);
+    }
+
+    .btn { white-space: normal; }
+
+    .footer__cta-actions .btn { min-width: 0; }
 
     .navbar__toggle { display: flex; }
 

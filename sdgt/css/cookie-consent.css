@@ -7,7 +7,7 @@
     bottom: 24px;
     right: 24px;
     z-index: 10050;
-    width: min(420px, calc(100vw - 32px));
+    width: min(420px, calc(100% - 32px));
     opacity: 0;
     visibility: hidden;
     transform: translateY(24px) scale(0.96);

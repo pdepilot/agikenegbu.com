@@ -425,6 +425,18 @@ body.donate-page.is-loaded { opacity: 1; }
 
 @media (max-width: 480px) {
     .impact-grid, .give-categories, .transparency-grid, .trust-grid { grid-template-columns: 1fr; }
+
+    .give-bank__row {
+        flex-wrap: wrap;
+    }
+
+    .give-bank__row span:last-child {
+        min-width: 0;
+        width: 100%;
+        text-align: left;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

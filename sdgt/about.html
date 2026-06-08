@@ -525,6 +525,7 @@
             padding: 140px 0;
             background: var(--sdtg-dark-soft);
             position: relative;
+            overflow: hidden;
         }
 
         .leadership__grid {
@@ -540,6 +541,7 @@
 
         .leadership__image {
             position: relative;
+            overflow: hidden;
         }
 
         .leadership__image-wrap {
@@ -963,6 +965,11 @@
         }
 
         @media (max-width: 768px) {
+            .reveal-left:not(.revealed),
+            .reveal-right:not(.revealed) {
+                transform: translateY(32px);
+            }
+
             .about-hero {
                 min-height: clamp(280px, 44vh, 380px);
                 padding: calc(var(--navbar-height) + 32px) 0 40px;

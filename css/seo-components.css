@@ -2,6 +2,8 @@
 
 .seo-faq {
     padding: 3rem 0;
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 .seo-faq__title {
@@ -48,6 +50,8 @@
 .seo-internal-nav {
     padding: 2rem 0;
     border-top: 1px solid rgba(26, 43, 92, 0.08);
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 .seo-internal-nav h3 {
