@@ -73,9 +73,13 @@
     let activePlatform = LIVESTREAM_CONFIG.defaultPlatform;
     let durationInterval = null;
 
-    function initPageLoad() {
+    function initPageFade() {
         document.body.classList.add('livestream-page');
         requestAnimationFrame(() => document.body.classList.add('is-loaded'));
+    }
+
+    function getScrollRevealElements() {
+        return Array.from(document.querySelectorAll('.reveal')).filter(el => !el.closest('.ls-hero'));
     }
 
     function initNavbar() {
@@ -142,24 +146,52 @@
 
     function initHeroReveal() {
         document.querySelectorAll('.ls-hero .reveal').forEach((el, i) => {
-            setTimeout(() => el.classList.add('is-visible'), 200 + (parseInt(el.dataset.delay, 10) || i * 100));
+            const delay = 200 + (parseInt(el.dataset.delay, 10) || i * 100);
+            el.style.transitionDelay = `${delay}ms`;
+            el.classList.add('is-visible');
         });
     }
 
-    function initScrollReveal() {
-        if (prefersReducedMotion) {
-            document.querySelectorAll('.reveal:not(.ls-hero .reveal)').forEach(el => el.classList.add('is-visible'));
+    function revealElement(el) {
+        const delay = parseInt(el.dataset.delay, 10) || 0;
+        if (delay <= 0) {
+            el.classList.add('is-visible');
             return;
         }
+        setTimeout(() => el.classList.add('is-visible'), delay);
+    }
+
+    function revealBroadcastCards() {
+        document.querySelectorAll(
+            '#lsExperiencePanel .ls-exp-card, #lsMinisterNow .ls-minister-card, #lsSchedule .ls-schedule-item, #lsPastBroadcasts .ls-broadcast-card'
+        ).forEach(el => el.classList.add('is-visible'));
+    }
+
+    function initScrollReveal() {
+        const reveals = getScrollRevealElements();
+
+        if (prefersReducedMotion) {
+            reveals.forEach(el => el.classList.add('is-visible'));
+            return;
+        }
+
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    setTimeout(() => entry.target.classList.add('is-visible'), parseInt(entry.target.dataset.delay, 10) || 0);
+                    revealElement(entry.target);
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.reveal:not(.ls-hero .reveal)').forEach(el => observer.observe(el));
+        }, { threshold: 0.08, rootMargin: '0px 0px 0px 0px' });
+
+        reveals.forEach(el => {
+            observer.observe(el);
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                revealElement(el);
+                observer.unobserve(el);
+            }
+        });
     }
 
     function pad(n) { return String(n).padStart(2, '0'); }
@@ -223,16 +255,44 @@
         setInterval(tick, 1000);
     }
 
+    function getOfflinePlayerHtml() {
+        return `
+            <div class="ls-player__offline">
+                <video class="ls-player__offline-video" src="videos/worship-hero.mp4" autoplay muted loop playsinline poster="img/lifted_hands.jpeg" aria-hidden="true"></video>
+                <div class="ls-player__placeholder ls-player__placeholder--offline">
+                    <span class="ls-player__offline-badge"><i class="fas fa-clock" aria-hidden="true"></i> Broadcast Preview</span>
+                    <i class="fas fa-satellite-dish" aria-hidden="true"></i>
+                    <p class="ls-player__offline-title">Send Down Thy Glory Live</p>
+                    <p>Global broadcast begins <strong>15 August 2026</strong>. The live feed will appear here automatically when we go on air.</p>
+                    <div class="ls-player__offline-actions">
+                        <a href="registration.html" class="btn btn--primary">Register Free</a>
+                        <a href="gallery.html" class="btn btn--outline">Watch Highlights</a>
+                    </div>
+                </div>
+            </div>`;
+    }
+
     function getEmbedHtml(platform) {
         const s = LIVESTREAM_CONFIG.streams[platform];
-        if (!s) return '';
+        if (!s) return getOfflinePlayerHtml();
+
+        if (!LIVESTREAM_CONFIG.isLive) {
+            if (platform === 'custom' && s.url) {
+                return `<video src="${s.url}" controls playsinline poster="img/lifted_hands.jpeg"></video>`;
+            }
+            return getOfflinePlayerHtml();
+        }
+
         if (platform === 'youtube' && s.id) {
-            return `<iframe src="https://www.youtube.com/embed/${s.id}?rel=0" title="SDTG Livestream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+            return `<iframe src="https://www.youtube.com/embed/${s.id}?rel=0&autoplay=1" title="SDTG Livestream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>`;
         }
         if (platform === 'vimeo' && s.id) {
-            return `<iframe src="https://player.vimeo.com/video/${s.id}?title=0&byline=0" title="SDTG Livestream" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+            return `<iframe src="https://player.vimeo.com/video/${s.id}?title=0&byline=0&autoplay=1" title="SDTG Livestream" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
         }
         if (platform === 'facebook') {
+            if (s.embed) {
+                return s.embed;
+            }
             return `<div class="ls-player__placeholder"><i class="fab fa-facebook" aria-hidden="true"></i><p>Facebook Live embed — connect your stream URL in admin</p></div>`;
         }
         if (platform === 'custom' && s.url) {
@@ -247,11 +307,16 @@
         const fullscreenBtn = document.getElementById('lsFullscreenBtn');
         const section = document.getElementById('player');
         const tabs = document.querySelectorAll('.ls-platform-tab');
+        const tabBar = document.querySelector('.ls-platform-tabs');
 
         function loadPlatform(platform) {
             activePlatform = platform;
             tabs.forEach(t => t.classList.toggle('is-active', t.dataset.platform === platform));
             if (frame) frame.innerHTML = getEmbedHtml(platform);
+        }
+
+        if (tabBar) {
+            tabBar.classList.toggle('hidden', !LIVESTREAM_CONFIG.isLive);
         }
 
         tabs.forEach(tab => tab.addEventListener('click', () => loadPlatform(tab.dataset.platform)));
@@ -280,23 +345,23 @@
         const el = document.getElementById('lsExperiencePanel');
         if (!el) return;
         el.innerHTML = `
-            <div class="ls-exp-card ls-exp-card--current reveal">
+            <div class="ls-exp-card ls-exp-card--current is-visible">
                 <span class="ls-exp-card__label"><i class="fas fa-circle" aria-hidden="true"></i> Current Session</span>
                 <h3>${c.title}</h3>
                 <p class="ls-exp-card__minister">${c.minister}</p>
                 <p class="ls-exp-card__meta">${c.ministry} · ${c.country}</p>
             </div>
-            <div class="ls-exp-card reveal" data-delay="80">
+            <div class="ls-exp-card is-visible">
                 <span class="ls-exp-card__label"><i class="fas fa-microphone" aria-hidden="true"></i> Ministering Now</span>
                 <h3>${c.minister}</h3>
                 <p class="ls-exp-card__meta">${c.topic}</p>
             </div>
-            <div class="ls-exp-card reveal" data-delay="160">
+            <div class="ls-exp-card is-visible">
                 <span class="ls-exp-card__label"><i class="fas fa-music" aria-hidden="true"></i> Worship Team</span>
                 <h3>${c.worshipTeam}</h3>
                 <p class="ls-exp-card__meta">Leading the congregation in praise</p>
             </div>
-            <div class="ls-exp-card ls-exp-card--upcoming reveal" data-delay="240">
+            <div class="ls-exp-card ls-exp-card--upcoming is-visible">
                 <span class="ls-exp-card__label"><i class="fas fa-clock" aria-hidden="true"></i> Up Next · ${u.time}</span>
                 <h3>${u.title}</h3>
                 <p class="ls-exp-card__minister">${u.minister}</p>
@@ -308,7 +373,7 @@
         const el = document.getElementById('lsMinisterNow');
         if (!el) return;
         el.innerHTML = `
-            <div class="ls-minister-card reveal">
+            <div class="ls-minister-card is-visible">
                 <div class="ls-minister-card__photo"><img src="${c.photo}" alt="${c.minister}" loading="lazy" width="400" height="500"></div>
                 <div class="ls-minister-card__body">
                     <span class="ls-minister-card__live"><span class="ls-live-dot"></span> Ministering Now</span>
@@ -325,7 +390,7 @@
         const track = document.getElementById('lsSchedule');
         if (!track) return;
         track.innerHTML = LIVESTREAM_CONFIG.schedule.map((item, i) => `
-            <article class="ls-schedule-item reveal" data-delay="${i * 60}">
+            <article class="ls-schedule-item is-visible">
                 <div class="ls-schedule-item__time">${item.time}</div>
                 <div class="ls-schedule-item__line" aria-hidden="true"><span></span></div>
                 <div class="ls-schedule-item__body">
@@ -340,7 +405,7 @@
         const grid = document.getElementById('lsPastBroadcasts');
         if (!grid) return;
         grid.innerHTML = LIVESTREAM_CONFIG.pastBroadcasts.map((b, i) => `
-            <article class="ls-broadcast-card reveal" data-delay="${i * 80}" tabindex="0" role="button"
+            <article class="ls-broadcast-card is-visible" tabindex="0" role="button"
                 data-video-type="${b.type}" data-video-src="${b.video}" data-video-title="${b.title}" aria-label="Play ${b.title}">
                 <div class="ls-broadcast-card__thumb">
                     <img src="${b.thumb}" alt="" loading="lazy" width="640" height="360">
@@ -525,12 +590,11 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        initPageLoad();
+        initPageFade();
         initNavbar();
         initVideoLogos();
         initParticles('lsHeroParticles');
         initParticles('lsCtaParticles');
-        initHeroReveal();
         initLiveStatus();
         initPlayer();
         renderExperiencePanel();
@@ -542,7 +606,10 @@
         initForms();
         initModals();
         initShare();
+        initHeroReveal();
+        revealBroadcastCards();
         initScrollReveal();
+        document.documentElement.classList.add('js-ready');
         initSmoothScroll();
         initNewsletter();
         initScrollTop();

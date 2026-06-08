@@ -2,8 +2,8 @@
    SDTG Livestream — Digital Broadcast Center
    ============================================================ */
 
-body.livestream-page { opacity: 0; transition: opacity 0.6s ease; }
-body.livestream-page.is-loaded { opacity: 1; }
+body.livestream-page:not(.is-loaded) { opacity: 0; }
+body.livestream-page.is-loaded { opacity: 1; transition: opacity 0.6s ease; }
 
 /* ---- Hero ---- */
 .ls-hero {
@@ -211,18 +211,58 @@ body.livestream-page.is-loaded { opacity: 1; }
     aspect-ratio: 16/9; position: relative;
 }
 
-.ls-player__frame iframe,
-.ls-player__frame video {
-    position: absolute; inset: 0; width: 100%; height: 100%; border: none;
-}
 
 .ls-player__placeholder {
     position: absolute; inset: 0; display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 16px;
+    padding: 32px 24px; text-align: center;
     color: var(--sdtg-text-muted); background: rgba(10,6,18,0.9);
+    z-index: 2;
 }
 
 .ls-player__placeholder i { font-size: 3rem; color: var(--sdtg-gold); opacity: 0.5; }
+
+.ls-player__placeholder p {
+    max-width: 420px; line-height: 1.65; font-size: 0.95rem;
+}
+
+.ls-player__offline {
+    position: absolute; inset: 0;
+}
+
+.ls-player__offline-video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+.ls-player__placeholder--offline {
+    background: linear-gradient(180deg, rgba(10,6,18,0.55) 0%, rgba(10,6,18,0.92) 100%);
+}
+
+.ls-player__offline-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--sdtg-gold); background: rgba(212,175,55,0.12);
+    border: 1px solid rgba(212,175,55,0.25); border-radius: 999px;
+}
+
+.ls-player__offline-title {
+    font-family: var(--sdtg-font-display);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    color: var(--sdtg-white); font-weight: 600;
+}
+
+.ls-player__offline-actions {
+    display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+    margin-top: 8px;
+}
+
+.ls-player__frame iframe,
+.ls-player__frame video:not(.ls-player__offline-video) {
+    position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+    z-index: 1;
+}
 
 .ls-player__bar {
     display: flex; flex-wrap: wrap; align-items: center;
@@ -250,6 +290,7 @@ body.livestream-page.is-loaded { opacity: 1; }
     padding: 24px; background: rgba(255,255,255,0.03);
     border: 1px solid var(--sdtg-glass-border); border-radius: var(--sdtg-radius-lg);
     transition: all var(--sdtg-transition);
+    min-height: 180px;
 }
 
 .ls-exp-card:hover {
@@ -737,11 +778,20 @@ body.livestream-page.is-loaded { opacity: 1; }
 
 /* ---- Reveal ---- */
 .reveal {
-    opacity: 0; transform: translateY(28px);
+    opacity: 1;
+    transform: none;
+}
+
+html.js-ready .reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(28px);
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.reveal.is-visible { opacity: 1; transform: none; }
+html.js-ready .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
@@ -774,6 +824,8 @@ body.livestream-page.is-loaded { opacity: 1; }
     .ls-hero__actions .btn { width: 100%; max-width: 320px; }
     .ls-cta__actions { flex-direction: column; align-items: center; }
     .ls-cta__actions .btn { width: 100%; max-width: 320px; }
+    .ls-player__offline-actions { flex-direction: column; align-items: center; width: 100%; }
+    .ls-player__offline-actions .btn { width: 100%; max-width: 280px; }
     .ls-countdown__unit { min-width: 0; flex: 1 1 calc(50% - 8px); padding: 14px 10px; }
     .ls-schedule-item { grid-template-columns: 64px 16px 1fr; gap: 10px; }
     .ls-social__grid { grid-template-columns: 1fr; }

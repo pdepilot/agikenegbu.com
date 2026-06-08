@@ -2305,6 +2305,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .footer__parent a:hover { text-decoration: underline; }
 
+.footer__crafted {
+    font-size: 0.82rem;
+    color: var(--sdtg-text-muted);
+}
+
+.footer__crafted a {
+    color: var(--sdtg-gold);
+    font-weight: 500;
+    transition: color var(--sdtg-transition);
+}
+
+.footer__crafted a:hover {
+    color: var(--sdtg-gold-light);
+    text-decoration: underline;
+}
+
 /* ---- Scroll to Top ---- */
 .scroll-top {
     position: fixed;

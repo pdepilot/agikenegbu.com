@@ -106,7 +106,7 @@
         <!-- Live Status -->
         <section class="ls-status" aria-label="Live broadcast status">
             <div class="container">
-                <div id="lsStatusOffline" class="ls-status__panel reveal">
+                <div id="lsStatusOffline" class="ls-status__panel">
                     <p class="ls-status__label">Event Starts In</p>
                     <div class="ls-countdown" id="lsCountdown" role="timer" aria-live="polite">
                         <div class="ls-countdown__unit"><span class="ls-countdown__num" id="lsCdDays">00</span><span class="ls-countdown__text">Days</span></div>
@@ -115,7 +115,7 @@
                         <div class="ls-countdown__unit"><span class="ls-countdown__num" id="lsCdSeconds">00</span><span class="ls-countdown__text">Seconds</span></div>
                     </div>
                 </div>
-                <div id="lsStatusLive" class="ls-status__panel hidden reveal">
+                <div id="lsStatusLive" class="ls-status__panel hidden">
                     <div class="ls-live-badge"><span class="ls-live-dot" aria-hidden="true"></span> Live Now</div>
                     <div class="ls-live-stats">
                         <div class="ls-live-stat"><span class="ls-live-stat__num" id="lsViewerCount">0</span><span class="ls-live-stat__label">Watching Now</span></div>
@@ -145,8 +145,13 @@
                     <button type="button" class="ls-platform-tab" data-platform="vimeo" role="tab">Vimeo</button>
                     <button type="button" class="ls-platform-tab" data-platform="custom" role="tab">SDTG Direct</button>
                 </div>
-                <div class="ls-player__wrap reveal" id="lsPlayerWrap">
-                    <div class="ls-player__frame" id="lsPlayerFrame"></div>
+                <div class="ls-player__wrap" id="lsPlayerWrap">
+                    <div class="ls-player__frame" id="lsPlayerFrame">
+                        <div class="ls-player__placeholder">
+                            <i class="fas fa-satellite-dish" aria-hidden="true"></i>
+                            <p>Loading broadcast…</p>
+                        </div>
+                    </div>
                     <div class="ls-player__bar">
                         <span class="ls-player__quality">Quality: <strong>Auto · HD</strong></span>
                         <span class="ls-player__quality"><i class="fas fa-signal" aria-hidden="true"></i> Stream Ready</span>
@@ -452,6 +457,7 @@
                 <div class="footer__bottom-inner">
                     <p class="footer__copyright">&copy; 2026 Send Down Thy Glory. All rights reserved.</p>
                     <p class="footer__parent">A ministry of <a href="../index.html">AG Ikenebgu Assemblies of God</a></p>
+                    <p class="footer__crafted">Crafted with love by <a href="https://htmlcodex.com">ERIBS Tech</a></p>
                 </div>
             </div>
         </div>
